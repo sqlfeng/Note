@@ -208,7 +208,7 @@ p_zm	4sm
 
 cl_ui_init（）画面初始化
 
-
+```SQL
 ® MAIN
 ```SQL
 MAIN
@@ -228,17 +228,19 @@ MAIN
    END IF
 ```
 
-bp（1）
+bp（()
 CALL fgl_set_arr_curr(1) 将光标固定到第一行
-
+```
 
 有数据
 before raw
 before insert
 before field
 after field
-…
+```
 
 before field
 after field
 ater
+
+我

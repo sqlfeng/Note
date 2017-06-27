@@ -33,6 +33,7 @@ ERROR(-1338):The function 'cl_set_act_visiable' has not been defined in any modu
     
     修改开窗字段image属性设置为zoom
 
+
 ### tips：
     错误信息维护工具：p_ze
     开窗维护工具p_qry
