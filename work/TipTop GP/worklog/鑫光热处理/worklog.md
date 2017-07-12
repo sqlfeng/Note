@@ -199,3 +199,5 @@ sr.oga01 = (null)
 l_ogb917 = (null)
 l_sql2 = "SELECT DISTINCT oga01,oga02  FROM oga_file,ogb_file WHERE oga01 = ogb01    AND (ogb67 = ? AND  ogb66  = ? )   AND oga09 = '8'   AND oga01 = ogb01   AND ogaconf <> 'X'"
 
+
+
