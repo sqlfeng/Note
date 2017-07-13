@@ -6,7 +6,7 @@ aapq700
 屏幕剪辑的捕获时间: 2017/6/9 星期五 14:33 
 
 http://192.168.1.8/gas/wa/r/gdc-toptest-udm-intranet 
-
+http://192.168.1.8/gas/wa/r/gdc-toptest-udm-intranet
 
 
 0 置 原 因 护 作 业 叩 il 仍 丌 丽 （ 试 月 [ LS 讒 试 1 阀 日 ： 17 / 05 / 09 （ GMT ） *F:TipTop 画 面 墩 不 料 劌 發 0 语 言 资 料 复 制 资 下 叫 貼 上 录 入 删 复 制 里 身 打 印 工 出 E c 基 本 资 料 留 置 原 因 码 留 苎 因 1 “ 一 年 后 支 付 00 已 1 “ 半 年 后 支 付 ？ 00 
