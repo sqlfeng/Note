@@ -44,3 +44,17 @@ l_sffbseq,l_sffbstus,l_sffb014,l_sffb017,l_sffb018,l_sffb019,l_sffb005
          LET r_success = FALSE        
       END IF
 #170421-00073#1 add(e)
+grep -l "q_ima_2" */4gl/*.4gl
+
+
+"SELECT oga02,oga01,oga03,oga14,oga15,ogb04,ogb06,'',ogb12, ",
+                    "       ogb13,ogb14t,oga24,'','',",
+                    "       azi03,azi04,azi05  ",
+                    "      ,oga10,oga23,ogb03,ogb31                          ",
+                    "      ,ogb05,ogb910,ogb912,ogb913,ogb915,ogb916         ",
+                    "      ,oga032,ogb14,ta_ogb01 ",
+                    "      ,ogb31,ogb32,ogb910,ogb912,ogb916,ogb917,ta_ogb02 ",
+                    "  FROM oga_file,ogb_file,azi_file,occ_file ",
+                    " WHERE oga01 = ogb01 AND oga23 = azi01 AND oga65 ='Y' AND oga09 ='2' ",
+                    "   AND ogaconf ='Y' AND ogapost ='Y' ",
+                    "   AND oga03 = occ01 ",
