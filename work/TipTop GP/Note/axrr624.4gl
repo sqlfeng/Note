@@ -1,6 +1,6 @@
 # Prog. Version..: '5.30.06-13.04.16(00010)'     #
 #
-# Pattern name...: axrr624.4gl
+# Pattern name...: cxrr624.4gl
 # Descriptions...: 客戶應收帳齡分析表
 # Date & Author..: 98/11/11 by Jimmy
 # Modify.........:No.9017 04/12/13 By Kitty 改長度
@@ -14,13 +14,13 @@
 # Modify.........: No.FUN-680123 06/08/29 By hongmei 欄位類型轉換
 # Modify.........: No.FUN-690127 06/10/16 By baogui cl_used位置調整及EXIT PROGRAM后加cl_used
 # Modify.........: No.FUN-6A0095 06/10/25 By xumin l_time轉g_time
-# Modify.........: No.CHI-830003 08/11/03 By xiaofeizhu 依程式畫面上的〔截止基准日〕回抓當月重評價匯率, 
+# Modify.........: No.CHI-830003 08/11/03 By xiaofeizhu 依程式畫面上的〔截止基准日〕回抓當月重評價匯率,
 # Modify.........:                                      若當月未產生重評價則往回抓前一月資料，若又抓不到再往上一個月找，找到有值為止
 # Modify.........: No.FUN-940102 09/04/27 BY destiny 檢查使用者的資料庫使用權限
-# Modify.........: No.TQC-950020 09/05/13 By mike 跨庫的SQL語句一律使用s_dbstring()的寫法 
+# Modify.........: No.TQC-950020 09/05/13 By mike 跨庫的SQL語句一律使用s_dbstring()的寫法
 # Modify.........: No.FUN-980030 09/08/31 By Hiko 加上GP5.2的相關設定
 # Modify.........: No.FUN-A50102 10/06/21 By lixia 跨庫寫法統一改為用cl_get_target_table()來實現
-# Modify.........: No.FUN-A70084 10/07/22 By lutingting 拿掉INPUT 營運中心,原本跨庫寫法改為不跨庫 
+# Modify.........: No.FUN-A70084 10/07/22 By lutingting 拿掉INPUT 營運中心,原本跨庫寫法改為不跨庫
 # Modify.........: No.TQC-B10083 11/01/19 By yinhy l_oma24應給予預設值'',抓不到值不應為'1'
 # Modify.........: No.FUN-B20033 11/02/17 By lilingyu SQL增加ooa37='1'的條件
 # Modify.........: No.MOD-B70194 11/07/25 By Polly 調整l_sql改用STRING 和修正l_sql條件
@@ -28,9 +28,9 @@
 # Modify.........: No.MOD-C90207 12/10/23 By Polly 增加依人員編號做群組
 
 DATABASE ds
- 
-GLOBALS "../../config/top.global"
- 
+
+GLOBALS "../../../tiptop/config/top.global"
+
    DEFINE tm  RECORD                         # Print condition RECORD
               wc      LIKE type_file.chr1000,        #No.FUN-680123 VARCHAR(1000),             # Where condition
                       a1   LIKE type_file.num5,      #No.FUN-680123 SMALLINT,
@@ -56,12 +56,12 @@ GLOBALS "../../config/top.global"
               END RECORD
      DEFINE     g_title  LIKE type_file.chr1000      #No.FUN-680123 VARCHAR(160)
 DEFINE   g_i             LIKE type_file.num5         #No.FUN-680123 SMALLINT   #count/index for any purpose
- 
+
 MAIN
    OPTIONS
        INPUT NO WRAP
    DEFER INTERRUPT                        # Supress DEL key function
- 
+
    #-----TQC-610059---------
    LET g_pdate=ARG_VAL(1)
    LET g_towhom=ARG_VAL(2)
@@ -98,38 +98,38 @@ MAIN
    LET g_rep_clas = ARG_VAL(17)
    LET g_template = ARG_VAL(18)
 #FUN-A70084--mod--end
- 
+
    IF (NOT cl_user()) THEN
       EXIT PROGRAM
    END IF
- 
+
    WHENEVER ERROR CALL cl_err_msg_log
- 
-   IF (NOT cl_setup("AXR")) THEN
+
+   IF (NOT cl_setup("CXR")) THEN
       EXIT PROGRAM
    END IF
    CALL cl_used(g_prog,g_time,1) RETURNING g_time #No.FUN-690127
- 
+
    #No.FUN-570264 ---end---
    IF cl_null(tm.wc)
       THEN CALL r624_tm(0,0)             # Input print condition
-   ELSE 
+   ELSE
       CALL r624()                   # Read data and create out-file
    END IF
    CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
 END MAIN
- 
+
 FUNCTION r624_tm(p_row,p_col)
 DEFINE lc_qbe_sn      LIKE gbm_file.gbm01   #No.FUN-580031
    DEFINE p_row,p_col LIKE type_file.num5,           #No.FUN-680123   SMALLINT,
           l_cmd       LIKE type_file.chr1000        #No.FUN-680123 VARCHAR(1000)
    DEFINE l_n         LIKE type_file.num5           #No.FUN-680123 SMALLINT
- 
-   OPEN WINDOW r624_w WITH FORM "axr/42f/axrr624"
+
+   OPEN WINDOW r624_w WITH FORM "cxr/42f/cxrr624"
        ATTRIBUTE (STYLE = g_win_style CLIPPED) #No.FUN-580092 HCN
- 
+
     CALL cl_ui_init()
- 
+
    CALL cl_opmsg('p')
    INITIALIZE tm.* TO NULL            # Default condition
    LET tm.a1 = 30
@@ -153,27 +153,27 @@ WHILE TRUE
          BEFORE CONSTRUCT
              CALL cl_qbe_init()
          #No.FUN-580031 ---end---
- 
+
        ON ACTION locale
            #CALL cl_dynamic_locale()
           CALL cl_show_fld_cont()                   #No.FUN-550037 hmf
          LET g_action_choice = "locale"
          EXIT CONSTRUCT
- 
+
      ON IDLE g_idle_seconds
         CALL cl_on_idle()
         CONTINUE CONSTRUCT
- 
+
       ON ACTION about         #MOD-4C0121
          CALL cl_about()      #MOD-4C0121
- 
+
       ON ACTION help          #MOD-4C0121
          CALL cl_show_help()  #MOD-4C0121
- 
+
       ON ACTION controlg      #MOD-4C0121
          CALL cl_cmdask()     #MOD-4C0121
- 
- 
+
+
            ON ACTION exit
            LET INT_FLAG = 1
            EXIT CONSTRUCT
@@ -213,20 +213,20 @@ WHILE TRUE
                  DISPLAY g_qryparam.multiret TO oma18
                  NEXT FIELD oma18
             END CASE
-      #No.FUN-C40001  --End  
+      #No.FUN-C40001  --End
   END CONSTRUCT
        IF g_action_choice = "locale" THEN
           LET g_action_choice = ""
           CALL cl_dynamic_locale()
           CONTINUE WHILE
        END IF
- 
- 
+
+
    IF INT_FLAG THEN
-      LET INT_FLAG = 0 CLOSE WINDOW r624_w 
+      LET INT_FLAG = 0 CLOSE WINDOW r624_w
       CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
       EXIT PROGRAM
-         
+
    END IF
    INPUT BY NAME  tm.a1,tm.a2,tm.a3,tm.a4,tm.a5,tm.a6,tm.type,tm.edate
         #,tm.p1,tm.p2,tm.p3,tm.p4,tm.p5,tm.p6,tm.p7,tm.p8      #FUN-A70084
@@ -236,73 +236,73 @@ WHILE TRUE
          BEFORE INPUT
              CALL cl_qbe_display_condition(lc_qbe_sn)
          #No.FUN-580031 ---end---
- 
+
       AFTER FIELD edate
          IF tm.edate IS NULL THEN NEXT FIELD edate END IF
    #     IF MONTH(tm.edate)=MONTH(tm.edate+1) THEN
    #        ERROR "請輸入月底日期!" NEXT FIELD edate
    #     END IF
- 
+
 #FUN-A70084--mark--str--
-#     #No.FUN-940102--begin  
+#     #No.FUN-940102--begin
 #     AFTER FIELD p1
-#        IF NOT cl_null(tm.p1) THEN 
-#           IF NOT s_chk_demo(g_user,tm.p1) THEN              
-#              NEXT FIELD p1          
-#           END IF  
-#        ELSE 
+#        IF NOT cl_null(tm.p1) THEN
+#           IF NOT s_chk_demo(g_user,tm.p1) THEN
+#              NEXT FIELD p1
+#           END IF
+#        ELSE
 #           NEXT FIELD p1
-#        END IF           
+#        END IF
 #
-#     AFTER FIELD p2                                                                                                                
-#        IF NOT cl_null(tm.p2) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p2) THEN                                                                                    
-#              NEXT FIELD p2                                                                                                        
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p2
+#        IF NOT cl_null(tm.p2) THEN
+#           IF NOT s_chk_demo(g_user,tm.p2) THEN
+#              NEXT FIELD p2
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p3                                                                                                                
-#        IF NOT cl_null(tm.p3) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p3) THEN                                                                                    
-#              NEXT FIELD p3                                                                                                        
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p3
+#        IF NOT cl_null(tm.p3) THEN
+#           IF NOT s_chk_demo(g_user,tm.p3) THEN
+#              NEXT FIELD p3
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p4                                                                                                                
-#        IF NOT cl_null(tm.p4) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p4) THEN                                                                                    
-#              NEXT FIELD p4                                                                                                       
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p4
+#        IF NOT cl_null(tm.p4) THEN
+#           IF NOT s_chk_demo(g_user,tm.p4) THEN
+#              NEXT FIELD p4
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p5                                                                                                                
-#        IF NOT cl_null(tm.p5) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p5) THEN                                                                                    
-#              NEXT FIELD p5                                                                                                        
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p5
+#        IF NOT cl_null(tm.p5) THEN
+#           IF NOT s_chk_demo(g_user,tm.p5) THEN
+#              NEXT FIELD p5
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p6                                                                                                                
-#        IF NOT cl_null(tm.p6) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p6) THEN                                                                                    
-#              NEXT FIELD p6                                                                                                        
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p6
+#        IF NOT cl_null(tm.p6) THEN
+#           IF NOT s_chk_demo(g_user,tm.p6) THEN
+#              NEXT FIELD p6
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p7                                                                                                                
-#        IF NOT cl_null(tm.p7) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p7) THEN                                                                                    
-#              NEXT FIELD p7                                                                                                        
-#           END IF                                                                                                                  
-#        END IF    
+#     AFTER FIELD p7
+#        IF NOT cl_null(tm.p7) THEN
+#           IF NOT s_chk_demo(g_user,tm.p7) THEN
+#              NEXT FIELD p7
+#           END IF
+#        END IF
 #
-#     AFTER FIELD p8                                                                                                                
-#        IF NOT cl_null(tm.p8) THEN                                                                                                 
-#           IF NOT s_chk_demo(g_user,tm.p8) THEN                                                                                    
-#              NEXT FIELD p8                                                                                                       
-#           END IF                                                                                                                  
-#        END IF    
-#     #No.FUN-940102--end     
+#     AFTER FIELD p8
+#        IF NOT cl_null(tm.p8) THEN
+#           IF NOT s_chk_demo(g_user,tm.p8) THEN
+#              NEXT FIELD p8
+#           END IF
+#        END IF
+#     #No.FUN-940102--end
 #FUN-A70084--mark--end
 
       AFTER FIELD more
@@ -312,7 +312,7 @@ WHILE TRUE
                       RETURNING g_pdate,g_towhom,g_rlang,
                                 g_bgjob,g_time,g_prtway,g_copies
          END IF
- 
+
 #FUN-A70084--mark--str--
 #     #-----No.FUN-560239-----
 #     ON ACTION CONTROLP
@@ -392,7 +392,7 @@ WHILE TRUE
 #        END CASE
 #     #-----No.FUN-560239 END-----
 #FUN-A70084--mark--end
- 
+
 ################################################################################
 # START genero shell script ADD
    ON ACTION CONTROLR
@@ -403,14 +403,14 @@ WHILE TRUE
       ON IDLE g_idle_seconds
          CALL cl_on_idle()
          CONTINUE INPUT
- 
+
       ON ACTION about         #MOD-4C0121
          CALL cl_about()      #MOD-4C0121
- 
+
       ON ACTION help          #MOD-4C0121
          CALL cl_show_help()  #MOD-4C0121
- 
- 
+
+
           ON ACTION exit
           LET INT_FLAG = 1
           EXIT INPUT
@@ -418,19 +418,19 @@ WHILE TRUE
          ON ACTION qbe_save
             CALL cl_qbe_save()
          #No.FUN-580031 ---end---
- 
+
    END INPUT
    IF INT_FLAG THEN
-      LET INT_FLAG = 0 CLOSE WINDOW r624_w 
+      LET INT_FLAG = 0 CLOSE WINDOW r624_w
       CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
       EXIT PROGRAM
-         
+
    END IF
    IF g_bgjob = 'Y' THEN
       SELECT zz08 INTO l_cmd FROM zz_file    #get exec cmd (fglgo xxxx)
-             WHERE zz01='axrr624'
+             WHERE zz01='cxrr624'
       IF SQLCA.sqlcode OR l_cmd IS NULL THEN
-         CALL cl_err('axrr624','9031',1)
+         CALL cl_err('cxrr624','9031',1)
       ELSE
          LET tm.wc=cl_replace_str(tm.wc, "'", "\"")
          LET l_cmd = l_cmd CLIPPED,        #(at time fglgo xxxx p1 p2 p3)
@@ -462,7 +462,7 @@ WHILE TRUE
                          " '",g_rep_user CLIPPED,"'",           #No.FUN-570264
                          " '",g_rep_clas CLIPPED,"'",           #No.FUN-570264
                          " '",g_template CLIPPED,"'"            #No.FUN-570264
-         CALL cl_cmdat('axrr624',g_time,l_cmd)    # Execute cmd at later time
+         CALL cl_cmdat('cxrr624',g_time,l_cmd)    # Execute cmd at later time
       END IF
       CLOSE WINDOW r624_w
       CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
@@ -474,7 +474,7 @@ WHILE TRUE
 END WHILE
    CLOSE WINDOW r624_w
 END FUNCTION
- 
+
 FUNCTION r624()
    DEFINE l_name    LIKE type_file.chr20,          #No.FUN-680123 VARCHAR(20),        # External(Disk) file name
 #       l_time          LIKE type_file.chr8        #No.FUN-6A0095
@@ -516,8 +516,8 @@ FUNCTION r624()
      DEFINE l_sql_2   STRING                #CHI-830003 add
      DEFINE l_omb03_1 LIKE omb_file.omb03   #CHI-830003 add
      DEFINE l_count   LIKE type_file.num5   #CHI-830003 add
-     DEFINE l_oma24   LIKE oma_file.oma24   #CHI-830003 add     
- 
+     DEFINE l_oma24   LIKE oma_file.oma24   #CHI-830003 add
+
      SELECT zo02 INTO g_company FROM zo_file WHERE zo01 = g_rlang
      #====>資料權限的檢查
      #Begin:FUN-980030
@@ -527,13 +527,13 @@ FUNCTION r624()
      #     IF g_priv3='4' THEN                           #只能使用相同群的資料
      #         LET tm.wc = tm.wc clipped," AND omagrup MATCHES '",g_grup CLIPPED,"*'"
      #     END IF
- 
+
      #     IF g_priv3 MATCHES "[5678]" THEN    #TQC-5C0134群組權限
      #         LET tm.wc = tm.wc clipped," AND omagrup IN ",cl_chk_tgrup_list()
      #     END IF
      LET tm.wc = tm.wc CLIPPED,cl_get_extra_cond('omauser', 'omagrup')
      #End:FUN-980030
- 
+
      #TQC-650131 remark
      #CASE
      #   WHEN tm.type='1'
@@ -543,9 +543,9 @@ FUNCTION r624()
      #   OTHERWISE
      #         LET g_title = g_x[21]
      #END CASE
- 
-     CALL cl_outnam('axrr624') RETURNING l_name
-     
+
+     CALL cl_outnam('cxrr624') RETURNING l_name
+
      #TQC-650131 --start-
      CASE
         WHEN tm.type='1'
@@ -556,7 +556,7 @@ FUNCTION r624()
               LET g_title = g_x[21]
      END CASE
      #TQC-650131 --end--
- 
+
      START REPORT r624_rep TO l_name
      LET g_pageno = 0
 #FUN-A70084--mark--str--
@@ -575,8 +575,8 @@ FUNCTION r624()
 #    IF cl_null(l_p) THEN CONTINUE FOR END IF
 #    SELECT azp03 INTO l_plant FROM azp_file WHERE azp01=l_p
 #    IF STATUS THEN CONTINUE FOR END IF
-#   #LET l_plant = s_dbstring(l_plant CLIPPED)   #TQC-950020 
-#    LET l_plant = s_dbstring(l_plant CLIPPED) #TQC-950020  
+#   #LET l_plant = s_dbstring(l_plant CLIPPED)   #TQC-950020
+#    LET l_plant = s_dbstring(l_plant CLIPPED) #TQC-950020
 #FUN-A70084--mark--end
      #No.B396 010423 by plum
      #No.MOD-5C0069  --Begin
@@ -590,8 +590,8 @@ FUNCTION r624()
                  #" FROM ",cl_get_target_table(l_p,'oma_file'),",",cl_get_target_table(l_p,'occ_file'), #FUN-A50102
                  #" ,OUTER ", cl_get_target_table(l_p,'gen_file') ,   #FUN-A50102
                  #" WHERE oma_file.oma14=gen_file.gen01 AND occ01=oma03",
-                  "  FROM oma_file LEFT OUTER JOIN gen_file ON oma_file.oma14 = gen_file.gen01,occ_file ", 
-                  " WHERE occ01=oma03 ", 
+                  "  FROM oma_file LEFT OUTER JOIN gen_file ON oma_file.oma14 = gen_file.gen01,occ_file ",
+                  " WHERE occ01=oma03 ",
                  #FUN-A70084--mod--end
                   "   AND ",tm.wc CLIPPED,                #No.MOD-B70194 remark
                   "   AND omaconf='Y' AND omavoid='N'",   #No.B396 by linda mod
@@ -624,31 +624,31 @@ FUNCTION r624()
                   "          AND ooa02 > '",tm.edate,"')) "
      END IF
      #No.MOD-5C0069  --End
- 
+
      IF  tm.type ='1' THEN
          LET l_sql = l_sql CLIPPED," AND occ37 = 'Y' "
      END IF
      IF  tm.type ='2' THEN
          LET l_sql = l_sql CLIPPED," AND occ37 = 'N' "
      END IF
-   # CALL cl_replace_sqldb(l_sql) RETURNING l_sql              #FUN-A50102 #FUN-A70084							
-   # CALL cl_parse_qry_sql(l_sql,l_p) RETURNING l_sql          #FUN-A50102 #FUN-A70084	
+   # CALL cl_replace_sqldb(l_sql) RETURNING l_sql              #FUN-A50102 #FUN-A70084
+   # CALL cl_parse_qry_sql(l_sql,l_p) RETURNING l_sql          #FUN-A50102 #FUN-A70084
      PREPARE r624_prepare1 FROM l_sql
-     IF STATUS THEN CALL cl_err('prepare:',STATUS,1) 
+     IF STATUS THEN CALL cl_err('prepare:',STATUS,1)
         CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
-        EXIT PROGRAM 
+        EXIT PROGRAM
      END IF
      DECLARE r624_curs1 CURSOR FOR r624_prepare1
      FOREACH r624_curs1 INTO sr.*,l_oma00
-       IF STATUS THEN CALL cl_err('Foreach:',STATUS,1) 
+       IF STATUS THEN CALL cl_err('Foreach:',STATUS,1)
           CALL cl_used(g_prog,g_time,2) RETURNING g_time #No.FUN-690127
-          EXIT PROGRAM 
+          EXIT PROGRAM
        END IF
-       
-      #CHI-830003--Add--Begin--#    
+
+      #CHI-830003--Add--Begin--#
       IF g_ooz.ooz07 = 'Y' THEN
          LET l_oox01 = YEAR(tm.edate)
-         LET l_oox02 = MONTH(tm.edate)                      	 
+         LET l_oox02 = MONTH(tm.edate)
          LET l_oma24 = ''    #TQC-B10083 add
          WHILE cl_null(l_oma24)
             IF g_ooz.ooz62 = 'N' THEN
@@ -661,17 +661,17 @@ FUNCTION r624()
                DECLARE r624_oox7 CURSOR FOR r624_prepare7
                OPEN r624_oox7
                FETCH r624_oox7 INTO l_count
-               CLOSE r624_oox7                       
+               CLOSE r624_oox7
                IF l_count = 0 THEN
-                  #LET l_oma24 = '1'   #TQC-B10083 mark 
+                  #LET l_oma24 = '1'   #TQC-B10083 mark
                   EXIT WHILE           #TQC-B10083 add
-               ELSE                  
-                  LET l_sql_1 = "SELECT oox07 FROM oox_file",             
+               ELSE
+                  LET l_sql_1 = "SELECT oox07 FROM oox_file",
                                 " WHERE oox00 = 'AR' AND oox01 = '",l_oox01,"'",
                                 "   AND oox02 = '",l_oox02,"'",
                                 "   AND oox03 = '",sr.oma01,"'",
                                 "   AND oox04 = '0'"
-               END IF                 
+               END IF
             ELSE
                LET l_sql_2 = "SELECT COUNT(*) FROM oox_file",
                              " WHERE oox00 = 'AR' AND oox01 <= '",l_oox01,"'",
@@ -682,41 +682,41 @@ FUNCTION r624()
                DECLARE r624_oox8 CURSOR FOR r624_prepare8
                OPEN r624_oox8
                FETCH r624_oox8 INTO l_count
-               CLOSE r624_oox8                       
+               CLOSE r624_oox8
                IF l_count = 0 THEN
                   #LET l_oma24 = '1'    #TQC-B10083 mark
                   EXIT WHILE            #TQC-B10083 add
-               ELSE            
+               ELSE
                   SELECT MIN(omb03) INTO l_omb03_1 FROM omb_file
                    WHERE omb01 = sr.oma01
                   IF cl_null(l_omb03_1) THEN
                      LET l_omb03_1 = 0
-                  END IF       
-                  LET l_sql_1 = "SELECT oox07 FROM oox_file",             
+                  END IF
+                  LET l_sql_1 = "SELECT oox07 FROM oox_file",
                                 " WHERE oox00 = 'AR' AND oox01 = '",l_oox01,"'",
                                 "   AND oox02 = '",l_oox02,"'",
                                 "   AND oox03 = '",sr.oma01,"'",
-                                "   AND oox04 = '",l_omb03_1,"'"                                      
+                                "   AND oox04 = '",l_omb03_1,"'"
                END IF
-            END IF   
+            END IF
             IF l_oox02 = '01' THEN
                LET l_oox02 = '12'
                LET l_oox01 = l_oox01-1
-            ELSE    
+            ELSE
                LET l_oox02 = l_oox02-1
-            END IF            
-            
-            IF l_count <> 0 THEN        
+            END IF
+
+            IF l_count <> 0 THEN
                PREPARE r624_prepare07 FROM l_sql_1
                DECLARE r624_oox07 CURSOR FOR r624_prepare07
                OPEN r624_oox07
                FETCH r624_oox07 INTO l_oma24
                CLOSE r624_oox07
-            END IF              
-         END WHILE                       
+            END IF
+         END WHILE
       END IF
-      #CHI-830003--Add--End--#        
-       
+      #CHI-830003--Add--End--#
+
        #LET amt1=sr.num1+amt1 LET sr.num1=0
        #   LET l_bucket=YEAR(tm.edate)*12+MONTH(tm.edate)-
        #               (YEAR(sr.oma02)*12+MONTH(sr.oma02))+1
@@ -740,8 +740,8 @@ FUNCTION r624()
           #IF g_ooz.ooz07 = 'Y' AND l_count <> 0 THEN          #TQC-B10083 mark
           IF g_ooz.ooz07 = 'Y' AND NOT cl_null(l_oma24) THEN   #TQC-B10083 mod
              LET amt2 = amt1 * l_oma24
-          END IF    
-          #CHI-830003--End--#          
+          END IF
+          #CHI-830003--End--#
           LET sr.num=sr.num+amt2
        ELSE
           LET amt1=0 LET amt2=0
@@ -756,8 +756,8 @@ FUNCTION r624()
           #IF g_ooz.ooz07 = 'Y' AND l_count <> 0 THEN           #TQC-B10083 mark
           IF g_ooz.ooz07 = 'Y' AND NOT cl_null(l_oma24) THEN    #TQC-B10083 mod
              LET amt2 = amt1 * l_oma24
-          END IF    
-          #CHI-830003--End--#          
+          END IF
+          #CHI-830003--End--#
           LET sr.num=sr.num+amt2
           LET sr.num=sr.num*-1
        END IF
@@ -774,16 +774,16 @@ FUNCTION r624()
        OUTPUT TO REPORT r624_rep(sr.*)
      END FOREACH
  #END FOR     #FUN-A70084
- 
+
      FINISH REPORT r624_rep
- 
+
      CALL cl_prt(l_name,g_prtway,g_copies,g_len)
 END FUNCTION
- 
+
 REPORT r624_rep(sr)
    DEFINE l_last_sw    LIKE type_file.chr1,   #No.FUN-680123 VARCHAR(1),
           l_amt1,l_amt2,l_amt3,l_amt4,l_amt5,l_amt6,l_amt7  LIKE type_file.num20_6,#No.FUN-680123    DEC(20,6),
-          l_amt_tot    LIKE type_file.num20_6,#No.FUN-680123 DEC(20,6),  
+          l_amt_tot    LIKE type_file.num20_6,#No.FUN-680123 DEC(20,6),
           sr        RECORD
                         oma14     LIKE oma_file.oma14,  #業務員編號
                         gen02     LIKE gen_file.gen02,  #業務員name
@@ -803,7 +803,7 @@ REPORT r624_rep(sr)
          {}             num6      LIKE type_file.num20_6,#No.FUN-680123 DEC(20,6),
          {}             num7      LIKE type_file.num20_6 #No.FUN-680123 DEC(20,6)
                     END RECORD
- 
+
   OUTPUT TOP MARGIN g_top_margin LEFT MARGIN g_left_margin BOTTOM MARGIN g_bottom_margin PAGE LENGTH g_page_line
   ORDER BY sr.oma03,sr.oma14                      #MOD-C90207 add oma14
   FORMAT
@@ -842,7 +842,7 @@ REPORT r624_rep(sr)
          IF cl_null(l_amt5) THEN LET l_amt5 =0 END IF
          IF cl_null(l_amt6) THEN LET l_amt6 =0 END IF
          IF cl_null(l_amt7) THEN LET l_amt7 =0 END IF
- 
+
          LET l_amt_tot = l_amt1+l_amt2+l_amt3+l_amt4+l_amt5+l_amt6+l_amt7
 #No.FUN-580010--start
          PRINT COLUMN g_c[31],sr.oma03,
@@ -857,7 +857,7 @@ REPORT r624_rep(sr)
                COLUMN g_c[40],cl_numfor(l_amt7,40,g_azi05),
                COLUMN g_c[41],cl_numfor(l_amt_tot,41,g_azi05)
 #No.FUN-580010--end
- 
+
   #---------------------------MOD-C90207-----------------------(S)
    BEFORE GROUP OF sr.oma03
       PRINT COLUMN g_c[31],sr.oma03,
@@ -907,7 +907,7 @@ REPORT r624_rep(sr)
          IF cl_null(l_amt5) THEN LET l_amt5 =0 END IF
          IF cl_null(l_amt6) THEN LET l_amt6 =0 END IF
          IF cl_null(l_amt7) THEN LET l_amt7 =0 END IF
- 
+
          LET l_amt_tot=l_amt1+l_amt2+l_amt3+l_amt4+l_amt5+l_amt6+l_amt7
 #No.FUN-580010--start
          PRINT g_dash2[1,g_len]
@@ -931,7 +931,7 @@ REPORT r624_rep(sr)
                COLUMN  g_c[41],cl_numfor(100.00,41,2)
 #No.FUN-580010--end
    PAGE TRAILER
-         PRINT '(axrr624)'
+         PRINT '(cxrr624)'
          PRINT g_dash[1,g_len]
          PRINT COLUMN 01,g_x[04] CLIPPED,COLUMN 41,g_x[05] CLIPPED
 END REPORT
