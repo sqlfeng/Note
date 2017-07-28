@@ -1,0 +1,78 @@
+---------------------------------------------------------------------------------- 
+-- File created from /u1/topprod/topcust/cxr/4fd/cxrr624.4fd by Genero Studio
+-- WARNING! All changes made in this file will be lost!
+----------------------------------------------------------------------------------
+
+SCHEMA formonly
+
+LAYOUT (spacing=normal, text=%"cxrr624")
+VBox VBox1
+Grid Grid1
+{
+ <G group01                                                                                     >
+  Customer No.        [oma03               ]
+  Employee No.        [oma14               ]
+  Department No.      [oma15               ]
+  Accounts Category   [oma00               ]
+  Account No.         [oma18               ]
+ <                                                                                              >
+}
+END -- Grid1
+Group group02(text="INPUT")
+Grid Grid2
+{
+ <G group03                                                                                     >
+ [a1        ][dummy01   ][a2        ][dummy02   ][a3        ][dummy03   ]
+ [a4        ][dummy04   ][a5        ][dummy05   ][a6        ][dummy06   ]
+ <                                                                                              >
+ <G group04                                                                                     >
+  Data Contents          [type                ]
+  Accounts Deadline      [edate       ]
+ <                                                                                              >
+
+}
+END -- Grid2
+END -- group02
+Grid Grid3
+{
+[more                                             ]
+
+
+
+
+
+}
+END -- Grid3
+END -- VBox1
+END -- cxrr624
+
+ATTRIBUTES
+Group group01:group01, text="QBE";
+Edit oma03=formonly.oma03 type VARCHAR, tabIndex=1;
+Edit oma14=formonly.oma14 type VARCHAR, tabIndex=2;
+Edit oma15=formonly.oma15 type VARCHAR, tabIndex=3;
+Edit oma00=formonly.oma00 type VARCHAR, tabIndex=4;
+Edit oma18=formonly.oma18 type VARCHAR, tabIndex=5;
+Group group03:group03, text="Aging Section";
+Edit a1=formonly.a1 type SMALLINT, tabIndex=6;
+Label dummy01:dummy01, text="Day";
+Edit a2=formonly.a2 type SMALLINT, tabIndex=7;
+Label dummy02:dummy02, text="Day";
+Edit a3=formonly.a3 type SMALLINT, tabIndex=8;
+Label dummy03:dummy03, text="Day";
+Edit a4=formonly.a4 type SMALLINT, tabIndex=9;
+Label dummy04:dummy04, text="Day";
+Edit a5=formonly.a5 type SMALLINT, tabIndex=10;
+Label dummy05:dummy05, text="Day";
+Edit a6=formonly.a6 type SMALLINT, tabIndex=11;
+Label dummy06:dummy06, text="Day";
+Group group04:group04;
+ComboBox type=formonly.type type VARCHAR, tabIndex=12, not null, required, items=(("1", %"Affiliate"),("2", %"Not Affiliate"),("3", %"All "));
+DateEdit edate=formonly.edate type DATE, tabIndex=13;
+CheckBox more=formonly.more type VARCHAR, tabIndex=18, text="Other codition to print", not null, required, valueChecked = "Y", valueUnchecked = "N";
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD Undefined(formonly.oma03,formonly.oma14,formonly.oma15,formonly.oma00,formonly.oma18,formonly.a1,formonly.a2,formonly.a3,formonly.a4,formonly.a5,formonly.a6,formonly.type,formonly.edate,formonly.more)
+END -- INSTRUCTIONS
+
