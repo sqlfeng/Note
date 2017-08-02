@@ -1,0 +1,45 @@
+---------------------------------------------------------------------------------- 
+-- File created from /u1/topprod/topcust/csf/4fd/csfr010.4fd by Genero Studio
+-- WARNING! All changes made in this file will be lost!
+----------------------------------------------------------------------------------
+
+SCHEMA ds
+
+LAYOUT (spacing=normal, text=%"csfr010")
+VBox vbox1
+Grid gr1
+{
+ <G group01                                 >
+  mss01               [mss01               ]
+
+  mss_v               [mss_v               ]
+
+
+ <                                          >
+
+
+
+
+
+}
+END -- gr1
+Grid gr2
+{
+ [more                                     ]
+
+}
+END -- gr2
+END -- vbox1
+END -- csfr010
+
+ATTRIBUTES
+Group group01:group01, text=%"QBE";
+ButtonEdit mss01=formonly.mss01 type VARCHAR, action=controlp, tabIndex=1, image="zoom.png";
+ComboBox mss_v=formonly.mss_v type VARCHAR, tabIndex=2, default = "HDF", not null, required, items=(("HDF", "HDF"),("HDP", "HDP"));
+CheckBox more=formonly.more type VARCHAR, tabIndex=3, text=%"Other codition to print", not null, required, valueChecked = "Y", valueUnchecked = "N";
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD undefined(formonly.mss01,formonly.mss_v,formonly.more)
+END -- INSTRUCTIONS
+
