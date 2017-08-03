@@ -635,7 +635,7 @@ FUNCTION csfr010()
                 " '','','','','', '','','' ",
                 "   FROM mss_file,ima_file,imk_file",
                 "   WHERE ima01 = mss01  AND  imk01 = mss01 ",
-                "   AND imk05=",l_str,#" AND imk06=",l_str1,
+                "   AND imk05=",l_str," AND imk06=",l_str1,
                 "   AND ",tm.wc CLIPPED
     # add by lixwz 20170728 s
 
@@ -699,6 +699,7 @@ FUNCTION csfr010()
       SELECT SUM(imk09) INTO sr.imk09
             FROM imk_file
             WHERE imk02 in (SELECT UNIQUE msp03 FROM msp_file WHERE msp01=sr.mss_v) AND   imk01=sr.sfa03
+            AND imk05 = l_sma51 AND imk06 = l_sma52 AND imkplant = g_plant
 
       # mark by lixwz 20170728 s
       # SELECT SUM(imk09) INTO sr.imk09 FROM imk_file WHERE imk01 = sr.sfa03
@@ -720,8 +721,8 @@ FUNCTION csfr010()
       END IF
       #add by shijl 170321--end--
       #开始计算每个月的需求量
-      LET l_sma51=sr.sma51   #当前年度月份
-      LET l_sma52=sr.sma52
+      #LET l_sma51=sr.sma51   #当前年度月份
+      # LET l_sma52=sr.sma52
       #开始计算12个月之前的年度月份
      # mark by lixwz 20170731
      # FOR i = 1 TO 11
@@ -1050,7 +1051,7 @@ FUNCTION csfr010()
       select *  into sr.* from csfr010_tmp
 
       #******
-
+      {
       LET l_sql=" SELECT distinct a.ima01,a.ima02,a.ima021,a.ima08,a.ima46,(nvl(a.ima48,0)+nvl(a.ima49,0)+nvl(a.ima491,0)+nvl(a.ima50,0)), ",
                 " '','',c.mss_v,c.imk09,a.ima25,c.d1,c.d2, ", #add c.ima46,c.ima49, shijl 2017/3/29 10:08   # mod by lixwz 20170728 b.imk02->c.mss_v
                 " c.s1,c.s2,c.s3,c.s4,c.s5,c.s6,c.s7,c.s8,c.s9,c.s10,c.s11,c.s12,c.s13,c.s14,c.s15,c.s16,c.s17,c.s18, ",
@@ -1066,7 +1067,7 @@ FUNCTION csfr010()
                 "  AND b.imk01=a.ima01",
                 "  AND stb02= ",l_str,
                 "  AND stb03= ",l_sma52#,
-                #"  AND ",tm.wc2 CLIPPED   # mark by lixwz 20170728
+                #"  AND ",tm.wc2 CLIPPED   }# mark by lixwz 20170728
                 # *************
       LET l_sql = "SELECT distinct c.sfa03,c.ima02,c.ima021,c.ima08,c.ima46,c.ima49, ",
                 "c.sma51,c.sma52,c.mss_v,c.imk09,c.ima25,c.d1,c.d2,",
