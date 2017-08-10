@@ -1,0 +1,83 @@
+---------------------------------------------------------------------------------- 
+-- File created from /u1/topprod/topcust/cxm/4fd/cxmq111_1.4fd by Genero Studio
+-- WARNING! All changes made in this file will be lost!
+----------------------------------------------------------------------------------
+
+SCHEMA formonly
+
+LAYOUT (text=%"cxmq110_1")
+VBox VBox1
+Folder Folder1
+Page Page1(text=%"Page1")
+Grid Grid1
+{
+
+ [label1            ][oea03              ] [oea032                                         ]
+ [label3    ]        [oea23              ]
+
+}
+END -- Grid1
+END -- Page1
+END -- Folder1
+Table Table1
+{
+[vdate            |oea01         |type             |tc_nmg01     |a              |af             |b              |bf             |c              |cf             |d              |df             |g              |h              |hf             |i              |iff            |j              |jf             |k              |kf             |exp                    ]
+[vdate            |oea01         |type             |tc_nmg01     |a              |af             |b              |bf             |c              |cf             |d              |df             |g              |h              |hf             |i              |iff            |j              |jf             |k              |kf             |exp                    ]
+[vdate            |oea01         |type             |tc_nmg01     |a              |af             |b              |bf             |c              |cf             |d              |df             |g              |h              |hf             |i              |iff            |j              |jf             |k              |kf             |exp                    ]
+[vdate            |oea01         |type             |tc_nmg01     |a              |af             |b              |bf             |c              |cf             |d              |df             |g              |h              |hf             |i              |iff            |j              |jf             |k              |kf             |exp                    ]
+[vdate            |oea01         |type             |tc_nmg01     |a              |af             |b              |bf             |c              |cf             |d              |df             |g              |h              |hf             |i              |iff            |j              |jf             |k              |kf             |exp                    ]
+
+
+}
+END -- Table1
+Grid Grid2
+{
+
+   ----------[label2  ][cnt       ]---------
+
+
+
+
+
+}
+END -- Grid2
+END -- VBox1
+END -- cxmq110_1
+
+ATTRIBUTES
+Label label1:Label1, text=%"Customer No#";
+Edit oea03=formonly.oea03 type VARCHAR, tabIndex=1, noEntry;
+Edit oea032=formonly.oea032 type VARCHAR, tabIndex=2, noEntry;
+Label label3:Label3, text=%"oea23";
+Edit oea23=formonly.oea23 type VARCHAR, tabIndex=3, noEntry;
+DateEdit vdate=formonly.vdate type DATE, tabIndex=4, title=%"Voucher Date", noEntry;
+Edit oea01=formonly.oea01 type VARCHAR, tabIndex=5, title=%"oea01", noEntry;
+ComboBox type=formonly.type type VARCHAR, tabIndex=6, title=%"type", noEntry, items=(("0", "年初余额"),("1", "订单"),("2", "回款作业单"),("3", "发货作业单"),("4", "开票作业单"),("5", "订单小计"),("6", "MISC开票小计"),("7", "收支作业单"),("8", "未维护收支单小计"),("9", "本期合计"),("10", "累计额"),("11", "销退作业单"));
+Edit tc_nmg01=formonly.tc_nmg01 type VARCHAR, tabIndex=7, title=%"tc_nmg01", noEntry;
+Edit a=formonly.a type DECIMAL, tabIndex=8, title=%"a", noEntry;
+Edit af=formonly.af type DECIMAL, tabIndex=9, title=%"af", noEntry;
+Edit b=formonly.b type DECIMAL, tabIndex=10, title=%"b", noEntry;
+Edit bf=formonly.bf type DECIMAL, tabIndex=11, title=%"bf", noEntry;
+Edit c=formonly.c type DECIMAL, tabIndex=12, title=%"c", noEntry;
+Edit cf=formonly.cf type DECIMAL, tabIndex=13, title=%"cf", noEntry;
+Edit d=formonly.d type DECIMAL, tabIndex=14, title=%"d", noEntry;
+Edit df=formonly.df type DECIMAL, tabIndex=15, title=%"df", noEntry;
+Edit g=formonly.g type DECIMAL, tabIndex=16, title=%"g", noEntry;
+Edit h=formonly.h type DECIMAL, tabIndex=17, title=%"h", noEntry;
+Edit hf=formonly.hf type DECIMAL, tabIndex=18, title=%"hf", noEntry;
+Edit i=formonly.i type DECIMAL, tabIndex=19, title=%"i", noEntry;
+Edit iff=formonly.iff type DECIMAL, tabIndex=20, title=%"iff", noEntry;
+Edit j=formonly.j type DECIMAL, tabIndex=21, title=%"j", noEntry;
+Edit jf=formonly.jf type DECIMAL, tabIndex=22, title=%"jf", noEntry;
+Edit k=formonly.k type DECIMAL, tabIndex=23, title=%"k", noEntry;
+Edit kf=formonly.kf type DECIMAL, tabIndex=24, title=%"kf", noEntry;
+Edit exp=formonly.exp type VARCHAR, tabIndex=25, title=%"Explanation";
+Label label2:Label2, text=%"Rows";
+Edit cnt=formonly.cnt type SMALLINT, tabIndex=26;
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD s_oea(formonly.vdate,formonly.oea01,formonly.type,formonly.tc_nmg01,formonly.a,formonly.af,formonly.b,formonly.bf,formonly.c,formonly.cf,formonly.d,formonly.df,formonly.g,formonly.h,formonly.hf,formonly.i,formonly.iff,formonly.j,formonly.jf,formonly.k,formonly.kf,formonly.exp)
+SCREEN RECORD Undefined(formonly.oea03,formonly.oea032,formonly.oea23,formonly.cnt)
+END -- INSTRUCTIONS
+
