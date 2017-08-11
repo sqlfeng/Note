@@ -1264,7 +1264,14 @@ CREATE TABLE ta_oeb_temp(
          ELSE
             LET l_sql=l_sql CLIPPED," AND (tc_oen08='",l_oeb.ta_oeb23,"' OR tc_oen08 IS NULL) "
          END IF
-
+         # add by lixwz 20170811 s  當簾子是一般簾子+掛布時, 料號 407001~407007安全拉繩的配色要根據掛布屬性配色
+         IF l_oeb.ta_oeb23='Y'  AND  l_oeb.ta_oeb18!='N' THEN #双层帘
+            IF l_oeb.ta_oeb21='N' OR l_oeb.ta_oeb21='N/'  THEN
+                  SELECT tc_oeh09 INTO l_oeb.ta_oeb18 FROM tc_oeh_file
+                    WHERE tc_oeh04=l_ta_oeb.ta_oeb18
+            END IF
+         END IF
+         # add by lixwz 20170811 e
          IF cl_null(l_oeb.ta_oeb18) THEN
             LET l_sql=l_sql CLIPPED," AND tc_oen09 IS NULL "
          ELSE
@@ -1413,8 +1420,16 @@ CREATE TABLE ta_oeb_temp(
        #     ELSE    #无挂布
        #
        #     END IF
-       #  END  IF
+       # END IF
          #add by zl 170527 拉伸颜色根据是否双层帘判断
+       # add by lixwz 20170811 s  當簾子是loop (Y-CORD)+掛布時, 料號807019~807016 1.2拉繩的配色也是根據掛布屬性配色
+       IF l_oeb.ta_oeb23='Y'  AND  l_oeb.ta_oeb18!='N' THEN #双层帘
+            IF l_oeb.ta_oeb21='Y-CORD'  THEN
+                  SELECT tc_oeh08 INTO l_tc_oeh.tc_oeh08 FROM tc_oeh_file
+                    WHERE tc_oeh04=l_ta_oeb.ta_oeb18
+            END IF
+       END IF
+       # add by lixwz 29170811 e
          IF cl_null(l_tc_oeh.tc_oeh08) THEN
             LET l_sql=l_sql CLIPPED," AND tc_oen18 IS NULL "
          ELSE
@@ -1450,6 +1465,14 @@ CREATE TABLE ta_oeb_temp(
          #---竖式上轨-----
 
          #str---add by jixf 160621
+         # add by lixwz 20170811 s 當簾子是無拉簾子+掛布時, 料號 807034~807037 無拉特強拉繩的配色要根據掛布屬性配色
+         IF l_oeb.ta_oeb23='Y'  AND  l_oeb.ta_oeb18!='N' THEN #双层帘
+            IF l_oeb.ta_oeb21='無拉' OR l_oeb.ta_oeb21='無拉/' THEN
+                  SELECT tc_oeh14 INTO l_tc_oeh.tc_oeh14 FROM tc_oeh_file
+                    WHERE tc_oeh04=l_ta_oeb.ta_oeb18
+            END IF
+        END IF
+         # add by lixwz 20170811 e
          IF cl_null(l_tc_oeh.tc_oeh14) THEN
             LET l_sql=l_sql CLIPPED," AND tc_oen26 IS NULL "
          ELSE
@@ -1527,7 +1550,9 @@ CREATE TABLE ta_oeb_temp(
             IF l_bmb.bmb03 LIKE '407%' OR l_bmb.bmb03 LIKE '807%' OR l_ima02 LIKE '4.0拉繩%' THEN
                 IF l_oeb.ta_oeb23='Y' AND NOT cl_null(l_tc_oeh09) AND NOT cl_null(l_tc_oeh.tc_oeh09)
                   AND l_tc_oeh09 = l_tc_oeh.tc_oeh09 THEN
-                    LET l_bmb.bmb06=l_bmb.bmb06*2
+                        IF l_oeb.ta_oeb06 >0 OR l_oeb.ta_oeb07>0 THEN      # add by lixwz 20170811
+                              LET l_bmb.bmb06=l_bmb.bmb06*2
+                        END IF # add by lixwz 20170811
                 END IF
             END IF
             #end---add by jixf 20150116
