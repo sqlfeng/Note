@@ -279,16 +279,7 @@ FUNCTION p120_process()
          l_oob10     LIKE oob_file.oob10,
          l_yy        LIKE type_file.num5,
          l_mm        LIKE type_file.num5
-        # add by lixwz 20170814 s
-        # 生成之前，清空本期数据，防止数据冗余
-        DELETE FROM tc_khy_file
-            WHERE tc_khy01=g_yy
-            AND tc_khy02 = g_mm
-        IF STATUS THEN
-           LET g_success = 'N'
-           CALL s_errmsg('','','DELETE',STATUS,1)
-        END IF
-        # add by lixwz 20170814 e
+
         IF g_mm = 1 THEN
            LET l_yy = g_yy -1
            LET l_mm = 12
@@ -309,6 +300,27 @@ FUNCTION p120_process()
              LET g_success = 'N'
              CALL s_errmsg('','','foreach:',STATUS,1)
           END IF
+          # add by lixwz 20170814 s
+          # 删除本期数据中没有的数据
+          LET l_cn = 0
+          SELECT COUNT(*) from oma_file
+          WHERE oma03=l_occ01 AND omaconf='Y'
+          LET l_cnt = 0
+          SELECT COUNT(*) FROM oea_file
+          WHERE oea03=l_occ01 AND oeaconf='Y'
+          IF l_cn = 0 AND l_cnt = 0 THEN
+                DELETE FROM tc_khy_file
+                    WHERE tc_khy01 = g_yy
+                        AND tc_khy02 = g_mm
+                        AND tc_khy03 = l_occ01
+                        AND tc_khy04 = l_azi01
+                IF STATUS THEN
+                   LET g_success = 'N'
+                   CALL s_errmsg('','','DELETE:',STATUS,1)
+                END IF
+                CONTINUE FOREACH
+          END IF
+          # add by lixwz 20170814 e
           LET l_a1 = 0
           LET l_a2 = 0
           LET l_a3 = 0

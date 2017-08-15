@@ -647,6 +647,15 @@ DEFINE l_lian_num   LIKE type_file.num15_3
          ELSE
             LET l_sql=l_sql CLIPPED," (tc_oen04='",l_oca02,"' OR tc_oen04 IS NULL) "
          END IF
+         # add by lixwz 20170811 s  當簾子是一般簾子+掛布時, 料號 407001~407007安全拉繩的配色要根據掛布屬性配色
+         IF l_oeb.ta_oeb23='Y'  AND  l_oeb.ta_oeb18!='N' THEN #双层帘
+            IF l_oeb.ta_oeb21='N' OR l_oeb.ta_oeb21='N/'  THEN
+                  SELECT tc_oeh09 INTO l_tc_oeh.tc_oeh09 FROM tc_oeh_file
+                    WHERE tc_oeh04=l_oeb.ta_oeb18
+                  LET l_tc_oeh09 = l_tc_oeh.tc_oeh09
+            END IF
+         END IF
+         # add by lixwz 20170811 e
          #-----梯绳------------
          IF NOT cl_null(l_tc_oeh09) THEN
             IF cl_null(l_tc_oeh.tc_oeh09) THEN
@@ -740,14 +749,7 @@ DEFINE l_lian_num   LIKE type_file.num15_3
          ELSE
             LET l_sql=l_sql CLIPPED," AND (tc_oen08='",l_oeb.ta_oeb23,"' OR tc_oen08 IS NULL) "
          END IF
-         # add by lixwz 20170811 s  當簾子是一般簾子+掛布時, 料號 407001~407007安全拉繩的配色要根據掛布屬性配色
-         IF l_oeb.ta_oeb23='Y'  AND  l_oeb.ta_oeb18!='N' THEN #双层帘
-            IF l_oeb.ta_oeb21='N' OR l_oeb.ta_oeb21='N/'  THEN
-                  SELECT tc_oeh09 INTO l_oeb.ta_oeb18 FROM tc_oeh_file
-                    WHERE tc_oeh04=l_ta_oeb.ta_oeb18
-            END IF
-         END IF
-         # add by lixwz 20170811 e
+
          IF cl_null(l_oeb.ta_oeb18) THEN
             LET l_sql=l_sql CLIPPED," AND tc_oen09 IS NULL "
          ELSE

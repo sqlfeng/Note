@@ -1,0 +1,38 @@
+SCHEMA FORMONLY
+
+LAYOUT
+  VBOX
+    GRID
+      {
+      <G group01                                                  >
+       Name      [tc_cust01  ] 
+      }
+    END --GRID
+    GROUP g01 (TEXT="INPUT")
+      GRID
+      {
+      <G group02                                                          >
+       Set Date Range      [tc_ser06_b  ] 
+       To                  [tc_ser06_e  ] 
+      }
+      END --GRID
+    END --GROUP
+    GRID 
+      {
+      [m                                       ]
+      }
+    END --GRID
+  END --VOBX
+END --LAYOUT
+
+ATTRIBUTES
+  GROUP      group01 : group01,TEXT="QBE";
+  GROUP      group02 : group02,TEXT="Sequence";
+  DATEEDIT   tc_ser06_b   = FORMONLY.tc_ser06_b TYPE DATE;
+  DATEEDIT   tc_ser06_e   = FORMONLY.tc_ser06_e TYPE DATE;
+  BUTTONEDIT tc_cust01 = FORMONLY.tc_cust01,ACTION=CONTROLP, IMAGE="zoom",
+                        COMMENTS='<^p>Qry Processor';
+  CHECKBOX   m            = FORMONLY.more  TYPE CHAR, NOT NULL, VALUECHECKED="Y", VALUEUNCHECKED="N", 
+                       TEXT="Other codition to print";
+END
+¡õ----------------------------------------------------------------
