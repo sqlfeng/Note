@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<report:Report xmlns:rtl="http://www.4js.com/2004/RTL" xmlns:report="http://www.4js.com/2007/REPORT" xmlns="http://www.4js.com/2004/PXML" gstVersion="2320f" version="5.00">
+  <report:Settings RWPageWidth="21.00cm" RWPageLength="29.70cm" RWLeftMargin="1.60cm" RWTopMargin="1.30cm" RWRightMargin="1.60cm" RWBottomMargin="1.30cm">
+    <report:FormatList>
+      <report:Format-SVG/>
+      <report:Format-PDF/>
+      <report:Format-image/>
+    </report:FormatList>
+  </report:Settings>
+  <report:Data RWDataLocation="cpmr500_g01.rdd" RWFglReportName="cpmr500_g01_subrep01"/>
+  <report:Conflicts/>
+  <rtl:stylesheet>
+    <PXML>
+      <rtl:match name="Report" nameConstraint="Report" minOccurs="1" maxOccurs="1">
+        <LAYOUTNODE name="DetailHeaders" width="max" length="min" floatingBehavior="enclosed">
+          <MINIPAGE name="DetailHeader01" width="min" length="max" layoutDirection="leftToRight">
+            <WORDWRAPBOX width="1.500cm" length="min" alignment="baseline" fontSize="10" floatingBehavior="enclosed" marginRightWidth="0.1cm" name="sr2.ooff013_Label" fontName="Microsoft YaHei" text="备注说明:"/>
+          </MINIPAGE>
+        </LAYOUTNODE>
+        <rtl:match name="OnEveryRow" nameConstraint="OnEveryRow" minOccurs="0" maxOccurs="unbounded">
+          <MINIPAGE name="Details" width="min" length="min" floatingBehavior="enclosed">
+            <MINIPAGE name="Detail01" width="min" length="max" layoutDirection="leftToRight">
+              <rtl:input-variable type="FGLString" expectedLocation="expectedHere" name="sr2.ooff013"/>
+              <WORDWRAPBOX width="max" alignment="near" fontSize="10" floatingBehavior="enclosed" trimText="both" fidelity="false" name="sr2.ooff013_Value" text="{{sr2.ooff013}}" fontName="Microsoft YaHei"/>
+            </MINIPAGE>
+          </MINIPAGE>
+        </rtl:match>
+      </rtl:match>
+    </PXML>
+  </rtl:stylesheet>
+</report:Report>

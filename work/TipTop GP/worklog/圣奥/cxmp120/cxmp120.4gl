@@ -727,7 +727,7 @@ FUNCTION p120_process()
                      END IF
                   END IF
                ELSE
-                     UPDATE tc_khy_file SET tc_khy33 = tc_khy33 + l_oob09,
+                     、 tc_khy_file SET tc_khy33 = tc_khy33 + l_oob09,
                                             tc_khy34 = tc+khy34 + l_oob10
                                       WHERE tc_khy01 = g_yy
                                         AND tc_khy02 = g_mm
