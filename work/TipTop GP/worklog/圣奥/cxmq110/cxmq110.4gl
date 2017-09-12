@@ -301,7 +301,7 @@ DEFINE p_row,p_col    LIKE type_file.num5,
           END IF
           IF YEAR(tm.bdate) <> YEAR(tm.edate) THEN
              #CALL cl_err('','gxr-001',0)   # mark by lixwz 20170822
-            # NEXT FIELD bdate             # mark by lixwz 20170822
+            # NEXT FIELD bdate  # mark by lixwz 20170822
           END IF
           IF tm.bdate > tm.edate THEN
              CALL cl_err('','aap-100',0)
@@ -552,7 +552,7 @@ FUNCTION cxmq110()
      #按月抓明细
      #回款作业  # cxmt100
      IF tm.c = 'Y' THEN       #按币种分页
-        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,tc_nmgdate,'',oea01,12,tc_nmg01,'',0,0,0,0,NVL(tc_nme13,0),NVL(tc_nme05,0) ",  # mod by lixwz 20170821 1->12
+        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,tc_nmgdate,'',oea01,1,tc_nmg01,'',0,0,0,0,NVL(tc_nme13,0),NVL(tc_nme05,0) ",  # mod by lixwz 20170821 1->12
                    "  FROM tc_nmg_file,tc_nme_file ",
                    "  LEFT JOIN oea_file ON tc_nme03 = oea01 ",
                    "  WHERE ", l_term CLIPPED,
@@ -564,7 +564,7 @@ FUNCTION cxmq110()
                    "   AND tc_nmgdate BETWEEN ? AND ? " #月份 #add by shijl 170713
 
      ELSE
-        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,tc_nmgdate,'',oea01,12,tc_nmg01,'',0,0,0,0,NVL(tc_nme13,0),NVL(tc_nme05,0) ",  # mod by lixwz 20170821 1->12
+        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,tc_nmgdate,'',oea01,1,tc_nmg01,'',0,0,0,0,NVL(tc_nme13,0),NVL(tc_nme05,0) ",  # mod by lixwz 20170821 1->12
                    "  FROM tc_nmg_file,tc_nme_file ",
                    "  LEFT JOIN oea_file ON tc_nme03 = oea01 ",
                    "  WHERE ", l_term CLIPPED,
@@ -1011,21 +1011,22 @@ FUNCTION cxmq110()
             END IF
 
             # mark by lixwz 20170818 s
-            #IF g_print = 0 THEN   #沒有打印過
+            # 没有数据的月份不显示
+            IF g_print = 0 THEN   #沒有打印過
 #add by shijl 170713--str--
-            #   LET sr.oea03   = sr1.oea03
-            #   LET sr.oea032  = sr1.oea032
-            #   LET sr.oea23   = sr1.oea23
-            #   LET sr.type =  'M'
+               LET sr.oea03   = sr1.oea03
+               LET sr.oea032  = sr1.oea032
+               LET sr.oea23   = sr1.oea23
+               LET sr.type =  'M'
 #add by shijl 170713--end--
-            #   LET sr.mm   = l_i
+               LET sr.mm   = l_i
 
-            #   IF tm.c = 'Y' THEN
-            #      OUTPUT TO REPORT cxmq110_rep1(sr.*)
-            #   ELSE
-            #     OUTPUT TO REPORT cxmq110_rep(sr.*)
-            #   END IF
-            #END IF
+               #IF tm.c = 'Y' THEN
+               #   OUTPUT TO REPORT cxmq110_rep1(sr.*)
+               #ELSE
+               #  OUTPUT TO REPORT cxmq110_rep(sr.*)
+               #END IF
+            END IF
             # mark by lixwz 20170818 s
         END FOR
      END FOREACH
@@ -1112,6 +1113,12 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
     DEFINE  l_qcd   LIKE   npq_file.npq07
     DEFINE  l_qccf  LIKE   npq_file.npq07
     DEFINE  l_qcc   LIKE   npq_file.npq07
+    # add by lixwz 20170823 s
+    # 累计额重新计算
+    DEFINE   l_d2,l_df2,l_c2,l_cf2,l_zzysye3,l_chysye3 ,l_chysye4  LIKE type_file.num20_6
+    DEFINE   l_chk        LIKE type_file.chr1
+    DEFINE l_vadte    STRING
+    # add by lixwz 20170823 e
 
   OUTPUT TOP MARGIN g_top_margin LEFT MARGIN g_left_margin BOTTOM MARGIN g_bottom_margin PAGE LENGTH g_page_line
   ORDER BY sr.oea03,sr.oea032,sr.mm,sr.oea01,sr.vdate
@@ -1190,9 +1197,10 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
 
       IF cl_null(l_zzysye2) THEN LET l_zzysye2 = 0 END IF
       IF cl_null(l_chysye2) THEN LET l_chysye2 = 0 END IF
-
+      LET l_chysye4 = l_chysye2 # add by lixwz 20170823 用来取期初
       INSERT INTO cxmq110_tmp
       VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','',
+            # '','0','','',l_zzysye2,l_zzysye2,  mark by lixwz 20170823
              '','0','','',l_zzysye2,l_chysye2,
              qc_df,qc_d,qc_cf,qc_c,
              g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
@@ -1269,7 +1277,7 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
       ELSE
             LET l_zzysye  = l_d - l_c
       END IF
-      LET l_chysye = l_chysye2 - l_qcye_c
+      #LET l_chysye = l_chysye2 - l_qcye_c # mark by lixwz 20170907
       INSERT INTO cxmq110_tmp
       VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','',
              '','5','','',l_zzysye,l_chysye,
@@ -1278,20 +1286,51 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
       LET g_seq=g_seq+1
 
       #累计额
-      LET l_d   = l_d + qc_df
-      LET l_df  = l_df+ qc_d
-      LET l_c   = l_c + qc_cf
-      LET l_cf  = l_cf+ qc_c
-      IF tm.b = 'Y' THEN  #打印原币
-            LET l_zzysye2  = l_df - l_cf
+      # mark by lixwz 20170823 s
+      #LET l_d   = l_d + qc_df
+      #LET l_df  = l_df+ qc_d
+      #LET l_c   = l_c +  qc_cf
+      #LET l_cf  = l_cf+ qc_c
+      # mark by lixwz 20170823 s
+      #IF tm.b = 'Y' THEN  #打印原币
+      #      LET l_zzysye2  = l_df - l_cf
+      #ELSE
+      #      LET l_zzysye2  = l_d - l_c
+      #END IF
+      # add by lixwz 20170823 s
+      IF cl_null(l_d2) THEN LET l_d2 = 0 END IF
+      IF cl_null(l_df2) THEN LET l_df2 = 0 END IF
+      IF cl_null(l_c2) THEN LET l_c2 = 0 END IF
+      IF cl_null(l_cf2) THEN LET l_cf2 = 0 END IF
+      IF cl_null(l_zzysye3) THEN LET l_zzysye3 = 0 END IF
+      IF cl_null(l_chysye3) THEN LET l_chysye3 = 0 END IF
+      IF  cl_null(l_chk) OR l_chk !='Y'  THEN
+          LET l_d2 =   l_d+   qc_d
+          LET l_df2 = l_df +qc_df
+          LET l_c2  =  l_c+   qc_c
+          LET l_cf2 =l_cf + qc_cf
+          LET l_chysye3 =l_chysye + l_chysye4
+          LET l_chk = 'Y'
       ELSE
-            LET l_zzysye2  = l_d - l_c
+          LET l_d2 = l_d2 +    l_d
+          LET l_df2 = l_df2 + l_df
+          LET l_c2  = l_c2 +    l_c
+          LET l_cf2 = l_cf2 + l_cf
+          LET l_chysye3 =l_chysye + l_chysye3
       END IF
+       IF tm.b = 'Y' THEN  #打印原币
+            LET l_zzysye3  = l_df2 - l_cf2
+      ELSE
+            LET l_zzysye3  = l_d2 - l_c2
+      END IF
+       SELECT last_day(sr.vdate) INTO sr.vdate FROM dual  # add by lixwz 20170823
+      # add by lixwz 20170823 e
 
       INSERT INTO cxmq110_tmp
-      VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','',
-             '','6','','',l_zzysye2,l_chysye2,
-             l_df,l_d,l_cf,l_c,
+
+      VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,sr.vdate,'',
+             '','6','','',l_zzysye3,l_chysye3,
+             l_df2,l_d2,l_cf2,l_c2,
              g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
       LET g_seq=g_seq+1
 
@@ -1636,6 +1675,11 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
     DEFINE  l_qcd   LIKE   npq_file.npq07
     DEFINE  l_qccf  LIKE   npq_file.npq07
     DEFINE  l_qcc   LIKE   npq_file.npq07
+    # add by lixwz 20170823 s
+    # 累计额重新计算
+    DEFINE   l_d2,l_df2,l_c2,l_cf2,l_zzysye3,l_chysye3,l_chysye4   LIKE type_file.num20_6
+    DEFINE   l_chk        LIKE type_file.chr1
+    # add by lixwz 20170823 e
 
   OUTPUT TOP MARGIN g_top_margin LEFT MARGIN g_left_margin BOTTOM MARGIN g_bottom_margin PAGE LENGTH g_page_line
   ORDER BY sr.oea03,sr.oea032,sr.oea23,sr.mm,sr.oea01,sr.vdate
@@ -1712,7 +1756,7 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
 
       IF cl_null(l_zzysye2) THEN LET l_zzysye2 = 0 END IF
       IF cl_null(l_chysye2) THEN LET l_chysye2 = 0 END IF
-
+      LET l_chysye4 = l_chysye2 # add by lixwz 20170823 用来取期初
       INSERT INTO cxmq110_tmp
       VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','',
              '','0','','',l_zzysye2,l_chysye2,
@@ -1806,20 +1850,50 @@ DEFINE qc_d,qc_df,qc_c,qc_cf   LIKE npq_file.npq07 #期初 借贷方
       LET g_seq=g_seq+1
 
       #累计额
-      LET l_d   = l_d + qc_df
-      LET l_df  = l_df+ qc_d
-      LET l_c   = l_c + qc_cf
-      LET l_cf  = l_cf+ qc_c
-      IF tm.b = 'Y' THEN  #打印原币
-            LET l_zzysye2  = l_df - l_cf
+      # mark by lixwz 20170823 s
+      #LET l_d   = l_d + qc_df
+      #LET l_df  = l_df+ qc_d
+      #LET l_c   = l_c +  qc_cf
+      #LET l_cf  = l_cf+ qc_c
+      # mark by lixwz 20170823 s
+      #IF tm.b = 'Y' THEN  #打印原币
+      #      LET l_zzysye2  = l_df - l_cf
+      #ELSE
+      #      LET l_zzysye2  = l_d - l_c
+      #END IF
+      # add by lixwz 20170823 s
+      IF cl_null(l_d2) THEN LET l_d2 = 0 END IF
+      IF cl_null(l_df2) THEN LET l_df2 = 0 END IF
+      IF cl_null(l_c2) THEN LET l_c2 = 0 END IF
+      IF cl_null(l_cf2) THEN LET l_cf2 = 0 END IF
+      IF cl_null(l_zzysye3) THEN LET l_zzysye3 = 0 END IF
+      IF cl_null(l_chysye3) THEN LET l_chysye3 = 0 END IF
+      IF  cl_null(l_chk) OR l_chk !='Y'  THEN
+          LET l_d2 = l_d+   qc_d
+          LET l_df2 =l_df +qc_df
+          LET l_c2  =l_c+   qc_c
+          LET l_cf2 =l_cf + qc_cf
+          LET l_chysye3 =l_chysye + l_chysye4
+          LET l_chk = 'Y'
       ELSE
-            LET l_zzysye2  = l_d - l_c
+          LET l_d2 = l_d2 +    l_d
+          LET l_df2 = l_df2 + l_df
+          LET l_c2  = l_c2 +    l_c
+          LET l_cf2 = l_cf2 + l_cf
+          LET l_chysye3 =l_chysye + l_chysye3
       END IF
+       IF tm.b = 'Y' THEN  #打印原币
+            LET l_zzysye3  = l_df2 - l_cf2
+      ELSE
+            LET l_zzysye3  = l_d2 - l_c2
+      END IF
+       SELECT last_day(sr.vdate) INTO sr.vdate FROM dual  # add by lixwz 20170823
+      # add by lixwz 20170823 e
 
       INSERT INTO cxmq110_tmp
-      VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','',
-             '','6','','',l_zzysye2,l_chysye2,
-             l_df,l_d,l_cf,l_c,
+      VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,sr.vdate,'',
+             '','6','','',l_zzysye3,l_chysye3,
+             l_df2,l_d2,l_cf2,l_c2,
              g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
       LET g_seq=g_seq+1
 
