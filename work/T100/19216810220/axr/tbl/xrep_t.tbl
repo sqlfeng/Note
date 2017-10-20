@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xrep_t" module="AXR" text="各期递延冲转主档" type="T" version="1">
+  <column name="xrepent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xrepsite" text="账务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrepcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrepdocno" text="单据号码" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xrepdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrepld" text="账别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xrep001" text="年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="xrep002" text="期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="xrep003" text="账务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrep004" text="传票号码" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrep005" text="第一期系統認列" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrepstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrepownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrepowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrepcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrepcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrepcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrepmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrepmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrepcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrepcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xrepent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrepsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrepcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrepld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xrep001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xrep002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xrep003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrep004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrep005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrepownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrepmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrepcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrepcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xrep_t" depend_field="xrepcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="xrep_t" depend_field="xrepcnfid" correspon_key="xrepcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xrep_t" depend_field="xrepcrtdp" correspon_key="xrepcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrep_t" depend_field="xrepcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="xrep_t" depend_field="xrepcrtid" correspon_key="xrepcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xrep_t" depend_field="xrepmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="xrep_t" depend_field="xrepmodid" correspon_key="xrepmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xrep_t" depend_field="xrepowndp" correspon_key="xrepowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrep_t" depend_field="xrepownid" correspon_key="xrepownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xrepstus" category="13" desc="单据状态码">
+      <code value="Y" desc="已审核"/>
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

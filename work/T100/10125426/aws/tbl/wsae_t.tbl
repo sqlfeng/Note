@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="wsae_t" module="AWS" text="营运据点签核设置档" type="X" version="1">
+  <column name="wsaeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="wsae001" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="wsae002" text="签核否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="wsae003" text="自动确认否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="wsae004" text="no use" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="wsae005" text="no use" attribute="C807" type="varchar2(100)" pk="N" req="N"/>
+  <column name="wsaeownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="wsaeowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="wsaecrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="wsaecrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="wsaecrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="wsaemodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="wsaemoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="wsaestus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="wsaeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsae001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_wsae001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsae002" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsae003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsae004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsae005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="wsaeownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsaeowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsaecrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsaecrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsaecrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="wsaemodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="wsaemoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="wsaestus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="wsae_t" depend_field="wsae001" correspon_key="wsaeent,wsae001" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="wsae_t" depend_field="wsaecrtdp" correspon_key="wsaecrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="wsae_t" depend_field="wsaecrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="wsae_t" depend_field="wsaecrtid" correspon_key="wsaecrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="wsae_t" depend_field="wsaemoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="wsae_t" depend_field="wsaemodid" correspon_key="wsaemodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="wsae_t" depend_field="wsaeowndp" correspon_key="wsaeowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="wsae_t" depend_field="wsaeownid" correspon_key="wsaeownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="wsaestus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzdk_t" module="AZZ" text="程序快照需求因应表" type="M" version="1">
+  <column name="gzdkownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzdkowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzdkcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzdkcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzdkcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzdkmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzdkmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzdkstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzdk001" text="快照需求主程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzdk002" text="被快照程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzdk003" text="类型/扩展名" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="gzdk004" text="本次重建时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzdkownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdkowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdkcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdkcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdkcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzdkmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdkmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzdkstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzdk001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzdk002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzdk003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzdk004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzdk_t" depend_field="gzdkcrtdp" correspon_key="gzdkcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzdk_t" depend_field="gzdkcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzdk_t" depend_field="gzdkcrtid" correspon_key="gzdkcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzdk_t" depend_field="gzdkmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzdk_t" depend_field="gzdkmodid" correspon_key="gzdkmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzdk_t" depend_field="gzdkowndp" correspon_key="gzdkowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzdk_t" depend_field="gzdkownid" correspon_key="gzdkownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="gzdkstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="无效"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>
+

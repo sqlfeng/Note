@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sfja_t" module="ASF" text="工单下阶料报废单头档" type="T" version="1">
+  <column name="sfjaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sfjasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfjadocno" text="报废单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sfjadocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfja001" text="申请人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfja002" text="申请部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfja003" text="过帐日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfja004" text="杂收单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfja005" text="退料单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfjacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfjacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sfjamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sfjacnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjacnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sfjapstid" text="资料过帐者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfjapstdt" text="资料过帐日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sfjastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sfjaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfjasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjadocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfjadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfja001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfja002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfja003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfja004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="aint302" case="upper"/>
+    <field name="sfja005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="asft323" case="upper"/>
+    <field name="sfjaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="sfjamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="sfjacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfjapstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfjapstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfjastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sfja_t" depend_field="sfja001" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfja002" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjacnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjacnfid" correspon_key="sfjacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="sfja_t" depend_field="sfjacrtdp" correspon_key="sfjacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="sfja_t" depend_field="sfjacrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjacrtid" correspon_key="sfjacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="sfja_t" depend_field="sfjadocno" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjamoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjamodid" correspon_key="sfjamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="sfja_t" depend_field="sfjaowndp" correspon_key="sfjaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="sfja_t" depend_field="sfjaownid" correspon_key="sfjaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="sfja_t" depend_field="sfjapstdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="sfja_t" depend_field="sfjapstid" correspon_key="sfjapstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="sfjastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="S" desc="已过账"/>
+      <code value="Z" desc="扣帐还原"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

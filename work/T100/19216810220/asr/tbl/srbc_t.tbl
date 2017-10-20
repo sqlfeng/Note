@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="srbc_t" module="ASR" text="重复性生产期末盘点分摊档" type="D" version="1">
+  <column name="srbcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="srbcsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbcdocno" text="盘点单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="srbcseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srbcseq1" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srbc001" text="生产料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="srbc002" text="BOM特性" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="srbc003" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="srbc004" text="分摊数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srbc005" text="分摊参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srbc006" text="领退料单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srbc007" text="分摊基数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="srbcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srbcsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbcdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srbcseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srbcseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srbc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srbc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmaa002" c_zoom="q_bmaa002" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srbc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srbc004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srbc005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srbc006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srbc007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="srbc_t" depend_field="srbc001" correspon_key="srbcent,srbc001" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

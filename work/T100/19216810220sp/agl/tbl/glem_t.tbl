@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glem_t" module="AGL" text="合并现金流量表间接法期初开账金额设置数据档" type="B" version="1">
+  <column name="glement" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glemld" text="合并账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glem001" text="上层公司" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glem002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="glem003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="glem004" text="群组编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glem005" text="科目编号" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="glem006" text="币种(记账币)" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glem007" text="借方金额(记账币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem008" text="贷方金额(记账币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem009" text="币种(功能币)" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glem010" text="借方金额(功能币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem011" text="贷方金额(功能币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem012" text="币种(报告币)" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glem013" text="借方金额(报告币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem014" text="贷方金额(报告币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glemownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glemowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glemcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glemcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glemcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glemmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glemmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glemstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glem015" text="期初金额(记账币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem016" text="期初金额(功能币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glem017" text="期初金额(报告币)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glement" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glemld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glem001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glem002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glem003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glem004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glem005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glem006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glem007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glem010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glem013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glemownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glemowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glemcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glemcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glemcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glemmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glemmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glemstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glem015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glem017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glem_t" depend_field="glemcrtdp" correspon_key="glemcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glem_t" depend_field="glemcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glem_t" depend_field="glemcrtid" correspon_key="glemcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glem_t" depend_field="glemmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glem_t" depend_field="glemmodid" correspon_key="glemmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glem_t" depend_field="glemowndp" correspon_key="glemowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glem_t" depend_field="glemownid" correspon_key="glemownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glemstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

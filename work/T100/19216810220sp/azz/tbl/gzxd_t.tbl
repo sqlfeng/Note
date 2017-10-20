@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzxd_t" module="AZZ" text="用户密码设置档" type="D" version="1">
+  <column name="gzxdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzxd001" text="用户编号" attribute="C820" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzxd002" text="用户密码 (编码)" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzxd003" text="修改状态纪录" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzxd004" text="下次登录是否需要修改密码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxdstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzxdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzxd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzxd003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxd004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxdstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="gzxdstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

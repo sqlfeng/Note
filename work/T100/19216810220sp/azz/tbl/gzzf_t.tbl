@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzzf_t" module="AZZ" text="作业级画面元件翻译代换表" type="X" version="1">
+  <column name="gzzfownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzfowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzzfcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzfcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzzfcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzzfmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzfmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzzfstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzzf001" text="作业编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzzf002" text="语言别" attribute="C800" type="varchar2(6)" pk="Y" req="Y"/>
+  <column name="gzzf003" text="待转标签" attribute="C817" type="varchar2(500)" pk="Y" req="Y"/>
+  <column name="gzzf004" text="使用标示" attribute="C911" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzzf005" text="转换标签文本" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="gzzf006" text="转换注解" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzzfownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzfowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzfcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzfcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzfcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzzfmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzfmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzzfstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzzf001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzzf002" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="6" format="" prog_rel="" case=""/>
+    <field name="gzzf003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzzf004" widget="ComboBox" items="98" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzf005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzzf006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzzf_t" depend_field="gzzfcrtdp" correspon_key="gzzfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzzf_t" depend_field="gzzfcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzzf_t" depend_field="gzzfcrtid" correspon_key="gzzfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzzf_t" depend_field="gzzfmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzzf_t" depend_field="gzzfmodid" correspon_key="gzzfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzzf_t" depend_field="gzzfowndp" correspon_key="gzzfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzzf_t" depend_field="gzzfownid" correspon_key="gzzfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="gzzfstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

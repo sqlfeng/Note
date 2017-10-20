@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmaq_t" module="APM" text="采购替代档" type="B" version="1">
+  <column name="pmaqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmaqsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaq001" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaq002" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pmaq003" text="可替代料号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pmaq004" text="替代类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaqownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaqowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmaqcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaqcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmaqcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmaqmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaqmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmaqstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmaq005" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="pmaq006" text="可替代产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmaqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmaqsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaq001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_3" c_zoom="q_pmaa001_3" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaq002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmaq003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmaq004" widget="ComboBox" items="2043" default="&apos;3&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmaqmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaqmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmaqstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmaq005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmaq006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmaq_t" depend_field="pmaq003" correspon_key="pmaq003" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmaq_t" depend_field="pmaqcrtdp" correspon_key="pmaqcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmaq_t" depend_field="pmaqcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmaq_t" depend_field="pmaqcrtid" correspon_key="pmaqcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmaq_t" depend_field="pmaqmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmaq_t" depend_field="pmaqmodid" correspon_key="pmaqmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmaq_t" depend_field="pmaqowndp" correspon_key="pmaqowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmaq_t" depend_field="pmaqownid" correspon_key="pmaqownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmaqstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

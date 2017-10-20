@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzow_t" module="AZZ" text="标准字词表" type="X" version="1">
+  <column name="gzow000" text="繁体中文标准词" attribute="C817" type="varchar2(500)" pk="Y" req="Y"/>
+  <column name="gzow001" text="英文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzow002" text="简体中文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzow003" text="日文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzow004" text="越文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzow005" text="泰文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzow006" text="韩文标准词" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzowownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzowowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzowcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzowcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzowcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzowmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzowmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzowcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzowcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzow000" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow001" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow002" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzow006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzowownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzowmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzowcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzowcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzow_t" depend_field="gzowcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzow_t" depend_field="gzowcnfid" correspon_key="gzowcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzow_t" depend_field="gzowcrtdp" correspon_key="gzowcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzow_t" depend_field="gzowcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzow_t" depend_field="gzowcrtid" correspon_key="gzowcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzow_t" depend_field="gzowmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzow_t" depend_field="gzowmodid" correspon_key="gzowmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzow_t" depend_field="gzowowndp" correspon_key="gzowowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzow_t" depend_field="gzowownid" correspon_key="gzowownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

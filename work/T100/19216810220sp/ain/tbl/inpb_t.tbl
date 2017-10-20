@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inpb_t" module="AIN" text="盘点计划流程档" type="D" version="1">
+  <column name="inpbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="inpbsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpbdocno" text="计划单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="inpbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="inpb001" text="盘点作业" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpb002" text="进度状况" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inpb003" text="处理进度" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpb004" text="负责人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpb005" text="预计日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpb006" text="操作人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpb007" text="实际操作日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpb008" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inpbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inpb001" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpb002" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpb003" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="inpb004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpb005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpb007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpb008" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inpb_t" depend_field="inpb004" correspon_key="inpb004" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpb_t" depend_field="inpb006" correspon_key="inpb006" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

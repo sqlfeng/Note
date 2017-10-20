@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sfnb_t" module="ASF" text="异常工时申报单身档" type="D" version="1">
+  <column name="sfnbent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sfnbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfnbdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sfnbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfnb000" text="异常类别代号" attribute="C013" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfnb001" text="异常描述" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="sfnb002" text="转稼人数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="sfnb003" text="开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfnb004" text="结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfnb005" text="异常工时" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="sfnb006" text="影响工单" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="sfnb007" text="责任部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfnb008" text="责任部门确认" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sfnb009" text="确认转稼工时" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="sfnb010" text="是有有偿" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sfnb011" text="是否有效工时" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sfnb012" text="开始时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="sfnb013" text="结束时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="sfnb014" text="影响工作站" attribute="C401" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sfnbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfnbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfnbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfnb000" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnb001" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfnb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="sfnb003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="sfnb004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="sfnb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfnb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfnb007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnb008" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnb009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfnb010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnb011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfnb012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfnb013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfnb014" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sfnb_t" depend_field="sfnb000" correspon_key="&apos;1121&apos;,sfna000" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="sfnb_t" depend_field="sfnb007" correspon_key="sfnb007" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rteb_t" module="ART" text="市场调查计划数据表" type="T" version="1">
+  <column name="rtebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtebsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtebdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtebdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rteb001" text="市调门店" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rteb002" text="竞争门店" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rteb003" text="市调类型" attribute="N806" type="number(10)" pk="N" req="N"/>
+  <column name="rteb004" text="开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rteb005" text="结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rteb006" text="计划人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rteb007" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="rtebstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtebownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtebowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtebcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtebcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtebcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtebmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtebmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtebcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtebcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtebunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtebsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_rtebdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtebdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rteb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rteb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtea002" c_zoom="q_rtea002" chk_ref="v_rtea002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rteb003" widget="ComboBox" items="6017" default="2" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rteb004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rteb005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rteb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rteb007" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtebstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtebownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtebmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtebcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtebcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtebunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rteb_t" depend_field="rteb001" correspon_key="rteb001" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rteb_t" depend_field="rteb002" correspon_key="rteb001,rteb002" ref_table="rtea_t" ref_fk="rtea001,rtea002" ref_dlang=" " ref_rtn="rtea003"/>
+    <field depend_table="rteb_t" depend_field="rteb006" correspon_key="rteb006" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rteb_t" depend_field="rtebcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rteb_t" depend_field="rtebcnfid" correspon_key="rtebcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rteb_t" depend_field="rtebcrtdp" correspon_key="rtebcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rteb_t" depend_field="rtebcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rteb_t" depend_field="rtebcrtid" correspon_key="rtebcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rteb_t" depend_field="rtebmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rteb_t" depend_field="rtebmodid" correspon_key="rtebmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rteb_t" depend_field="rtebowndp" correspon_key="rtebowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rteb_t" depend_field="rtebownid" correspon_key="rtebownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtebstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

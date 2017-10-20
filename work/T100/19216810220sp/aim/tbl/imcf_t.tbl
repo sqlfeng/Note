@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imcf_t" module="AIM" text="料件据点生管分群档" type="B" version="1">
+  <column name="imcfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imcfownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imcfowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcfcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imcfcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcfcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imcfmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf011" text="生管分群" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcf012" text="计划员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imcf013" text="生产型态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf014" text="领发料机制" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf015" text="生产损耗率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf016" text="生产单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf017" text="生产单位批量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf018" text="最小生产量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf019" text="生产批量控管方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf020" text="生产超交率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf021" text="生产指令展开选项" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf022" text="工单拆分批量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf023" text="必要性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf031" text="默认工单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="imcf032" text="工艺料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcf033" text="默认工艺编号" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf034" text="默认部门/供应商" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf035" text="默认成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf036" text="允许需求合并生产" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="imcf037" text="默认BOM特性" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="imcf041" text="默认入库库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf042" text="默认入库储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf051" text="标准人工工时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf052" text="标准机器工时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf061" text="MPS计算" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="imcf062" text="默认无效天数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf063" text="No use" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf064" text="供给汇整时距" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf065" text="建议新单量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf066" text="预计停产日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="imcf071" text="固定生产前置时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf072" text="变动生产前置时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf073" text="变动批量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf074" text="QC前置时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf075" text="累计前置时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf076" text="严守交期前置时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf077" text="计划批次移转量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf078" text="物规划移转时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf079" text="主料需求保留天数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf080" text="关键物料" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="imcf081" text="发料单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf082" text="发料单位批量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf083" text="最小发料数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcf084" text="发料批量控管方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf085" text="发料调整时间" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="imcf091" text="倒扣料" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="imcf092" text="发料前调整" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="imcf101" text="默认发料库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf102" text="默认发料储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf103" text="默认退料库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcf104" text="默认退料储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcfud001" text="自定義欄位(文字)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud002" text="自定義欄位(文字)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud003" text="自定義欄位(文字)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud004" text="自定義欄位(文字)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud005" text="自定義欄位(文字)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud006" text="自定義欄位(文字)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud007" text="自定義欄位(文字)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud008" text="自定義欄位(文字)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud009" text="自定義欄位(文字)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud010" text="自定義欄位(文字)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imcfud011" text="自定義欄位(數字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud012" text="自定義欄位(數字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud013" text="自定義欄位(數字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud014" text="自定義欄位(數字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud015" text="自定義欄位(數字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud016" text="自定義欄位(數字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud017" text="自定義欄位(數字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud018" text="自定義欄位(數字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud019" text="自定義欄位(數字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud020" text="自定義欄位(數字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcfud021" text="自定義欄位(日期時間)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud022" text="自定義欄位(日期時間)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud023" text="自定義欄位(日期時間)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud024" text="自定義欄位(日期時間)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud025" text="自定義欄位(日期時間)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud026" text="自定義欄位(日期時間)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud027" text="自定義欄位(日期時間)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud028" text="自定義欄位(日期時間)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud029" text="自定義欄位(日期時間)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcfud030" text="自定義欄位(日期時間)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imcf086" text="库存可混批供给" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="imcfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcfownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcf011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="q_oocq002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="q_ooag001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf013" widget="ComboBox" items="4001" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf014" widget="ComboBox" items="4002" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf015" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="imcf016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf019" widget="ComboBox" items="2025" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf020" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="imcf021" widget="ComboBox" items="4003" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf023" widget="ComboBox" items="1101" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002" c_zoom="q_ooba002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ecba001" c_zoom="q_ecba001" chk_ref="v_imaf001_14" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="imcf033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ecba002" c_zoom="q_ecba002" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcf034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_1" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf035" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001" c_zoom="q_ooea001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf036" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf037" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmaa002" c_zoom="q_bmaa002" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcf041" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_1" c_zoom="q_inaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf042" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_1" c_zoom="q_inab002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf051" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="-----&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf052" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="-----&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf061" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf062" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf063" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf064" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf065" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf066" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcf071" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf072" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf073" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf074" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf075" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf076" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf077" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf078" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf079" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf080" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf081" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf082" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf083" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf084" widget="ComboBox" items="2025" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf085" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcf091" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf092" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf101" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_1" c_zoom="q_inaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf102" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_1" c_zoom="q_inab002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf103" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_1" c_zoom="q_inaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcf104" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_1" c_zoom="q_inab002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcfud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imcfud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcfud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcfud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imcf086" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imcf_t" depend_field="imcf011" correspon_key="imcfent,&apos;204&apos;,imcf011" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imcf_t" depend_field="imcf016" correspon_key="imcfent,imcf016" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="imcf_t" depend_field="imcf031" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="imcf_t" depend_field="imcf032" correspon_key="imcfent,imcf032" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="imcf_t" depend_field="imcf034" correspon_key="imcfent,imcf034" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imcf_t" depend_field="imcf035" correspon_key="imcfent,imcf035" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imcf_t" depend_field="imcf041" correspon_key="imcfent,imcfsite,imcf041" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="imcf_t" depend_field="imcf042" correspon_key="imcfent,imcfsite,imcf041,imcf042" ref_table="inab_t" ref_fk="inabent,inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="imcf_t" depend_field="imcf081" correspon_key="imcfent,imcf081" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="imcf_t" depend_field="imcf101" correspon_key="imcfent,imcfsite,imcf101" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="imcf_t" depend_field="imcf102" correspon_key="imcfent,imcfsite,imcf101,imcf102" ref_table="inab_t" ref_fk="inabent,inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="imcf_t" depend_field="imcf103" correspon_key="imcfent,imcfsite,imcf103" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="imcf_t" depend_field="imcf104" correspon_key="imcfent,imcfsite,imcf103,imcf104" ref_table="inab_t" ref_fk="inabent,inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="imcf_t" depend_field="imcfcrtdp" correspon_key="imcfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imcf_t" depend_field="imcfcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="imcf_t" depend_field="imcfcrtid" correspon_key="imcfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="imcf_t" depend_field="imcfmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="imcf_t" depend_field="imcfmodid" correspon_key="imcfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="imcf_t" depend_field="imcfowndp" correspon_key="imcfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imcf_t" depend_field="imcfownid" correspon_key="imcfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="imcfstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

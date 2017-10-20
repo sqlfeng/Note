@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mrbf_t" module="AMR" text="资源适用机台资源档" type="M" version="1">
+  <column name="mrbfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mrbfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrbf001" text="资源编号" attribute="C403" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrbf002" text="适用资源编号" attribute="C403" type="varchar2(20)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="mrbfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrbfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrbf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrbf002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mrba001_2" c_zoom="q_mrba001_2" chk_ref="v_mrba001_2" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mrbf_t" depend_field="mrbf002" correspon_key="mrbfsite,mrbf002" ref_table="mrba_t" ref_fk="mrbastie,mrba001" ref_dlang="" ref_rtn="mrba004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

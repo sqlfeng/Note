@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmac_t" module="ANM" text="节假日表数据档" type="B" version="1">
+  <column name="nmacent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmacstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmac001" text="节假日表编号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="nmac002" text="日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="nmac003" text="节假日类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmac004" text="备注" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="nmac005" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="nmacownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmacowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmaccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmaccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmaccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmacmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmacmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmacent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmacstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmac001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002" c_zoom="q_ooal002" chk_ref="" widget_width="10" format="" prog_rel="aooi074" case="upper"/>
+    <field name="nmac002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmac003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmac004" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="nmac005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="nmacownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmacowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmacmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmacmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="nmac_t" depend_field="nmac001" correspon_key="nmacent,&apos;4&apos;,nmac001" ref_table="ooall_t" ref_fk="ooallent,ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="nmac_t" depend_field="nmac003" correspon_key="nmacent,&apos;6&apos;,nmac003" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="nmac_t" depend_field="nmaccrtdp" correspon_key="nmaccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmac_t" depend_field="nmaccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmac_t" depend_field="nmaccrtid" correspon_key="nmaccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmac_t" depend_field="nmacmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmac_t" depend_field="nmacmodid" correspon_key="nmacmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmac_t" depend_field="nmacowndp" correspon_key="nmacowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmac_t" depend_field="nmacownid" correspon_key="nmacownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="nmacstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

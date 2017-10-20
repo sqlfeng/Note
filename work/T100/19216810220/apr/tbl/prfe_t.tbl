@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prfe_t" module="APR" text="产品价格组申请数据表" type="T" version="1">
+  <column name="prfeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prfeunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfedocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prfedocdt" text="申请日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prfe001" text="申请类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfe002" text="产品价格组编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfe003" text="版本" attribute="C014" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfe004" text="申请人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prfe005" text="申请部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfeacti" text="数据有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="prfestus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfeownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prfeowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfecrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prfecrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prfecrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="prfemodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prfemoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="prfecnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prfecnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prfeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prfeunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfedocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_prfedocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prfedocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prfe001" widget="ComboBox" items="32" default="&apos;I&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prfg001" c_zoom="q_prfe002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfe003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prfe004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfe005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_4" c_zoom="q_ooeg001_4" chk_ref="v_ooeg001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfeacti" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfestus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfeownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfeowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfecrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfecrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfecrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="prfemodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfemoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="prfecnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prfecnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prfe_t" depend_field="prfe004" correspon_key="prfe004" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prfe_t" depend_field="prfe005" correspon_key="prfeent,prfe005" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="prfe_t" depend_field="prfecnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="prfe_t" depend_field="prfecnfid" correspon_key="prfecnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prfe_t" depend_field="prfecrtdp" correspon_key="prfecrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="prfe_t" depend_field="prfecrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="prfe_t" depend_field="prfecrtid" correspon_key="prfecrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prfe_t" depend_field="prfedocno" correspon_key="b_prfedocno" ref_table="prfel_t" ref_fk="prfeldocno" ref_dlang="prfel001" ref_rtn="prfel003"/>
+    <field depend_table="prfe_t" depend_field="prfemoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="prfe_t" depend_field="prfemodid" correspon_key="prfemodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prfe_t" depend_field="prfeowndp" correspon_key="prfeowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="prfe_t" depend_field="prfeownid" correspon_key="prfeownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prfe_t" depend_field="prfesite" correspon_key="prfeent,prfesite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="prfe_t" depend_field="prfeunit" correspon_key="prfeent,prfeunit" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="prfe_t" depend_field="prfedocno" correspon_key="prfedocno" lang_table="prfel_t" lang_fk="prfeldocno" lang_dlang="prfel001" lang_rtn="prfel002"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="prfestus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

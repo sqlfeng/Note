@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmjd_t" module="ABM" text="ECR木板维护变更后影响事项档" type="D" version="1">
+  <column name="bmjdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="bmjdsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmjdseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmjdseq1" text="项序" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmjd001" text="模板编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmjd002" text="影响类型" attribute="C012" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="bmjd003" text="影响内容" attribute="C012" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="bmjd004" text="回复值类型" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <col_attr>
+    <field name="bmjdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmjdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmjdseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmjdseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmjd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmja001" c_zoom="q_bmja001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmjd002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmjd003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmjd004" widget="ComboBox" items="5447" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmjd_t" depend_field="bmjd002" correspon_key="&apos;1119&apos;,bmjd002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="bmjd_t" depend_field="bmjd003" correspon_key="&apos;1120&apos;,bmjd003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

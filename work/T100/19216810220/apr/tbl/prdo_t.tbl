@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prdo_t" module="APR" text="促销规则时间数据档" type="D" version="1">
+  <column name="prdoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prdounit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdosite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdo001" text="规则编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prdo002" text="组别" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prdo003" text="开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prdo004" text="结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prdo005" text="开始时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="prdo006" text="结束时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="prdo007" text="固定日期" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdo008" text="固定星期" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="prdostus" text="有效否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prdoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prdounit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdosite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdo001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="prdo002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prdo003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prdo004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prdo005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="prdo006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="prdo007" widget="ComboBox" items="6520" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdo008" widget="ComboBox" items="30" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdostus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="prdostus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

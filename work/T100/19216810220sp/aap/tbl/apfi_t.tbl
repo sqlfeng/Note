@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apfi_t" module="AAP" text="集团付款核销单账款明细档" type="M" version="1">
+  <column name="apfient" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="apfidocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="apfiseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="apfi001" text="账款法人组织" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfi002" text="账款所属账套" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="apfi003" text="应付单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfi004" text="应付单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfi005" text="多账期序号" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfi006" text="类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi007" text="付款条件" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi008" text="税别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi009" text="内部银行账户编码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi010" text="内部银行存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi011" text="应付款日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apfi012" text="账款类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi013" text="借贷别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apfi100" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfi101" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apfi103" text="原币冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfi104" text="本币冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfi201" text="对应代付方当日汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apfi204" text="对应代付方本金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apfient" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfidocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfiseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfi001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfi002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="apfi003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfi004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfi005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfi006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmad002_2" c_zoom="q_pmad002_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_5" c_zoom="q_oodb002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmaj001" c_zoom="q_nmaj001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfi012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi100" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfi101" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfi103" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfi104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfi201" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfi204" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="apfi_t" depend_field="apfi001" correspon_key="apfient,apfi001" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="apfi_t" depend_field="apfi007" correspon_key="apfient,apfi007" ref_table="ooibl_t" ref_fk="ooiblent,ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

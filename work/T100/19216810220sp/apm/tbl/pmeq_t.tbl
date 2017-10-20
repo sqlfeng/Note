@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmeq_t" module="APM" text="要货模板基本数据单头档" type="B" version="1">
+  <column name="pmeqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmequnit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeq001" text="要货模板编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmeq002" text="引用店群" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeqownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmeqowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeqcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmeqcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeqcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmeqmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmeqmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmeqstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmeqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmequnit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_24" chk_ref="q_ooef001_24" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeq001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmeq001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeq002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtaa001_4" chk_ref="q_rtaa001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmeqmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeqmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmeqstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmeq_t" depend_field="pmeq002" correspon_key="pmeq002" ref_table="rtaal_t" ref_fk="rtaal001" ref_dlang="rtaal002" ref_rtn="rtaal003"/>
+    <field depend_table="pmeq_t" depend_field="pmeqcrtdp" correspon_key="pmeqcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmeq_t" depend_field="pmeqcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="pmeq_t" depend_field="pmeqcrtid" correspon_key="pmeqcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="pmeq_t" depend_field="pmeqmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="pmeq_t" depend_field="pmeqmodid" correspon_key="pmeqmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="pmeq_t" depend_field="pmeqowndp" correspon_key="pmeqowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmeq_t" depend_field="pmeqownid" correspon_key="pmeqownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="pmeq_t" depend_field="pmequnit" correspon_key="pmequnit" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pmeq_t" depend_field="pmeq001" correspon_key="pmeq001" lang_table="pmeql_t" lang_fk="pmeql001" lang_dlang="pmeql002" lang_rtn="pmeql003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="pmeqstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

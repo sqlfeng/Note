@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crba_t" module="ACR" text="客诉单维护单头档" type="T" version="1">
+  <column name="crbaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="crbasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crbadocno" text="客诉单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="crbadocdt" text="客诉日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="crba001" text="处理人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crba002" text="处理部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crba003" text="负责业务" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crba004" text="处理期限" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="crba005" text="结案日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="crba006" text="原销售单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crba007" text="原销售项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="crba008" text="原销售日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="crba009" text="客户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crba010" text="客户简称" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="crba011" text="会员卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="crba012" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="crba013" text="会员姓名" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="crba014" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crba015" text="客户订单" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crba016" text="产品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crba017" text="品名" attribute="C302" type="varchar2(255)" pk="N" req="N"/>
+  <column name="crba018" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crba019" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="crba020" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba021" text="客诉数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba022" text="补货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba023" text="换货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba024" text="销货退回" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba025" text="折让金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="crba026" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crbaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crbaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crbacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crbacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crbacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crbamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbacnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crbacnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crbaud001" text="自定义栏位(文字)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud002" text="自定义栏位(文字)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud003" text="自定义栏位(文字)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud004" text="自定义栏位(文字)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud005" text="自定义栏位(文字)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud006" text="自定义栏位(文字)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud007" text="自定义栏位(文字)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud008" text="自定义栏位(文字)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud009" text="自定义栏位(文字)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud010" text="自定义栏位(文字)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crbaud011" text="自定义栏位(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud012" text="自定义栏位(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud013" text="自定义栏位(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud014" text="自定义栏位(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud015" text="自定义栏位(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud016" text="自定义栏位(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud017" text="自定义栏位(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud018" text="自定义栏位(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud019" text="自定义栏位(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud020" text="自定义栏位(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="crbaud021" text="自定义栏位(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud022" text="自定义栏位(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud023" text="自定义栏位(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud024" text="自定义栏位(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud025" text="自定义栏位(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud026" text="自定义栏位(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud027" text="自定义栏位(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud028" text="自定义栏位(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud029" text="自定义栏位(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crbaud030" text="自定义栏位(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crbaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooef001" chk_ref="v_ooed004" widget_width="10" format="" prog_rel=""/>
+    <field name="crbadocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_crbadocno" chk_ref="v_ooba002" widget_width="20" format="" prog_rel=""/>
+    <field name="crbadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crba001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_6" c_zoom="q_ooag001_6" chk_ref="v_ooag001" widget_width="10" format="" prog_rel=""/>
+    <field name="crba002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001" widget_width="10" format="" prog_rel=""/>
+    <field name="crba003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_6" c_zoom="q_ooag001_6" chk_ref="v_ooag001" widget_width="10" format="" prog_rel=""/>
+    <field name="crba004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crba005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crba006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_crba026" c_zoom="q_crba026" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crba007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="crba008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crba009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_13" c_zoom="q_pmaa001_13" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel=""/>
+    <field name="crba010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crba011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mmaq001_2" c_zoom="q_mmaq001_2" chk_ref="v_mmaq001" widget_width="20" format="" prog_rel=""/>
+    <field name="crba012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mmaf001" c_zoom="q_mmaf001" chk_ref="v_mmaf001" widget_width="20" format="" prog_rel=""/>
+    <field name="crba013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crba014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crba015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_crba015" c_zoom="q_crba015" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crba016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel=""/>
+    <field name="crba017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crba018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001_1" c_zoom="q_ooai001_1" chk_ref="v_ooai001" widget_width="10" format="" prog_rel=""/>
+    <field name="crba019" widget="Edit" items="" default="1" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba023" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crba025" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="crba026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_crba026" c_zoom="q_crba026" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crbaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crbaud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crbaud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crbaud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crbaud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="crba_t" depend_field="crba001" correspon_key="crba001" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crba002" correspon_key="crba002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="crba_t" depend_field="crba003" correspon_key="crba003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crba009" correspon_key="crba009" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="crba_t" depend_field="crba018" correspon_key="crba018" ref_table="ooial_t" ref_fk="ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="crba_t" depend_field="crbacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="crba_t" depend_field="crbacnfid" correspon_key="crbacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crbacrtdp" correspon_key="crbacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="crba_t" depend_field="crbacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="crba_t" depend_field="crbacrtid" correspon_key="crbacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crbamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="crba_t" depend_field="crbamodid" correspon_key="crbamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crbaowndp" correspon_key="crbaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="crba_t" depend_field="crbaownid" correspon_key="crbaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crba_t" depend_field="crbasite" correspon_key="crbasite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="crbastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="C" desc="结案"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

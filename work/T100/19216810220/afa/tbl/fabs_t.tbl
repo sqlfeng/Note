@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fabs_t" module="AFA" text="资产资本化账务单身档" type="D" version="1">
+  <column name="fabsent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="fabscomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabsld" text="帐别编号" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="fabsdocno" text="帐务编号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="fabsseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="fabs001" text="单据来源" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs002" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabs003" text="来源单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fabs004" text="财产编号" attribute="C580" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabs005" text="附号" attribute="C581" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabs006" text="卡片编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs007" text="借方科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fabs008" text="贷方科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fabs009" text="交易币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs010" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabs011" text="原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabs012" text="本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabs013" text="摘要" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="fabs014" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs015" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs016" text="利润/成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs017" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs018" text="交易客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs019" text="帐款客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs020" text="客群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs021" text="产品类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs022" text="人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabs023" text="预算编号" attribute="C509" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs024" text="专案编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabs025" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="fabs100" text="本位币二币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs101" text="本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabs102" text="本位币二本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabs150" text="本位币三币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabs151" text="本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabs152" text="本位币三本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fabsent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabscomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabsld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="fabsdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabsseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fabs001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fabndocno" c_zoom="q_fabndocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabs003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fabs004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabs005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fabs006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabs008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabs009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs013" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="fabs014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs018" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs019" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabs025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="fabs100" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs102" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs150" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabs151" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabs152" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

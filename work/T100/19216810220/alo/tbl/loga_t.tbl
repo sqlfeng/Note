@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="loga_t" module="ALO" text="用户程序执行时间记录表" type="D" version="1">
+  <column name="loga001" text="用户编号" attribute="C820" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga002" text="作业编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga003" text="数据库编号" attribute="C802" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga004" text="主机地址" attribute="C801" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga005" text="sessionkey" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="loga006" text="启动时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="loga007" text="关闭时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="loga008" text="离开编号" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="loga009" text="员工编号" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga010" text="程序编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga011" text="NO USE" attribute="N802" type="number(5)" pk="N" req="N"/>
+  <column name="loga012" text="初始营运据点编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="loga013" text="作业PID" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="loga014" text="父阶sessionkey" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="logaent" text="企业编号" attribute="N802" type="number(5)" pk="N" req="N"/>
+  <col_attr>
+    <field name="loga001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gzxa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="loga002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="loga003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="loga004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="loga005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="loga006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="loga007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="loga008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="loga009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="loga010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="loga011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="loga012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_01" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="loga013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="loga014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="logaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="loga_t" depend_field="loga002" correspon_key="loga002" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="loga_t" depend_field="loga009" correspon_key="loga009" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="loga_t" depend_field="loga010" correspon_key="loga010" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="loga_t" depend_field="loga012" correspon_key="loga012" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

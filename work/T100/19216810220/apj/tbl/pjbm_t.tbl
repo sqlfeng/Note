@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pjbm_t" module="APJ" text="专案活动单身档" type="B" version="1">
+  <column name="pjbment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="pjbm001" text="专案编号" attribute="C090" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="pjbm002" text="活动编号" attribute="C092" type="varchar2(30)" pk="Y" req="N"/>
+  <column name="pjbm003" text="活动类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm004" text="部门编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm005" text="前置活动编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjbm006" text="前置活动关系类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm007" text="后续活动编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjbm008" text="容差时间" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="pjbm009" text="负责人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjbm010" text="负责部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm011" text="对应WBS编号" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjbm012" text="活动权重因子" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbm013" text="计划完工比例方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm014" text="实际完工比例方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjbm015" text="标准作业天数" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="pjbm016" text="最少作业天数" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="pjbm017" text="预计开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm018" text="预计完成日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm019" text="最早开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm020" text="最早完成日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm021" text="最晚开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm022" text="最晚完成日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm023" text="实际开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm024" text="实际完成日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm025" text="完工率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbm026" text="推算进度更新日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm027" text="最新进度更新日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pjbm028" text="最新进度更新人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjbm029" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pjbment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pjbm002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pjbm01" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjbm003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_8004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbm01" c_zoom="q_pjbm01" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjbm006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbm01" c_zoom="q_pjbm01" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjbm008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbm009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbb002_2" c_zoom="q_pjbb002_2" chk_ref="v_pjbb002_1" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjbm012" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pjbm013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_8005" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_8005" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm015" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbm016" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbm017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pjbm026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbm028" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbm029" widget="Edit" items="" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pjbm_t" depend_field="pjbm003" correspon_key="&apos;8004&apos;,pjbm003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm004" correspon_key="pjbm004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pjbm_t" depend_field="pjbm005" correspon_key="pjbm001,pjbm005" ref_table="pjbml_t" ref_fk="pjbml001,pjbml002" ref_dlang="pjbml003" ref_rtn="pjbml004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm007" correspon_key="pjbm001,pjbm007" ref_table="pjbml_t" ref_fk="pjbml001,pjbml002" ref_dlang="pjbml003" ref_rtn="pjbml004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm009" correspon_key="pjbm009" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pjbm_t" depend_field="pjbm010" correspon_key="pjbm010" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pjbm_t" depend_field="pjbm011" correspon_key="pjbm001,pjbm011" ref_table="pjbbl_t" ref_fk="pjbbl001,pjbbl002" ref_dlang="pjbbl003" ref_rtn="pjbbl004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm013" correspon_key="&apos;8005&apos;,pjbm013" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm014" correspon_key="&apos;8005&apos;,pjbm014" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pjbm_t" depend_field="pjbm028" correspon_key="pjbm028" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pjbm_t" depend_field="pjbm002" correspon_key="pjbm001,pjbm002" lang_table="pjbml_t" lang_fk="pjbml001,pjbml002" lang_dlang="pjbml003" lang_rtn="pjbml004"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

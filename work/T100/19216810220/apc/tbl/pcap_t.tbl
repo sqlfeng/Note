@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcap_t" module="APC" text="Service差异调整单" type="T" version="1">
+  <column name="pcapent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcapunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapsite" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pcapdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pcap001" text="调整人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcap002" text="调整部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcap003" text="备注" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pcap014" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcapowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcapcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcapcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pcapmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcapmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pcapcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcapcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pcapent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcapunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_24" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="" chk_ref="v_ooba002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pcapdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcap001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_6" c_zoom="q_ooag001_6" chk_ref="v_ooag001" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pcap002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcap003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcap014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcapownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pcapmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pcapcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcapcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcap_t" depend_field="pcapcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcap_t" depend_field="pcapcnfid" correspon_key="pcapcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcap_t" depend_field="pcapcrtdp" correspon_key="pcapcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcap_t" depend_field="pcapcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcap_t" depend_field="pcapcrtid" correspon_key="pcapcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcap_t" depend_field="pcapmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcap_t" depend_field="pcapmodid" correspon_key="pcapmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcap_t" depend_field="pcapowndp" correspon_key="pcapowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcap_t" depend_field="pcapownid" correspon_key="pcapownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcap_t" depend_field="pcappstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcap_t" depend_field="pcappstid" correspon_key="pcappstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pcapstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stfx_t" module="AST" text="合同进项税变更单头表" type="M" version="1">
+  <column name="stfxent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stfxsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfxunit" text="应用执行组织对象" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfxdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stfxdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stfx001" text="合约编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stfx002" text="版本" attribute="C014" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx003" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx004" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx005" text="合同状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx006" text="文档编号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="stfx007" text="原税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx008" text="新税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfx009" text="原发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="stfx010" text="新发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="stfx011" text="原含发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stfx012" text="新含发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stfx013" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="stfxownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stfxowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfxcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stfxcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stfxcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stfxmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stfxmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stfxcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stfxcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stfxstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stfxent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stfxsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stfxdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stfx001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stfx002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stfx003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx004" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx005" widget="ComboBox" items="6785" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="stfx007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfx013" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="stfxownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stfxmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stfxcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stfxcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stfxstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stfx_t" depend_field="stfxcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="stfx_t" depend_field="stfxcnfid" correspon_key="stfxcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="stfx_t" depend_field="stfxcrtdp" correspon_key="stfxcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stfx_t" depend_field="stfxcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="stfx_t" depend_field="stfxcrtid" correspon_key="stfxcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="stfx_t" depend_field="stfxmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="stfx_t" depend_field="stfxmodid" correspon_key="stfxmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="stfx_t" depend_field="stfxowndp" correspon_key="stfxowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stfx_t" depend_field="stfxownid" correspon_key="stfxownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="stfxstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

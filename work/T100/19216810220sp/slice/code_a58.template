@@ -1,0 +1,19 @@
+#應用 a58 樣板自動產生(Version:3)
+         CONSTRUCT BY NAME g_master.wc ON ${master_fields_qbe}
+            BEFORE CONSTRUCT
+               #add-point:cs段before_construct name="cs.head.before_construct"
+               {<point name="cs.head.before_construct"/>}
+               #end add-point 
+         
+            #公用欄位開窗相關處理
+            ${master_commons_ctrlp}
+               
+            #一般欄位開窗相關處理    
+            ${master_fields_ctrlp}
+            
+            #add-point:其他管控 name="cs.other"
+            {<point name="cs.other"/>}
+            #end add-point
+            
+         END CONSTRUCT
+

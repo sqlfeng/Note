@@ -1,0 +1,30 @@
+{<section id="${app_id}.desc_show" >}
+#應用 qs22 樣板自動產生(Version:7)
+#+ tree節點名稱顯示程式段
+PRIVATE FUNCTION ${general_prefix}_desc_show(pi_ac)
+   #add-point:desc_show段define-客製 name="desc_show.define_customerization"
+   {<point name="desc_show.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_ac   LIKE type_t.num10
+   DEFINE li_tmp  LIKE type_t.num10
+   #add-point:desc_show段define-標準  (請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="desc_show.define"
+   {<point name="desc_show.define"/>}
+   #end add-point
+ 
+   #add-point:FUNCTION前置處理 name="desc_show.before_function"
+   {<point name="desc_show.before_function" />}
+   #end add-point
+ 
+   LET li_tmp = l_ac
+   LET l_ac = pi_ac
+ 
+   #add-point:desc處理 name="desc_show.name"
+   {<point name="desc_show.name"/>}
+   #end add-point
+ 
+   LET l_ac = li_tmp
+ 
+END FUNCTION
+{</section>}
+ 
+

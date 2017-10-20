@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzve_t" module="ADZ" text="树状结构属性设置档(版次归1)" type="B" version="1">
+  <column name="dzvestus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="dzve001" text="程式代号" attribute="C903" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzve002" text="识别码版号" attribute="C902" type="varchar2(15)" pk="Y" req="Y"/>
+  <column name="dzve003" text="4fd tag name" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="dzve004" text="编号" attribute="N001" type="number(5,0)" pk="N" req="Y"/>
+  <column name="dzve005" text="属性(ex.描述desc,pid,id,type,提速档speed,spid,sid,stype)" attribute="C804" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzve006" text="资料表代码" attribute="C803" type="varchar2(15)" pk="N" req="N"/>
+  <column name="dzve007" text="字段代码" attribute="C804" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzve008" text="使用标示" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="dzveownid" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzveowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvecrtid" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvecrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvecrtdt" text="资料创建日" attribute="D002" type="date()" pk="N" req="N"/>
+  <column name="dzvemodid" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvemoddt" text="最近修改日" attribute="D002" type="date()" pk="N" req="N"/>
+  <column name="dzve009" text="客户代号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzvestus" widget="ComboBox" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzve001" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzve002" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzve003" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="20" format=" " prog_rel=" "/>
+    <field name="dzve004" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="5" format=" " prog_rel=" "/>
+    <field name="dzve005" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="20" format=" " prog_rel=" "/>
+    <field name="dzve006" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="20" format=" " prog_rel=" "/>
+    <field name="dzve007" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="20" format=" " prog_rel=" "/>
+    <field name="dzve008" widget="CheckBox" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzveownid" widget="ButtonEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom="q_ooag001" chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzveowndp" widget="ButtonEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom="q_ooea001_1" chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvecrtid" widget="ButtonEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom="q_ooag001" chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvecrtdp" widget="ButtonEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom="q_ooea001_1" chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvecrtdt" widget="DateEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="15" format=" " prog_rel=" "/>
+    <field name="dzvemodid" widget="ButtonEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom="q_ooag001" chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvemoddt" widget="DateEdit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="15" format=" " prog_rel=" "/>
+    <field name="dzve009" widget="ComboBox" items="115" default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzve_t" depend_filed="dzvecnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzve_t" depend_filed="dzvecnfid" correspon_key="dzvecnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzve_t" depend_filed="dzvecrtdp" correspon_key="dzvecrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzve_t" depend_filed="dzvecrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzve_t" depend_filed="dzvecrtid" correspon_key="dzvecrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzve_t" depend_filed="dzvemoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzve_t" depend_filed="dzvemodid" correspon_key="dzvemodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzve_t" depend_filed="dzveowndp" correspon_key="dzveowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzve_t" depend_filed="dzveownid" correspon_key="dzveownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

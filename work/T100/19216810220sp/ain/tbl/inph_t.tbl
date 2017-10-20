@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inph_t" module="AIN" text="ABC分类数据档" type="B" version="1">
+  <column name="inphent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="inphsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="inph001" text="ABC计算方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inph002" text="过去期间" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="inph003" text="计算基准" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inph004" text="成本来源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inph005" text="A类分配百分比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="inph006" text="B类分配百分比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="inph007" text="分类类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inph008" text="A类值" attribute="N202" type="number(20,6)" pk="N" req="Y"/>
+  <column name="inph009" text="B类值" attribute="N202" type="number(20,6)" pk="N" req="Y"/>
+  <column name="inph010" text="C类值" attribute="N202" type="number(20,6)" pk="N" req="Y"/>
+  <column name="inph011" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="inphownid" text="数据所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inphowndp" text="数据所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inphcrtid" text="数据建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inphcrtdp" text="数据建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inphcrtdt" text="数据创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inphmodid" text="数据修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inphmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inphent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inphsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inph001" widget="ComboBox" items="2209" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inph002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="inph003" widget="ComboBox" items="2210" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inph004" widget="ComboBox" items="2211" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inph005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="inph006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="inph007" widget="RadioGroup" items="2212" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inph008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="inph009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="inph010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="inph011" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inphownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inphowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inphcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inphcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inphcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inphmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inphmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inph_t" depend_field="inphcrtdp" correspon_key="inphcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inph_t" depend_field="inphcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="inph_t" depend_field="inphcrtid" correspon_key="inphcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="inph_t" depend_field="inphmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="inph_t" depend_field="inphmodid" correspon_key="inphmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="inph_t" depend_field="inphowndp" correspon_key="inphowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inph_t" depend_field="inphownid" correspon_key="inphownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

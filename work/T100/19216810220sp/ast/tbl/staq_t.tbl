@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="staq_t" module="AST" text="自营合约经营范围设置档" type="D" version="1">
+  <column name="staqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="staq001" text="合约编号" attribute="C207" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="staq002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="staq003" text="品类编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="staq004" text="可退货否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="staq005" text="主部类" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="staqacti" text="有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="staqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="staq001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="staq002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="staq003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="staq004" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="staq005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="staqacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="staq_t" depend_field="staq003" correspon_key="staqent,staq003" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

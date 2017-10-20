@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mrbe_t" module="AMR" text="资源适用产品档" type="M" version="1">
+  <column name="mrbeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mrbesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrbe001" text="资源编号" attribute="C403" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrbe002" text="适用料号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="mrbeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrbesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrbe001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrbe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001_6" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mrbe_t" depend_field="mrbe002" correspon_key="mrbe002" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

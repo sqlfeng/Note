@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmey_t" module="AXM" text="销售估价其他费用单身档" type="M" version="1">
+  <column name="xmeyent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmeysite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmeydocno" text="估价单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmeyseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmey001" text="内含外加" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmey002" text="费用类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmey003" text="费用金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmey004" text="费用料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmey005" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmey006" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xmey007" text="预估金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmey008" text="建议厂商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmey009" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmeyent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmeysite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeydocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmeyseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmey001" widget="ComboBox" items="3028" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmey002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmey003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmey004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmey005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmey006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmey007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmey008" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmey009" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmey_t" depend_field="xmey002" correspon_key="&apos;802&apos;,xmey002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

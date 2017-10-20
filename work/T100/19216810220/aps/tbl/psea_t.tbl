@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="psea_t" module="APS" text="APS运行阶段记录档" type="H" version="1">
+  <column name="pseaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pseasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="psea001" text="APS版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="psea002" text="运行日期时间" attribute="C204" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="psea003" text="运行阶段编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="psea004" text="处理数据" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="psea005" text="执行人" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pseaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pseasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psea001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_psca001" c_zoom="q_psca001" chk_ref="v_psca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psea002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="psea003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psea004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="psea005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="psea_t" depend_field="psea001" correspon_key="pscaent,pscasite,psca001" ref_table="pscal_t" ref_fk="pscalent,pscalsite,pscal001" ref_dlang="pscal002" ref_rtn="pscal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glan_t" module="AGL" text="分摊金额来源档" type="T" version="1">
+  <column name="glanent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glanownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glanowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glancrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glancrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glancrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glanmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glanmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glancnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glancnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glanpstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glanpstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glanstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glanld" text="账别(套)编号" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glandocno" text="分摊编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="glanseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="glan001" text="科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glan002" text="分摊百分比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="glan003" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan004" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan005" text="利润/成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan006" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan007" text="收付款客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan008" text="账款客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan009" text="客群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan010" text="产品类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan011" text="人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glan012" text="no use" attribute="C509" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan013" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glan014" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="glan015" text="余额来源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glan016" text="余额性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glan017" text="来源性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glan018" text="余额来源年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="glan019" text="余额来源期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glan051" text="经营方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan052" text="通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glan053" text="品牌" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glanent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glanownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glanowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glancrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glancrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glancrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glanmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glanmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glancnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glancnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glanpstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glanpstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glanstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glanld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glandocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="glanseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glan001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glan002" widget="Edit" items="" default="100" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="glan003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan007" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan008" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="glan014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="glan015" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan016" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan017" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glan019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glan051" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan052" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glan053" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glan_t" depend_field="glancnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glan_t" depend_field="glancnfid" correspon_key="glancnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glan_t" depend_field="glancrtdp" correspon_key="glancrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glan_t" depend_field="glancrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glan_t" depend_field="glancrtid" correspon_key="glancrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glan_t" depend_field="glanmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glan_t" depend_field="glanmodid" correspon_key="glanmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glan_t" depend_field="glanowndp" correspon_key="glanowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glan_t" depend_field="glanownid" correspon_key="glanownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glan_t" depend_field="glanpstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glan_t" depend_field="glanpstid" correspon_key="glanpstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glanstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

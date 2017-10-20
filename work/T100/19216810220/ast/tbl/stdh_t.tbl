@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stdh_t" module="AST" text="内部结算单明细数据表" type="D" version="1">
+  <column name="stdhent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stdhunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdhsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdhdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stdhseq" text="单据项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stdh001" text="业务类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh002" text="内部交易类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh003" text="来源单据" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdh004" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="stdh005" text="来源日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stdh006" text="产品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="stdh007" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh008" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh009" text="税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh010" text="方向" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stdh011" text="未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh012" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh013" text="未结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh014" text="已结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh015" text="本次结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh016" text="存货组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh017" text="存货法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh018" text="仓库编码" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh019" text="交易对象" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh020" text="交易对象组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh021" text="交易对象法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh022" text="结算会计期" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="stdh023" text="财务会计年度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stdh024" text="财务会计期别" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stdh025" text="账务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh026" text="账务法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh027" text="账务类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdh028" text="主账套已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh029" text="账套二已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh030" text="账套三已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdh031" text="来源项序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="stdh032" text="出入库码" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stdhent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdhunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdhsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdhdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stdhseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdh001" widget="ComboBox" items="6082" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh002" widget="ComboBox" items="6083" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stdh003" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stdh004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdh005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdh006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stdh007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooai001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oodb002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stdh011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001_8" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="stdh023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stdh024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stdh025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh027" widget="ComboBox" items="6079" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdh028" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh029" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh030" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdh031" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdh032" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stdh_t" depend_field="stdh006" correspon_key="stdh006" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="stdh_t" depend_field="stdh007" correspon_key="stdh007" ref_table="stael_t" ref_fk="stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+    <field depend_table="stdh_t" depend_field="stdh008" correspon_key="stdh008" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="stdh_t" depend_field="stdh016" correspon_key="stdh016" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdh_t" depend_field="stdh017" correspon_key="stdh017" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdh_t" depend_field="stdh018" correspon_key="stdhsite,stdh018" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="stdh_t" depend_field="stdh020" correspon_key="stdh020" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdh_t" depend_field="stdh021" correspon_key="stdh021" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdh_t" depend_field="stdh025" correspon_key="stdh025" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdh_t" depend_field="stdh026" correspon_key="stdh026" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

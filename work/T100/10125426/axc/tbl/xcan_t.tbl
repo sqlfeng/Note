@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcan_t" module="AXC" text="成本差异科目设置档" type="M" version="1">
+  <column name="xcanent" text="企業代碼" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcanld" text="帳別" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xcan001" text="差异科目分类" attribute="C103" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="xcan002" text="科目编号" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="xcan003" text="分摊公式类型" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="xcan004" text="数据来源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcan005" text="分摊比例%" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcanownid" text="資料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcanowndp" text="資料所屬部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcancrtid" text="資料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcancrtdp" text="資料建立部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcancrtdt" text="資料創建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcanmodid" text="資料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcanmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcancnfid" text="資料確認者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcancnfdt" text="資料確認日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcanstus" text="狀態碼" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcanent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcanld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcan001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcan002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcan003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcan004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcan005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xcanownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcanowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcancrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcancrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcancrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcanmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcanmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcancnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcancnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcanstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcan_t" depend_field="xcancnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcan_t" depend_field="xcancnfid" correspon_key="xcancnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcan_t" depend_field="xcancrtdp" correspon_key="xcancrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcan_t" depend_field="xcancrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcan_t" depend_field="xcancrtid" correspon_key="xcancrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcan_t" depend_field="xcanmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcan_t" depend_field="xcanmodid" correspon_key="xcanmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcan_t" depend_field="xcanowndp" correspon_key="xcanowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcan_t" depend_field="xcanownid" correspon_key="xcanownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xcanstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

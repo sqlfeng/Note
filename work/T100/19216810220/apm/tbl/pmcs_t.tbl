@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmcs_t" module="APM" text="库存组织要货范围设置-供货对象范围" type="B" version="1">
+  <column name="pmcsent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmcssite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcs001" text="库位编号" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcs002" text="供货对象组织编号" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcsstus" text="状态" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcsownid" text="数据所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmcsowndp" text="数据所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcscrtid" text="数据建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmcscrtdp" text="数据建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcscrtdt" text="数据创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmcsmodid" text="数据修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmcsmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmcsent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcssite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcs001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcs002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcsstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcsownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcsowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcscrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcscrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcscrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmcsmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcsmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmcs_t" depend_field="pmcscrtdp" correspon_key="pmcscrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmcs_t" depend_field="pmcscrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmcs_t" depend_field="pmcscrtid" correspon_key="pmcscrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmcs_t" depend_field="pmcsmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmcs_t" depend_field="pmcsmodid" correspon_key="pmcsmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmcs_t" depend_field="pmcsowndp" correspon_key="pmcsowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmcs_t" depend_field="pmcsownid" correspon_key="pmcsownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmcsstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

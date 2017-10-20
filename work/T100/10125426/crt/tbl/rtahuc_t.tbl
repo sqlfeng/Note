@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtahuc_t" module="CRT" text="CS渠道对账单" type="M" version="1">
+  <column name="rtahucent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtahucownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtahucowndp" text="资料所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtahuccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtahuccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtahuccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtahucmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtahucmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtahuccnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtahuccnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtahucstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtahucdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="rtahucsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtahucseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="rtahuc001" text="客户编号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc002" text="年度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc003" text="期别" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc004" text="日" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc005" text="市场保证金" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc006" text="一般回款" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc007" text="季度政策回款" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc008" text="特殊产品回款(计入任务)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc009" text="特殊产品回款（不计入任务）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc010" text="日常试用装购买回款" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc011" text="合同约定试用装购买回款" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc012" text="物料购买回款" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc013" text="窜货款/快递、物流费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc014" text="标准柜" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc015" text="非标准柜" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc016" text="一般订单发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc017" text="季度政策发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc018" text="特殊产品发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc019" text="特殊产品发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc020" text="试用装购买发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc021" text="合同约定试用装购买发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc022" text="物料购买发货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc023" text="退换货" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc024" text="已回金额（小促道具核销）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc025" text="已发金额（小促道具核销）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc026" text="结余金额（小促道具核销）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc027" text="应返金额（形象柜押金转返金额）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc028" text="已发金额（形象柜押金转返金额）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc029" text="结余金额（形象柜押金转返金额）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc030" text="应返金额（特价试用装）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc031" text="已发金额（特价试用装）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc032" text="结余金额（特价试用装）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc033" text="应返金额（产品返利订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc034" text="已发金额（产品返利订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc035" text="结余金额（产品返利订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc036" text="应核金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc037" text="已核金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc038" text="结余金额（会议核销订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc039" text="应发金额（试用装订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc040" text="已发金额（试用装订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc041" text="结余金额（试用装订单）" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc042" text="货款余额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc043" text="形象柜押金余额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc044" text="保证金余额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc045" text="总余额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc046" text="自定义字段" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc047" text="自定义字段" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc048" text="自定义字段" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc049" text="自定义字段" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc050" text="自定义字段" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtahuc051" text="自定义字段" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc052" text="自定义字段" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc053" text="自定义字段" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc054" text="自定义字段" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtahuc055" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc056" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc057" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc058" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc059" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc060" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc061" text="自定义字段" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc062" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc063" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc064" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc065" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc066" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc067" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc068" text="自定义字段" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtahuc069" text="自定义字段" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtahuc070" text="自定义字段" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtahucent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtahucownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahucowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahuccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahuccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahuccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtahucmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahucmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtahuccnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahuccnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtahucstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtahucdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtahucsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtahucseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtahuc001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc002" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc003" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc023" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc025" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc026" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc027" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc028" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc029" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc030" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc031" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc032" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc033" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc034" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc035" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc036" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc037" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc038" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc039" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc040" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc041" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc042" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc043" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc044" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc045" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc046" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc047" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc049" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtahuc051" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc052" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc053" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc054" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtahuc055" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc056" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc057" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc058" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc059" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc060" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc061" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc062" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc063" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc064" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc065" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc066" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc067" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc068" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtahuc069" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtahuc070" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtahuc_t" depend_field="rtahuccnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtahuc_t" depend_field="rtahuccnfid" correspon_key="rtahuccnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtahuc_t" depend_field="rtahuccrtdp" correspon_key="rtahuccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtahuc_t" depend_field="rtahuccrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtahuc_t" depend_field="rtahuccrtid" correspon_key="rtahuccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtahuc_t" depend_field="rtahucmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtahuc_t" depend_field="rtahucmodid" correspon_key="rtahucmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtahuc_t" depend_field="rtahucowndp" correspon_key="rtahucowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtahuc_t" depend_field="rtahucownid" correspon_key="rtahucownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtahucstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="无效"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,15 @@
+#應用 a55 樣板自動產生(Version:3)
+      #六階樹狀給值
+      LET g_current_idx = g_curr_diag.getCurrentRow("s_browse")
+      IF g_current_idx > 0 THEN
+         IF NOT cl_null(g_browser[g_current_idx].b_show) THEN
+            LET ${master_var_type} = g_browser[g_current_idx].b_${master_field_type}
+            ${master_type_mark2}LET ${master_var_type2} = g_browser[g_current_idx].b_${master_field_type2}
+            ${master_type_mark3}LET ${master_var_type3} = g_browser[g_current_idx].b_${master_field_type3}
+            ${master_type_mark4}LET ${master_var_type4} = g_browser[g_current_idx].b_${master_field_type4}
+            ${master_type_mark5}LET ${master_var_type5} = g_browser[g_current_idx].b_${master_field_type5}
+            ${master_type_mark6}LET ${master_var_type6} = g_browser[g_current_idx].b_${master_field_type6}
+         END IF
+      END IF
+ 
+

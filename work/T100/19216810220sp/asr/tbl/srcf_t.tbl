@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="srcf_t" module="ASR" text="重复性生产制程变更历程档" type="T" version="1">
+  <column name="srcfent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="srcfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcf000" text="类型" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="srcf001" text="生产计划" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcf002" text="制程编号" attribute="C404" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcf003" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="srcf004" text="BOM特性" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="srcf005" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="srcf006" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcfseq" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcf007" text="变更序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcf008" text="变更字段" attribute="C804" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="srcf009" text="变更类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcf010" text="变更前内容" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="srcf011" text="变更后内容" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="srcf012" text="最后变更时间" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="srcf013" text="字段说明SQL" attribute="C107" type="varchar2(500)" pk="N" req="N"/>
+  <column name="srcfownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srcfowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcfcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srcfcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcfcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="srcfmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srcfmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="srcfcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srcfcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="srcfpstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="srcfpstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="srcfstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="srcfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srcfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcf000" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcf001" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcf002" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srcf003" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srcf004" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcf005" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcf006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcf007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcf008" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="srcf009" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcf010" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcf011" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcf012" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcf013" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcfownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="srcfmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="srcfcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="srcfpstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcfpstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="srcfstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="srcf_t" depend_field="srcfcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="srcf_t" depend_field="srcfcnfid" correspon_key="srcfcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="srcf_t" depend_field="srcfcrtdp" correspon_key="srcfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="srcf_t" depend_field="srcfcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="srcf_t" depend_field="srcfcrtid" correspon_key="srcfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="srcf_t" depend_field="srcfmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="srcf_t" depend_field="srcfmodid" correspon_key="srcfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="srcf_t" depend_field="srcfowndp" correspon_key="srcfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="srcf_t" depend_field="srcfownid" correspon_key="srcfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="srcf_t" depend_field="srcfpstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="srcf_t" depend_field="srcfpstid" correspon_key="srcfpstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="srcfstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

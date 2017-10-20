@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glas_t" module="AGL" text="科目核算项设置默认值表" type="B" version="1">
+  <column name="glasent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glasownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glasowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glascrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glascrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glascrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glasmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glasmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glasstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glasld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glas001" text="科目编号" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="glas002" text="核算项类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glas003" text="默认值" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glasent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glasownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glasowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glascrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glascrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glascrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glasmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glasmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glasstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glasld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glas001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glas002" widget="ComboBox" items="9934" default="&apos;5&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glas003" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glas_t" depend_field="glascrtdp" correspon_key="glascrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glas_t" depend_field="glascrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glas_t" depend_field="glascrtid" correspon_key="glascrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glas_t" depend_field="glasld" correspon_key="glasent,glasld" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="glas_t" depend_field="glasmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glas_t" depend_field="glasmodid" correspon_key="glasmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glas_t" depend_field="glasowndp" correspon_key="glasowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glas_t" depend_field="glasownid" correspon_key="glasownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glasstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

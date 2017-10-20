@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stcb_t" module="AST" text="分销合同申请费用设置表" type="D" version="1">
+  <column name="stcbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stcbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcbunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcbdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stcbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stcb001" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcb002" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb003" text="会计期间" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb004" text="价款类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb005" text="计算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb006" text="费用周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb007" text="费用周期方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb008" text="条件基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb009" text="计算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb010" text="费用净额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcb011" text="费用比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcb012" text="保底否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb013" text="保底金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcb014" text="保底扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcb015" text="分量扣点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcb016" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcb017" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcb018" text="下次计算日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcb019" text="费用开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcb020" text="费用截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcb021" text="是否参与现金折扣" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stcbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcbunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stcbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stcb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stcb002" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stae001" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="asti203" case="upper"/>
+    <field name="stcb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb004" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb005" widget="ComboBox" items="6007" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb006" widget="ComboBox" items="6008" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb007" widget="ComboBox" items="6009" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="asti205" case="upper"/>
+    <field name="stcb009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stcb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stcb012" widget="ComboBox" items="6010" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stcb014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stcb015" widget="ComboBox" items="6011" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcb016" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcb017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcb018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcb019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcb020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcb021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stcb_t" depend_field="stcb002" correspon_key="stcbent,stcb002" ref_table="stael_t" ref_fk="staelent,stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+    <field depend_table="stcb_t" depend_field="stcb008" correspon_key="stcbent,stcb008" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+    <field depend_table="stcb_t" depend_field="stcb009" correspon_key="stcbent,stcb009" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

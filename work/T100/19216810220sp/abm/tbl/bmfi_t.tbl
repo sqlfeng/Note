@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmfi_t" module="ABM" text="ECN特征限定用料单头档" type="D" version="1">
+  <column name="bmfient" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bmfisite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmfidocno" text="ECN单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bmfi002" text="ECN项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmfi003" text="限定特征" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="bmfient" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfisite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfidocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfi002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmfi003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imeb004" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmfi_t" depend_field="bmfi003" correspon_key="&apos;273&apos;,bmfi003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

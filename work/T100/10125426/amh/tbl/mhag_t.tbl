@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mhag_t" module="AMH" text="离职人员基本数据档" type="M" version="1">
+  <column name="mhagent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mhagsite" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhagunit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhag001" text="人员编号" attribute="C006" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mhag002" text="身份证号码" attribute="C015" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhag003" text="离职日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mhag004" text="离职理由码" attribute="C013" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhag005" text="未办理离职手续" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mhag006" text="费用单单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhag007" text="纳入黑名单" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mhag008" text="黑名单理由码" attribute="C013" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhag009" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mhagownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhagowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhagcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhagcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhagcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mhagmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhagmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mhagcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhagcnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mhagstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mhagent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_24" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag001" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_mhaf001" c_zoom="q_mhaf001" chk_ref="v_mhaf001" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag002" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_mhaf001" c_zoom="q_mhaf001" chk_ref="v_mhaf001" widget_width="20" format="" prog_rel=""/>
+    <field name="mhag003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag004" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag006" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="mhag007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag008" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhag009" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="mhagownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="mhagmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="mhagcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mhagcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="mhagstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mhag_t" depend_field="mhag001" correspon_key="mhag001" ref_table="mhaf_t" ref_fk="mhaf001" ref_dlang=" " ref_rtn="mhaf002"/>
+    <field depend_table="mhag_t" depend_field="mhagcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhag_t" depend_field="mhagcnfid" correspon_key="mhagcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhag_t" depend_field="mhagcrtdp" correspon_key="mhagcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhag_t" depend_field="mhagcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhag_t" depend_field="mhagcrtid" correspon_key="mhagcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhag_t" depend_field="mhagmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhag_t" depend_field="mhagmodid" correspon_key="mhagmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhag_t" depend_field="mhagowndp" correspon_key="mhagowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhag_t" depend_field="mhagownid" correspon_key="mhagownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhag_t" depend_field="mhagsite" correspon_key="mhagsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mhagstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

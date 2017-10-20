@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcad_t" module="APC" text="POS模块基本数据表" type="B" version="1">
+  <column name="pcadent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcadunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcad001" text="模块编号" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pcad002" text="模块等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcad003" text="上级模块" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pcad004" text="功能类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcad005" text="进程名称" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pcad006" text="参数" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pcad007" text="是否打印" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcad008" text="是否客显" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcadstamp" text="时间戳记" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <column name="pcadstus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcadownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcadowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcadcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcadcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcadcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pcadmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcadmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pcadent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcadunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcad001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pcad001" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcad002" widget="ComboBox" items="6024" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcad003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pcad001" c_zoom="q_pcad001" chk_ref="v_pcad001" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcad004" widget="ComboBox" items="6025" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcad005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcad006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcad007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcad008" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadstamp" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pcadstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pcadmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcadmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcad_t" depend_field="pcad002" correspon_key="pcadent,pcadsite,pcad002" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="pcad_t" depend_field="pcad003" correspon_key="pcadent,pcad003" ref_table="pcadl_t" ref_fk="pcadlent,pcadl001" ref_dlang="pcadl002" ref_rtn="pcadl003"/>
+    <field depend_table="pcad_t" depend_field="pcadcrtdp" correspon_key="pcadcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcad_t" depend_field="pcadcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcad_t" depend_field="pcadcrtid" correspon_key="pcadcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcad_t" depend_field="pcadmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcad_t" depend_field="pcadmodid" correspon_key="pcadmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcad_t" depend_field="pcadowndp" correspon_key="pcadowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcad_t" depend_field="pcadownid" correspon_key="pcadownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pcad_t" depend_field="pcad001" correspon_key="pcadent,pcad001" lang_table="pcadl_t" lang_fk="pcadlent,pcadl001" lang_dlang="pcadl002" lang_rtn="pcadl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="pcadstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

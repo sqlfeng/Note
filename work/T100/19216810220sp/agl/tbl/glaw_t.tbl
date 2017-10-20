@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glaw_t" module="AGL" text="账别科目对应档" type="B" version="1">
+  <column name="glawent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glawownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glawowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glawcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glawcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glawcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glawmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glawmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glawstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glaw001" text="来源帐别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glaw002" text="来源科目" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="glaw003" text="对应帐别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glaw004" text="对应科目" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="glaw005" text="对应比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="glaw006" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="glaw007" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="glawent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glawownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glawowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glawcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glawcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glawcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glawmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glawmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glawstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glaw001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glaw002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glad001_1" c_zoom="q_glad001_1" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glaw003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glaw004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glad001_1" c_zoom="q_glad001_1" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glaw005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="glaw006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glaw007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glaw_t" depend_field="glaw001" correspon_key="glawent,glaw001" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="glaw_t" depend_field="glaw002" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glaw_t" depend_field="glaw003" correspon_key="glawent,glaw003" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="glaw_t" depend_field="glawcrtdp" correspon_key="glawcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glaw_t" depend_field="glawcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glaw_t" depend_field="glawcrtid" correspon_key="glawcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glaw_t" depend_field="glawmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glaw_t" depend_field="glawmodid" correspon_key="glawmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glaw_t" depend_field="glawowndp" correspon_key="glawowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glaw_t" depend_field="glawownid" correspon_key="glawownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glawstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

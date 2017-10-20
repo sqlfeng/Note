@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crdc_t" module="ACR" text="会员价值评估记录档" type="S" version="1">
+  <column name="crdcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="crdc001" text="会员编号" attribute="C602" type="varchar2(30)" pk="Y" req="N"/>
+  <column name="crdc002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="N"/>
+  <column name="crdc003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="N"/>
+  <column name="crdc004" text="会员等级" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crdc005" text="R值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crdc006" text="F值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crdc007" text="M值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="crdc008" text="RFM等级标识" attribute="C701" type="varchar2(3)" pk="N" req="N"/>
+  <column name="crdc009" text="RFM得分" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="crdc010" text="会员价值" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crdc011" text="评估日期" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crdc012" text="评估人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crdc013" text="备用一" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crdc014" text="备用二" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="crdc015" text="备用三" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crdcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crdc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="crdc002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel=""/>
+    <field name="crdc003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="crdc004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crdc005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crdc006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="crdc007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="crdc008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel=""/>
+    <field name="crdc009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="crdc010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crdc011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="crdc012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="crdc013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crdc014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="crdc015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="crdc_t" depend_field="crdc010" correspon_key="&apos;2111&apos;,crdc010" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

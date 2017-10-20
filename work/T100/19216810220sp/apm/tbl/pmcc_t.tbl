@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmcc_t" module="APM" text="供应商评核项目设置档" type="B" version="1">
+  <column name="pmccent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmcc001" text="评核期别" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcc002" text="评核品类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcc003" text="评核开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmcc004" text="评核结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmcc005" text="定量评核整体权重" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmcc006" text="定性评核整体权重" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmccstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmccownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmccowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmcccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmccmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmccmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmccent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmcc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001" c_zoom="q_rtax001" chk_ref="v_rtax001_2" widget_width="10" format="" prog_rel="arti202" case="upper"/>
+    <field name="pmcc003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcc004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcc005" widget="Edit" items="" default="50" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmcc006" widget="Edit" items="" default="50" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmccstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmccownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmccowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmcccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmccmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmccmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmcc_t" depend_field="pmcc002" correspon_key="pmcc002,pmccent" ref_table="rtaxl_t" ref_fk="rtaxl001,rtaxlent" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="pmcc_t" depend_field="pmcccrtdp" correspon_key="pmcccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmcc_t" depend_field="pmcccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmcc_t" depend_field="pmcccrtid" correspon_key="pmcccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmcc_t" depend_field="pmccmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmcc_t" depend_field="pmccmodid" correspon_key="pmccmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmcc_t" depend_field="pmccowndp" correspon_key="pmccowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmcc_t" depend_field="pmccownid" correspon_key="pmccownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmccstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

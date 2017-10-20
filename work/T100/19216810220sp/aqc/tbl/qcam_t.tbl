@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="qcam_t" module="AQC" text="品质检验项目单头档" type="B" version="1">
+  <column name="qcament" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="qcam001" text="参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="qcam002" text="品管分群" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcam003" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="qcam004" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="qcam005" text="作业编号" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcam006" text="加工序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="qcam007" text="交易对象类型" attribute="C816" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="qcam008" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcam009" text="检验类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcam010" text="识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="qcamownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="qcamowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcamcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="qcamcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcamcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="qcammodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="qcammoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="qcamstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="qcament" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="qcam001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_4" c_zoom="q_ooal002_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="qcam004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="qcam005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="qcam007" widget="ComboBox" items="5055" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_1" c_zoom="q_pmaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam009" widget="ComboBox" items="5056" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcam010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="qcamownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcamowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcamcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcamcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcamcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="qcammodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcammoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="qcamstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="qcam_t" depend_field="qcam001" correspon_key="qcament,&apos;5&apos;,qcam001" ref_table="ooall_t" ref_fk="ooallent,ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="qcam_t" depend_field="qcam002" correspon_key="qcament,&apos;205&apos;,qcam002" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="qcam_t" depend_field="qcam003" correspon_key="qcament,qcam003" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="qcam_t" depend_field="qcam005" correspon_key="qcament,&apos;221&apos;,qcam005" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="qcam_t" depend_field="qcam008" correspon_key="qcament,qcam008" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="qcam_t" depend_field="qcamcrtdp" correspon_key="qcamcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="qcam_t" depend_field="qcamcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="qcam_t" depend_field="qcamcrtid" correspon_key="qcamcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="qcam_t" depend_field="qcammoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="qcam_t" depend_field="qcammodid" correspon_key="qcammodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="qcam_t" depend_field="qcamowndp" correspon_key="qcamowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="qcam_t" depend_field="qcamownid" correspon_key="qcamownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="qcamstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

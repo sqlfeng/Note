@@ -1,0 +1,10 @@
+      #應用 a28 樣板自動產生(Version:3)
+      #欄位參照
+      INITIALIZE g_ref_vars TO NULL
+      #args - Start -
+      LET g_ref_vars[${args}] = ${mdl_var${args}}
+      #args -  End  -
+      CALL cl_ap_reference('${mdl_tbl}', g_ref_vars, "${mdl_wc}", '${mdl_mcode1}', '${mdl_mcode2}') RETURNING g_rtn_fields
+      LET ${mdl_var_rtn} = g_rtn_fields[2] 
+      DISPLAY BY NAME ${mdl_var_rtn}
+

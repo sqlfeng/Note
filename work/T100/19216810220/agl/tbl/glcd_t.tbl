@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glcd_t" module="AGL" text="总账调汇科目范围档" type="D" version="1">
+  <column name="glcdent" text="企业编码" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="glcdld" text="帐套编号" attribute="C501" type="varchar2(5)" pk="Y" req="N"/>
+  <column name="glcd001" text="科目编号" attribute="C502" type="varchar2(24)" pk="Y" req="N"/>
+  <column name="glcdacti" text="有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glcdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcdld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glcd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcdacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glcdstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

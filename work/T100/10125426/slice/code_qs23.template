@@ -1,0 +1,45 @@
+{<section id="${app_id}.chk_isnode" >}
+#應用 qs23 樣板自動產生(Version:5)
+#+ 搜尋該節點下是否還有子節點
+PRIVATE FUNCTION ${general_prefix}_chk_isnode(pi_id)
+   #add-point:chk_isnode段define-客製 name="chk_isnode.define_customerization"
+   {<point name="chk_isnode.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_id    LIKE type_t.num10
+   DEFINE li_cnt   LIKE type_t.num10
+   #add-point:chk_isnode段define-標準  (請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="chk_isnode.define"
+   {<point name="chk_isnode.define"/>}
+   #end add-point
+ 
+ 
+   #add-point:chk_isnode段筆數計算sql組成 name="chk_isnode.row_count_sql"
+   {<point name="chk_isnode.row_count_sql"/>}
+   #end add-point
+ 
+   PREPARE ${general_prefix}_chk_isnode_pre FROM g_sql
+ 
+   CASE ${detail_var_title}[pi_id].expcode
+      WHEN -1
+         RETURN FALSE
+      WHEN 0
+         RETURN FALSE
+      WHEN 1
+         #add-point:chk_isnode段sql執行 name="chk_isnode.execute_sql_1"
+         {<point name="chk_isnode.execute_sql_1"/>}
+         #end add-point
+      WHEN 2
+         #add-point:chk_isnode段sql執行 name="chk_isnode.execute_sql_2"
+         {<point name="chk_isnode.execute_sql_2"/>}
+         #end add-point
+   END CASE
+ 
+   IF li_cnt > 0 THEN
+      RETURN TRUE
+   ELSE
+      RETURN FALSE
+   END IF
+ 
+END FUNCTION
+{</section>}
+ 
+

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="steo_t" module="AST" text="合约费用优惠执行情况明细档" type="D" version="1">
+  <column name="steoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="steounit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steosite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steoacti" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steodocno" text="审批单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="steoseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="steo001" text="执行类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steo002" text="优惠类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steo003" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steo004" text="优惠开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="steo005" text="优惠结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="steo006" text="优惠金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="steo007" text="优惠原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="steo008" text="优惠单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="steo009" text="优惠项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="steoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steounit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steosite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steoacti" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steodocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="steoseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="steo001" widget="ComboBox" items="6784" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo002" widget="ComboBox" items="6783" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="steo007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="steo008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="steo009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="steo_t" depend_field="steo003" correspon_key="steo003" ref_table="stael_t" ref_fk="stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

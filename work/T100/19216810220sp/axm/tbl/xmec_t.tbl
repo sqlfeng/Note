@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmec_t" module="AXM" text="销售合约变更累计定价明细档" type="D" version="1">
+  <column name="xmecent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="xmecsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmecdocno" text="合约单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="xmec900" text="变更序" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="xmecseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="xmecseq1" text="项序" attribute="N101" type="number(20,6)" pk="Y" req="N"/>
+  <column name="xmec001" text="到达数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmec002" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmec003" text="折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmec004" text="数量到达日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmec005" text="数量到达参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmec901" text="变更类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmec902" text="变更理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmec903" text="变更备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmecent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmecsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmecdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmec900" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmecseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmecseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmec001" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmec002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmec003" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmec004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmec005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmec901" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmec902" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmec903" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmec_t" depend_field="xmec902" correspon_key="xmecent,&apos;282&apos;,xmec902" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xrda_t" module="AXR" text="收款核销单单头档" type="T" version="1">
+  <column name="xrdaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xrdacomp" text="所属法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrdald" text="账套别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xrdadocno" text="冲账单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xrdadocdt" text="冲账日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrdasite" text="账务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda001" text="账款单性质" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda003" text="账务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda004" text="账款核销客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda005" text="收款客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda006" text="一次性对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda007" text="生成方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrda008" text="来源参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda009" text="冲账批序号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda010" text="集团代收付单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda011" text="差异处理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrda012" text="退款类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda013" text="分录底稿是否可重新生成" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrda014" text="抛转凭证号码" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrda015" text="作废理由码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrda016" text="打印次数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xrda017" text="MEMO备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xrdastus" text="审核否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrdaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrdaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrdacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrdacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrdacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrdamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrdamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrda103" text="原币借方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda104" text="原币贷方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda113" text="本币借方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda114" text="本币贷方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda123" text="本位币二借方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda124" text="本位币二贷方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda133" text="本位币三借方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrda134" text="本位币三贷方金额合计" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrdacnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrdacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrdapstid" text="资料过帐者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrdapstdt" text="资料过帐日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrda018" text="来源类型(流通)" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xrdaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrdacomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdald" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xrdadocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrdadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrdadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrdasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_1" c_zoom="q_xrah002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda001" widget="ComboBox" items="8307" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda005" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xrda007" widget="ComboBox" items="8324" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrda009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrda009" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xrda010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrda011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda013" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrda014" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrda015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrda016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="xrda017" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xrdastus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrdamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrda103" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda113" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda114" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda123" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda124" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda133" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrda134" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrdacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrdapstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrdapstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrda018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xrda_t" depend_field="xrda003" correspon_key="xrda003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrda004" correspon_key="xrdaent,xrda004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xrda_t" depend_field="xrda005" correspon_key="xrdaent,xrda005" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xrda_t" depend_field="xrda008" correspon_key="xrdaent,xrda008" ref_table="bgaal_t" ref_fk="bgaalent,bgaal001" ref_dlang="bgaal002" ref_rtn="bgaal003"/>
+    <field depend_table="xrda_t" depend_field="xrda015" correspon_key="xrdaent,&apos;216&apos;,xrda015" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xrda_t" depend_field="xrdacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrda_t" depend_field="xrdacnfid" correspon_key="xrdacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrdacomp" correspon_key="xrdaent,xrdacomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrda_t" depend_field="xrdacrtdp" correspon_key="xrdacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrda_t" depend_field="xrdacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrda_t" depend_field="xrdacrtid" correspon_key="xrdacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrdadocno" correspon_key="xrdaent,xrdacomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrda_t" depend_field="xrdald" correspon_key="xrdaent,xrdald" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="xrda_t" depend_field="xrdamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrda_t" depend_field="xrdamodid" correspon_key="xrdamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrdaowndp" correspon_key="xrdaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrda_t" depend_field="xrdaownid" correspon_key="xrdaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrdapstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrda_t" depend_field="xrdapstid" correspon_key="xrdapstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrda_t" depend_field="xrdasite" correspon_key="xrdaent,xrdasite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xrdastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

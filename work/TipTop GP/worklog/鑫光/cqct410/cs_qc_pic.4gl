@@ -13,7 +13,6 @@ DATABASE ds
 
 GLOBALS "../../../tiptop/config/top.global"
 
-
 DEFINE gs_wc          STRING,
        gs_tempdir     STRING,
        gs_fglasip     STRING
@@ -69,6 +68,7 @@ FUNCTION cs_qc_pic(p_class,p_tc_imc01,p_tc_imc02,p_tc_imc31,p_str)
       RETURN
    END IF
    LET g_class = p_class # add by lixwz 170911
+
    LET gi_maintain = TRUE
    IF NOT cs_getFieldDocument() THEN
       CALL cl_err(NULL, "lib-211", 1)
@@ -324,7 +324,7 @@ FUNCTION cs_maintainFieldDocument()
                 LET gs_location = ls_file
              END IF
 
-          ON ACTION del_pic
+          ON ACTION delete_pic
              IF cl_confirm('TSD0038') THEN    #TSD0038 是否確認刪除圖片?
                 LET gs_mode = "delete"
                 EXIT WHILE
@@ -357,7 +357,7 @@ FUNCTION cs_maintainFieldDocumentRecord()
           ls_time       STRING,
           ls_fname      STRING,
           ls_location   STRING
-  DEFINE  l_filesize    LIKE type_file.num10
+  DEFINE  l_filesize    LIKE type_file.num10  # add by lixwz 20170911
 
    #--If location is a URL format, then store this location directly
    #--Otherwise, store file into DB
@@ -373,12 +373,13 @@ FUNCTION cs_maintainFieldDocumentRecord()
       IF g_class = '3' THEN
           LET l_filesize = os.Path.size(ls_fname.trim())
           IF l_filesize > 512000 THEN
-              CALL cl_err('大小超过限制，500KB','!',1)
+              IF os.Path.delete(ls_fname.trim()) THEN
+                  CALL cl_err('大小超过限制，500KB','!',1)
+              END IF
               RETURN FALSE
           END IF
       END IF
       # add by lixwz 20170911 e
-
       LOCATE g_key.tc_imc10 IN FILE ls_fname
    END IF
    #--

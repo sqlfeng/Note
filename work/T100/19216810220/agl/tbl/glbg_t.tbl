@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glbg_t" module="AGL" text="揭露事项说明档" type="B" version="1">
+  <column name="glbgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glbgownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glbgowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glbgcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glbgcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glbgcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glbgmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glbgmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glbgstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glbgld" text="帐别编号" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glbg001" text="报表类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glbg002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="glbg003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="glbg004" text="行序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="glbg005" text="说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="glbg006" text="金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glbg007" text="使用分类" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glbg008" text="汇率(本位币二)" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="glbg009" text="金额(本位币二)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="glbg010" text="汇率(本位币三)" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="glbg011" text="金额(本位币三)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glbgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glbgownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbgowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbgcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbgcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbgcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glbgmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbgmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glbgstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glbgld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glbg001" widget="ComboBox" items="8029" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbg002" widget="Edit" items="" default="" max_compare="&lt;=" max="9999.000" min_compare="&gt;=" min="1000.000" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glbg003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glbg004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glbg005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="glbg006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glbg007" widget="ComboBox" items="8030" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glbg008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="glbg009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="glbg010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="glbg011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glbg_t" depend_field="glbgcrtdp" correspon_key="glbgcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glbg_t" depend_field="glbgcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glbg_t" depend_field="glbgcrtid" correspon_key="glbgcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glbg_t" depend_field="glbgmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glbg_t" depend_field="glbgmodid" correspon_key="glbgmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glbg_t" depend_field="glbgowndp" correspon_key="glbgowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glbg_t" depend_field="glbgownid" correspon_key="glbgownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glbgstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmab_t" module="AFM" text="融资科目设置档" type="B" version="1">
+  <column name="fmabent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="fmab001" text="融资类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fmab002" text="会计科目参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="fmab003" text="融资本金面值科目" attribute="C502" type="varchar2(24)" pk="N" req="Y"/>
+  <column name="fmab004" text="利息调整科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fmab005" text="保证费用科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fmab006" text="承销费用科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fmab007" text="签证费用科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="fmab008" text="交割服务费用科目" attribute="C502" type="varchar2(24)" pk="N" req="Y"/>
+  <column name="fmab009" text="费用化利息科目" attribute="C502" type="varchar2(24)" pk="N" req="Y"/>
+  <column name="fmab010" text="应付利息科目" attribute="C502" type="varchar2(24)" pk="N" req="Y"/>
+  <column name="fmab011" text="LC折价科目" attribute="C502" type="varchar2(24)" pk="N" req="Y"/>
+  <column name="fmabownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmabowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmabcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmabcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmabcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmabmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmabmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmabstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmabent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="q_fmaa001_1" c_zoom="q_fmab001" chk_ref="v_fmab001" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="q_ooal002_1" c_zoom="q_fmab002" chk_ref="v_fmab002" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab003" chk_ref="v_fmab003" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab004" chk_ref="v_fmab004" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab005" chk_ref="v_fmab005" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab006" chk_ref="v_fmab006" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab007" chk_ref="v_fmab007" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab008" chk_ref="v_fmab008" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab009" chk_ref="v_fmab009" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab010" chk_ref="v_fmab010" widget_width="10" format="" prog_rel=""/>
+    <field name="fmab011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac001" c_zoom="q_fmab011" chk_ref="v_fmab011" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmabmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmabmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmabstus" widget="ComboBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmab_t" depend_field="fmab001" correspon_key="fmab001,fmabent" ref_table="fmaal_t" ref_fk="fmaal001,fmaalent" ref_dlang="fmall002" ref_rtn="fmaal003"/>
+    <field depend_table="fmab_t" depend_field="fmab002" correspon_key="fmab002,fmabent" ref_table="ooall_t" ref_fk="ooallent,ooall002" ref_dlang="" ref_rtn="ooall004"/>
+    <field depend_table="fmab_t" depend_field="fmab003" correspon_key="fmabent,fmab003" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab004" correspon_key="fmabent,fmab004" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab005" correspon_key="fmabent,flmab005" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab006" correspon_key="fmabent,fmab006" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab007" correspon_key="fmabent,fmab007" ref_table="glacl_t" ref_fk="alaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab008" correspon_key="fmabent,fmab008" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab009" correspon_key="fmabent,fmab009" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab010" correspon_key="fmabent,fmab010" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmab011" correspon_key="fmabent,fmab011" ref_table="glacl_t" ref_fk="glaclent,glacl002" ref_dlang="" ref_rtn="glacl004"/>
+    <field depend_table="fmab_t" depend_field="fmabcrtdp" correspon_key="fmabcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmab_t" depend_field="fmabcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmab_t" depend_field="fmabcrtid" correspon_key="fmabcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmab_t" depend_field="fmabmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmab_t" depend_field="fmabmodid" correspon_key="fmabmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmab_t" depend_field="fmabowndp" correspon_key="fmabowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmab_t" depend_field="fmabownid" correspon_key="fmabownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="fmab_t" depend_field="fmab001" correspon_key="fmab001,fmabent" lang_table="fmaal_t" lang_fk="fmaal001,fmaalent" lang_dlang="fmaal002" lang_rtn="fmaal003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="fmabstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dbbc_t" module="ADB" text="销售范围基本数据档" type="B" version="1">
+  <column name="dbbcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="dbbc001" text="销售范围编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dbbc002" text="销售组织编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbc003" text="通路编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbc004" text="产品组编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbc005" text="办事处编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbcownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbbcowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbccrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbbccrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbbccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dbbcmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbbcmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dbbcstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dbbcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbbc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbbc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbc004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbba001" c_zoom="q_dbba001" chk_ref="v_dbba001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="v_ooef001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbcownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbcowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dbbcmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbbcmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dbbcstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dbbc_t" depend_field="dbbc002" correspon_key="dbbc002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbbc_t" depend_field="dbbc003" correspon_key="dbbc003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="dbbc_t" depend_field="dbbc004" correspon_key="dbbc004" ref_table="dbbal_t" ref_fk="dbbal001" ref_dlang="dbbal002" ref_rtn="dbbal003"/>
+    <field depend_table="dbbc_t" depend_field="dbbc005" correspon_key="dbbc005" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbbc_t" depend_field="dbbccrtdp" correspon_key="dbbccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbbc_t" depend_field="dbbccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbbc_t" depend_field="dbbccrtid" correspon_key="dbbccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbbc_t" depend_field="dbbcmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbbc_t" depend_field="dbbcmodid" correspon_key="dbbcmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbbc_t" depend_field="dbbcowndp" correspon_key="dbbcowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbbc_t" depend_field="dbbcownid" correspon_key="dbbcownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="dbbc_t" depend_field="dbbc001" correspon_key="dbbc001" lang_table="dbbcl_t" lang_fk="dbbcl001" lang_dlang="dbbcl002" lang_rtn="dbbcl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="dbbcstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

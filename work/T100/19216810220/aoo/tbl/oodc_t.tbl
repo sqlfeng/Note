@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oodc_t" module="AOO" text="复合税数据档" type="B" version="1">
+  <column name="oodcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oodcownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oodcowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oodccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oodccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oodccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="oodcmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oodcmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="oodcstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oodc001" text="交易税区" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oodc002" text="复合税代码" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oodc003" text="税别代码" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="oodcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oodcownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodcowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="oodcmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodcmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="oodcstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oodc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodc001" c_zoom="q_ooal002_11" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodc002" c_zoom="q_oodc002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oodc003" widget="ButtonEdit" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_4" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oodc_t" depend_field="oodc001" correspon_key="oodcent,&apos;2&apos;,oodc001" ref_table="ooall_t" ref_fk="ooallent,ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="oodc_t" depend_field="oodc002" correspon_key="oodcent,oodc001,oodc002" ref_table="oodbl_t" ref_fk="oodblent,oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="oodc_t" depend_field="oodc003" correspon_key="oodcent,oodc001,oodc002" ref_table="oodbl_t" ref_fk="oodblent,oodb001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="oodc_t" depend_field="oodccrtdp" correspon_key="oodccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oodc_t" depend_field="oodccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oodc_t" depend_field="oodccrtid" correspon_key="oodccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oodc_t" depend_field="oodcmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oodc_t" depend_field="oodcmodid" correspon_key="oodcmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oodc_t" depend_field="oodcowndp" correspon_key="oodcowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oodc_t" depend_field="oodcownid" correspon_key="oodcownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="oodcstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

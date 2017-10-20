@@ -1,0 +1,17 @@
+            #應用 a25 樣板自動產生(Version:3)
+            #輸入資料才做查詢
+            IF NOT cl_null(${mdl_var}) THEN
+               INITIALIZE g_rtn_fields TO NULL
+               CALL cl_mnemonic('${mdl_tbl}',${mdl_var},"${mdl_wc}",'${mdl_field_list}') RETURNING g_rtn_fields, g_chk
+               IF g_chk THEN
+                  LET ${mdl_rtn_var} = g_rtn_fields[1] 
+                  #mdls - Start -
+                  LET ${mdl_rtn_var${mdl}} = g_rtn_fields[${mdl}]
+                  #mdls -  End  -
+               END IF
+               DISPLAY BY NAME ${mdl_rtn_var}
+               #mdls - Start -
+               DISPLAY BY NAME ${mdl_rtn_var${mdl}}
+               #mdls -  End  -
+            END IF 
+

@@ -1,0 +1,9 @@
+#應用 a47 樣板自動產生(Version:4)
+      #刪除相關文件
+      CALL ${general_prefix}_set_pk_array()
+      #add-point:相關文件刪除前 name="delete.befroe.related_document_remove${mdl_addpoint}"
+      {<point name="delete.befroe.related_document_remove${mdl_addpoint}"/>}
+      #end add-point   
+      CALL cl_doc_remove()  
+ 
+

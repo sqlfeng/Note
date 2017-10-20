@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmay_t" module="AFM" text="NO USE" type="M" version="1">
+  <column name="fmayent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmay001" text="财务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmay002" text="偿还本息账务编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmay003" text="帐套" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="fmay004" text="归属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmay005" text="年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmay006" text="期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmay007" text="凭证编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmayownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmayowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaycrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaycrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaycrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmaymodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaymoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmaycnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaycnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmaystus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmayent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmay001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmay027" c_zoom="q_fmay027" chk_ref="v_fmay027" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmay002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmay003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_fmay005" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="fmay004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmay005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmay005" c_zoom="q_fmay005" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="fmay006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmay005" c_zoom="q_fmay005" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="fmay007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmayownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmayowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaycrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaycrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaycrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmaymodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaymoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmaycnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaycnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmaystus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmay_t" depend_field="fmay003" correspon_key="fmayent,fmay003" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="" ref_rtn="glaal002"/>
+    <field depend_table="fmay_t" depend_field="fmaycnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmay_t" depend_field="fmaycnfid" correspon_key="fmaycnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmay_t" depend_field="fmaycrtdp" correspon_key="fmaycrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmay_t" depend_field="fmaycrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmay_t" depend_field="fmaycrtid" correspon_key="fmaycrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmay_t" depend_field="fmaymoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmay_t" depend_field="fmaymodid" correspon_key="fmaymodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmay_t" depend_field="fmayowndp" correspon_key="fmayowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmay_t" depend_field="fmayownid" correspon_key="fmayownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="fmaystus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

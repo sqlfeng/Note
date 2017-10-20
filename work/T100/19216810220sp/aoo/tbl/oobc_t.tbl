@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oobc_t" module="AOO" text="单据别控制组限定档" type="D" version="1">
+  <column name="oobcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oobc001" text="参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobc002" text="单据别" attribute="C202" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobc003" text="控制组编号" attribute="C020" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oobc004" text="控制组类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="oobcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oobc001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobc002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooha001" c_zoom="q_ooha001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobc004" widget="ComboBox" items="24" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oobc_t" depend_field="oobc003" correspon_key="oobcent,oobc003" ref_table="oohal_t" ref_fk="oohalent,oohal001" ref_dlang="oohal002" ref_rtn="oohal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

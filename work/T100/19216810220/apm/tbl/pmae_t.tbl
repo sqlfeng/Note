@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmae_t" module="APM" text="交易对象标签档" type="D" version="1">
+  <column name="pmaeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmae001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmae002" text="标签编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmae003" text="交易对象类型" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="pmaeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmae001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmae002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_1" c_zoom="q_oocq002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmae003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmae_t" depend_field="pmae002" correspon_key="&apos;235&apos;,pmae002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

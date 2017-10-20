@@ -1,0 +1,11 @@
+        #報表 d01 樣板自動產生(Version:2)
+        ${group_typestr} GROUP OF sr1.${group_field}
+${${group_type}_${group_field}_signstr}
+           #add-point:${rep_type}.${group_type}.${group_field}.before name="${rep_type}.${group_type}.${group_field}.before"
+           {<point name="${rep_type}.${group_type}.${group_field}.before"/>}
+           #end add-point:
+
+${${group_type}_${group_field}_subrep}
+           #add-point:${rep_type}.${group_type}.${group_field}.after name="${rep_type}.${group_type}.${group_field}.after"
+           {<point name="${rep_type}.${group_type}.${group_field}.after"/>}
+           #end add-point:

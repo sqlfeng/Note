@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmau_t" module="AMM" text="会员卡储值异动档" type="S" version="1">
+  <column name="mmauent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmau001" text="会员卡号" attribute="C602" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmau002" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmau003" text="异动来源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmau004" text="异动类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmau005" text="异动交易单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmau006" text="异动日期" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mmau007" text="期初储值金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau008" text="期初储值成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau009" text="本次储值金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau010" text="储值折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau011" text="本次折扣金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau012" text="本次加值金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau013" text="本次送抵现值金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau014" text="本次储值成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau015" text="期末储值金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau016" text="期末储值成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau017" text="单位储值成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmau018" text="异动营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmau019" text="需求营运组织" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmauseq" text="异动序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmau100" text="请求GUID" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mmau101" text="处理GUID" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mmau020" text="活动规则编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmau021" text="活动规则版本" attribute="C014" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmau022" text="活动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmauent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmau001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmaq001_2" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmau002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmaf001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmau003" widget="ComboBox" items="6512" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmau004" widget="ComboBox" items="6514" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmau005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmau005" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmau006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="mmau007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="mmau011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmau018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooea001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmau019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmauseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmau100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmau101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmau020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmau021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmau022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmau_t" depend_field="mmau002" correspon_key="mmauent,mmau002" ref_table="mmaf_t" ref_fk="mmafent,mmaf001" ref_dlang=" " ref_rtn="mmaf008"/>
+    <field depend_table="mmau_t" depend_field="mmau018" correspon_key="mmau018" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

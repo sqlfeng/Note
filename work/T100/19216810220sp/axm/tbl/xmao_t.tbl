@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmao_t" module="AXM" text="唛头基本数据档" type="B" version="1">
+  <column name="xmaoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="xmao001" text="客户编号" attribute="C004" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xmao002" text="唛头编号" attribute="C816" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xmao003" text="数据多笔时显示方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmao004" text="数据间间隔符号" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="xmaoownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmaoowndp" text="资料所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmaocrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmaocrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmaocrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmaomodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmaomoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmaostus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmaoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmao001" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_7" c_zoom="q_pmaa001_7" chk_ref="v_pmaa001_7" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmao002" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmao002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmao003" widget="ComboBox" items="2099" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmao004" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmaoownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaoowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaocrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaocrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaocrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmaomodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaomoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmaostus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmao_t" depend_field="xmaocrtdp" correspon_key="xmaocrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmao_t" depend_field="xmaocrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaocrtid" correspon_key="xmaocrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmao_t" depend_field="xmaomoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaomodid" correspon_key="xmaomodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmao_t" depend_field="xmaoowndp" correspon_key="xmaoowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmao_t" depend_field="xmaoownid" correspon_key="xmaoownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code>
+    <field depend_table="xmao_t" depend_field="xmao001" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmao002" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmao003" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmao004" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaocrtdp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaocrtdt" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaocrtid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaomoddt" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaomodid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaoowndp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaoownid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xmao_t" depend_field="xmaostus" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+  </help_code>
+  <scc>
+    <field name="xmaostus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

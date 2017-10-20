@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apga_t" module="AAP" text="信用状申请单主档" type="T" version="1">
+  <column name="apgaent" text="" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="apgaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apgaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apgacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apgacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apgacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apgamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgacnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apgacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgapstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apgapstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apgacomp" text="法人" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="apgadocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="apgadocdt" text="申请日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga001" text="L/C NO" attribute="C205" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga002" text="版次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apga003" text="开状日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga004" text="供应商(受益人)" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga005" text="业务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga006" text="付款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga007" text="开状银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="apga008" text="信用状类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga009" text="保兑信用状否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apga010" text="信用状有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga011" text="许可证号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga012" text="承兑日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga013" text="保兑费用支付方" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga014" text="可否分批交运" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apga015" text="自备款比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga016" text="融资利率" attribute="N305" type="number(10,6)" pk="N" req="N"/>
+  <column name="apga017" text="融资天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="apga018" text="融资合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga019" text="最后装运日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga020" text="运送方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga021" text="装载港/机场" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="apga022" text="卸载港/机场" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="apga023" text="E.T.D" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga024" text="E.T.A" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apga025" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="apga026" text="开状时支付自备款" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apga027" text="NO USE" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga028" text="账务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga029" text="结案否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apga030" text="通知银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="apga031" text="开状时支付自备款" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga100" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga101" text="开状汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apga103" text="开状原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga104" text="自备款原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga105" text="融资原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga106" text="到单原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga107" text="到货原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga108" text="保证金原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga113" text="开状本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga114" text="自备款本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga115" text="融资本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apgaud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apgaud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apgaud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apga102" text="预付款原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga109" text="初开状原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga112" text="预付款本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga117" text="到货本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga118" text="保证金本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apga032" text="保证金待抵单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga033" text="预付款待抵单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apga034" text="保证金存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga035" text="保证金现变码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga040" text="支付账户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga041" text="多币种采购单" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apga036" text="自备款存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga037" text="自备款现变码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga038" text="预付款存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga039" text="预付款现变码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apga042" text="付款条件" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apgaent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apgaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgapstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgapstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apgacomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apgadocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_apgadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apgadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_apga001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="apga002" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apga003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001_8" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga006" widget="ComboBox" items="8517" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_nmab001" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apga008" widget="ComboBox" items="8515" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="apga012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga013" widget="ComboBox" items="8516" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga014" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="apga016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="9" format="---&amp;.&amp;&amp;&amp;%" prog_rel="" case=""/>
+    <field name="apga017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="apga018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="apga019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga021" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="apga022" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="apga023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apga025" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="apga026" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apga028" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apga029" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmab001" c_zoom="q_nmab001" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apga031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apga100" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooaj002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga101" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga103" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga105" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga106" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga107" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga108" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga113" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga114" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga115" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apgaud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apgaud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apgaud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apga102" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga109" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga112" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga117" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga118" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apga032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apga033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apga034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga041" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga037" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga038" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga039" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apga042" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="apga_t" depend_field="apga004" correspon_key="apga004" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="apga_t" depend_field="apga005" correspon_key="apga005" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="apga_t" depend_field="apga007" correspon_key="apga007" ref_table="nmabl_t" ref_fk="nmabl001" ref_dlang="nmabl002" ref_rtn="nmabl003"/>
+    <field depend_table="apga_t" depend_field="apga020" correspon_key="&apos;263&apos;,apgd020" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="apga_t" depend_field="apga030" correspon_key="apga030" ref_table="nmabl_t" ref_fk="nmabl001" ref_dlang="nmabl002" ref_rtn="nmabl003"/>
+    <field depend_table="apga_t" depend_field="apgacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="apga_t" depend_field="apgacnfid" correspon_key="apgacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="apga_t" depend_field="apgacrtdp" correspon_key="apgacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="apga_t" depend_field="apgacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="apga_t" depend_field="apgacrtid" correspon_key="apgacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="apga_t" depend_field="apgamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="apga_t" depend_field="apgamodid" correspon_key="apgamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="apga_t" depend_field="apgaowndp" correspon_key="apgaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="apga_t" depend_field="apgaownid" correspon_key="apgaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="apga_t" depend_field="apgapstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="apga_t" depend_field="apgapstid" correspon_key="apgapstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="apgastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

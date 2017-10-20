@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtan_t" module="ART" text="门店资源协议申请明细档" type="D" version="1">
+  <column name="rtanent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtansite" text="所属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtancomp" text="所属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtandocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtanseq" text="单据项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtan001" text="资源协议编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtan002" text="资源编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan003" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtan004" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtan005" text="本次租用资源数量" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtan006" text="资源面积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtan007" text="专柜编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan008" text="供应商编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan009" text="经营类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan010" text="所属部门" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan011" text="费用代码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan012" text="纳入结算单否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtan013" text="票扣否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtan014" text="价款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan015" text="计算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan016" text="收费标准金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtan017" text="协议金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtan018" text="仓库押金" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtan019" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="rtan020" text="协议状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtan021" text="下次结算日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtan022" text="下次费用开始日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtan023" text="下次费用截止日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtan024" text="租用对象" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtanent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtansite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtancomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtandocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtanseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtan001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtan002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtan004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtan005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtan006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtan007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan013" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan014" widget="ComboBox" items="6006" default="2" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan015" widget="ComboBox" items="6842" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtan017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtan018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtan019" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtan020" widget="ComboBox" items="6841" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtan021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtan022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtan023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtan024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

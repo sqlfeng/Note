@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzav_t" module="ADZ" text="删除设计数据纪录表" type="X" version="1">
+  <column name="dzav001" text="程序代号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzav002" text="模块" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzav003" text="删除类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzav004" text="建构版次" attribute="N903" type="number(10)" pk="N" req="N"/>
+  <column name="dzav005" text="规格版次" attribute="N903" type="number(10)" pk="N" req="N"/>
+  <column name="dzav006" text="程序版次" attribute="N903" type="number(10)" pk="N" req="N"/>
+  <column name="dzavownid" text="数据所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzavowndp" text="数据所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzavcrtid" text="数据建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzavcrtdp" text="数据建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzavcrtdt" text="数据创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dzavmodid" text="数据修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzavmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzav001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzav002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzav003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzav004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzav005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzav006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzavownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzavowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzavcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzavcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzavcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dzavmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzavmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzav_t" depend_field="dzavcrtdp" correspon_key="dzavcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzav_t" depend_field="dzavcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzav_t" depend_field="dzavcrtid" correspon_key="dzavcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzav_t" depend_field="dzavmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzav_t" depend_field="dzavmodid" correspon_key="dzavmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzav_t" depend_field="dzavowndp" correspon_key="dzavowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzav_t" depend_field="dzavownid" correspon_key="dzavownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

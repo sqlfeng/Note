@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtab_t" module="ART" text="店群门店数据明细档" type="D" version="1">
+  <column name="rtabent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtab001" text="店群编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtab002" text="门店编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="rtabent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtab001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtab002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001" c_zoom="q_rtab002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtab_t" depend_field="rtab002" correspon_key="rtab002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

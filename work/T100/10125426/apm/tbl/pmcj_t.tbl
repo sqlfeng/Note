@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmcj_t" module="APM" text="供应商评核评核项目得分档" type="S" version="1">
+  <column name="pmcjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmcj001" text="评核期别" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcj002" text="评核品类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcj003" text="评核类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcj004" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcj005" text="评核项目" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmcj006" text="评核部门" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcj007" text="项目得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmcjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmcc001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtax001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_10" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmcj005" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmcj007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmcj_t" depend_field="pmcj002" correspon_key="pmcjent,pmcj002" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="pmcj_t" depend_field="pmcj004" correspon_key="pmcjent,pmcj004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal004" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmcj_t" depend_field="pmcj005" correspon_key="pmcjent,pmcj005" ref_table="oocql_t" ref_fk="oocqlent,oocql001" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmcj_t" depend_field="pmcj006" correspon_key="pmcjent,pmcj006" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

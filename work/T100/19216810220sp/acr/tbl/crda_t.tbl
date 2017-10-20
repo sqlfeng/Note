@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crda_t" module="ACR" text="会员RFM测量方式维护档" type="B" version="1">
+  <column name="crdaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="crdastus" text="状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crda000" text="等级" attribute="C001" type="varchar2(1)" pk="Y" req="N"/>
+  <column name="crda001" text="R最小值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crda002" text="R最大值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crda003" text="F最小值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crda004" text="F最大值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crda005" text="M最小值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="crda006" text="M最大值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="crda007" text="R计量单位" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crda008" text="F计量单位" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crda009" text="M计量单位" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crda010" text="备注" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="crdaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crdaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crdacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crdacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crdacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crdamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="crdamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="crda011" text="R值权重" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="crda012" text="F值权重" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="crda013" text="M值权重" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crdaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="crdastus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crda000" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crda001" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="crda007" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crda008" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crda009" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crda010" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="crdaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crdaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crdacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crdacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crdacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="crdamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crdamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="crda011" widget="Edit" items="" default="10" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="crda012" widget="Edit" items="" default="10" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="crda013" widget="Edit" items="" default="10" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="crda_t" depend_field="crdacrtdp" correspon_key="crdacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="crda_t" depend_field="crdacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="crda_t" depend_field="crdacrtid" correspon_key="crdacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crda_t" depend_field="crdamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="crda_t" depend_field="crdamodid" correspon_key="crdamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="crda_t" depend_field="crdaowndp" correspon_key="crdaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="crda_t" depend_field="crdaownid" correspon_key="crdaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="crdastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcbj_t" module="AXC" text="工时费用统计维护档" type="B" version="1">
+  <column name="xcbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="xcbjcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbjld" text="账别编号" attribute="C501" type="varchar2(5)" pk="Y" req="N"/>
+  <column name="xcbj001" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xcbj002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="N"/>
+  <column name="xcbj003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="N"/>
+  <column name="xcbj004" text="成本中心" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xcbj005" text="费用分类（主成本要素）" attribute="C001" type="varchar2(1)" pk="Y" req="N"/>
+  <column name="xcbj006" text="分摊方式" attribute="C001" type="varchar2(1)" pk="Y" req="N"/>
+  <column name="xcbj010" text="制费类别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcbj011" text="会计科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="xcbj020" text="分摊基础指标总和" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj021" text="标准产能" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj101" text="费用总额(本位币一)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj102" text="固定费用(本位币一)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj103" text="分摊金额(本位币一)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj104" text="闲置费用(本位币一)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj105" text="单位成本(本位币一)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj111" text="费用总额(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj112" text="固定费用(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj113" text="分摊金额(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj114" text="闲置费用(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj115" text="单位成本(本位币二)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj121" text="费用总额(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj122" text="固定费用(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj123" text="分摊金额(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj124" text="闲置费用(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbj125" text="单位成本(本位币三)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbjownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbjowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbjcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbjcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbjcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcbjmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbjmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcbjstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcbjcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="_ooef001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_glaald" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcbj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcat001" c_zoom="q_xcat001" chk_ref="v_xcat001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcbj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcbj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_4" c_zoom="q_ooeg001_4" chk_ref="v_ooeg001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbj005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbj006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbj010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbj011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcbj020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj102" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj103" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj104" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj105" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj111" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj112" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj113" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj114" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj115" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj121" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj122" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj123" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj124" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbj125" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbjownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcbjmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbjmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcbjstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcbj_t" depend_field="xcbj001" correspon_key="xcbjent,xcbj001" ref_table="xcatl_t" ref_fk="xcatlent,xcatl001" ref_dlang="xcatl002" ref_rtn="xcatl003"/>
+    <field depend_table="xcbj_t" depend_field="xcbjcomp" correspon_key="xcbjent,xcbjcomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbj_t" depend_field="xcbjcrtdp" correspon_key="xcbjcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbj_t" depend_field="xcbjcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbj_t" depend_field="xcbjcrtid" correspon_key="xcbjcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbj_t" depend_field="xcbjld" correspon_key="xcbjent,xcbjld" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="xcbj_t" depend_field="xcbjmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbj_t" depend_field="xcbjmodid" correspon_key="xcbjmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbj_t" depend_field="xcbjowndp" correspon_key="xcbjowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbj_t" depend_field="xcbjownid" correspon_key="xcbjownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xcbjstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

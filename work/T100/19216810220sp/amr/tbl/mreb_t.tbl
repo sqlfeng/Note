@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mreb_t" module="AMR" text="资源设备盘点单单身档" type="D" version="1">
+  <column name="mrebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mrebsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrebdocno" text="单据单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrebseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mreb001" text="资源编号" attribute="C403" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mreb002" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mreb003" text="保管人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mreb004" text="保管部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mreb005" text="一级存放位置" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mreb006" text="二级存放位置" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mreb007" text="资源盘点状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mreb008" text="盘点数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mreb009" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mreb010" text="实际保管人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mreb011" text="实际保管部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mreb012" text="实际存放一级位置" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mreb013" text="实际存放二级位置" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mreb014" text="盘点日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mreb015" text="盘点时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mrebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrebsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrebdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrebseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mreb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mrba001" c_zoom="q_mrba001" chk_ref="v_mrba001_4" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mreb002" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mreb003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mreb004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mreb005" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mreb006" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mreb007" widget="ComboBox" items="3088" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mreb008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mreb009" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mreb010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mreb011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mreb012" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mreb013" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mreb014" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mreb015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mreb_t" depend_field="mreb001" correspon_key="mreb001" ref_table="mrba_t" ref_fk="mrba001" ref_dlang=" " ref_rtn="mrba004"/>
+    <field depend_table="mreb_t" depend_field="mreb003" correspon_key="mreb003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mreb_t" depend_field="mreb004" correspon_key="mreb004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mreb_t" depend_field="mreb010" correspon_key="mreb010" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mreb_t" depend_field="mreb011" correspon_key="mreb011" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

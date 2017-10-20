@@ -1,0 +1,28 @@
+#應用 qs17 樣板自動產生(Version:3)
+   CASE p_flag
+      WHEN 'F' FETCH FIRST    ${general_prefix}_curs INTO ${master_ver_key}
+      WHEN 'L' FETCH LAST     ${general_prefix}_curs INTO ${master_ver_key}
+      WHEN 'P' FETCH PREVIOUS ${general_prefix}_curs INTO ${master_ver_key}
+      WHEN 'N' FETCH NEXT     ${general_prefix}_curs INTO ${master_ver_key}
+      WHEN '/'
+         IF (NOT g_no_ask) THEN
+            CALL cl_set_act_visible("accept,cancel", TRUE)
+            CALL cl_getmsg('fetch',g_lang) RETURNING g_msg
+            LET INT_FLAG = 0
+ 
+            PROMPT g_msg CLIPPED,':' FOR g_jump
+               #交談指令共用ACTION
+               &include "common_action.4gl"
+            END PROMPT
+ 
+            CALL cl_set_act_visible("accept,cancel", FALSE)
+            IF INT_FLAG THEN
+                LET INT_FLAG = 0
+                EXIT CASE
+            END IF
+         END IF
+         FETCH ABSOLUTE g_jump ${general_prefix}_curs INTO ${master_ver_key}
+         LET g_no_ask = FALSE
+   END CASE
+ 
+

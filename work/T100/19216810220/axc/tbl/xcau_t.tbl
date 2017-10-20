@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcau_t" module="AXC" text="成本次要素档" type="B" version="1">
+  <column name="xcauent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcauownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcauowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcaucrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcaucrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcaucrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcaumodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcaumoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcaustus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcau001" text="成本次要素编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcau002" text="所属成本次要素分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcau003" text="所属成本主要素" attribute="N806" type="number(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcauent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcauownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcauowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcaucrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcaucrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcaucrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcaumodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcaumoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcaustus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcau001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xcau001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcau002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcav001" c_zoom="q_xcav001" chk_ref="v_xcav001" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xcau003" widget="ComboBox" items="8901" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcau_t" depend_field="xcau002" correspon_key="xcauent,xcau002" ref_table="xcavl_t" ref_fk="xcavlent,xcavl001" ref_dlang="xcavl002" ref_rtn="xcavl003"/>
+    <field depend_table="xcau_t" depend_field="xcaucrtdp" correspon_key="xcaucrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcau_t" depend_field="xcaucrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcau_t" depend_field="xcaucrtid" correspon_key="xcaucrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcau_t" depend_field="xcaumoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcau_t" depend_field="xcaumodid" correspon_key="xcaumodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcau_t" depend_field="xcauowndp" correspon_key="xcauowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcau_t" depend_field="xcauownid" correspon_key="xcauownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="xcau_t" depend_field="xcau001" correspon_key="xcauent,xcau001" lang_table="xcaul_t" lang_fk="xcaulent,xcaul001" lang_dlang="xcaul002" lang_rtn="xcaul003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="xcaustus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

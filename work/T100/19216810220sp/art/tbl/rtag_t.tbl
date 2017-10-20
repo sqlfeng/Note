@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtag_t" module="ART" text="品类策略异动申请明细档" type="D" version="1">
+  <column name="rtagent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtagdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtag001" text="策略编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtag002" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtag003" text="角色编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtag004" text="SKU占比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtag005" text="SKU上限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtag006" text="SKU下限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtag007" text="毛利率上限" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtag008" text="毛利率下限" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtagacti" text="资料有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtagent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtagdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtag001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtag002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtag003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="rtag004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtag005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtag006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtag007" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtag008" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtagacti" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtag_t" depend_field="rtag002" correspon_key="rtagent,rtag002" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtag_t" depend_field="rtag003" correspon_key="rtagent,&apos;2059&apos;,rtag003" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

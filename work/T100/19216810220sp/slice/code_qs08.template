@@ -1,0 +1,42 @@
+#應用 qs08 樣板自動產生(Version:5)
+   #+ filter段DIALOG段的組成
+   DIALOG ATTRIBUTES(UNBUFFERED,FIELD ORDER FORM)
+ 
+      #單頭
+      CONSTRUCT g_wc_filter ON ${detail_tbl_fields_qbe}
+                          FROM ${detail_tbl_srfield_all}
+ 
+         BEFORE CONSTRUCT
+         ${detail_display_info}
+ 
+         #單身公用欄位開窗相關處理
+         ${detail_commons_ctrlp}
+ 
+         #單身一般欄位開窗相關處理
+         ${detail_tbl_fields_filter_ctrlp}
+ 
+      END CONSTRUCT
+ 
+      #add-point:filter段add_cs name="filter.add_cs"
+      {<point name="filter.add_cs"/>}
+      #end add-point
+ 
+      BEFORE DIALOG
+         #add-point:filter段b_dialog name="filter.b_dialog"
+         {<point name="filter.b_dialog"/>}
+         #end add-point
+ 
+      ON ACTION accept
+         ACCEPT DIALOG
+ 
+      ON ACTION cancel
+         LET INT_FLAG = 1
+         EXIT DIALOG
+ 
+      #交談指令共用ACTION
+      &include "common_action.4gl"
+         CONTINUE DIALOG
+ 
+   END DIALOG
+ 
+

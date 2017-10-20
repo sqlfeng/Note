@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmdq_t" module="APM" text="采购多交期汇总档" type="D" version="1">
+  <column name="pmdqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmdqsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdqdocno" text="采购单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmdqseq" text="采购项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmdqseq2" text="分批序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmdq002" text="分批数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdq003" text="交货日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmdq004" text="到厂日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmdq005" text="到库日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmdq006" text="收货时段" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdq007" text="MRP冻结否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmdq008" text="交期类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdq201" text="分批包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdq202" text="分批包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdq900" text="保留字段str" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdq999" text="保留字段end" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmdqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdqsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdqdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdqseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdqseq2" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdq002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdq003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdq004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdq005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdq006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_274" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdq007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdq008" widget="ComboBox" items="2057" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdq201" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdq202" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdq900" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdq999" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmdq_t" depend_field="pmdq006" correspon_key="&apos;274&apos;,pmdq006" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

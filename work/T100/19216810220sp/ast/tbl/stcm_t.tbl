@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stcm_t" module="AST" text="分销客户合作进场协议数据表" type="T" version="1">
+  <column name="stcment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stcmsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcmunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcmdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stcmdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcm001" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcm002" text="客户类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm003" text="经销商编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm004" text="网点编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm005" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm006" text="结算方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm007" text="结算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm008" text="人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcm009" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm010" text="结算中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm011" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm012" text="销售范围" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm013" text="销售通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm014" text="产品组" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm015" text="办事处" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm016" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm017" text="税目" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcm018" text="开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcm019" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcmstus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcmownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcmowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcmcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcmcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcmcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stcmmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcmmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stcmcnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcmcnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stcment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcmsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stcmdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stcm002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_21" c_zoom="q_pmaa001_21" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_18" c_zoom="q_pmaa001_18" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm005" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_staa001" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbbc001" c_zoom="q_dbbc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oojd001" c_zoom="q_oojd001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbba001" c_zoom="q_dbba001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_aooi001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmab084" c_zoom="q_pmab084" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcm018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcm019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcmstus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stcmmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stcmcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcmcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stcm_t" depend_field="stcm003" correspon_key="stcment,stcm003" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="stcm_t" depend_field="stcm004" correspon_key="stcment,stcm004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="stcm_t" depend_field="stcm006" correspon_key="stcment,stcm006" ref_table="staal_t" ref_fk="staalent,staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="stcm_t" depend_field="stcm007" correspon_key="stcment,stcm007" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="stcm_t" depend_field="stcm008" correspon_key="stcm008" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stcm_t" depend_field="stcm009" correspon_key="stcment,stcm009" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcm010" correspon_key="stcment,stcm010" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcm011" correspon_key="stcment,stcm011" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcm012" correspon_key="stcment,stcm012" ref_table="dbbcl_t" ref_fk="dbbclent,dbbcl001" ref_dlang="dbbcl002" ref_rtn="dbbcl003"/>
+    <field depend_table="stcm_t" depend_field="stcm013" correspon_key="stcment,stcm013" ref_table="oojdl_t" ref_fk="oojdlent,oojdl001" ref_dlang="oojdl002" ref_rtn="oojdl003"/>
+    <field depend_table="stcm_t" depend_field="stcm014" correspon_key="stcment,stcm014" ref_table="dbbal_t" ref_fk="dbbalent,dbbal001" ref_dlang="dbbal002" ref_rtn="dbbal003"/>
+    <field depend_table="stcm_t" depend_field="stcm015" correspon_key="stcment,stcm015" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcm016" correspon_key="stcment,stcm016" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="stcm_t" depend_field="stcmcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stcm_t" depend_field="stcmcnfid" correspon_key="stcmcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stcm_t" depend_field="stcmcrtdp" correspon_key="stcmcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcmcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stcm_t" depend_field="stcmcrtid" correspon_key="stcmcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stcm_t" depend_field="stcmmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stcm_t" depend_field="stcmmodid" correspon_key="stcmmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stcm_t" depend_field="stcmowndp" correspon_key="stcmowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stcm_t" depend_field="stcmownid" correspon_key="stcmownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stcm_t" depend_field="stcmsite" correspon_key="stcment,stcmsite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="stcmstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

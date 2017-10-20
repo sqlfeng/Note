@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmay_t" module="APM" text="经销商市场能力档" type="D" version="1">
+  <column name="pmayent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmay001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmay002" text="终端通路类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmay003" text="终端通路编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmay004" text="通路岗位经理人数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmay005" text="覆盖终端店数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmayent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmay001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmay002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmay003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmay004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="" prog_rel="" case=""/>
+    <field name="pmay005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmay_t" depend_field="pmay002" correspon_key="&apos;2073&apos;,pmay002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmay_t" depend_field="pmay003" correspon_key="&apos;2035&apos;,pmay003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="faca_t" module="AFA" text="调拨账务单身档" type="D" version="1">
+  <column name="facaent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="facald" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="facadocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="facaseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="faca001" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca002" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="faca003" text="财产编号" attribute="C580" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca004" text="附号" attribute="C581" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca005" text="卡片编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca006" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca007" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca008" text="调拨数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca009" text="调拨成本" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca010" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca011" text="原币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca012" text="原币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca013" text="原币应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca014" text="本币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca015" text="本币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca016" text="本币应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca017" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="faca018" text="处置损益" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca019" text="异动科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca020" text="累折科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca021" text="减值准备科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca022" text="资产科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca023" text="应收/付账款科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca024" text="税额科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="faca025" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca026" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca027" text="利润/成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca028" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca029" text="交易客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca030" text="账款客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca031" text="客群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca032" text="人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca033" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca034" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca035" text="账款编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca036" text="摘要" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="faca037" text="应收/付账款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="faca038" text="本位币二币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca039" text="本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="faca040" text="本位币二税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca041" text="本位币二税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca042" text="本位币二应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca043" text="本位币二调拨成本" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca044" text="本位币二处置损益" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca045" text="本位币三币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="faca046" text="本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="faca047" text="本位币三税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca048" text="本位币三税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca049" text="本位币三应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca050" text="本位币三调拨成本" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca051" text="本位币三处置损益" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="faca052" text="经营方式" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="faca053" text="渠道" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="faca054" text="品牌" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="faca055" text="自由核算项一" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca056" text="自由核算项二" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca057" text="自由核算项三" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca058" text="自由核算项四" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca059" text="自由核算项五" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca060" text="自由核算项六" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca061" text="自由核算项七" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca062" text="自由核算项八" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca063" text="自由核算项九" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca064" text="自由核算项十" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="faca065" text="产品类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="facaud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="facaud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="facaud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="facaud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="facaent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="facald" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="facadocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="facaseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="faca001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="faca002" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="faca003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="faca004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="faca005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="faca018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="faca025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca029" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="faca034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="faca035" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="faca036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="faca037" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="faca038" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca039" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca040" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca041" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca042" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca043" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca044" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca045" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca046" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca047" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca048" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca049" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca050" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca051" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="faca052" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="faca053" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="faca054" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="faca055" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca056" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca057" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca058" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca059" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca060" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca061" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca062" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca063" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca064" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="faca065" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="facaud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="facaud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="facaud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="facaud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="faca_t" depend_field="facacrtdp" correspon_key="facacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="faca_t" depend_field="facacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="faca_t" depend_field="facacrtid" correspon_key="facacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="faca_t" depend_field="facamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="faca_t" depend_field="facamodid" correspon_key="facamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="faca_t" depend_field="facaowndp" correspon_key="facaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="faca_t" depend_field="facaownid" correspon_key="facaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="facastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

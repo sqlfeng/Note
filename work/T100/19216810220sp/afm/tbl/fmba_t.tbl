@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmba_t" module="AFM" text="NO USE" type="T" version="1">
+  <column name="fmbaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmba001" text="账务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmba002" text="计提利息账务编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fmba003" text="账别" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="fmba004" text="归属法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmba005" text="年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmba006" text="期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmba007" text="凭证编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmbastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmbaownid" text="数据所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmbaowndp" text="数据所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmbacrtid" text="数据建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmbacrtdp" text="数据建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmbacrtdt" text="数据创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmbamodid" text="数据修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmbamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmbacnfid" text="数据确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmbacnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmbaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmba001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmba002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmba003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="fmba004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmba005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="fmba006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="fmba007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmbastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmbaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmbamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmbacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmbacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmba_t" depend_field="fmbacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="fmba_t" depend_field="fmbacnfid" correspon_key="fmbacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="fmba_t" depend_field="fmbacrtdp" correspon_key="fmbacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmba_t" depend_field="fmbacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="fmba_t" depend_field="fmbacrtid" correspon_key="fmbacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="fmba_t" depend_field="fmbamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="fmba_t" depend_field="fmbamodid" correspon_key="fmbamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="fmba_t" depend_field="fmbaowndp" correspon_key="fmbaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmba_t" depend_field="fmbaownid" correspon_key="fmbaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="fmbastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

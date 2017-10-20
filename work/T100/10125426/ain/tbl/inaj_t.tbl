@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inaj_t" module="AIN" text="库存交易明细档" type="D" version="1">
+  <column name="inajent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inajsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inaj001" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inaj002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inaj003" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inaj004" text="出入库码" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="inaj005" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inaj006" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="inaj007" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inaj008" text="库位编号" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj009" text="储位编号" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj010" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inaj011" text="交易数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj012" text="交易单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj013" text="交易单位与库存单位换算率" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj014" text="交易单位与料件基本单位换算率" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj015" text="异动单据性质" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj016" text="理由码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj017" text="异动部门编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj018" text="异动厂商/客户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj019" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="inaj020" text="工单单号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inaj021" text="多角序号" attribute="C481" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj022" text="单据扣账日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inaj023" text="实际执行扣账日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inaj024" text="数据产生时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="inaj025" text="异动数据产生者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj026" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj027" text="参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj028" text="成本料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inaj036" text="库存异动类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj029" text="交易单位与成本单位换算率" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj030" text="VMI交易结算否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj031" text="VMI对应入库/仓退单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj032" text="VMI对应入库/仓退项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="inaj033" text="VMI对应杂发/杂收单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj034" text="VMI对应杂发/杂收项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="inaj035" text="异动作业代号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj037" text="成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj038" text="专案编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj039" text="WBS编号" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inaj040" text="重复性生产-计划编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj041" text="重复性生产-生产料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inaj042" text="重复性生产-生产料号BOM特性" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inaj043" text="重复性生产-生产料号产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="inaj044" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inaj200" text="内部结算否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inaj201" text="业务类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj202" text="内部交易类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj203" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj204" text="税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj205" text="内部结算未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj206" text="内部结算含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj207" text="交易所属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj208" text="内部交易对象组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj209" text="内部交易对象法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inajud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inajud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inajud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inajud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inaj045" text="异动时库存单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inaj046" text="交易单位与库存单位换算分子" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj047" text="交易单位与库存单位换算分母" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj048" text="交易单位与料件基本单位换算分子" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj049" text="交易单位与料件基本单位换算分母" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj050" text="交易单位与成本单位换算分子" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj051" text="交易单位与成本单位换算分母" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj210" text="单据单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="inaj211" text="品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inajent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inajsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inaj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inaj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="inaj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inab002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj010" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj018" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj019" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj020" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inaj023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inaj024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inaj025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj028" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj028" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj030" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj031" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inaj033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj033" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inaj035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="inaj037" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa005" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj038" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pjaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj039" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pjbb002" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inaj040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj040" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj041" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj041" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj042" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj043" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inaj044" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaj044" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inaj200" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj201" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj202" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj203" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj204" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj205" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj206" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj207" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj208" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj209" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inajud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inajud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inajud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inajud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inaj045" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inaj046" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj047" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj048" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj049" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj050" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj051" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj210" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inaj211" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inaj_t" depend_field="inaj005" correspon_key="inaj005" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="inaj_t" depend_field="inaj008" correspon_key="inajsite,inaj008" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="inaj_t" depend_field="inaj009" correspon_key="inajsite,inaj008,inaj009" ref_table="inab_t" ref_fk="inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="inaj_t" depend_field="inaj012" correspon_key="inaj012" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="inaj_t" depend_field="inaj017" correspon_key="inaj017" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inaj_t" depend_field="inaj018" correspon_key="inaj018" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="inaj_t" depend_field="inaj025" correspon_key="inaj025" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="inaj_t" depend_field="inaj026" correspon_key="inak026" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="inaj_t" depend_field="inaj035" correspon_key="inaj035" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="inaj_t" depend_field="inaj203" correspon_key="inaj203" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="inaj_t" depend_field="inaj207" correspon_key="inaj207" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl004"/>
+    <field depend_table="inaj_t" depend_field="inaj208" correspon_key="inaj208" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl004"/>
+    <field depend_table="inaj_t" depend_field="inaj209" correspon_key="inaj209" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl004"/>
+    <field depend_table="inaj_t" depend_field="inajsite" correspon_key="inajsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

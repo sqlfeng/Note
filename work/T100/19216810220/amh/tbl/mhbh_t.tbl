@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mhbh_t" module="AMH" text="证照明细表" type="D" version="1">
+  <column name="mhbhent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mhbhsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhbhunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhbhdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mhbh001" text="商户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhbh002" text="证件类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mhbh003" text="证件编号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="mhbh004" text="证件名称" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mhbh005" text="经营品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhbh006" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mhbh007" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mhbh008" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mhbh009" text="证件提供组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhbhacti" text="数据有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mhbhent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mhbhsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbhunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbhdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mhbh001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbh002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbh003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mhbh004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mhbh005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbh006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mhbh007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mhbh008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mhbh009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhbhacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mhbh_t" depend_field="mhbhcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhbh_t" depend_field="mhbhcnfid" correspon_key="mhbhcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhbh_t" depend_field="mhbhcrtdp" correspon_key="mhbhcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhbh_t" depend_field="mhbhcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhbh_t" depend_field="mhbhcrtid" correspon_key="mhbhcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhbh_t" depend_field="mhbhmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhbh_t" depend_field="mhbhmodid" correspon_key="mhbhmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhbh_t" depend_field="mhbhowndp" correspon_key="mhbhowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhbh_t" depend_field="mhbhownid" correspon_key="mhbhownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhbh_t" depend_field="mhbhpstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhbh_t" depend_field="mhbhpstid" correspon_key="mhbhpstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mhbhstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="无效"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>

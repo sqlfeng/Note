@@ -1,0 +1,70 @@
+#應用 a39 樣板自動產生(Version:10)
+#+ BPM提交
+PRIVATE FUNCTION ${general_prefix}_send()
+   #add-point:send段define(客製用) name="send.define_customerization"
+   {<point name="send.define_customerization" edit="c" mark="Y"/>}
+   #end add-point 
+   #add-point:send段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="send.define"
+   {<point name="send.define"/>}
+   #end add-point 
+   
+   #add-point:Function前置處理  name="send.pre_function"
+   {<point name="send.pre_function"/>}
+   #end add-point
+   
+   #依據單據個數，需要指定所有單身條件為" 1=1"  (單身有幾個就要設幾個)
+   ${mdl_mark}LET g_wc2_table1 = " 1=1"
+   #tables - Start - 
+   ${mdl_mark}LET g_wc2_table${table} = " 1=1"
+   #tables -  End  -
+ 
+   CALL ${general_prefix}_show()
+   CALL ${general_prefix}_set_pk_array()
+   
+   #add-point: 初始化的ADP name="send.before_send"
+   {<point name="send.before_send" />}
+   #end add-point
+   
+   #公用變數初始化
+   CALL cl_bpm_data_init()
+                  
+   #依照主檔/單身個數產生 CALL cl_bpm_set_master_data() / cl_bpm_set_detail_data() 
+   #單頭固定為 CALL cl_bpm_set_master_data(util.JSONObject.fromFGL(xxxx)) 傳入參數: (1)單頭陣列  ; 回傳值: 無
+   CALL cl_bpm_set_master_data(util.JSONObject.fromFGL(${master_var_title}))
+                              
+   #單身固定為 CALL cl_bpm_set_detail_data(s_detailX, util.JSONArray.fromFGL(xxxx)) 傳入參數: (1)單身SR名稱  (2)單身陣列  ; 回傳值: 無
+   ${mdl_mark}CALL cl_bpm_set_detail_data("${sr_name}", util.JSONArray.fromFGL(${detail_var_title}))
+   #pages - Start -
+   ${mdl_mark}CALL cl_bpm_set_detail_data("${sr_name${page}}", util.JSONArray.fromFGL(${detail_var_title${page}}))
+   #pages -  End  -
+ 
+   # cl_bpm_cli() 裡有包含以前的aws_condition()=>送簽資料檢核和更新單據狀況碼為'W'
+   # cl_bpm_cli() 傳入參數:無  ;  回傳值: 0 開單失敗; 1 開單成功
+ 
+   #add-point: 提交前的ADP name="send.before_cli"
+   {<point name="send.before_cli" />}
+   #end add-point
+ 
+   #開單失敗
+   IF NOT cl_bpm_cli() THEN 
+      RETURN FALSE
+   END IF
+ 
+   #add-point: 提交後的ADP name="send.after_send"
+   {<point name="send.after_send" />}
+   #end add-point
+ 
+   #此段落不需要刪除資料,但是否需要refresh圖片樣式???
+   #CALL ${general_prefix}_ui_browser_refresh()
+ 
+   #重新指定此筆單據資料狀態圖片=>送簽中
+   LET g_browser[g_current_idx].b_statepic = "stus/16/signing.png"
+ 
+   #重新取得單頭/單身資料,DISPLAY在畫面上
+   ${mdl_mark}CALL ${general_prefix}_ui_headershow()
+   ${mdl_mark}CALL ${general_prefix}_ui_detailshow()
+ 
+   RETURN TRUE
+   
+END FUNCTION
+

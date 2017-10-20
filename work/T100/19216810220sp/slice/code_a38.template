@@ -1,0 +1,52 @@
+   #應用 a38 樣板自動產生(Version:6)
+   #單身多語言複製
+   DROP TABLE ${general_prefix}_detail_lang
+   
+   #add-point:單身複製前1 name="detail_reproduce.body.lang${lang}.b_insert"
+   {<point name="detail_reproduce.body.lang${lang}.b_insert" mark="Y"/>}
+   #end add-point
+   
+   #CREATE TEMP TABLE & INSERT 
+   SELECT * FROM ${mdl_lang_tbl} 
+    WHERE ${mdl_append_wc} ${mdl_field_fk01} = g_${master_field_pk01}_t
+      #master_keys - Start -
+      AND ${mdl_field_fk${key}} = g_${master_field_pk${key}}_t
+      #keys -  End  -
+     INTO TEMP ${general_prefix}_detail_lang
+ 
+   #將key修正為調整後   
+   UPDATE ${general_prefix}_detail_lang 
+      #更新key欄位
+      SET ${mdl_field_fk01} = ${master_var_pk01}
+          #master_keys - Start -
+          , ${mdl_field_fk${key}} = ${master_var_pk${key}}
+          #keys -  End  -                   
+  
+   #add-point:單身修改前 name="detail_reproduce.body.lang${lang}.b_update"
+   {<point name="detail_reproduce.body.lang${lang}.b_update"/>}
+   #end add-point   
+  
+   #將資料塞回原table   
+   INSERT INTO ${mdl_lang_tbl} SELECT * FROM ${general_prefix}_detail_lang
+   
+   IF SQLCA.sqlcode THEN
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = "reproduce" 
+      LET g_errparam.code   = SQLCA.sqlcode 
+      LET g_errparam.popup  = TRUE 
+      CALL cl_err()
+ 
+      RETURN
+   END IF
+   
+   #add-point:單身複製中1 name="detail_reproduce.lang${lang}.table1.m_insert"
+   {<point name="detail_reproduce.lang${lang}.table1.m_insert"/>}
+   #end add-point
+   
+   #刪除TEMP TABLE
+   DROP TABLE ${general_prefix}_detail_lang
+   
+   #add-point:單身複製後1 name="detail_reproduce.lang${lang}.table1.a_insert"
+   {<point name="detail_reproduce.lang${lang}.table1.a_insert"/>}
+   #end add-point
+

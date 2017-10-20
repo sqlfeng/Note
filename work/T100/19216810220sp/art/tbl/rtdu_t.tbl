@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtdu_t" module="ART" text="自营新商品引进单头档" type="T" version="1">
+  <column name="rtduent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtdudocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtdudocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtdu001" text="供应商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu002" text="合约编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdu003" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu004" text="结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu005" text="采购中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu006" text="采购员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdu007" text="配送中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu008" text="店群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu009" text="生命周期" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu010" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="rtdustus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtduownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtduowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtducrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtducrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtducrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtdumodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdumoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtducnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtducnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtduunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdusite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu011" text="税区别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu000" text="作业方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdu012" text="采购方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtduent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdudocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_rtdudocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtdudocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdu001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stan001" c_zoom="q_stan001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtdu003" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_staa001" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_7" c_zoom="q_ooea001_7" chk_ref="v_ooef001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_4" c_zoom="q_ooag001_4" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_6" c_zoom="q_ooea001_6" chk_ref="v_ooef001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtaa001" c_zoom="q_rtaa001" chk_ref="v_rtaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooea001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu010" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtdustus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtduownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtduowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtducrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtducrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtducrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtdumodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdumoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtducnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtducnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtduunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooea001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdusite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu000" widget="ComboBox" items="6780" default="&apos;I&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdu012" widget="ComboBox" items="6014" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtdu_t" depend_field="rtdu001" correspon_key="rtdu001" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal001" ref_rtn="pmaal003"/>
+    <field depend_table="rtdu_t" depend_field="rtdu004" correspon_key="rtdu004" ref_table="staal_t" ref_fk="staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="rtdu_t" depend_field="rtdu005" correspon_key="rtdu005" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdu_t" depend_field="rtdu006" correspon_key="rtdu006" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtdu_t" depend_field="rtdu007" correspon_key="rtdu007" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdu_t" depend_field="rtdu008" correspon_key="rtdu008" ref_table="rtaal_t" ref_fk="rtaal001" ref_dlang="rtaal002" ref_rtn="rtaal003"/>
+    <field depend_table="rtdu_t" depend_field="rtdu009" correspon_key="rtdu009" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdu_t" depend_field="rtducnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtdu_t" depend_field="rtducnfid" correspon_key="rtducnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtdu_t" depend_field="rtducrtdp" correspon_key="rtducrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdu_t" depend_field="rtducrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtdu_t" depend_field="rtducrtid" correspon_key="rtducrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtdu_t" depend_field="rtdumoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtdu_t" depend_field="rtdumodid" correspon_key="rtdumodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtdu_t" depend_field="rtduowndp" correspon_key="rtduowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdu_t" depend_field="rtduownid" correspon_key="rtduownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtdustus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="A" desc="已核准"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,47 @@
+#應用 a65 樣板自動產生(Version:4)
+#+ 資料遮罩還原(FOR UPDATE)
+PRIVATE FUNCTION ${general_prefix}_${mdl_tbl_name}_mask_restore(ps_type)
+   #add-point:mask_restore段define name="${mdl_tbl_name}_mask_restore.define_customerization"
+   {<point name="${mdl_tbl_name}_mask_restore.define_customerization" edit="c" mark="Y"/>}
+   #end add-point 
+   DEFINE ps_type  LIKE type_t.chr50
+   DEFINE li_idx   LIKE type_t.num10
+   #add-point:mask_restore段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="${mdl_tbl_name}_mask_restore.define"
+   {<point name="${mdl_tbl_name}_mask_restore.define"/>}
+   #end add-point   
+   
+   #先判斷是否有遮罩, 若無則不做處理
+   IF g_priv_col.getLength() = 0 THEN
+      RETURN
+   END IF
+   
+   ${mdl_mark}#還原成遮罩前
+   ${mdl_mark}IF ps_type = 'restore_mask_o' THEN
+   ${mdl_mark}   FOR li_idx = 1 TO g_priv_col.getLength()
+   ${mdl_mark}      IF g_priv_col[li_idx].colid = '${mdl_field}' THEN
+   ${mdl_mark}         LET ${mdl_var} = ${mdl_var_o}
+   ${mdl_mark}      END IF
+   ${mdl_mark}      #mdls - Start -
+   ${mdl_mark}      IF g_priv_col[li_idx].colid = '${mdl_field${mdl}}' THEN
+   ${mdl_mark}         LET ${mdl_var${mdl}} = ${mdl_var_o${mdl}}
+   ${mdl_mark}      END IF
+   ${mdl_mark}      #mdls -  End  -
+   ${mdl_mark}   END FOR
+   ${mdl_mark}END IF
+    
+   #還原成遮罩後
+   ${mdl_mark}IF ps_type = 'restore_mask_n' THEN
+   ${mdl_mark}   FOR li_idx = 1 TO g_priv_col.getLength()
+   ${mdl_mark}      IF g_priv_col[li_idx].colid = '${mdl_field}' THEN
+   ${mdl_mark}         LET ${mdl_var} = ${mdl_var_n}
+   ${mdl_mark}      END IF
+   ${mdl_mark}      #mdls - Start -
+   ${mdl_mark}      IF g_priv_col[li_idx].colid = '${mdl_field${mdl}}' THEN
+   ${mdl_mark}         LET ${mdl_var${mdl}} = ${mdl_var_n${mdl}}
+   ${mdl_mark}      END IF
+   ${mdl_mark}      #mdls -  End  -
+   ${mdl_mark}   END FOR
+   ${mdl_mark}END IF
+    
+END FUNCTION
+

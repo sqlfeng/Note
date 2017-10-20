@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmcn_t" module="ANM" text="应收票据主档" type="M" version="1">
+  <column name="nmcnent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmcnownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcnowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcncrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcncrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcncrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcnmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcncnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcncnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcncomp" text="法人" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmcnsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcndocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="nmcndocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmcnorga" text="账务归属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn001" text="缴款部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn002" text="帐务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcn003" text="交易对象代码" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn004" text="一次性交易对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcn005" text="票据号码" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcn006" text="票据类别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmcn007" text="客票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmcn008" text="发票人" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="nmcn009" text="到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmcn010" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn011" text="原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn012" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="nmcn013" text="本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn014" text="付款银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="nmcn015" text="票面利率种类" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmcn016" text="利率百分比" attribute="N305" type="number(10,6)" pk="N" req="N"/>
+  <column name="nmcn017" text="票况" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmcn018" text="托贴银行帐户编码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn019" text="存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn020" text="转付对象客商码" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn021" text="流通期间" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="nmcn022" text="贴现利率种类" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmcn023" text="贴现率" attribute="N305" type="number(10,6)" pk="N" req="N"/>
+  <column name="nmcn024" text="贴现期间" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="nmcn025" text="拨款原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn026" text="拨款本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn027" text="帐款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmcn028" text="主帐套已冲原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn029" text="主帐套已冲本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn030" text="主帐套本位币二币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn031" text="主帐套本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="nmcn032" text="主帐套本位币二金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn033" text="主帐套本位币二已冲金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn034" text="主帐套本位币三币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn035" text="主帐套本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="nmcn036" text="主帐套本位币三金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn037" text="主帐套本位币三已冲金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn038" text="次帐套一币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn039" text="次帐套一原币已冲" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn040" text="次帐套一本币已冲" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn041" text="次帐套二币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmcn042" text="次帐套二原币已冲" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcn043" text="次帐套二本币已冲" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud001" text="自定义栏位(文字)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud002" text="自定义栏位(文字)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud003" text="自定义栏位(文字)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud004" text="自定义栏位(文字)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud005" text="自定义栏位(文字)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud006" text="自定义栏位(文字)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud007" text="自定义栏位(文字)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud008" text="自定义栏位(文字)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud009" text="自定义栏位(文字)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud010" text="自定义栏位(文字)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmcnud011" text="自定义栏位(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud012" text="自定义栏位(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud013" text="自定义栏位(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud014" text="自定义栏位(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud015" text="自定义栏位(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud016" text="自定义栏位(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud017" text="自定义栏位(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud018" text="自定义栏位(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud019" text="自定义栏位(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud020" text="自定义栏位(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmcnud021" text="自定义栏位(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud022" text="自定义栏位(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud023" text="自定义栏位(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud024" text="自定义栏位(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud025" text="自定义栏位(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud026" text="自定义栏位(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud027" text="自定义栏位(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud028" text="自定义栏位(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud029" text="自定义栏位(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmcnud030" text="自定义栏位(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmcnent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcnownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcnowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcncrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcncrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcncrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcnmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcncnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcncnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcncomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcnsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcndocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="nmcndocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcnorga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="nmcn005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="nmcn006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn007" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="nmcn009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcn013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcn015" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="9" format="---&amp;.&amp;&amp;&amp;%" prog_rel=""/>
+    <field name="nmcn017" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn020" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="nmcn022" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="9" format="---&amp;.&amp;&amp;&amp;%" prog_rel=""/>
+    <field name="nmcn024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="nmcn025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="nmcn028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcn032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcn036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn037" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn038" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn039" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn041" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="nmcn042" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcn043" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="nmcnud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="nmcnud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="nmcnud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="nmcn_t" depend_field="nmcncnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmcn_t" depend_field="nmcncnfid" correspon_key="nmcncnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmcn_t" depend_field="nmcncrtdp" correspon_key="nmcncrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmcn_t" depend_field="nmcncrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmcn_t" depend_field="nmcncrtid" correspon_key="nmcncrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmcn_t" depend_field="nmcnmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmcn_t" depend_field="nmcnmodid" correspon_key="nmcnmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmcn_t" depend_field="nmcnowndp" correspon_key="nmcnowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmcn_t" depend_field="nmcnownid" correspon_key="nmcnownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="nmcnstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

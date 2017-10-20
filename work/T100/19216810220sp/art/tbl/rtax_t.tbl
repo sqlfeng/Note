@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtax_t" module="ART" text="品类基本数据档" type="B" version="1">
+  <column name="rtaxent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtaxunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtax001" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtax002" text="分类类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtax003" text="上级品类编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtax004" text="层级" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtax005" text="下级品类数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtax006" text="所属一级品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtax007" text="主分群码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtax008" text="no use" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtaxstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtaxownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtaxowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtaxcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtaxcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtaxcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtaxmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtaxmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtax009" text="检验否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtax010" text="商品临期比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtax011" text="临期控管方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtaxent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtaxunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001" c_zoom="q_rtax001" chk_ref="v_imaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax002" widget="ComboBox" items="6925" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax003" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtax005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtax006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtax006" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imca001" c_zoom="q_imca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtaxownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtaxcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtaxmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtax009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtax010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtax011" widget="ComboBox" items="6799" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree>
+    <type no="1" table="" col=""/>
+    <id no="2" table="rtax_t" col="rtax001"/>
+    <pid no="3" table="rtax_t" col="rtax003"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="rtaxs_t" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="rtax_t" depend_field="rtax001" correspon_key="rtaxent,rtax001" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtax_t" depend_field="rtax003" correspon_key="rtaxent,rtax003" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtax_t" depend_field="rtax006" correspon_key="rtaxent,rtax006" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtax_t" depend_field="rtax007" correspon_key="rtaxent,&apos;200&apos;,rtax007" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="rtax_t" depend_field="rtax008" correspon_key="rtaxent,&apos;200&apos;,rtax007" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="rtax_t" depend_field="rtaxcrtdp" correspon_key="rtaxcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtax_t" depend_field="rtaxcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtax_t" depend_field="rtaxcrtid" correspon_key="rtaxcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtax_t" depend_field="rtaxmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="rtax_t" depend_field="rtaxmodid" correspon_key="rtaxmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="rtax_t" depend_field="rtaxowndp" correspon_key="rtaxowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtax_t" depend_field="rtaxownid" correspon_key="rtaxownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="rtax_t" depend_field="rtax001" correspon_key="rtax001" lang_table="rtaxl_t" lang_fk="rtaxl001" lang_dlang="rtaxl002" lang_rtn="rtaxl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="rtaxstus" category="17" desc="基本数据状态码">
+      <code value="Y" desc="有效"/>
+      <code value="N" desc="无效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xrca_t" module="AXR" text="应收凭单单头" type="T" version="1">
+  <column name="xrcaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xrcaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrcaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrcacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrcacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrcacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrcamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcacnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrcacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcapstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrcapstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrcacomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrcald" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xrcadocno" text="应收账款单号码" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xrcadocdt" text="账款日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca001" text="账款单性质" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrcasite" text="账务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca003" text="账务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca004" text="账款客户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca005" text="收款客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca006" text="客户分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca007" text="账款类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca008" text="收款条件编号" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca009" text="应收款日/应扣抵日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca010" text="容许票据到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca011" text="税种" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca012" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="xrca013" text="含税否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca014" text="人员编号" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca015" text="部门编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca016" text="来源作业类型" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca017" text="生成方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca018" text="来源参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca019" text="系统生成对应单号(待抵账款-预收)" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca020" text="信用状申请流程否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca021" text="商业发票号码(IV no.)" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca022" text="出口报单号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca023" text="发票客户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca024" text="发票客户税号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca025" text="发票客户全名" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xrca026" text="发票客户地址" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <column name="xrca028" text="发票类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca029" text="发票汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xrca030" text="发票应开税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca031" text="发票应开税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca032" text="发票应开含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca033" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca034" text="责任中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca035" text="应收(借方)科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="xrca036" text="收入(贷方)科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="xrca037" text="分录凭证生成否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca038" text="抛转凭证号码" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca039" text="会计检核附件份数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xrca040" text="留置否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca041" text="留置理由码" attribute="C013" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca042" text="留置设置日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca043" text="留置解除日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca044" text="留置原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca045" text="留置说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xrca046" text="关系人否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca047" text="多角序号" attribute="C481" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca048" text="集团代收/代付单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca049" text="来源营运中心编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca050" text="交易原始单据份数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xrca051" text="作废理由码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca052" text="打印次数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xrca053" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xrca054" text="多账期设置" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca055" text="缴款优惠条件" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca056" text="会计检核附件状态" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca057" text="交易对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca058" text="销售分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca059" text="预算编号" attribute="C509" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca060" text="发票开立原则" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca061" text="预计开立发票日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xrca062" text="多角性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xrca063" text="整账批序号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca064" text="订金序次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xrca065" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca066" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xrca100" text="交易原币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca101" text="原币汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xrca103" text="原币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca104" text="原币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca106" text="原币直接折抵合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca107" text="原币直接冲账(调整)合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca108" text="原币应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca113" text="本币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca114" text="本币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca116" text="本币直接冲账(调整)合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca117" text="本币直接冲账(调整)合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca118" text="本币应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca120" text="本位币二币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca121" text="本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xrca123" text="本位币二税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca124" text="本位币二税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca126" text="本位币二直接折抵合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca127" text="本位币二直接冲账(调整)合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca128" text="本位币二应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca130" text="本位币三币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xrca131" text="本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xrca133" text="本位币三税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca134" text="本位币三税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca136" text="本位币三直接折抵合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca137" text="本位币三直接冲账(调整)合计金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrca138" text="本位币三应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xrcaud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xrcaud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xrcaud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xrcaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrcaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrcapstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcapstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrcastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrcacomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcald" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xrcadocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_3" c_zoom="q_xrcadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrcadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca001" widget="ComboBox" items="8302" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrcasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_1" c_zoom="q_xrah002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmac002_1" c_zoom="q_pmac002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib001_1" c_zoom="q_ooib001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_5" c_zoom="q_oodb002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xrca013" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_1" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca016" widget="ComboBox" items="8340" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca017" widget="ComboBox" items="8324" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isafdocno" c_zoom="q_isafdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrca019_1" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca020" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca023" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xrca026" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xrca028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca030" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca031" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca032" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_2" c_zoom="q_ooeg001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca035" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca036" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca037" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca038" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrca038" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca039" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="xrca040" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca041" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca042" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca043" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca044" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca045" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xrca046" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca047" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca049" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="xrca051" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca052" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="xrca053" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xrca054" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca055" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooid001_1" c_zoom="q_ooid001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca056" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca057" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmak002" c_zoom="q_xrca057" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xrca058" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca059" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bgaa001" c_zoom="q_bgaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca060" widget="ComboBox" items="8321" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca061" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xrca062" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca063" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xrca063" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xrca064" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xrca065" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca066" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xrca100" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca103" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca106" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca107" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca108" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca113" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca114" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca116" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca117" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca118" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca120" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca121" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca123" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca124" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca126" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca127" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca128" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca130" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xrca131" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca133" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca134" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca136" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca137" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrca138" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xrcaud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xrcaud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xrcaud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xrca_t" depend_field="xrca003" correspon_key="xrca003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrca004" correspon_key="xrcaent,xrca004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xrca_t" depend_field="xrca005" correspon_key="xrcaent,xrca005" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xrca_t" depend_field="xrca007" correspon_key="xrcaent,&apos;3111&apos;,xrca007" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xrca_t" depend_field="xrca008" correspon_key="xrcaent,xrca008" ref_table="ooibl_t" ref_fk="ooiblent,ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="xrca_t" depend_field="xrca011" correspon_key="xrcaent,&apos;&apos;,xrca011" ref_table="oodbl_t" ref_fk="oodblent,oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="xrca_t" depend_field="xrca014" correspon_key="xrca014" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrca015" correspon_key="xrca015" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrca028" correspon_key="xrcaent,&apos;&apos;,xrca028" ref_table="isacl_t" ref_fk="isaclent,isacl001,isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="xrca_t" depend_field="xrca033" correspon_key="xrcaent,xrca033" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrca034" correspon_key="xrcaent,xrca034" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrca035" correspon_key="xrcaent,&apos;&apos;,xrca035" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="xrca_t" depend_field="xrca036" correspon_key="xrcaent.&apos;&apos;,xrca036" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="xrca_t" depend_field="xrca041" correspon_key="xrcaent,&apos;3113&apos;,xrca041" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xrca_t" depend_field="xrca051" correspon_key="xrcaent,&apos;3115&apos;,xrca015" ref_table="oocq_t" ref_fk="oocqent,oocq001,oocq002" ref_dlang="oocq003" ref_rtn="oocq004"/>
+    <field depend_table="xrca_t" depend_field="xrca054" correspon_key="xrcaent,&apos;3114&apos;,xrca054" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xrca_t" depend_field="xrca055" correspon_key="xrcaent,xrca055" ref_table="ooidl_t" ref_fk="ooidlent,ooidl001" ref_dlang="ooidl002" ref_rtn="ooidl003"/>
+    <field depend_table="xrca_t" depend_field="xrca057" correspon_key="xrca057" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrca058" correspon_key="xrcaent,&apos;295&apos;,xrca058" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xrca_t" depend_field="xrca059" correspon_key="xrcaent,xrca059" ref_table="bgaal_t" ref_fk="bgaalent,bgaal001" ref_dlang="bgaal002" ref_rtn="bgaal003"/>
+    <field depend_table="xrca_t" depend_field="xrcacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrca_t" depend_field="xrcacnfid" correspon_key="xrcacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrcacomp" correspon_key="xrcaent,xrcacomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrcacrtdp" correspon_key="xrcacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrcacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrca_t" depend_field="xrcacrtid" correspon_key="xrcacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrcadocno" correspon_key="xrcaent,xrcadocno" ref_table="oobxl_t" ref_fk="oobxlent,oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="xrca_t" depend_field="xrcald" correspon_key="xrcaent,xrcald" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="xrca_t" depend_field="xrcamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrca_t" depend_field="xrcamodid" correspon_key="xrcamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrcaowndp" correspon_key="xrcaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xrca_t" depend_field="xrcaownid" correspon_key="xrcaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrcapstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xrca_t" depend_field="xrcapstid" correspon_key="xrcapstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xrca_t" depend_field="xrcasite" correspon_key="xrcaent,xrcasite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xrcastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

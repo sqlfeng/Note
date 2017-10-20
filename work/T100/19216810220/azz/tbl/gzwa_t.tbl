@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzwa_t" module="AZZ" text="library注册主档" type="B" version="1">
+  <column name="gzwa001" text="4gl程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzwa002" text="函式编号" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="gzwa003" text="客制" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzwa004" text="内部函式区别码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzwa005" text="现行版本" attribute="C905" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzwa006" text="函式目的" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzwa007" text="其他说明" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzwaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzwaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzwacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzwacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzwacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzwamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzwamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzwa001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzwa001" c_zoom="q_gzwa001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzwa002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzwa002" c_zoom="q_gzwa002" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzwa003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwa004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwa005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzwa006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzwa007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzwaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzwamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzwa_t" depend_field="gzwa001" correspon_key="b_gzwa001" ref_table="gzdel_t" ref_fk="gzdel001" ref_dlang="gzdel002" ref_rtn="gzdel003"/>
+    <field depend_table="gzwa_t" depend_field="gzwacrtdp" correspon_key="gzwacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzwa_t" depend_field="gzwacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzwa_t" depend_field="gzwacrtid" correspon_key="gzwacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzwa_t" depend_field="gzwamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzwa_t" depend_field="gzwamodid" correspon_key="gzwamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzwa_t" depend_field="gzwaowndp" correspon_key="gzwaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzwa_t" depend_field="gzwaownid" correspon_key="gzwaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

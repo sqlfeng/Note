@@ -544,26 +544,49 @@ FUNCTION cxmq111()
      #11 销退作业单              Y
 
      IF tm.c = 'Y' THEN
-        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
-                   " oea1008,oea1008*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
-                   "  FROM oea_file ",
+        LET l_sql1=#"SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
+                   #" oea1008,oea1008*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
+                   #"  FROM oea_file ",
+                   #"  WHERE ", l_term CLIPPED,
+                   #"   AND oea03 = ? AND oea032 = ? ",
+                   #"   AND oea23 = ? ", #币别
+                   #"   AND oea02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
+                   #"   AND MONTH(oea02) = ? " #月份
+                   #,"  AND oea00 != 0" # add by lixwz 20170808  不按合同号
+                   #,"  AND YEAR(oea02) = ?" # add by lixwz 20170808 年份
+                   "SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
+                   " SUM(oeb12*oeb13),SUM(oeb12*oeb13)*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
+                   "  FROM oea_file,oeb_file ",
                    "  WHERE ", l_term CLIPPED,
+                   "   AND oea01 = oeb01 ",
                    "   AND oea03 = ? AND oea032 = ? ",
                    "   AND oea23 = ? ", #币别
                    "   AND oea02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
                    "   AND MONTH(oea02) = ? " #月份
                    ,"  AND oea00 != 0" # add by lixwz 20170808  不按合同号
-                   ,"  AND YEAR(oea02) = ?" # add by lixwz 20170808 年份
+                   ,"  AND YEAR(oea02) = ?", # add by lixwz 20170808 年份
+                   " GROUP BY oea03,oea032,oea23,0,oea02,oea01,1,oea01,oea24"
      ELSE
-        LET l_sql1="SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
-                   " oea1008,oea1008*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
-                   "  FROM oea_file ",
+        LET l_sql1=#"SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
+                   #" oea1008,oea1008*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
+                   #"  FROM oea_file ",
+                   #"  WHERE ", l_term CLIPPED,
+                   #"   AND oea03 = ? AND oea032 = ? ",
+                   #"   AND oea02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
+                   #"   AND MONTH(oea02) = ? " #月份
+                   #,"  AND oea00 != 0" # add by lixwz 20170808  不按合同号
+                   #,"  AND YEAR(oea02) = ?" # add by lixwz 20170808 年份
+                   "SELECT DISTINCT oea03,oea032,oea23,0,oea02,oea01,1,oea01,",
+                   " SUM(oeb12*oeb13),SUM(oeb12*oeb13)*oea24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
+                   "  FROM oea_file,oeb_file ",
                    "  WHERE ", l_term CLIPPED,
+                   "   AND oea01 = oeb01 ",
                    "   AND oea03 = ? AND oea032 = ? ",
                    "   AND oea02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
                    "   AND MONTH(oea02) = ? " #月份
                    ,"  AND oea00 != 0" # add by lixwz 20170808  不按合同号
-                   ,"  AND YEAR(oea02) = ?" # add by lixwz 20170808 年份
+                   ,"  AND YEAR(oea02) = ?", # add by lixwz 20170808 年份
+                   " GROUP BY oea03,oea032,oea23,0,oea02,oea01,1,oea01,oea24"
      END IF
 
      PREPARE cxmq111_prepare0 FROM l_sql1
@@ -584,7 +607,7 @@ FUNCTION cxmq111()
                    "  WHERE ", l_term CLIPPED,
                    "   AND oea03 = ? AND oea032 = ? ",
                    "   AND tc_nme01 = tc_nmg01  AND tc_nmg09 ='A' ", #收支类型是'A'
-                   "   AND tc_nme14 = ? ", #币别
+                   #"   AND tc_nme14 = ? ", #币别
                    "   AND tc_nmgdate BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
                    "   AND MONTH(tc_nmgdate) = ? " #月份
                    ,"  AND YEAR(tc_nmgdate) = ?" # add by lixwz 20170808 年份
@@ -612,25 +635,30 @@ FUNCTION cxmq111()
      #开票作业
      IF tm.c = 'Y' THEN       #按币种分页
         LET l_sql1=" SELECT DISTINCT omf05,omf051,omf07,0,omf03,ogb31,4,omf00,0,0,0,0, ",
-                   " (case when substr(oma00,1,1)='2' and sum(omb16t)>0 then sum(omb16t)*-1 else sum(omb16t) end),",
-                   " (case when substr(oma00,1,1)='2' and sum(omb14t)>0 then sum(omb14t)*-1 else sum(omb14t) end),",
+                   #" (case when substr(oma00,1,1)='2' and sum(omb16t)>0 then sum(omb16t)*-1 else sum(omb16t) end),",
+                   #" (case when substr(oma00,1,1)='2' and sum(omb14t)>0 then sum(omb14t)*-1 else sum(omb14t) end),",
+                   " (case when substr(oma00,1,1)='2' and sum(omb16t)>0 then sum(omb12*omb13)*oma24*-1 else sum(omb12*omb13)*oma24 end),",
+                   " (case when substr(oma00,1,1)='2' and sum(omb14t)>0 then sum(omb12*omb13)*-1 else sum(omb12*omb13) end),",
                    " 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
                    " from oma_file,omb_file,ogb_file,omf_file,oea_file  ",
                    " where oma01=omb01 and omb31=omf11 and omb32=omf12  ",
                    " and oma02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
                    " and ogb01=omb31 and ogb03=omb32  ",
                    "   AND oea03 = ? AND oea032 = ? ",
-                   " and oea01=ogb31  and oma23=? ",
+                   "  AND oea23 = ? ",
+                   " and oea01=ogb31   ",
                    "  AND MONTH(omf03) = ? ", #月份
                    "  AND YEAR(omf03) = ?", # add by lixwz 20170808 年份
                    "  AND ",l_term CLIPPED,
-                   " GROUP BY omf05,omf051,omf07,0,omf03,ogb31,omf00,oma00,oma33  "
+                   " GROUP BY omf05,omf051,omf07,0,omf03,ogb31,omf00,oma00,oma33,oma24   "
 
 
      ELSE
         LET l_sql1=" SELECT DISTINCT omf05,omf051,omf07,0,omf03,ogb31,4,omf00,0,0,0,0, ",
                    " (case when substr(oma00,1,1)='2' and sum(omb16t)>0 then sum(omb16t)*-1 else sum(omb16t) end),",
                    " (case when substr(oma00,1,1)='2' and sum(omb14t)>0 then sum(omb14t)*-1 else sum(omb14t) end),",
+                   #" (case when substr(oma00,1,1)='2' and sum(omb16t)>0 then sum(omb12*omb13)*oma24*-1 else sum(omb12*omb13)*oma24 end),",
+                   #" (case when substr(oma00,1,1)='2' and sum(omb14t)>0 then sum(omb12*omb13)*-1 else sum(omb12*omb13) end),",
                    " 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
                    " from oma_file,omb_file,ogb_file,omf_file,oea_file  ",
                    " where oma01=omb01 and omb31=omf11 and omb32=omf12  ",
@@ -641,7 +669,7 @@ FUNCTION cxmq111()
                    "  AND MONTH(omf03) = ? ", #月份
                    "  AND YEAR(omf03) = ?", # add by lixwz 20170808 年份
                    "  AND ",l_term CLIPPED,
-                   " GROUP BY omf05,omf051,omf07,0,omf03,ogb31,omf00,oma00,oma33  "
+                   " GROUP BY omf05,omf051,omf07,0,omf03,ogb31,omf00,oma00,oma33,oma24  "
      END IF
 
      PREPARE cxmq111_prepare2 FROM l_sql1
@@ -655,7 +683,8 @@ FUNCTION cxmq111()
      #出货/销退作业 X303-XS161100698
      IF tm.c = 'Y' THEN       #按币种分页
         LET l_sql1=" SELECT DISTINCT oga03,oga032,oga23,0,oga02,oga16,3,oga01,0,0, ",
-                   " SUM(ogb14t)*oga24,SUM(ogb14t),",
+                   #" SUM(ogb14t)*oga24,SUM(ogb14t),",  # mark by lixwz 170912
+                   " SUM(ogb12*ogb13)*oga24,SUM(ogb12*ogb13),", # add by lixwz 170912 金额以数量*单价为准
                    " 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
                    " FROM oga_file,oea_file,ogb_file  ",
                    " WHERE oga01=ogb01 and oga02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
@@ -686,7 +715,8 @@ FUNCTION cxmq111()
 
      ELSE
         LET l_sql1=" SELECT DISTINCT oga03,oga032,oga23,0,oga02,oga16,3,oga01,0,0, ",
-                   " SUM(ogb14t)*oga24,SUM(ogb14t),",
+                   #" SUM(ogb14t)*oga24,SUM(ogb14t),",     # mark by lixwz 170912
+                   " SUM(ogb12*ogb13)*oga24,SUM(ogb12*ogb13),",   # add by lixwz 170912 金额以数量*单价为准
                    " 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
                    " FROM oga_file,oea_file,ogb_file ",
                    " WHERE oga01=ogb01 and oga02 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
@@ -803,7 +833,7 @@ FUNCTION cxmq111()
                    "  AND nmh27 IN ('112201','112202','112204') ",  # add by lixwz 20170821
                    " UNION ",
                    " SELECT DISTINCT nmg18,nmg19,nmg22,0,nmg01,'',2,nmg00, ",
-                   " 0,0,0,0,0,0,nmg04,nmg05,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
+                   " 0,0,0,0,0,0,(SELECT oma54t FROM oma_file WHERE oma01=nmg00 ),(SELECT oma56t FROM oma_file WHERE oma01=nmg00),0,0,0,0,0,0,0,0,0,0,0,0,0,0,'' ",
                    " from nmg_file ",
                    " where nmg01 BETWEEN '",tm.bdate,"' AND '",tm.edate,"'",
                    "   AND nmg18 = ? AND nmg19 = ? ",
@@ -878,7 +908,7 @@ FUNCTION cxmq111()
         #FOR l_i = mm1 TO nn1 mark by lixwz 20170818
         FOR l_i2 = mm2 TO nn2
             LET yy2 = cl_digcut(l_i2/12,0)
-            IF l_i2/12 < yy2 THEN
+            IF l_i2/12 <= yy2 THEN
                 LET yy2 = yy2-1
             END IF
             LET l_i = (l_i2/12-yy2)*12
@@ -900,7 +930,7 @@ FUNCTION cxmq111()
                   LET g_print = g_print + 1
                END FOREACH
                #回款作业
-               FOREACH cxmq111_cursb1 USING sr1.oea03,sr1.oea032,sr1.oea23,l_i,yy2
+               FOREACH cxmq111_cursb1 USING sr1.oea03,sr1.oea032,l_i,yy2
                                      INTO sr.*
                   IF SQLCA.sqlcode THEN
                      CALL cl_err('foreach:',SQLCA.sqlcode,0)
@@ -975,6 +1005,8 @@ FUNCTION cxmq111()
                   # add by lixwz20170908 s
                   EXECUTE cxmq111_ohb14 USING sr.oea01
                       INTO l_ohb14,l_ohb14t
+                  IF cl_null(l_ohb14) THEN LET l_ohb14 = 0 END IF
+                  IF cl_null(l_ohb14t) THEN LET l_ohb14t = 0 END IF
                   LET sr.c = sr.c - l_ohb14t
                   LET sr.cf =  sr.cf - l_ohb14t
                   # add by lixwz20170908 e
@@ -1225,9 +1257,9 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4 ,
       # add by lixwz 20170804 s
       LET l_g  =l_g+sr.b-sr.d - sr.l
       LET l_h = l_h+sr.a-sr.d - sr.l
-      LET lf_h = lf_h+sr.a-sr.df
+      LET lf_h = lf_h+sr.a-sr.df - sr.l
       LET l_ii  = l_ii+sr.b-sr.c  - sr.l
-      LET lf_ii = lf_ii+sr.bf-sr.cf
+      LET lf_ii = lf_ii+sr.bf-sr.cf - sr.l
       LET l_j  = l_j+sr.a-sr.b
       LET lf_j = lf_j+sr.af-sr.bf
       LET l_k  = l_k+sr.c-sr.d
@@ -1261,7 +1293,7 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4 ,
       LET l_g  = l_b-l_d - l_l  # add by lixwz 20170804
       LET l_m  = l_b-l_l    # add by lixwz 20170901
       LET l_h  = l_a-l_d - l_l
-      LET lf_h = lf_a-lf_d
+      LET lf_h = lf_a-lf_d - l_l
       LET l_ii  = l_b-l_c - l_l
       LET lf_ii = lf_b-lf_c
       LET l_j  = l_a-l_b
@@ -1434,7 +1466,11 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4 ,
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
       LET g_seq=g_seq+1
 
+      # add by lixwz 170913 s
+      AFTER GROUP OF sr.oea03
 
+      LET l_flag_chk = ''
+      # add by lixwz 170913 e
 
 END REPORT
 
@@ -1483,16 +1519,22 @@ REPORT cxmq111_rep1(sr)
 DEFINE l_tc_khy05,l_tc_khy06,l_tc_khy07,l_tc_khy08,l_tc_khy09,l_tc_khy10,l_tc_khy11,l_tc_khy12 LIKE  npq_file.npq07
 DEFINE l_h,l_ii,l_j,l_k      LIKE type_file.num20_6   #用于本期累计
 DEFINE lf_h,lf_ii,lf_j,lf_k  LIKE type_file.num20_6   #用于本期累计
+DEFINE l_g,l_g2                      LIKE type_file.num20_6  # add by lixwz 20170804
+DEFINE l_l,l_m,l_l2,l_m2,l_l3,l_m3,l_l4,l_m4       LIKE type_file.num20_6 # add by lixwz 20170901
 DEFINE l_h2,l_ii2,l_j2,l_k2  LIKE type_file.num20_6   #用于按月累计
 DEFINE lf_h2,lf_ii2,lf_j2,lf_k2 LIKE type_file.num20_6   #用于按月累计
 DEFINE l_a,l_b,l_c,l_d LIKE type_file.num20_6
 DEFINE lf_a,lf_b,lf_c,lf_d LIKE type_file.num20_6
 # add by lixwz 20170808 s  用于累计
-DEFINE l_g,l_g2                      LIKE type_file.num20_6  # add by lixwz 20170804
 DEFINE l_a3,lf_a3,l_b3,lf_b3,l_c3,lf_c3,l_d3,lf_d3,l_g3 ,
              l_h3,lf_h3,l_ii3,lf_ii3,l_j3,lf_j3,l_k3,lf_k3 LIKE type_file.num20_6
 DEFINE l_flag_chk  LIKE type_file.chr1
 # add by lixwz 20170808 e
+# add by lixwz 20170818 s
+# 用于按月累计
+DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4 ,
+             l_h4,lf_h4,l_ii4,lf_ii4,l_j4,lf_j4,l_k4,lf_k4 LIKE type_file.num20_6
+# add by lixwz 20170818 e
 
   OUTPUT TOP MARGIN g_top_margin LEFT MARGIN g_left_margin BOTTOM MARGIN g_bottom_margin PAGE LENGTH g_page_line
   ORDER BY sr.oea03,sr.oea032,sr.oea23,sr.yy,sr.mm,sr.oea01,sr.vdate
@@ -1513,6 +1555,19 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       SELECT azi04,azi05,azi07 INTO t_azi04,t_azi05,t_azi07 FROM azi_file
        WHERE azi01 = sr.oea23
 
+      # add by lixwz 20170818 s
+      # 用来每月累计
+      LET l_g4  = 0
+      LET l_h4 = 0
+      LET lf_h4 = 0
+      LET l_ii4 = 0
+      LET lf_ii4 = 0
+      LET l_j4 = 0
+      LET lf_j4 = 0
+      LET l_k4 = 0
+      LET lf_k4 = 0
+      LET l_m4 = 0
+      # add by lixwz 20170818 e
       #抓期初数据
         IF tm.c = 'Y' THEN
 
@@ -1538,6 +1593,8 @@ DEFINE l_flag_chk  LIKE type_file.chr1
 
       #期初金额
          LET l_g2 = l_tc_khy08-l_tc_khy12   #     #出货应收余额 B-D
+         LET l_l2 = 0 # 销退折让金额 # add by lixwz 20170901
+         LET l_m2 = l_tc_khy08 - l_l2 # 实际出货金额 = 出货金额 - 销退折让金额
 
          LET l_h2 = l_tc_khy06-l_tc_khy12  #订单-回款 #订单应收余额 A-D
          LET lf_h2 = l_tc_khy05-l_tc_khy11
@@ -1560,7 +1617,9 @@ DEFINE l_flag_chk  LIKE type_file.chr1
          INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','','0','',
                 l_tc_khy06,l_tc_khy05,l_tc_khy08,l_tc_khy07,l_tc_khy10,l_tc_khy09,l_tc_khy12,l_tc_khy11,
+                l_l2,l_g2,                                          # add by lixwz 20170804
                 l_h2,lf_h2,l_ii2,lf_ii2,l_j2,lf_j2,l_k2,lf_k2,
+                l_m2,                                                # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
          LET g_seq=g_seq+1
 
@@ -1571,6 +1630,8 @@ DEFINE l_flag_chk  LIKE type_file.chr1
    BEFORE GROUP OF sr.oea01
       #本期小计前清值
       LET  l_g = 0 # add by lixwz 20170804
+      LET  l_l = 0 # add by lixwz 20170901
+      LET  l_m = 0 # add by lixwz 20170901
       LET  l_h = 0
       LET  l_ii = 0
       LET  l_j = 0
@@ -1602,6 +1663,7 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       IF cl_null(sr.c) THEN LET sr.c = 0 END IF
       IF cl_null(sr.df) THEN LET sr.df = 0 END IF
       IF cl_null(sr.d) THEN LET sr.d = 0 END IF
+      IF cl_null(sr.l) THEN LET sr.l = 0 END IF # add by lixwz 20170901
 
       # 每行明细
       # mark by lixwz 20170808 s
@@ -1615,22 +1677,24 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       #LET lf_k = sr.cf-sr.df
       # mark by lixwz 20170808  e
       # add by lixwz 20170804 s
-      LET l_g  =l_g+sr.b-sr.d
-      LET l_h = l_h+sr.a-sr.d
-      LET lf_h = lf_h+sr.a-sr.df
-      LET l_ii  = l_ii+sr.b-sr.c
-      LET lf_ii = lf_ii+sr.bf-sr.cf
+      LET l_g  =l_g+sr.b-sr.d - sr.l
+      LET l_h = l_h+sr.a-sr.d - sr.l
+      LET lf_h = lf_h+sr.a-sr.df - sr.l
+      LET l_ii  = l_ii+sr.b-sr.c  - sr.l
+      LET lf_ii = lf_ii+sr.bf-sr.cf - sr.l
       LET l_j  = l_j+sr.a-sr.b
       LET lf_j = lf_j+sr.af-sr.bf
       LET l_k  = l_k+sr.c-sr.d
       LET lf_k = lf_k+sr.cf-sr.df
+      LET l_m = l_m + sr.b - sr.l
       # add by lixwz 20170804 e
 
          INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,sr.vdate,sr.oea01,sr.type,sr.tc_nmg01,
                 sr.a,sr.af,sr.b,sr.bf,sr.c,sr.cf,sr.d,sr.df,
-                l_g,     # add by lixwz 20170804
+                sr.l,l_g,     # add by lixwz 20170804
                 l_h,lf_h,l_ii,lf_ii,l_j,lf_j,l_k,lf_k,
+                l_m,         # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
 
       LET g_seq=g_seq+1
@@ -1645,12 +1709,15 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       LET lf_c= GROUP SUM(sr.cf)
       LET l_d = GROUP SUM(sr.d)
       LET lf_d= GROUP SUM(sr.df)
+      LET l_l = GROUP SUM(sr.l) # add by lixwz 20170901
+      IF cl_null(l_l) THEN LET l_l =0 END IF
 #add by shijl 170629--str--
-      LET l_g  = l_b-l_d    # add by lixwz 20170804
-      LET l_h  = l_a-l_d
-      LET lf_h = lf_a-lf_d
-      LET l_ii  = l_b-l_c
-      LET lf_ii = lf_b-lf_c
+      LET l_g  = l_b-l_d - l_l  # add by lixwz 20170804
+      LET l_m  = l_b-l_l    # add by lixwz 20170901
+      LET l_h  = l_a-l_d - l_l
+      LET lf_h = lf_a-lf_d - l_l
+      LET l_ii  = l_b-l_c - l_l
+      LET lf_ii = lf_b-lf_c - l_l
       LET l_j  = l_a-l_b
       LET lf_j = lf_a-lf_b
       LET l_k  = l_c-l_d
@@ -1668,12 +1735,26 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       LET lf_j2 = lf_j2 + lf_j
       LET lf_k2 = lf_k2 + lf_k}
       # mark by lixwz 20170808 e
+      # add by lixwz 20170818 s
+      # 用来每月累计
+      LET l_g4  = l_g4 + l_g
+      LET l_h4 = l_h4 + l_h
+      LET lf_h4 = lf_h4 + lf_h
+      LET l_ii4 = l_ii4 + l_ii
+      LET lf_ii4 = lf_ii4 + lf_ii
+      LET l_j4 = l_j4 + l_j
+      LET lf_j4 = lf_j4 + lf_j
+      LET l_k4 = l_k4 + l_k
+      LET lf_k4 = lf_k4 + lf_k
+      LET l_m4 = l_m4 + l_m # add by lixwz 20170901
+      # add by lixwz 20170818 e
 
          INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','','5','',
                 l_a,lf_a,l_b,lf_b,l_c,lf_c,l_d,lf_d,
-                l_g,   # add by lixwz 20170804
+                l_l,l_g,   # add by lixwz 20170804
                 l_h,lf_h,l_ii,lf_ii,l_j,lf_j,l_k,lf_k,
+                l_m,       # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
       LET g_seq=g_seq+1
 
@@ -1689,22 +1770,25 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       LET lf_c= GROUP SUM(sr.cf)
       LET l_d = GROUP SUM(sr.d)
       LET lf_d= GROUP SUM(sr.df)
+      LET l_l = GROUP SUM(sr.l)  # add by lixwz 20170901
 
-      LET l_g  =sr.b-sr.d     # add by lixwz 20170804
-      LET l_h  = sr.a-sr.d
+      LET l_g  =sr.b-sr.d  - sr.l   # add by lixwz 20170804
+      LET l_h  = sr.a-sr.d - sr.l
       LET lf_h = sr.af-sr.df
-      LET l_ii  = sr.b-sr.c
+      LET l_ii  = sr.b-sr.c - sr.l
       LET lf_ii = sr.bf-sr.cf
       LET l_j  = sr.a-sr.b
       LET lf_j = sr.af-sr.bf
       LET l_k  = sr.c-sr.d
       LET lf_k = sr.cf-sr.df
+      LET l_m = sr.b - sr.l # add by lixwz 20171020
 
       INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','','9','',
                 l_a,lf_a,l_b,lf_b,l_c,lf_c,l_d,lf_d,
-                l_g,    # add by lixwz 20170804
-                l_h,lf_h,l_ii,lf_ii,l_j,lf_j,l_k,lf_k,
+                l_l,l_g4,    # add by lixwz 20170804
+                l_h4,lf_h4,l_ii4,lf_ii4,l_j4,lf_j4,l_k4,lf_k4,
+                l_m4,        # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
       LET g_seq=g_seq+1
 
@@ -1719,6 +1803,7 @@ DEFINE l_flag_chk  LIKE type_file.chr1
             LET lf_c3  = lf_c+ l_tc_khy09
             LET l_d3   = l_d + l_tc_khy12
             LET lf_d3  = lf_d+ l_tc_khy11
+            LET l_l3   = l_l + 0  # 期初 # add by lixwz 20171020
             LET l_g3   = l_g + l_g2
             LET l_h3   = l_h + l_h2
             LET lf_h3  = lf_h+ lf_h2
@@ -1728,6 +1813,7 @@ DEFINE l_flag_chk  LIKE type_file.chr1
             LET lf_j3    = lf_j + lf_j2
             LET l_k3    = l_k  + l_k2
             LET lf_k3   = lf_k+ lf_k2
+            LET l_m3   = l_m4 + l_m2  # add by lixwz 20171020
             LET l_flag_chk = 'Y'
       ELSE
             LET l_a3   = l_a + l_a3
@@ -1738,6 +1824,7 @@ DEFINE l_flag_chk  LIKE type_file.chr1
             LET lf_c3  = lf_c+ lf_c3
             LET l_d3   = l_d + l_d3
             LET lf_d3  = lf_d+ lf_d3
+            LET l_l3   = l_l + l_l3 # add by lixwz 20171020
             LET l_g3   = l_g + l_g3
             LET l_h3   = l_h + l_h3
             LET lf_h3  = lf_h+ lf_h3
@@ -1747,7 +1834,20 @@ DEFINE l_flag_chk  LIKE type_file.chr1
             LET lf_j3    = lf_j + lf_j3
             LET l_k3    = l_k  + l_k3
             LET lf_k3   = lf_k+ lf_k3
+            LET l_m3   = l_m4 + l_m3 # add by lixwz 20171020
       END IF
+      # add by lixwz 20170818 s
+      LET l_g4  = 0
+      LET l_h4 = 0
+      LET lf_h4 = 0
+      LET l_ii4 = 0
+      LET lf_ii4 = 0
+      LET l_j4 = 0
+      LET lf_j4 = 0
+      LET l_k4 = 0
+      LET lf_k4 = 0
+      LET l_m4 = 0 # add by lixwz 20170901
+      # add by lixwz 20170818 e
       # add by lixwz  20170808 e
       # mark by lixwz  20170808 s
       #LET l_a   = l_a + l_tc_khy06
@@ -1763,9 +1863,10 @@ DEFINE l_flag_chk  LIKE type_file.chr1
       SELECT last_day(sr.vdate) INTO sr.vdate FROM dual  # add by lixwz 20170823
       INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,sr.vdate,'','10','',
-                l_a,lf_a,l_b,lf_b,l_c,lf_c,l_d,lf_d,
-                l_g3 ,# add by lixwz 20170804 # *****
-                l_h2,lf_h2,l_ii2,lf_ii2,l_j2,lf_j2,l_k2,lf_k2,
+                l_a3,lf_a3,l_b3,lf_b3,l_c3,lf_c3,l_d3,lf_d3,
+                l_l3,l_g3 ,# add by lixwz 20170804 # *****
+                l_h3,lf_h3,l_ii3,lf_ii3,l_j3,lf_j3,l_k3,lf_k3,
+                l_m3,       # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
 
       LET g_seq=g_seq+1

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmmt_t" module="AFM" text="计提投资收益维护单身档" type="D" version="1">
+  <column name="fmmtent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmmtdocno" text="计息单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmmtseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmmt001" text="投资组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmmt002" text="投资单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmmt003" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmmt004" text="本金" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt005" text="起算日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmmt006" text="止算日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmmt007" text="天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmmt008" text="年利率" attribute="N305" type="number(10,6)" pk="N" req="N"/>
+  <column name="fmmt009" text="计息方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmmt010" text="本期计提金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt011" text="利息调整" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt012" text="投资收益" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt013" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmmt014" text="计提本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt015" text="本币利息调整" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt016" text="本币投资收益" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt017" text="计息来源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmmt018" text="已收原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmmt019" text="已收本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmmtent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmmtdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmmtseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmmt001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmmt002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmmt003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_ooaj002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmmt004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmmt006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmmt007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="fmmt008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="9" format="---&amp;.&amp;&amp;&amp;%" prog_rel="" case=""/>
+    <field name="fmmt009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmmt010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmmt018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmmt019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

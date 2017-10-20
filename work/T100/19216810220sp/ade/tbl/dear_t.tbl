@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dear_t" module="ADE" text="门店收银备用金领用单单身档" type="T" version="1">
+  <column name="dearent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="dearsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dearunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deardocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dearseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="dear000" text="专柜编号" attribute="C601" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dear001" text="收银员编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dear002" text="款别分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dear003" text="款别编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dear004" text="面额编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dear005" text="单位金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dear006" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dear007" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dear008" text="金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dear009" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dearent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dearsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dearunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deardocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dearseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="dear000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pcab001" c_zoom="q_pcab001" chk_ref="v_pcab001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear002" widget="Edit" items="" default="&apos;10&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooia001_03" c_zoom="q_ooia001_03" chk_ref="v_ooie001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dear006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dear007" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dear008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dear009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dear_t" depend_field="dear001" correspon_key="dearent,dear001" ref_table="pcab_t" ref_fk="pcabent,pcab001" ref_dlang=" " ref_rtn="pcab003"/>
+    <field depend_table="dear_t" depend_field="dear003" correspon_key="dearent,dear003" ref_table="ooial_t" ref_fk="ooialent,ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="dear_t" depend_field="dear004" correspon_key="dearent,dear004" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="dear_t" depend_field="dear006" correspon_key="dearent,dear006" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

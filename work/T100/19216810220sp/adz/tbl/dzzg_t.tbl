@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzzg_t" module="ADZ" text="签核等级单头(测试用)" type="M" version="1">
+  <column name="dzzgstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzg001" text="签核等级" attribute="049" type="varchar2(4)" pk="Y" req="Y"/>
+  <column name="dzzg002" text="说明" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="dzzg003" text="说明" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="dzzg004" text="ComboBox(改属性)" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzg005" text="ButtonEdit字段(改属性)" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzg006" text="日期字段(改属性)" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="dzzg007" text="是否需查看后方可签核" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzzg008" text="是否由系统自动赋予签核等级" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzzg009" text="签核单据别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzg010" text="赋予条件" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="dzzg011" text="换为人员代号" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgownid" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgcrtid" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgcrtdt" text="资料创建日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzzgmodid" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgmoddt" text="最近修改日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzzgcnfid" text="资料确认者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzgcnfdt" text="数据确认日" attribute="D002" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzzgstus" widget="ComboBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg001" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzzg002" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzzg003" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzzg004" widget="ComboBox" items="genero_aw_widgets" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg005" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg006" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg007" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg008" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg009" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzg010" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzzg011" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgownid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgowndp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgcrtid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgcrtdp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgcrtdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzzgmodid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgmoddt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzzgcnfid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzgcnfdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree>
+    <type no="1" table="" col=""/>
+    <id no="2" table="dzzg_t" col="dzzg001"/>
+    <pid no="3" table="dzzg_t" col="dzzg002"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="dzzg_t" depend_filed="dzzg011" correspon_key="" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="ooag006" ref_rtn="ooag007"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzg_t" depend_filed="dzzgcnfid" correspon_key="dzzgcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgcrtdp" correspon_key="dzzgcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzg_t" depend_filed="dzzgcrtid" correspon_key="dzzgcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzg_t" depend_filed="dzzgmodid" correspon_key="dzzgmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgowndp" correspon_key="dzzgowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzzg_t" depend_filed="dzzgownid" correspon_key="dzzgownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="dzzg_t" depend_filed="dzzg002" correspon_key="dzzg001" lang_table="ooagl_t" lang_fk="ooagl001" lang_dlang="ooagl002" lang_rtn="ooagl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtkn_t" module="ART" text="补货建议单明细数据表" type="D" version="1">
+  <column name="rtknent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtknunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtknsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkndocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtknseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtkn001" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtkn002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtkn003" text="商品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="rtkn004" text="品类编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkn005" text="采购类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkn006" text="供应商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkn007" text="库存单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkn008" text="要货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn009" text="要货金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn010" text="到货日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtkn011" text="促销开始日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtkn012" text="促销结束日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtkn101a" text="安全库存天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn101b" text="要货频率" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn101c" text="送货天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn101d" text="门店备货周期校正系数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn101" text="备货天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn201a" text="日均销量" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn201b" text="到货日品类周参数A" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn201c" text="到货日品类日驱势参数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn201d" text="备货天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn201e" text="最小库存天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn201f" text="最小库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn201g" text="特殊陈列量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn201" text="安全库存量1" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn202" text="安全库存量2" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn203" text="安全库存量3" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn204" text="安全库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn301a" text="日均销量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn301b" text="到货日品类周参数A" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn301c" text="到货日品类日驱势参数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn301d" text="备货天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn301e" text="年节天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn301f" text="促销日均销量PDMS" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn301g" text="AVG(起始-结束日品类周参数A)" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn301h" text="休假天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkn301" text="促销库存增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn302" text="年节备货增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn303" text="休假备货增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401a" text="日均销量DMS" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401b" text="到货日品类周参数A" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn401c" text="到货日品类日驱势参数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtkn401d" text="安全库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401e" text="促销库存增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401f" text="年节备货增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401g" text="休假备货增量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401h" text="目标库存天数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn401" text="目标库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn501a" text="目标库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn501b" text="当前库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn501c" text="在途出库量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn501d" text="在途入库量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtkn501" text="建议补货量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud001" text="自定義欄位(文字)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud002" text="自定義欄位(文字)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud003" text="自定義欄位(文字)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud004" text="自定義欄位(文字)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud005" text="自定義欄位(文字)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud006" text="自定義欄位(文字)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud007" text="自定義欄位(文字)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud008" text="自定義欄位(文字)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud009" text="自定義欄位(文字)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud010" text="自定義欄位(文字)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtknud011" text="自定義欄位(數字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud012" text="自定義欄位(數字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud013" text="自定義欄位(數字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud014" text="自定義欄位(數字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud015" text="自定義欄位(數字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud016" text="自定義欄位(數字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud017" text="自定義欄位(數字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud018" text="自定義欄位(數字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud019" text="自定義欄位(數字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud020" text="自定義欄位(數字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtknud021" text="自定義欄位(日期時間)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud022" text="自定義欄位(日期時間)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud023" text="自定義欄位(日期時間)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud024" text="自定義欄位(日期時間)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud025" text="自定義欄位(日期時間)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud026" text="自定義欄位(日期時間)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud027" text="自定義欄位(日期時間)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud028" text="自定義欄位(日期時間)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud029" text="自定義欄位(日期時間)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtknud030" text="自定義欄位(日期時間)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtknent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtknunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtknsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkndocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="rtknseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="rtkn001" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="rtkn002" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtkn003" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtkn004" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn005" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn006" widget="ComboBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn007" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="rtkn010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="rtkn101a" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn101b" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn101c" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn101d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn201a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="rtkn201b" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn201c" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn201d" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn201e" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn201f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn201g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn201" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn202" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn203" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn204" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301b" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301c" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301d" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn301e" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn301f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301g" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn301h" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="rtkn301" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn302" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn303" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401b" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401c" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn401" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn501a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn501b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn501c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn501d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtkn501" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="rtknud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="rtknud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="rtknud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="rtknud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtkn_t" depend_field="rtkn001" correspon_key="rtkn001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="rtkn_t" depend_field="rtkn004" correspon_key="rtkn004" ref_table="rtaxl_t" ref_fk="rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtkn_t" depend_field="rtkn006" correspon_key="rtkn006" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="rtkn_t" depend_field="rtkn007" correspon_key="rtkn007" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

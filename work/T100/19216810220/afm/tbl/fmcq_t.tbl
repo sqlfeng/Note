@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmcq_t" module="AFM" text="债券融资明细档" type="D" version="1">
+  <column name="fmcqent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmcqdocno" text="融资合同编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmcqseq" text="清单项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmcqseq2" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmcq001" text="债券编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcq002" text="发行币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcq003" text="债券面值" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="fmcq004" text="票面利率" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="fmcq005" text="债券编号起" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmcq006" text="债券编号止" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmcq007" text="发行数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcq008" text="债券本金总额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcq009" text="发行价格" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmcqent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmcqdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmcqseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmcqseq2" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmcq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmcq002" widget="ButtonEdit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002" c_zoom="q_ooaj002" chk_ref="v_ooaj002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcq003" widget="CheckBox" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcq004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case="upper"/>
+    <field name="fmcq005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fmcq006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcq007" widget="ButtonEdit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcq008" widget="ButtonEdit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcq009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmcq_t" depend_field="fmcq002" correspon_key="fmcq002" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

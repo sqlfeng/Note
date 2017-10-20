@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzzh_t" module="ADZ" text="签核等级单身(测试用)" type="M" version="1">
+  <column name="dzzhstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzh001" text="签核等级" attribute="049" type="" pk="Y" req="Y"/>
+  <column name="dzzh002" text="顺序" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="dzzh003" text="人员代码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzzh004" text="备注" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="dzzh005" text="人员签名档" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzh006" text="dzzh006_test" attribute="C903" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzzh007" text="dzzh007_test" attribute="C903" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzzh008" text="dzzh008_test" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="dzzhownid" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhcrtid" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhcrtdt" text="资料创建日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzzhmodid" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhmoddt" text="最近修改日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzzhcnfid" text="资料确认者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzzhcnfdt" text="数据确认日" attribute="D002" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzzhstus" widget="ComboBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzh001" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzzh002" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel=""/>
+    <field name="dzzh003" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzh004" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzzh005" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzh006" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzh007" widget="ComboBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzh008" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhownid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhowndp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhcrtid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhcrtdp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhcrtdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzzhmodid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhmoddt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzzhcnfid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzzhcnfdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzzh_t" depend_filed="dzzh005" correspon_key="dzzh005" ref_table="ooaa_t" ref_fk="ooaa001" ref_dlang="ooaa000" ref_rtn="ooaa001"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzh_t" depend_filed="dzzhcnfid" correspon_key="dzzhcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhcrtdp" correspon_key="dzzhcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzh_t" depend_filed="dzzhcrtid" correspon_key="dzzhcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzzh_t" depend_filed="dzzhmodid" correspon_key="dzzhmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhowndp" correspon_key="dzzhowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzzh_t" depend_filed="dzzhownid" correspon_key="dzzhownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

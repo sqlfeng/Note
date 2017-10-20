@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bcai_t" module="ABC" text="供应商送货单单头档" type="T" version="1">
+  <column name="bcaient" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bcaisite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bcaidocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bcaidocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="bcai000" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bcai001" text="采购性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bcai002" text="收货地址" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="bcai003" text="收货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bcai004" text="打印次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="bcai005" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="bcaistus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bcaient" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bcaisite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bcaidocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bcaidocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bcai000" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bcai001" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bcai002" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="bcai003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bcai004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="bcai005" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="bcaistus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="bcaistus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="作废"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>
+

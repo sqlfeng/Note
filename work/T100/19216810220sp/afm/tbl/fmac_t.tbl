@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmac_t" module="AFM" text="融资合约维护档" type="M" version="1">
+  <column name="fmacent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmac001" text="融资合约编号" attribute="C207" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmac002" text="融资申请组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmac003" text="合约银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="fmac004" text="核准日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmac005" text="有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmac006" text="合约主币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmac007" text="合约总额度" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmac008" text="额度内循环使用" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmac009" text="提供担保" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmac010" text="担保方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmac011" text="贷款用途" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="fmacownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmacowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmacmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmacmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmaccnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaccnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmacstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmacent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmac001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmac001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fmac002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac002" c_zoom="q_fmac002" chk_ref="v_fmac002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmac003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmax005" c_zoom="q_fmax005" chk_ref="v_fmac003" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmac004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmac005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmac006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002" c_zoom="q_ooaj002" chk_ref="v_fmac006" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmac007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmac008" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmac009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmac010" widget="ComboBox" items="8856" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmac011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="fmacownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmacowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmacmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmacmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmaccnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmaccnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmacstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmac_t" depend_field="fmac002" correspon_key="fmacent,fmac002" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl003" ref_rtn=""/>
+    <field depend_table="fmac_t" depend_field="fmac003" correspon_key="fmacent.fmac003" ref_table="nmabl_t" ref_fk="nmablent,nmabl001" ref_dlang="nmabl004" ref_rtn=""/>
+    <field depend_table="fmac_t" depend_field="fmac006" correspon_key="fmacent,fmac006" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="fmac_t" depend_field="fmaccnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmac_t" depend_field="fmaccnfid" correspon_key="fmaccnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmac_t" depend_field="fmaccrtdp" correspon_key="fmaccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmac_t" depend_field="fmaccrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmac_t" depend_field="fmaccrtid" correspon_key="fmaccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmac_t" depend_field="fmacmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmac_t" depend_field="fmacmodid" correspon_key="fmacmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmac_t" depend_field="fmacowndp" correspon_key="fmacowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmac_t" depend_field="fmacownid" correspon_key="fmacownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="fmacstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="X" desc="无效"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>

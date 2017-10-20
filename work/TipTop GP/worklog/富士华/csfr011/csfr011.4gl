@@ -584,8 +584,10 @@ FUNCTION csfr011()
   DEFINE l_tlf         RECORD LIKE tlf_file.*
   DEFINE p_qty         LIKE tlf_file.tlf10
   DEFINE l_check       CHAR(1)
-  DEFINE l_str          STRING  #*****
-  DEFINE l_str1          STRING  #*****
+  DEFINE l_str          STRING  # add by lixwz 201709
+  DEFINE l_str1          STRING  # add by lixwz 201709
+  DEFINE l_sma51_1       LIKE sma_file.sma51 # add by lixwz 20170919
+  DEFINE l_sma52_1       LIKE sma_file.sma52 # add by lixwz 20170919
   #xueyh170303 add------------end---------------
    #str FUN-720005 add
    ## *** 與 Crystal Reports 串聯段 - <<<< 清除暫存資料 >>>> FUN-720005 *** ##
@@ -791,8 +793,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -800,8 +803,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a1) THEN LET sr.a1 = 0 END IF
@@ -826,8 +830,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -835,8 +840,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a2) THEN LET sr.a2 = 0 END IF
@@ -861,8 +867,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -870,8 +877,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a3) THEN LET sr.a3 = 0 END IF
@@ -896,8 +904,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -905,8 +914,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a4) THEN LET sr.a4 = 0 END IF
@@ -933,6 +943,7 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '731%')
                         AND YEAR(sfb13)     =   l_sma51
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -940,8 +951,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a5) THEN LET sr.a5 = 0 END IF
@@ -966,8 +978,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -977,6 +990,7 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '831%')
                         AND YEAR(sfb13)     =   l_sma51
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a6) THEN LET sr.a6 = 0 END IF
@@ -1001,8 +1015,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1010,8 +1025,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a7) THEN LET sr.a7 = 0 END IF
@@ -1036,8 +1052,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1047,6 +1064,7 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '831%')
                         AND YEAR(sfb13)     =   l_sma51
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a8) THEN LET sr.a8 = 0 END IF
@@ -1071,8 +1089,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1082,6 +1101,7 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '831%')
                         AND YEAR(sfb13)     =   l_sma51
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a9) THEN LET sr.a9 = 0 END IF
@@ -1106,8 +1126,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1115,8 +1136,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a10) THEN LET sr.a10 = 0 END IF
@@ -1141,8 +1163,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1152,6 +1175,7 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '831%')
                         AND YEAR(sfb13)     =   l_sma51
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a11) THEN LET sr.a11 = 0 END IF
@@ -1176,8 +1200,9 @@ FUNCTION csfr011()
                             OR  sfa01   LIKE    '433%'
                             OR  sfa01   LIKE    '631%'
                             OR  sfa01   LIKE    '731%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF sr.mss_v = 'HDP' THEN
@@ -1185,8 +1210,9 @@ FUNCTION csfr011()
                         WHERE sfa01=sfb01
                         AND (   sfa01   LIKE    '531%'
                             OR  sfa01   LIKE    '831%')
-                        AND YEAR(sfb13)     =   l_sma51
+                        AND YEAR(sfb13)     =   l_sma51 - 1  # mod by lixwz 20170920
                         AND MONTH(sfb13)    =   l_sma52
+                        AND sfb87 ='Y'
                         AND sfa03 = sr.sfa03
                  END IF
                  IF cl_null(sr.a12) THEN LET sr.a12 = 0 END IF
@@ -1399,7 +1425,7 @@ FUNCTION csfr011()
                 "c.sma51,c.sma52,c.mss_v,c.imk09,c.ima25,c.d1,c.d2,",
                 " c.s1,c.s2,c.s3,c.s4,c.s5,c.s6,c.s7,c.s8,c.s9,c.s10,c.s11,c.s12,c.s13,c.s14,c.s15,c.s16,c.s17,c.s18, ",
                 " c.s19,c.s20,c.s21,c.s22,c.s23,c.s24, ",
-                " c.s1,c.s2,c.s3,c.s4,c.s5,c.s6,c.s7,c.s8,c.s9,c.s10,c.s11,c.s12,",   # add by lixwz 20170905
+                " c.a1,c.a2,c.a3,c.a4,c.a5,c.a6,c.a7,c.a8,c.a9,c.a10,c.a11,c.a12,",   # add by lixwz 20170905
                 " a.ima06,a.ima131,a.ima27,a.ima54,d.pmc03,a.ima12,a.ima902,sta04+ta_sta03 ",
                 " FROM csfr011_tmp c",
                 " LEFT JOIN ima_file a ON a.ima01 = c.sfa03",

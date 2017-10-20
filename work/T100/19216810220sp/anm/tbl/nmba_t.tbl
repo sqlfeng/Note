@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmba_t" module="ANM" text="银存收支主档" type="M" version="1">
+  <column name="nmbaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmbaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmbamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmbacnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmbastus" text="审核码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbacomp" text="法人" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmbadocno" text="收支单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="nmbadocdt" text="收支日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmbasite" text="资金中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmba001" text="缴款部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmba002" text="账务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba003" text="来源作业类型" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba004" text="交易对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmba005" text="一次性交易对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba006" text="暂收否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmba007" text="账务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba008" text="缴款人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba009" text="核准日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmba010" text="账套二账务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba011" text="账套三账务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmba012" text="立账否(for流通)" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmba013" text="起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmba014" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmba015" text="往来据点" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmbaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmbamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmbacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbacomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbadocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_4" c_zoom="q_nmbadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmbadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_3" c_zoom="q_xrah002_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="nmba006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmba008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmba010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmba011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmba012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmba013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmba014" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmba015" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="nmba_t" depend_field="nmba001" correspon_key="nmbaent,nmba001" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmba_t" depend_field="nmba002" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmba_t" depend_field="nmba004" correspon_key="nmbaent,nmba004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="nmba_t" depend_field="nmba008" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmba_t" depend_field="nmbacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmba_t" depend_field="nmbacnfid" correspon_key="nmbacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmba_t" depend_field="nmbacomp" correspon_key="nmbaent,nmbacomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmba_t" depend_field="nmbacrtdp" correspon_key="nmbacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmba_t" depend_field="nmbacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmba_t" depend_field="nmbacrtid" correspon_key="nmbacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmba_t" depend_field="nmbadocno" correspon_key="nmbaent,&apos;&apos;,nmbadocno" ref_table="oobal_t" ref_fk="oobalent,oobal001,oobal002" ref_dlang="oobal003" ref_rtn="oobal004"/>
+    <field depend_table="nmba_t" depend_field="nmbamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmba_t" depend_field="nmbamodid" correspon_key="nmbamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmba_t" depend_field="nmbaowndp" correspon_key="nmbaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmba_t" depend_field="nmbaownid" correspon_key="nmbaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmba_t" depend_field="nmbasite" correspon_key="nmbaent,nmbasite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="nmbastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="V" desc="已复核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

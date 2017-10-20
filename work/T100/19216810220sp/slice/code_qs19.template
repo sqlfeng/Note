@@ -1,0 +1,50 @@
+#應用 qs19 樣板自動產生(Version:3)
+         #有關於sel欄位選取的action段落
+         #選擇全部
+         ON ACTION selall
+            CALL DIALOG.setSelectionRange("${sr_name}", 1, -1, 1)
+            FOR li_idx = 1 TO ${detail_var_title}.getLength()
+               LET ${detail_var_title}[li_idx].sel = "Y"
+            END FOR
+ 
+            #add-point:ui_dialog段on action selall name="ui_dialog.onaction_selall"
+            {<point name="ui_dialog.onaction_selall"/>}
+            #end add-point
+ 
+         #取消全部
+         ON ACTION selnone
+            CALL DIALOG.setSelectionRange("${sr_name}", 1, -1, 0)
+            FOR li_idx = 1 TO ${detail_var_title}.getLength()
+               LET ${detail_var_title}[li_idx].sel = "N"
+            END FOR
+ 
+            #add-point:ui_dialog段on action selnone name="ui_dialog.onaction_selnone"
+            {<point name="ui_dialog.onaction_selnone"/>}
+            #end add-point
+ 
+         #勾選所選資料
+         ON ACTION sel
+            FOR li_idx = 1 TO ${detail_var_title}.getLength()
+               IF DIALOG.isRowSelected("${sr_name}", li_idx) THEN
+                  LET ${detail_var_title}[li_idx].sel = "Y"
+               END IF
+            END FOR
+ 
+            #add-point:ui_dialog段on action sel name="ui_dialog.onaction_sel"
+            {<point name="ui_dialog.onaction_sel"/>}
+            #end add-point
+ 
+         #取消所選資料
+         ON ACTION unsel
+            FOR li_idx = 1 TO ${detail_var_title}.getLength()
+               IF DIALOG.isRowSelected("${sr_name}", li_idx) THEN
+                  LET ${detail_var_title}[li_idx].sel = "N"
+               END IF
+            END FOR
+ 
+            #add-point:ui_dialog段on action unsel name="ui_dialog.onaction_unsel"
+            {<point name="ui_dialog.onaction_unsel"/>}
+            #end add-point
+ 
+ 
+

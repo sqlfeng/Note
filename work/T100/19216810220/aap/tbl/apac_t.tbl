@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apac_t" module="AAP" text="零用金帐户主档" type="M" version="1">
+  <column name="apacent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="apacstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apacsite" text="归属营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apac001" text="零用金帐户代码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="apac002" text="设置日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apac003" text="管理归属人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apac004" text="管理归属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apac005" text="归属帐务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apac006" text="收支表应报告日期" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apac007" text="换算本币留存上限金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apacownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apacowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apaccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apaccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apaccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="apacmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apacmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apacent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apacstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apacsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_01" c_zoom="q_ooef001_01" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apac001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_apac001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apac002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apac003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apac004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_1" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apac005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_2" c_zoom="q_xrah002_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apac006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apac007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apacownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apacowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apaccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apaccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apaccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="apacmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apacmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="apac_t" depend_field="apaccrtdp" correspon_key="apaccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="apac_t" depend_field="apaccrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="apac_t" depend_field="apaccrtid" correspon_key="apaccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="apac_t" depend_field="apacmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="apac_t" depend_field="apacmodid" correspon_key="apacmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="apac_t" depend_field="apacowndp" correspon_key="apacowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="apac_t" depend_field="apacownid" correspon_key="apacownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="apac_t" depend_field="apac001" correspon_key="apacent,apac001" lang_table="apacl_t" lang_fk="apaclent,apacl001" lang_dlang="apacl002" lang_rtn="apacl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="apacstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

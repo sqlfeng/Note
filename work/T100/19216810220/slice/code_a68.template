@@ -1,0 +1,19 @@
+   #應用 a68 樣板自動產生(Version:1)
+   #若是修改，須視權限加上條件
+   IF g_action_choice = "modify" OR g_action_choice = "modify_detail" THEN
+      LET ls_owndept_list = NULL
+      LET ls_ownuser_list = NULL
+
+      #若有設定部門權限
+      CALL cl_get_owndept_list("${detail_tbl_name}","modify") RETURNING ls_owndept_list
+      IF NOT cl_null(ls_owndept_list) THEN
+         LET g_sql = g_sql, " AND ${mdl_field02} IN (",ls_owndept_list,")"
+      END IF
+
+      #若有設定個人權限
+      CALL cl_get_ownuser_list("${detail_tbl_name}","modify") RETURNING ls_ownuser_list
+      IF NOT cl_null(ls_ownuser_list) THEN
+         LET g_sql = g_sql," AND ${mdl_field01} IN (",ls_ownuser_list,")"
+      END IF
+   END IF
+

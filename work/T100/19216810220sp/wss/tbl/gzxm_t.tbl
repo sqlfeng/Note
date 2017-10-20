@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzxm_t" version="1">
+  <column name="gzxmmodu" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmdate" text="最近修改日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzxmoriu" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmorid" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmuser" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmdept" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmbuid" text="资料创建日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzxmstus" text="状态码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzxm001" text="QBE序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="gzxm002" text="使用者" attribute="C809" type="varchar2(20)" pk="N" req="Y"/>
+  <column name="gzxm003" text="程式编号" attribute="C006" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="gzxm004" text="查询条件编号" attribute="N001" type="number(5,0)" pk="N" req="Y"/>
+  <column name="gzxm005" text="说明" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxm006" text="预设QBE" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxm007" text="查询时是否直接带入" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="gzxm008" text="是否分享" attribute="C107" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzxm009" text="" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzxmmodu" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmdate" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmoriu" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmorid" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmuser" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmdept" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmbuid" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxmstus" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxment" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxm001" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5"/>
+    <field name="gzxm002" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxm003" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20"/>
+    <field name="gzxm004" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20"/>
+    <field name="gzxm005" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30"/>
+    <field name="gzxm006" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxm007" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxm008" widget="TextEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzxm009" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width=""/>
+  </col_attr>
+  <tree id="gzxm_t" type="gzxo_t" lid="" pid="" desc="gzxml_t" speed="" stype="" slid="" spid=""/>
+  <ref_field>
+    <field depend_table="gzxm_t" depend_filed="gzxm002" correspon_key="gzxm002" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="gzxm_t" depend_filed="gzxm003" correspon_key="gzxm003" ref_table="gzxa_t" ref_fk="gzxa001" ref_dlang="" ref_rtn="gzxa002"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="gzxm_t" depend_filed="gzxm001" correspon_key="gzxment, gzxm001" lang_table="gzxml_t" lang_fk="gzxmlent, gzxml001" lang_dlang="gzxml002" lang_rtn="gzxml003"/>
+  </multi_lang>
+  <help_code/>
+</table>

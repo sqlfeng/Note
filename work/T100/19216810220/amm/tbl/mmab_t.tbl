@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmab_t" module="AMM" text="会员基本数据申请档-属性数据" type="D" version="1">
+  <column name="mmabent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmabdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmab001" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmab002" text="属性代码类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmab003" text="对应应用分类代码" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mmab004" text="属性代码值" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmabacti" text="资料有效码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmabent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmabdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmab001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmab002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmab003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmab004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmabacti" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmab_t" depend_field="mmab002" correspon_key="&apos;2049&apos;,mmab002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="mmab_t" depend_field="mmab004" correspon_key="&apos;2016&apos;,mmab004" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

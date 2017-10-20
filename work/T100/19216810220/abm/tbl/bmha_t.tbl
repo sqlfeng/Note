@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmha_t" module="ABM" text="料件承认模板承认内容数据档" type="D" version="1">
+  <column name="bmhaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="bmha001" text="模板代号" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="bmhaseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="bmha002" text="分类代码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmhaseq1" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="bmha003" text="承认内容" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="bmha004" text="责任部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmha005" text="须回复否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmhaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmha001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmhe001" c_zoom="q_bmhe001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmhaseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmha002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmhaseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmha003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmha003" c_zoom="q_bmha003" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="bmha004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_9" c_zoom="q_ooef001_9" chk_ref="v_ooef001_14" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmha005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmha_t" depend_field="bmha002" correspon_key="&apos;1115&apos;,bmha002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="bmha_t" depend_field="bmha004" correspon_key="bmha004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

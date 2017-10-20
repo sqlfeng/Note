@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sfhc_t" module="ASF" text="工单当站下线入库明细档" type="D" version="1">
+  <column name="sfhcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sfhcsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfhcdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sfhcseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfhcseq1" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfhc001" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sfhc002" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="sfhc003" text="库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfhc004" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfhc005" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="sfhc006" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="sfhc007" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfhc008" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sfhc009" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfhc010" text="参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sfhc011" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfhc012" text="存货备注" attribute="C106" type="varchar2(4000)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sfhcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfhcsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfhcdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfhcseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfhcseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfhc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfhc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfhc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_1" c_zoom="q_inaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfhc004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfhc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfhc006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfhc007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfhc008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfhc009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfhc010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfhc011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfhc012" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sfhc_t" depend_field="sfhc001" correspon_key="sfhc001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="sfhc_t" depend_field="sfhc003" correspon_key="sfhc003" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="sfhc_t" depend_field="sfhc004" correspon_key="sfhc003,sfhc004" ref_table="inab_t" ref_fk="inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="sfhc_t" depend_field="sfhc007" correspon_key="sfhc007" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="sfhc_t" depend_field="sfhc009" correspon_key="sfhc009" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

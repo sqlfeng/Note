@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prcd_t" module="APR" text="促销活动计划主档" type="B" version="1">
+  <column name="prcdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prcdunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcdsite" text="NO USE" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcdstus" text="有效否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcd001" text="活动计划" attribute="C092" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="prcd002" text="档期类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcd003" text="活动等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcd004" text="开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prcd005" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prcd006" text="制定促销方案否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="prcd098" text="应用业态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcdownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prcdowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcdcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prcdcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcdcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="prcdmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prcdmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="prcd007" text="年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prcdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_prcd001" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="prcd002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_prcd002" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_prcd003" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcd098" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="prcdmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="prcdmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="prcd007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prcd_t" depend_field="prcd002" correspon_key="prcd002" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="prcd_t" depend_field="prcd003" correspon_key="prcd003" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="prcd_t" depend_field="prcdcrtdp" correspon_key="prcdcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang=" " ref_rtn="ooefl002"/>
+    <field depend_table="prcd_t" depend_field="prcdcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="prcd_t" depend_field="prcdcrtid" correspon_key="prcdcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prcd_t" depend_field="prcdmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="prcd_t" depend_field="prcdmodid" correspon_key="prcdmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="prcd_t" depend_field="prcdowndp" correspon_key="prcdowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang=" " ref_rtn="ooefl002"/>
+    <field depend_table="prcd_t" depend_field="prcdownid" correspon_key="prcdownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="prcd_t" depend_field="prcd001" correspon_key="prcdent,prcd001" lang_table="prcdl_t" lang_fk="prcdlent,prcdl001" lang_dlang="prcdl002" lang_rtn="prcdl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="prcdstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

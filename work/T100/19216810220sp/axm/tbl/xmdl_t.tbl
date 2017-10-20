@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmdl_t" module="AXM" text="出货/签收/销退单单身明细档" type="D" version="1">
+  <column name="xmdlent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmdlsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdldocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmdlseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmdl001" text="出通单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl002" text="出通项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl003" text="订单单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl004" text="订单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl005" text="订单项序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl006" text="订单分批序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl007" text="子件特性" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl008" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdl009" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="xmdl010" text="包装容器" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdl011" text="作业编号" attribute="C402" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl012" text="作业序" attribute="C402" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl013" text="多库储批出货" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdl014" text="库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl015" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl016" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdl017" text="出货单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl018" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl019" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl020" text="参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl021" text="计价单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl022" text="计价数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl023" text="检验否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdl024" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl025" text="税种" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl026" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="xmdl027" text="税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl028" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl029" text="税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl030" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl031" text="WBS编号" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdl032" text="活动编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdl033" text="客户料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdl034" text="QPA" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl035" text="已签收量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl036" text="已签退量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl037" text="已销退量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl038" text="主账套已立账数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl039" text="账套二已立账数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl040" text="账套三已立账数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl041" text="保税否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdl042" text="取价来源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl043" text="价格来源参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl044" text="价格来源参考项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl045" text="取出价格" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl046" text="价差比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl047" text="已对账数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl048" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl049" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl050" text="理由码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl051" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xmdl052" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdl053" text="主账套暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl054" text="账套二暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl055" text="账套三暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl081" text="No Use" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl082" text="签退参考数量(签收、签退单使用)" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl083" text="签退计价数量(签收、签退单使用)" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl084" text="签退理由码(签收、签退单使用)" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl085" text="订单开立据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl086" text="订单多角性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl087" text="需自立应收否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdl088" text="多角流程编号" attribute="C480" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl089" text="No Use" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl090" text="No Use" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl091" text="No Use" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl092" text="借货还量数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl093" text="借货还量参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl200" text="销售渠道" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl201" text="产品组编码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl202" text="销售范围编码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl203" text="销售办公室" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl204" text="出货包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl205" text="出货包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl206" text="签退包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl207" text="库存锁定等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl208" text="标准价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl209" text="促销价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl210" text="交易价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl211" text="折价金额" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl212" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl213" text="销售人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl214" text="销售部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl215" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl216" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl217" text="结算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl218" text="结算方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl219" text="交易类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl220" text="寄销已核销数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl222" text="地区编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl223" text="县市编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl224" text="省区编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl225" text="区域编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl226" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdlorga" text="账务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdlud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdlud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdlud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdlud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdl056" text="检验合格量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl094" text="来源单号(销退)" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl095" text="项次(销退)" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl227" text="现金折扣单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl228" text="现金折扣单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl057" text="有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdl058" text="制造日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdl096" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmdl059" text="客户退货量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdl060" text="放行状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdl097" text="装箱单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdl098" text="装箱项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmdlent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdlsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdldocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdlseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmdgdocno" c_zoom="q_xmdgdocno" chk_ref="v_xmdgdocno" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="v_xmdhseq" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmdadocno_2" c_zoom="q_xmdadocno_2" chk_ref="v_xmdadocno_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="v_xmddseq2" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="v_xmddseq2" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="v_xmddseq2" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl007" widget="ComboBox" items="2055" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmdl009" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmdl010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl013" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_4" c_zoom="q_inaa001_4" chk_ref="v_inag004_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_8" c_zoom="q_inab002_8" chk_ref="v_inag005_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag006" c_zoom="q_inag006" chk_ref="v_inag006_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl023" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_3" c_zoom="q_oodb002_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl026" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmdl027" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl028" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl029" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case="upper"/>
+    <field name="xmdl030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjba001" c_zoom="q_pjba001" chk_ref="v_pjba001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbb002_1" c_zoom="q_pjbb002_1" chk_ref="v_pjbb002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdl032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbm002" c_zoom="q_pjbm002" chk_ref="v_pjbm002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdl033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmao001" c_zoom="q_pmao001" chk_ref="v_pmao004" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl035" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl036" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl037" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl038" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl039" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl040" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl041" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl042" widget="ComboBox" items="2067" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl043" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl044" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl045" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl046" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmdl047" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl049" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl050" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl051" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmdl052" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmdl053" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl054" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl055" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl081" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl082" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl083" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl084" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl085" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_icaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl086" widget="ComboBox" items="2064" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl087" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl088" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_icaa001_2" c_zoom="q_icaa001" chk_ref="v_icaa001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl089" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl090" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl091" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl092" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl093" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl200" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oojd001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl201" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbba001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl202" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbbc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl203" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl204" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imao002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl205" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl206" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl207" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl208" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl209" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl210" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl211" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl212" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl213" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl214" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl215" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xmdl216" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl217" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl218" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl219" widget="ComboBox" items="6064" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl220" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl222" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl223" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl224" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl225" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl226" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmdlunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdlorga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdlud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdlud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdlud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdl056" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl094" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl095" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl227" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl228" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl057" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdl058" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdl096" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmdl059" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdl060" widget="ComboBox" items="4083" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdl097" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdl098" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmdl_t" depend_field="xmdl006" correspon_key="xmdl006" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl008" correspon_key="xmdl008" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl011" correspon_key="&apos;221&apos;,xmdl011" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl014" correspon_key="xmdlsite,xmdl014" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="xmdl_t" depend_field="xmdl015" correspon_key="xmdlsite,xmdl014,xmdl015" ref_table="inab_t" ref_fk="inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl017" correspon_key="xmdl017" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl019" correspon_key="xmdl019" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl021" correspon_key="xmdl021" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl023" correspon_key="xmdl023" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl025" correspon_key="xmdl025" ref_table="oodbl_t" ref_fk="oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl030" correspon_key="xmdl030" ref_table="pjbal_t" ref_fk="pjbal001" ref_dlang="pjbal002" ref_rtn="pjbal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl031" correspon_key="xmdl030,xmdl031" ref_table="pjbbl_t" ref_fk="pjbbl001,pjbbl002" ref_dlang="pjbbl003" ref_rtn="pjbbl004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl032" correspon_key="xmdl030,xmdl032" ref_table="pjbml_t" ref_fk="pjbml001,pjbml002" ref_dlang="pjbml003" ref_rtn="pjbml004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl050" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdl_t" depend_field="xmdl084" correspon_key="&quot;&quot;,xmdl084" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl085" correspon_key="xmdl0852" ref_table="icaal_t" ref_fk="icaal001" ref_dlang="icaal002" ref_rtn="icaal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl088" correspon_key="xmdl088" ref_table="icaal_t" ref_fk="icaal001" ref_dlang="icaal002" ref_rtn="icaal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl200" correspon_key="&apos;275&apos;,xmdl200" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl201" correspon_key="xmdl201" ref_table="dbbal_t" ref_fk="dbbal001" ref_dlang="dbbal002" ref_rtn="dbbal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl202" correspon_key="xmdl202" ref_table="dbbcl_t" ref_fk="ddbcl001" ref_dlang="ddbcl002" ref_rtn="dbbcl003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl203" correspon_key="xmdl203" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl204" correspon_key="xmdl204" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl212" correspon_key="xmdl212" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl213" correspon_key="xmdl213" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdl_t" depend_field="xmdl214" correspon_key="xmdl214" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdl_t" depend_field="xmdl217" correspon_key="&apos;2060&apos;,xmdl217" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdl_t" depend_field="xmdl218" correspon_key="xmdl218" ref_table="staal_t" ref_fk="staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="xmdl_t" depend_field="xmdlorga" correspon_key="xmdlorga" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

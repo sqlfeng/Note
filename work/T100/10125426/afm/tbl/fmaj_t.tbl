@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmaj_t" module="AFM" text="融资合同档" type="B" version="1">
+  <column name="fmajent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmaj001" text="融资合同编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fmaj002" text="融资资金组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaj003" text="融资类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaj004" text="融资方案编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaj005" text="银行贷款合同号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaj006" text="贷款银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="fmaj007" text="合约编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaj008" text="签订日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmaj009" text="贷款期限起" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmaj010" text="贷款期限止" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmaj011" text="计息基础" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="fmaj012" text="不定日分次划付" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmaj013" text="担保方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmaj014" text="保证人" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmaj015" text="保证合同号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="fmaj016" text="抵押人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaj017" text="抵押合同号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="fmaj018" text="质押人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmaj019" text="质押合同号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="fmaj020" text="融资方案项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fmajownid" text="資料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmajowndp" text="資料所屬部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmajcrtid" text="資料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmajcrtdp" text="資料建立部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmajcrtdt" text="資料創建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmajmodid" text="資料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmajmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmajcnfid" text="資料確認者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmajcnfdt" text="資料確認日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmajstus" text="狀態碼" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmajent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac002" c_zoom="q_fmac002" chk_ref="v_fmac002" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmaj003" c_zoom="q_fmaj003" chk_ref="v_fmaj003" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj005" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="fmaj006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac003_1" c_zoom="q_fmac003_1" chk_ref="v_fmac003" widget_width="15" format="" prog_rel=""/>
+    <field name="fmaj007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac001" c_zoom="q_fmac001" chk_ref="v_fmaj007" widget_width="20" format="" prog_rel=""/>
+    <field name="fmaj008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj011" widget="Edit" items="" default="360" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="fmaj012" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj013" widget="ComboBox" items="8856" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj014" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj015" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="fmaj016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac002" c_zoom="q_fmac002" chk_ref="v_fmaj016" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj017" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="fmaj018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="q_fmac002" c_zoom="q_fmac002" chk_ref="v_fmaj016" widget_width="10" format="" prog_rel=""/>
+    <field name="fmaj019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmaj019" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="fmaj020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="fmajownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmajmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmajcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmajcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmajstus" widget="ComboBox" items="13" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmaj_t" depend_field="fmaj002" correspon_key="fmajent,fmaj002" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="" ref_rtn="ooefl003"/>
+    <field depend_table="fmaj_t" depend_field="fmaj003" correspon_key="fmajent,fmaj003" ref_table="fmaal_t" ref_fk="fmaalent,fmaal001" ref_dlang="" ref_rtn="fmaal003"/>
+    <field depend_table="fmaj_t" depend_field="fmaj006" correspon_key="fmajent,fmaj006" ref_table="nmabl_t" ref_fk="nmablent,fmabl001" ref_dlang="" ref_rtn="nmabl003"/>
+    <field depend_table="fmaj_t" depend_field="fmajcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmaj_t" depend_field="fmajcnfid" correspon_key="fmajcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmaj_t" depend_field="fmajcrtdp" correspon_key="fmajcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmaj_t" depend_field="fmajcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmaj_t" depend_field="fmajcrtid" correspon_key="fmajcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmaj_t" depend_field="fmajmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmaj_t" depend_field="fmajmodid" correspon_key="fmajmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmaj_t" depend_field="fmajowndp" correspon_key="fmajowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmaj_t" depend_field="fmajownid" correspon_key="fmajownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="fmajstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

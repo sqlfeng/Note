@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imcn_t" module="AIM" text="料件主分群特征档" type="D" version="1">
+  <column name="imcnent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imcn001" text="主分群码" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcn002" text="特征类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcn003" text="特征值" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <col_attr>
+    <field name="imcnent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcn001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcn002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcn003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imec003" c_zoom="q_imec003" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imcn_t" depend_field="imcn002" correspon_key="imcnent,imcn002" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imcn_t" depend_field="imcn003" correspon_key="imcnent,imcn003" ref_table="imecl_t" ref_fk="imeclent,imecl003" ref_dlang="imecl004" ref_rtn="imecl005"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

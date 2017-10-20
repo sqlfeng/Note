@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified">
+  <xs:element name="spec">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="toolbar" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="table" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="all" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="db_all" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="di_all" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="mi_all" minOccurs="0" maxOccurs="1"/><!-- 可忽略 -->
+        <xs:element ref="tree" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="field" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="prog_rel" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ref_field" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="multi_lang" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="help_code" minOccurs="0" maxOccurs="unbounded"/><!-- 可忽略 -->
+        <xs:element ref="act" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="strings" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="sa_spec" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="exclude" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+      <xs:attribute name="prog" type="noEmpty" use="required"/>
+      <xs:attribute name="std_prog" type="noEmpty" use="required"/>
+      <xs:attribute name="erpver" type="noEmpty" use="required"/><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="module" type="noEmpty" use="required"/>
+      <xs:attribute name="booking" type="noEmpty" use="required"/>
+      <xs:attribute name="class" type="canEmpty" use="required"/>
+ <!-- <xs:attribute name="template" type="canEmpty" use="required"/>     20140616 madey:marked -->
+ <!-- <xs:attribute name="normal_style" type="noEmpty" use="required"/>  20140616 madey:marked -->
+      <xs:attribute name="env" type="noEmpty" use="required"/>
+      <xs:attribute name="zone" type="noEmpty" use="required"/><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="type" type="noEmpty" use="required"/>          <!--20140616 madey:add -->
+      <xs:attribute name="identity" type="noEmpty" use="required"/>      <!--20140616 madey:add -->
+      <xs:attribute name="designer_ver" type="canEmpty" use="required"/> <!--20150428 Hiko:add -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="toolbar">
+    <xs:complexType>
+      <xs:attribute name="items" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tbl" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tbl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sr" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="parent" type="canEmpty" use="required"/>
+      <xs:attribute name="main" type="noEmpty" use="required"/>
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sr">
+    <xs:complexType>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="insert" type="noEmpty" use="required"/>
+      <xs:attribute name="delete" type="noEmpty" use="required"/>
+      <xs:attribute name="append" type="noEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="all">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- 值可為空 --><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="db_all">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- 值可為空 --><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="di_all">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- 值可為空 --><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mi_all">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- 值可為空 --><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tree"><!-- TREE的src以目前的結構來看, xsd很難做到, 所以就不檢查了 -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type"/>
+        <xs:element ref="id"/>
+        <xs:element ref="pid"/>
+        <xs:element ref="desc"/>
+        <xs:element ref="speed"/>
+        <xs:element ref="stype"/>
+        <xs:element ref="sid"/>
+        <xs:element ref="spid"/>
+      </xs:sequence>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="kind" type="noEmpty" use="required"/>
+      <xs:attribute name="att" type="noEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pid">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="desc">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="speed">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stype">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sid">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spid">
+    <xs:complexType>
+      <xs:attribute name="no" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/>
+      <xs:attribute name="col" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="field">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="column" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="table" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="attribute" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="type" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="req" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="can_edit" type="canEmpty" use="optional"/>
+      <xs:attribute name="can_query" type="canEmpty" use="optional"/>
+      <xs:attribute name="i_zoom" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="c_zoom" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="chk_ref" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="items" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="default" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="max" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="min" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="widget" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prog_rel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="pfield" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pfield">
+    <xs:complexType>
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="depend_filed" type="noEmpty" use="required"/>
+      <xs:attribute name="program" type="noEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref_field">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="rfield" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rfield">
+    <xs:complexType>
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="depend_filed" type="noEmpty" use="required"/>
+      <xs:attribute name="correspon_key" type="noEmpty" use="required"/>
+      <xs:attribute name="ref_table" type="noEmpty" use="required"/>
+      <xs:attribute name="ref_fk" type="noEmpty" use="required"/>
+      <xs:attribute name="ref_dlang" type="canEmpty" use="required"/>
+      <xs:attribute name="ref_rtn" type="noEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="multi_lang">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="mfield" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mfield">
+    <xs:complexType>
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="depend_filed" type="noEmpty" use="required"/>
+      <xs:attribute name="correspon_key" type="noEmpty" use="required"/>
+      <xs:attribute name="lang_table" type="noEmpty" use="required"/>
+      <xs:attribute name="lang_fk" type="noEmpty" use="required"/>
+      <xs:attribute name="lang_dlang" type="noEmpty" use="required"/>
+      <xs:attribute name="lang_rtn" type="noEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="help_code"><!-- 註記碼未確定做法, 可以不檢查 -->
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="hfield" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hfield">
+    <xs:complexType>
+      <xs:attribute name="src" type="noEmpty" use="optional"/>
+      <xs:attribute name="ver" type="canEmpty" use="optional"/>
+      <xs:attribute name="name" type="canEmpty" use="optional"/>
+      <xs:attribute name="depend_filed" type="canEmpty" use="optional"/>
+      <xs:attribute name="correspon_key" type="canEmpty" use="optional"/>
+      <xs:attribute name="help_table" type="canEmpty" use="optional"/>
+      <xs:attribute name="help_fk" type="canEmpty" use="optional"/>
+      <xs:attribute name="help_dlang" type="canEmpty" use="optional"/>
+      <xs:attribute name="help_rtn" type="canEmpty" use="optional"/>
+      <xs:attribute name="status" type="canEmpty" use="optional"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="act">
+    <xs:complexType mixed="true">
+      <xs:attribute name="src" type="noEmpty" use="required"/>
+      <xs:attribute name="id" type="noEmpty" use="required"/>
+      <xs:attribute name="ver" type="noEmpty" use="required"/>
+      <xs:attribute name="cite_std" type="canEmpty" use="required"/>
+      <xs:attribute name="cite_ver" type="canEmpty" use="required"/><!-- 值可為空 --><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="type" type="noEmpty" use="required"/><!-- tsd調整格式.txt沒有顯示 -->
+      <xs:attribute name="status" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="strings"><!-- 多語言不檢查 -->
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="sfield" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="sact" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sfield">
+    <xs:complexType>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="text" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="comment" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="lstr" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sact">
+    <xs:complexType>
+      <xs:attribute name="name" type="noEmpty" use="required"/>
+      <xs:attribute name="text" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="comment" type="canEmpty" use="required"/><!-- 值可為空 -->
+      <xs:attribute name="lstr" type="canEmpty" use="required"/><!-- 值可為空 -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sa_spec"><!-- SA規格不檢查 -->
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="sa_field" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="sa_act" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="sa_all" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sa_field">
+    <xs:complexType>
+      <xs:attribute name="name" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sa_act">
+    <xs:complexType>
+      <xs:attribute name="name" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sa_all">
+    <xs:complexType>
+      <xs:attribute name="name" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exclude">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="widget" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:choice>
+      <xs:attribute name="ver" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="widget">
+    <xs:complexType>
+      <xs:attribute name="name" type="canEmpty" use="required"/>
+      <xs:attribute name="src" type="canEmpty" use="required"/>
+      <xs:attribute name="status" type="canEmpty" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="noEmpty"><!-- 自訂的type -->
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="canEmpty"><!-- 自訂的type -->
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
+

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<coms>
+  <com id="ap_chk_andreturn" desc="取得資料庫資料並回傳">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_sql" type="char(500)" desc="取資料用sql語句"/>
+    <param name="p_errno" type="char(20)" desc="搜尋失敗時的錯誤訊息"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <param name="p_return" type="number(5)" desc="回傳數量"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+    <rtn name="" type="char(100)" desc="取得的值1"/>
+    <rtn name="" type="char(100)" desc="取得的值2"/>
+    <rtn name="" type="char(100)" desc="取得的值3"/>
+    <rtn name="" type="char(100)" desc="取得的值4"/>
+    <rtn name="" type="char(100)" desc="取得的值5"/>
+  </com>
+  <com id="ap_chk_inrange" desc="比對資料是否介於特定範圍內">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_min" type="char(200)" desc="最小值(p_min,p_max可填入其中一項或兩項都填入)"/>
+    <param name="p_max" type="char(200)" desc="最大值(p_min,p_max可填入其中一項或兩項都填入)"/>
+    <param name="p_errno" type="char(20)" desc="發生錯誤時的錯誤代碼"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_chk_isexist" desc="比對資料(ex:key值)是否存在">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_sql" type="char(500)" desc="搜尋sql語句"/>
+    <param name="p_errno" type="char(20)" desc="搜尋失敗時的錯誤訊息"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_chk_match" desc="比對資料是否輸入正確">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_cond" type="char(200)" desc="欄位值限制(match)"/>
+    <param name="p_errno" type="char(20)" desc="是否要顯示錯誤訊息"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_chk_notdup" desc="比對資料(ex:key值)是否重複定義">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_sql" type="char(200)" desc="比對用sql語句"/>
+    <param name="p_errno" type="char(20)" desc="搜尋失敗時的錯誤訊息"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_chk_range" desc="比對資料是否介於特定範圍內(額外判定&gt;,&gt;=,&lt;,&lt;=)">
+    <param name="p_field" type="char(200)" desc="欄位值"/>
+    <param name="p_min" type="char(200)" desc="最小值(p_min,p_max可填入其中一項或兩項都填入)"/>
+    <param name="p_min_type" type="char(1)" desc="是否須等於最小值(0不等於/1等於)"/>
+    <param name="p_max" type="char(200)" desc="最大值(p_min,p_max可填入其中一項或兩項都填入)"/>
+    <param name="p_max_type" type="char(1)" desc="是否須等於最大值(0不等於/1等於)"/>
+    <param name="p_errno" type="char(20)" desc="發生錯誤時的錯誤代碼"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗)"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_chk_serial" desc="比對單身序號是否重複定義">
+    <param name="p_sql" type="char(500)" desc="比對用sql語句"/>
+    <param name="p_errno" type="char(20)" desc="重複時的錯誤訊息"/>
+    <param name="p_ow" type="char(1)" desc="該錯誤訊息是否要開框(0不開窗/1開窗"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="ap_ref" desc="帶出對應欄位值">
+    <param name="p_field" type="char(50)" desc="欄位值"/>
+    <param name="p_sql" type="string" desc="搜尋用sql語句"/>
+    <rtn name="" type="char(300)" desc="取得的值(依據sql語句判斷回傳數量，最多五個)"/>
+  </com>
+  <com id="ap_ref_array" desc="帶出對應欄位值">
+    <param name="pa_field" type="char(500)" desc="欄位值(最多10個)"/>
+    <param name="ps_sql" type="string" desc="搜尋用sql語句"/>
+    <rtn name="" type="char(300)" desc="取得的值(依據sql語句判斷回傳數量，最多五個)"/>
+  </com>
+  <com id="ap_ref_array2" desc="帶出對應欄位值">
+    <param name="pa_field" type="char(500)" desc="欄位值(最多10個)"/>
+    <param name="ps_sql" type="string" desc="搜尋用sql語句"/>
+    <param name="ps_errno" type="string" desc="搜尋失敗時的錯誤訊息"/>
+    <rtn name="" type="char(500)" desc="取得的值(依據sql語句判斷回傳數量，最多五個)"/>
+  </com>
+  <com id="ap_temptable" desc=""/>
+  <com id="check_license" desc="for license control  #avoid using bdl license for genero bdl"/>
+  <com id="cl_act_del_tmp_path" desc="刪除actionlist的特殊合併檔案"/>
+  <com id="cl_act_noauth_disable" desc="將無權限的action隱藏起來 (test)t6 function cl_act_noauth_disable()t6    define   lst_act_list   base.stringtokenizer,t6             ls_act         string,t6             li_act_allow   like type_t.num5,      #no.fun-690005 smallint,t6"/>
+  <com id="cl_add_date_extra_cond" desc="多加一天date">
+    <param name="ps_result" type="string" desc=""/>
+    <rtn name="" type="ps_result||&quot;:&quot;||" desc="ld"/>
+  </com>
+  <com id="cl_allow_set_entry" desc="判斷欄位是否允許設定noentry">
+    <param name="ps_field_name" type="string" desc="欄位名稱"/>
+    <rtn name="" type="boolean" desc="true/false 是否允許"/>
+  </com>
+  <com id="cl_ap_execmd" desc="執行cmd (配合_sys取不同指定路徑)並讀取回傳值">
+    <param name="ls_cmd" type="string" desc="指令"/>
+    <param name="lc_mode" type="char(1)" desc="0讀回傳值 1:只讀license後的值"/>
+    <rtn name="" type="string" desc="讀回的值"/>
+  </com>
+  <com id="cl_ap_formpath" desc="42f檔所在路徑">
+    <param name="p_mod" type="string" desc=""/>
+    <param name="p_formfile" type="string" desc=""/>
+    <rtn name="" type="string" desc=""/>
+  </com>
+  <com id="cl_ap_init" desc="依模組進行系統初始化設定(含系統設定,畫面開啟,sql撈取)">
+    <param name="p_mod" type="char(10)" desc="模組別"/>
+    <param name="p_bgjob" type="char(1)" desc="是否背景執行 y-背景執行/n-視窗執行/c-皆可(由使用者決定是"/>
+    <rtn name="" type="boolean" desc="ture/false"/>
+  </com>
+  <com id="cl_ask_anykey" desc="顯示『請按enter鍵繼續』視窗"/>
+  <com id="cl_ask_arful" desc="詢問是否因buffer size too small 要繼續執行">
+    <param name="p_arrno" type="number(5)" desc="陣列的數目"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_choice" desc="讓使用者輸入選擇">
+    <param name="ls_msg" type="string" desc="顯示訊息"/>
+    <rtn name="" type="char(1)" desc="回傳選擇碼"/>
+  </com>
+  <com id="cl_ask_close" desc="詢問 &quot;此筆資料是否確定結案(y/n):&quot;或 &quot;此筆資料是否取消結案(y/n):&quot;">
+    <param name="p_old_acticode" type="char(1)" desc="舊狀態碼"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_conf" desc="根據 message code 取出正確訊息, 詢問類似&quot;是否......(y/n):&quot;, 注意訊息不可超過 60 byte">
+    <param name="p_msgcode" type="char(8)" desc="訊息代碼"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_conf2" desc="根據 message code 篩選輸入值&quot;是否......(1/2/3/4):&quot;, 注意訊息不可超過 60 byte">
+    <param name="p_msgcode" type="string" desc="訊息代碼"/>
+    <param name="p_value" type="char(10)" desc=""/>
+    <rtn name="" type="char(1)" desc="true/false"/>
+  </com>
+  <com id="cl_ask_conf3" desc="根據 message code 取出正確訊息, 詢問">
+    <param name="p_msgcode" type="string" desc="訊息代碼"/>
+    <rtn name="" type="char(8)" desc="true/flase"/>
+  </com>
+  <com id="cl_ask_confirm" desc="出現讓使用者選擇是否確認的畫面.">
+    <param name="ps_msg" type="string" desc="訊息/訊息代號"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_confirm2" desc="確認畫面">
+    <param name="ps_msg" type="string" desc="訊息字串或訊息代碼"/>
+    <param name="ps_msg2" type="string" desc="訊息字串"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_confirm_parm" desc="出現讓使用者選擇是否確認的畫面.">
+    <param name="ps_msg" type="string" desc="訊息/訊息代號"/>
+    <param name="p_str" type="string" desc="替換變數"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_continue" desc="詢問 &quot;是否繼續執行本作業(y/n):&quot;">
+    <rtn name="" type="char(8)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_del_detail" desc="詢問 &quot;是否確定取消此筆單身資料(y/n):&quot;(for 單檔建檔程式單身取消功能 on key f2)">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_del_master" desc="詢問 &quot;是否確定刪除此筆單頭及所有單身資料(y/n):&quot;(for 單檔建檔程式單頭取消功能)">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_delete" desc="出現詢問 &quot;是否刪除此筆資料 ?&quot; 視窗">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_delh1" desc="詢問 &quot;是否確定取消此筆單頭及所有單身資料(y/n):&quot;(for 單檔建檔程式單頭刪除功能)">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_end" desc="顯示 &quot;作業結束,請按任何鍵繼續:&quot;"/>
+  <com id="cl_ask_end1" desc="顯示 &quot;資料已拋轉成功,請按任何鍵繼續:&quot;"/>
+  <com id="cl_ask_end2" desc="顯示 執行結果, 並詢問是否要繼續">
+    <param name="p_code" type="number(5)" desc="1代表成功/2代表失敗"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_exp" desc="詢問 &quot;此筆資料是否確定無效(y/n):&quot;或 &quot;此筆資料是否恢復有效(y/n):&quot;(for 單檔建檔無效功能)">
+    <param name="p_old_acticode" type="char(1)" desc="舊狀態碼"/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_idle" desc="詢問 &quot;是否確定執行本作業(y/n):&quot;">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_pause" desc="告訴使用者, 按任一鍵繼續"/>
+  <com id="cl_ask_pressanykey" desc="顯示訊息，然後按任何鍵繼續">
+    <param name="p_msg" type="string" desc="欲顯示的訊息"/>
+  </com>
+  <com id="cl_ask_prompt" desc="詢問 ls_msg">
+    <param name="ls_msg" type="string" desc=""/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_sure" desc="詢問 &quot;是否確定執行本作業(y/n):&quot;">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_sure3" desc="詢問 &quot;您所輸入的資料是否正確(y/n)?&quot;">
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_upsw" desc="詢問 &quot;是否確認此張異動單據 (y/n)? &quot;或&quot;是否取消確認此張異動單據 (y/n)? &quot;">
+    <param name="p_upsw" type="char(1)" desc=""/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_ask_void" desc="詢問 &quot;此筆資料是否確定作廢(y/n):&quot; 或 &quot;此筆資料是否取消作廢(y/n):&quot;">
+    <param name="p_old_acticode" type="char(1)" desc=""/>
+    <rtn name="" type="number(5)" desc="是否確定執行"/>
+  </com>
+  <com id="cl_auth_chk_act" desc="檢查傳入的 id 是否已存在允許權限清單">
+    <param name="ls_actid" type="string" desc=""/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="cl_autotime" desc="自動累加時間,累加級數為1">
+    <param name="time1" type="char(8)" desc="累加起始時間"/>
+    <param name="sw" type="char(1)" desc="累加類型 h:小時 m:分鐘 s:秒鐘"/>
+    <param name="lay" type="number(5)" desc="累加級數 default = 1"/>
+    <rtn name="" type="char(8)" desc=""/>
+  </com>
+  <com id="cl_batch_bg_date_convert" desc="轉換標準日期">
+    <param name="ps_date" type="string" desc="日期保留字串"/>
+    <rtn name="" type="date" desc="正確執行日期"/>
+  </com>
+  <com id="cl_batch_bg_javamail" desc="批次背景執行結果以javamail傳送">
+    <param name="pc_result" type="char(1)" desc="結果 y = success , n = fail"/>
+  </com>
+  <com id="cl_batch_bg_msg_filename" desc="製造批次背景執行時的訊息紀錄檔名">
+    <rtn name="" type="string" desc="訊息檔名"/>
+  </com>
+  <com id="cl_batch_bg_msg_log" desc="批次背景執行時，錯誤訊息寫入紀錄檔">
+    <param name="ps_msg" type="string" desc="訊息內容"/>
+  </com>
+  <com id="cl_cal" desc="傳入目前日期,月份及天數參數取得正確日期">
+    <param name="p_date" type="date" desc="日期"/>
+    <param name="p_month" type="number(5)" desc="月份"/>
+    <param name="p_day" type="number(5)" desc="日"/>
+    <rtn name="" type="date" desc="正確日期"/>
+  </com>
+  <com id="cl_cal_assigned_weekday" desc="計算指定日期 a 當月的第 b個星期c (星期天=0 ..星期六=6)">
+    <param name="ld_given" type="date" desc="日期 a"/>
+    <param name="li_th" type="number(5)" desc="第 b個"/>
+    <param name="li_weekday" type="number(5)" desc="星期 c"/>
+    <rtn name="" type="date" desc="when error return null / normal return date"/>
+  </com>
+  <com id="cl_chg_style_pic_url" desc=""/>
+  <com id="cl_chk_act_auth" desc="檢查action的權限.">
+    <rtn name="" type="number(5)" desc="是否有權限"/>
+  </com>
+  <com id="cl_chk_act_auth_nomsg" desc="若檢查action不過也不show error msg.                                #若程式從頭到尾沒call nomsg / showmsg                                #則 method =null or =0 都有可能, 故取 #let mi_show_nomsg = true      #method=2表示不再show er"/>
+  <com id="cl_chk_act_auth_showmsg" desc="若檢查action不過show error msg.  #method=1 表示回復要show (離開2就要show)"/>
+  <com id="cl_chk_act_tgrup" desc="查核此 g_user或g_dept是否位列g_data_group的tgrup中t6 # input parameter: nonet6 # return code....: li_ingrup   (true/false)t6 # usage..........: if cl_chk_act_tgrup() thent6  t6 function cl_chk_act_tgrup()t6  t6    define li_i     like type_t.num"/>
+  <com id="cl_chk_base_act" desc="判斷所執行的權限是否存在於程式基本執行功能清單內.t6 # input parameter: ps_act   string   所要檢查的actiont6 # return code....: true/false   是否存在於程式基本執行功能清單內t6 # usage..........: if cl_chk_base_a"/>
+  <com id="cl_chk_date_symbol" desc="檢核輸入日期前面是否查詢符號">
+    <param name="" type="ps_result" desc=""/>
+    <rtn name="" type="number(5)" desc="ture/false"/>
+  </com>
+  <com id="cl_chk_err_setting" desc="判斷是否需要產生sql錯誤記錄檔 範例  call cl_chk_err_setting()  #若 強制需要紀錄 或 是背景作業 或 是排程作業 就要進行錯誤紀錄"/>
+  <com id="cl_chk_exist" desc="檢查是否存在,根據其sql(l_dzcd003)進行檢查存在,若資料不存在則顯示錯誤訊息(l_dzcd004)">
+    <param name="p_chk_id" type="char(20)" desc="校驗帶值識別碼"/>
+    <rtn name="" type="boolean" desc="false(資料不存在或sql語句錯誤)/true(資料存在)"/>
+  </com>
+  <com id="cl_chk_exist_and_ref_val" desc="根據其sql(l_dzcd003)檢查存在並帶出參照的欄位值,若資料筆數不唯一則顯示錯誤訊息(l_dzcd004)           ,然後帶回預設值">
+    <param name="p_chk_id" type="char(20)" desc="校驗帶值識別碼"/>
+    <rtn name="" type="boolean" desc="false(資料筆數不唯一或sql語句錯誤)/true(資料筆數唯一且已帶"/>
+  </com>
+  <com id="cl_chk_ipv4" desc="檢核ipv4">
+    <param name="ps_ip" type="string" desc="ip"/>
+    <rtn name="" type="boolean" desc="true/false"/>
+  </com>
+  <com id="cl_chk_num" desc="檢查 &apos;p_str&apos; 是否為數值型態">
+    <param name="p_str" type="char(50)" desc="欲檢查的值"/>
+    <param name="p_len" type="number(5)" desc="長度"/>
+    <rtn name="" type="boolean" desc="true/false"/>
+  </com>
+  <com id="cl_chk_tgrup_list" desc="輸出此 g_dept 所有的相關 grup 清單t6 # input parameter: nonet6 # return code....: ls_tgrup   string    group清單t6 # usage..........: call cl_chk_tgrup_list()t6 # memo...........: 以目前的g_user及g_dept為基準t6  t6 function cl_chk_tgru"/>
+  <com id="cl_chk_ym" desc="檢查文字型態變數是否為年月型態">
+    <param name="p_str" type="char(6)" desc="文字型態變數"/>
+    <rtn name="" type="boolean" desc="true/false"/>
+  </com>
+  <com id="cl_close_progress_bar" desc="關閉 progressbar 視窗"/>
+  <com id="cl_cmdat" desc="指定時間延後執行 unix 指令">
+    <param name="p_code" type="char(20)" desc="程式編號"/>
+    <param name="p_time" type="char(8)" desc="指定時間"/>
+    <param name="p_cmd" type="string" desc="unix 指令"/>
+  </com>
+  <com id="cl_cmdrun" desc="讀取該程式的unix執行指令執行 111111111111">
+    <param name="ps_cmd" type="string" desc="欲執行之指令字串(ex:paooi020 &apos;a009&apos; &apos;y&apos;)"/>
+  </com>
+  <com id="cl_cmdrun_openpipe" desc="執行unix執行指令,並截取錯誤訊息">
+    <param name="ps_cmd_show" type="string" desc="要顯示於訊息的指令"/>
+    <param name="ps_cmd" type="string" desc="欲執行之指令字串(ex:paooi020 &apos;a009&apos; &apos;y&apos;)"/>
+    <param name="p_show" type="boolean" desc="是否要顯示錯誤訊息"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+    <rtn name="" type="string" desc="截取的錯誤訊息"/>
+  </com>
+  <com id="cl_cmdrun_unset_lang" desc="執行unix指令.會 unset lang">
+    <param name="ps_cmd" type="string" desc="欲執行之指令字串(ex:paooi020 &apos;a009&apos; &apos;y&apos;)"/>
+  </com>
+  <com id="cl_cmdrun_unset_lang_wait" desc="執行unix指令,需等待此命令結束後才可繼續原來程式的執行, 會 unset lang">
+    <param name="ps_cmd" type="string" desc="欲執行之指令字串(ex:paooi020 &apos;a009&apos; &apos;y&apos;)"/>
+  </com>
+  <com id="cl_cmdrun_wait" desc="執行unix指令,需等待此命令結束後才可繼續原來程式的執行.">
+    <param name="ps_cmd" type="string" desc="欲執行之指令字串(ex:paooi020 &apos;a009&apos; &apos;y&apos;)"/>
+  </com>
+  <com id="cl_day" desc="取得每月第??日">
+    <param name="p_date" type="date" desc="日期"/>
+    <rtn name="" type="number(5)" desc="第??日"/>
+  </com>
+  <com id="cl_days" desc="取得該年月的天數">
+    <param name="p_year" type="number(5)" desc="年份"/>
+    <param name="p_month" type="number(5)" desc="月份"/>
+    <rtn name="" type="number(5)" desc="天數"/>
+  </com>
+  <com id="cl_db_get_database_type" desc="回傳一個資料庫形態判別字串">
+    <rtn name="" type="char(3)" desc="ora,ifx,msv"/>
+  </com>
+  <com id="cl_del_doc" desc="文件資料 刪除單據時，刪除所有相關文件t6    define l_sql      stringt6    define l_gcb01    like gcb_file.gcb01t6    define l_gca07    dynamic array of string   t6    define tmp        like gca_file.gca07t6 t6    let l_sql = l_sql, &quot;gca01"/>
+  <com id="cl_detail_input_auth" desc="檢查是否允許在單身中有insert或delete的權限">
+    <param name="ps_act_type" type="string" desc="insert/delete"/>
+    <rtn name="" type="number(5)" desc="true/false"/>
+  </com>
+  <com id="cl_detect_act_visible" desc="偵測畫面上的action元件目前為顯示或隱藏.">
+    <param name="ps_act_name" type="string" desc="要偵測的action名稱"/>
+    <rtn name="" type="boolean" desc="true/false 是否顯示"/>
+  </com>
+  <com id="cl_dic_chk" desc="檢核字典檔是否有資料">
+    <param name="ps_field" type="string" desc="字串"/>
+    <param name="pi_lang" type="number(5)" desc="語言別"/>
+    <rtn name="" type="array" desc="回傳多語言相關資料"/>
+  </com>
+  <com id="cl_doc" desc="相關文件處理函式t6   #--compose key valuet6   let gr_key.gca01 = g_doc.column1 clipped || &quot;=&quot; || g_doc.value1 clippedt6   let gr_key.gca02 = g_doc.column2 clipped || &quot;=&quot; || g_doc.value2 clippedt6   let gr_key.gca03 = g_doc.column3 clipped || &quot;=&quot; |"/>
+  <com id="cl_dynamic_locale" desc="動態轉換畫面語言別.t6    define p_g_lang     like type_t.chr1 t6    define ls_lang      stringt6    define ls_hide      string           t6    define li_i         like type_t.num10t6    define lch_file     base.channel     t6    define ls_notify"/>
+  <com id="cl_err" desc="顯示錯誤訊息 範例     call cl_err(p_msg,err_code,p_n)">
+    <param name="p_msg" type="string" desc="錯誤訊息的附加說明"/>
+    <param name="ls_err_code" type="string" desc="錯誤訊息代碼(可為文字或數字)"/>
+    <param name="p_n" type="number(5)" desc="顯示錯誤訊息後是否應按(cr)繼續或停留秒數 0:不必按(cr)繼續"/>
+  </com>
+  <com id="cl_err3" desc="顯示資料庫處理錯誤訊息 範例 call cl_err3(&quot;ins&quot;,&quot;ima_file&quot;,&quot;001bg&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;p_zl.4gl p_zl_i() : 1130&quot;,1)      call cl_err3(&quot;upd&quot;,&quot;ima_file&quot;,&quot;&quot;,&quot;1&quot;,&quot;&quot;,&quot;-239&quot;,&quot;p_zl.4gl p_zl_i() : 1131&quot;,1)      call cl_err3(&quot;del&quot;,&quot;ima_file&quot;,&quot;001bg&quot;,&quot;1&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;">
+    <param name="ps_type" type="string" desc="錯誤訊息形式，分ins、del、upd、sel"/>
+    <param name="ps_tables" type="char" desc="錯誤訊息發生的table"/>
+    <param name="ps_key1" type="string" desc="錯誤訊息發生的值-1"/>
+    <param name="ps_key2" type="string" desc="錯誤訊息發生的值-2"/>
+    <param name="ps_desc" type="string" desc="錯誤訊息代碼"/>
+    <param name="ps_action" type="string" desc="action代碼"/>
+    <param name="ps_mark" type="string" desc="&quot;更多&quot;的訊息"/>
+    <param name="pi_idle_sec" type="smallint" desc="idle秒數"/>
+  </com>
+  <com id="cl_err_msg" desc="顯現錯誤訊息. 範例  若需要替換錯誤訊息內的變數(%1,%2...),則第三個參數要以&apos;|&apos;當作分隔字串.                  1.不需替換參數:call cl_err_msg(null, &quot;asf001&quot;, null, 5)                  2.需替換參數  :call cl_err_ms">
+    <param name="ps_title" type="string" desc="錯誤訊息視窗的title"/>
+  </com>
+  <com id="cl_err_msg_log" desc="紀錄錯誤訊息">
+    <param name="" type="none" desc=""/>
+    <rtn name="" type="void" desc=""/>
+  </com>
+  <com id="cl_errmsg" desc="錯誤訊息統整  #當 g_bgerr = false 時，不需記錄並顯示錯誤 array                            #"/>
+  <com id="cl_first" desc="取得當月第一天, 原理同取得最後一天, 只不過是往前推罷了">
+    <param name="p_date" type="date" desc="日期"/>
+    <rtn name="" type="date" desc="當月第一天日期"/>
+  </com>
+  <com id="cl_fldhelp" desc="畫面欄位說明資料維護作業  define p_argv1  string  #t6 like gae_file.gae01  define p_argv2  string  #t6 like gae_file.gae02  define p_argv3  string  #t6 like gae_file.gae03t6   whenever error call cl_err_msg_logt6t6   initialize g_gae.* to null"/>
+  <com id="cl_fldhlp" desc="顯示欄位說明 ( 4行 window 顯示 )t6 # input parameter: p_field_namet6 # usage .........: call cl_fldhlp(p_field_name)t6 t6 public function cl_fldhlp(p_field_name)t6 t6    define p_field_name  like type_t.chr20t6    define l_d1          like type_t"/>
+  <com id="cl_flow_notify" desc="工作流程的通知.">
+    <param name="ps_doc_no" type="string" desc="單據編號"/>
+    <param name="pc_state" type="char(1)" desc="功能類別(i.新增 u.更改 d.刪除 y.確認 s.過帳 v.作廢)"/>
+  </com>
+  <com id="cl_forupd_sql" desc="判斷 select ... for update 是否加上其他語法(by database)">
+    <param name="ps_forupd_sql" type="string" desc="原傳入 sql 字串"/>
+    <rtn name="" type="string" desc="調整過的 sql 字串"/>
+  </com>
+  <com id="cl_get_act_path" desc="回傳actionlist的載入路徑">
+    <param name="ps_prog" type="string" desc="程式代號"/>
+    <rtn name="" type="string" desc="actionlist的載入路徑"/>
+  </com>
+  <com id="cl_get_current" desc="將系統時間(current)轉換為指定時區時間">
+    <rtn name="" type="datetime" desc="year  對方當地時間"/>
+  </com>
+  <com id="cl_get_doc_no" desc="由單據編號中取單別t6 # input parameter: ps_slip        單據編號t6 # return code....: ls_doc         單別編號t6 # usage..........: call cl_get_doc_no(g_pmw.pmw01) returning g_sheett6 t6 function cl_get_doc_no(ps_slip)t6 t6    define ps_sli"/>
+  <com id="cl_get_extra_cond" desc="增加額外的查詢條件">
+    <param name="p_user_field" type="string" desc="資料歸屬人員攔位"/>
+    <param name="p_grup_field" type="string" desc="資料歸屬部門欄位"/>
+    <rtn name="" type="string" desc="額外的查詢條件"/>
+  </com>
+  <com id="cl_get_extra_cond_for_qry" desc="開窗程式專用:增加額外的查詢條件t6 # usage..........: call cl_get_extra_cond(azpuser, azpgrup) returning l_extra_condt6 # input parameter: p_prog_name  開窗程式代碼t6 #                : p_table_name 開窗程式的主tablet6 # return c"/>
+  <com id="cl_get_syscurrent" desc="取出系統時間">
+    <rtn name="" type="datetime" desc="year  系統時間"/>
+  </com>
+  <com id="cl_get_time" desc="取出指定時區當下時間">
+    <rtn name="" type="datetime" desc="hour  對方當地時間"/>
+  </com>
+  <com id="cl_get_today" desc="取出指定時區當下日期">
+    <rtn name="" type="datetime" desc="year  對方當地時間"/>
+  </com>
+  <com id="cl_get_tpserver_ip" desc="回傳一個tiptop gp server主機ip位址字串">
+    <rtn name="" type="string" desc="tiptop gp server主機ip位址"/>
+  </com>
+  <com id="cl_getdate" desc="依日期及期間推算其工作日">
+    <param name="p_date" type="date" desc="起始日期"/>
+    <param name="p_offset" type="number(15,3)" desc="推算期間"/>
+    <rtn name="" type="date" desc="新的工作日"/>
+  </com>
+  <com id="cl_getenv_area" desc="回傳目前環境區域回傳目前環境區域 input parameter: none return code....: l_env string">
+    <rtn name="" type="string" desc="環境區域"/>
+  </com>
+  <com id="cl_getenv_client_ip" desc="取得目前使用者端 ip">
+    <rtn name="" type="string" desc="使用者端 ip"/>
+  </com>
+  <com id="cl_getenv_dvm_version" desc="取得主機端系統 dvm 版本資訊">
+    <rtn name="" type="string" desc="dvm 版本(e.x. 1.33.2f)"/>
+  </com>
+  <com id="cl_getenv_erp_version" desc="取得 tiptop erp 產品版本">
+    <rtn name="" type="string" desc="tiptop 產品版本"/>
+  </com>
+  <com id="cl_getenv_fastcgidispatch_version" desc="取得主機端系統 fastcgidispatch 版本資訊">
+    <rtn name="" type="string" desc="dvm 版本(e.x. 2.30.13)"/>
+  </com>
+  <com id="cl_getenv_fglgui" desc="判斷目前使用者所使用的前端介面為何種模式.">
+    <rtn name="" type="number(5)" desc="前端介面的代碼"/>
+  </com>
+  <com id="cl_getenv_gdc_version" desc="取得使用者 gdc 版本資訊">
+    <rtn name="" type="string" desc="gdc 版本(e.x. 1.33.1b)"/>
+  </com>
+  <com id="cl_getenv_os" desc="設定關於使用者與系統公用變數的設定.抓取作業系統名稱">
+    <rtn name="" type="string" desc="系統別"/>
+  </com>
+  <com id="cl_getfield" desc="取得該table中是否有該欄位">
+    <param name="ps_table" type="string" desc="table編號"/>
+    <param name="ps_field" type="string" desc="欄位編號"/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="cl_getmsg" desc="依訊息代碼取出系統錯誤訊息檔(ze_file)內的錯誤訊息.">
+    <param name="p_code" type="char(20)" desc="訊息代碼"/>
+    <param name="p_lang" type="number(2)" desc="語言別"/>
+  </com>
+  <com id="cl_getmsg_parm" desc="依訊息代碼取出系統錯誤訊息檔(ze_file)內的錯誤訊息.">
+    <param name="p_code" type="char(8)" desc="訊息代碼"/>
+    <param name="p_lang" type="char(1)" desc="語言別"/>
+    <param name="p_str" type="string" desc="替換變數"/>
+    <rtn name="" type="string" desc="錯誤訊息"/>
+  </com>
+  <com id="cl_increase_progress_counter" desc="令 progressbar 指標 +1"/>
+  <com id="cl_javamail" desc="">
+    <rtn name="" type="string" desc="l_receiver"/>
+    <rtn name="" type="string" desc="l_cc"/>
+    <rtn name="" type="string" desc="l_bcc"/>
+  </com>
+  <com id="cl_jmail" desc="java mail功能                         file         string,  #xml檔名(不含路徑,檔案放置在os.path.join(fgl_gete                         mailserver   string,  #mail server ip                         serverport   string,  #mail server port"/>
+  <com id="cl_jmaildeflist" desc="">
+    <param name="p_prg" type="char(20)" desc=""/>
+    <param name="p_mailtype" type="char(1)" desc=""/>
+    <rtn name="" type="char(1000)" desc=""/>
+  </com>
+  <com id="cl_key_check0" desc="檢查tp是否已完成註冊">
+    <rtn name="" type="boolean" desc="true完成註冊/false未完成註冊"/>
+  </com>
+  <com id="cl_keychk_crypt_trans" desc="字串由文字轉換成ascii code">
+    <param name="ls_str" type="string" desc="待轉換字串"/>
+    <rtn name="" type="string" desc="已轉換完成字串"/>
+  </com>
+  <com id="cl_keychk_readfile" desc="讀取tiptop.key註冊檔訊息讀取tiptop.key註冊檔訊息 input parameter: none return code....: 讀出 tpsn序號/tpdc驗證碼/flsn 4js授權號/tpcy序號編碼                  讀出資料未經解碼  define ls_tpsn  string  #註冊序號  defi">
+    <rtn name="" type="boolean" desc="true/false"/>
+  </com>
+  <com id="cl_last" desc="取得該月份最後一天的日期">
+    <param name="p_date" type="date" desc="日期"/>
+    <rtn name="" type="date" desc="最後一天日期"/>
+  </com>
+  <com id="cl_licensed_list" desc="列出所有使用license的ip+port">
+    <rtn name="" type="string" desc="列出所有使用license的ip+port"/>
+  </com>
+  <com id="cl_load_4ad_formlevel" desc="載入actionlist">
+    <param name="ps_prog" type="string" desc="程式代號"/>
+  </com>
+  <com id="cl_load_4ad_interface" desc="載入actionlist">
+    <param name="ps_prog" type="string" desc="程式代號"/>
+  </com>
+  <com id="cl_load_4tb_formlevel" desc="設定toolbar  #設定4tb路徑  #未設定樣板時,抓取o類的  #menu作業特別處理  #loading lobal action view file  #確定存在後,將4tb讀入 form level"/>
+  <com id="cl_load_4tm_formlevel" desc="載入topmenu">
+    <param name="ps_prog" type="string" desc="程式代號"/>
+  </com>
+  <com id="cl_load_style_list" desc="載入 stylelist.">
+    <param name="ps_prog" type="string" desc="程式代號"/>
+  </com>
+  <com id="cl_maillist" desc="mail 清單                          m3 like gzzm_t.gzzm003, #mail server ip                          m1 like gzzm_t.gzzm005, #mail server user                          m2 like gzzm_t.gzzm004 #mail server port                          #t6 m7 like gzzm_t.m"/>
+  <com id="cl_monck" desc="調整日期為星期一">
+    <param name="p_date" type="date" desc="欲調整日期"/>
+    <rtn name="" type="date" desc="該週星期一"/>
+  </com>
+  <com id="cl_months" desc="取得該月份的天數">
+    <param name="p_date" type="date" desc="日期"/>
+    <rtn name="" type="integer" desc="天數"/>
+  </com>
+  <com id="cl_mothck" desc="讀取該日期所在的月份之第一天及最後一天">
+    <param name="p_date" type="date" desc="日期"/>
+    <rtn name="" type="date" desc="該月之第一天"/>
+    <rtn name="" type="date" desc="該月之最後一天"/>
+  </com>
+  <com id="cl_msg_error" desc="顯示錯誤訊息, 若沒有主要訊息時，則以第二訊息為主">
+    <param name="p_str" type="string" desc="固定顯示的訊息"/>
+    <param name="p_error" type="string" desc="主要錯誤代號, 如 sqlca.sqlcode"/>
+    <param name="p_error2" type="string" desc="次要錯誤代號, 如 sqlca.sqlerrd[2]"/>
+  </com>
+  <com id="cl_multilang" desc="根據傳入的key與多語言資料,table名稱進行新增/修改">
+    <param name="pa_keys" type="string" desc="key值"/>
+    <param name="pa_langs" type="string" desc="多語言資料"/>
+    <param name="ps_table" type="string" desc="多語言table代號"/>
+  </com>
+  <com id="cl_multitable" desc="根據傳入的key與多table資料進行新增/修改">
+    <param name="pa_var_keys" type="string" desc=""/>
+    <param name="pa_field_keys" type="string" desc=""/>
+    <param name="pa_vars" type="string" desc=""/>
+    <param name="pa_fields" type="string" desc=""/>
+    <param name="pa_var_keys_bak" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+  </com>
+  <com id="cl_multitable_bak" desc="根據傳入的key與多table資料進行新增/修改">
+    <param name="pa_var_keys" type="string" desc=""/>
+    <param name="pa_field_keys" type="string" desc=""/>
+    <param name="pa_vars" type="string" desc=""/>
+    <param name="pa_fields" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+  </com>
+  <com id="cl_multitable_delete" desc="根據傳入的key進行刪除">
+    <param name="pa_field_keys" type="string" desc=""/>
+    <param name="pa_var_keys_bak" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+  </com>
+  <com id="cl_multitable_key_upd" desc="根據傳入的key與多table資料進行key值修改">
+    <param name="pa_new_key" type="string" desc=""/>
+    <param name="pa_old_key" type="string" desc=""/>
+    <param name="pa_field_key" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+  </com>
+  <com id="cl_multitable_lock" desc="根據傳入的key與多table資料進行lock">
+    <param name="pa_var_keys" type="string" desc=""/>
+    <param name="pa_field_keys" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+    <rtn name="" type="boolean" desc="是否執行成功"/>
+  </com>
+  <com id="cl_multitable_reproduce" desc="根據傳入的key與多table資料進行複製">
+    <param name="pa_new_keys" type="string" desc=""/>
+    <param name="pa_old_keys" type="string" desc=""/>
+    <param name="pa_field_keys" type="string" desc=""/>
+    <param name="pa_fields" type="string" desc=""/>
+    <param name="ps_table" type="string" desc=""/>
+  </com>
+  <com id="cl_multitable_unlock" desc="解除lock"/>
+  <com id="cl_navigator_setting" desc="設定toolbar上瀏覽上下筆資料的按鈕狀態.">
+    <param name="pi_curr_index" type="number(10)" desc="目前cursor索引值"/>
+    <param name="pi_row_count" type="number(10)" desc="資料筆數"/>
+  </com>
+  <com id="cl_null" desc="檢查字串是否為null或是空字串.">
+    <param name="ps_source" type="string" desc="來源字串"/>
+    <rtn name="" type="smallint" desc="true/false"/>
+  </com>
+  <com id="cl_null_cat_to_file" desc="產生一個空檔案到指定的路徑內">
+    <param name="l_path" type="string" desc="目標檔案路徑"/>
+  </com>
+  <com id="cl_ofday" desc="計算兩日期間之工作日數">
+    <param name="p_strtdate" type="date" desc="起始日期"/>
+    <param name="p_duedate" type="date" desc="截止日期"/>
+    <rtn name="" type="number(10)" desc="工作日數"/>
+  </com>
+  <com id="cl_on_idle" desc="在 on idle 時的處理.t6   define   lc_zz28       like zz_file.zz28   t6   define   lc_zw04       like zw_file.zw04   t6   define   lc_process    like type_t.chr1 t6   define   l_time        like type_t.chr8 t6   define   li_result     like type_t.num5"/>
+  <com id="cl_parse" desc="將 matches &apos;[xyz]&apos; 的指令 轉成 oracle 的 in (&apos;x&apos;,&apos;y&apos;,&apos;z&apos;)">
+    <param name="p_type" type="char(1000)" desc=""/>
+    <rtn name="" type="char(1000)" desc=""/>
+  </com>
+  <com id="cl_progress_bar" desc="開啟作業處理進度畫面">
+    <param name="pi_total_count" type="number(10)" desc="處理作業的總次數"/>
+  </com>
+  <com id="cl_progressing" desc="顯現目前處理進度.">
+    <param name="ps_log" type="string" desc="正在處理的作業說明"/>
+  </com>
+  <com id="cl_prtmsg" desc="詢問 p_code">
+    <param name="p_code" type="string" desc="訊息代碼"/>
+    <param name="p_lang" type="char(1)" desc="語言別"/>
+    <rtn name="" type="string" desc=""/>
+  </com>
+  <com id="cl_qbe_display_condition" desc="qbe查詢條件顯示於畫面上">
+    <param name="pc_gzxm001" type="number(5)" desc="條件序號"/>
+  </com>
+  <com id="cl_qbe_init" desc="qbe查詢條件紀錄維護預設qbe及g_qbe_code的值"/>
+  <com id="cl_qbe_list" desc="qbe查詢條件列表">
+    <rtn name="" type="number(5)" desc="條件序號"/>
+  </com>
+  <com id="cl_qbe_list_b" desc="維護qbe查詢條件  define l_lock_sw    like type_t.chr1                  #單身鎖住否  declare gzxm_bcl cursor from g_forupd_sql      # lock cursor        let li_chkgzxm = true   #預設為不可進入&#x9;    #查詢條件紀錄單頭檔 gzxm_t&#x9;&#x9;#gzx"/>
+  <com id="cl_qbe_save" desc="qbe查詢條件儲存  define li_openwin    like type_t.num5   #改成是更新或新增的flag  #搜尋整個畫面上欄位中有輸入值的，用value屬性            #紀錄是否為日期欄位            select gae04 into g_gzxn[li_cnt].gae04 from"/>
+  <com id="cl_qbe_save_b" desc="qbe查詢條件值維護        #非日期欄位不可修改條件值           #轉換方式選擇4、5才可以填寫日期值           #依照轉換方式更改條件值           #先把前面的比較字串拉出來，如果是日期中間用|或.."/>
+  <com id="cl_qbe_select" desc="qbe查詢條件列表及顯示條件於畫面上"/>
+  <com id="cl_ref_val" desc="根據其sql(l_dzcd003)帶出參照的欄位值,若資料筆數不唯一則顯示錯誤訊息(l_dzcd004)          ,然後帶回預設值">
+    <param name="p_chk_id" type="char(20)" desc="校驗帶值識別碼"/>
+  </com>
+  <com id="cl_remove_zero" desc="將數值字串後面多餘的0刪除">
+    <param name="ps_value" type="string" desc="數值字串"/>
+    <rtn name="" type="string" desc="數值字串"/>
+  </com>
+  <com id="cl_replace_err_msg" desc="替換錯誤訊息. 範例  let lc_gzze003 = cl_replace_err_msg(lc_gzze003, ps_replace_arg)">
+    <param name="ps_err_msg" type="string" desc="錯誤訊息來源"/>
+    <param name="ps_replace_arg" type="string" desc="欲替換的訊息字串(以&apos;|&apos;分隔字串)"/>
+    <rtn name="" type="string" desc="替換後的錯誤訊息"/>
+  </com>
+  <com id="cl_replace_init" desc="預設參數值"/>
+  <com id="cl_replace_multistr" desc="取代字串 (適用於multi-byte)">
+    <param name="ps_source" type="string" desc="來源字串"/>
+    <param name="ps_old" type="string" desc="舊字串"/>
+    <param name="ps_new" type="string" desc="新字串"/>
+    <rtn name="" type="string" desc="取代後的新字串"/>
+  </com>
+  <com id="cl_replace_once" desc="設定為只取代第一個找到的替換字串."/>
+  <com id="cl_replace_sqldb" desc="取代sql字串t6 # input parameter: ps_source string 來源sql字串t6 # return code....: string 取代後的新字串t6  t6 function cl_replace_sqldb(ps_sql)t6 t6    define ps_sql         stringt6    define ls_temp        stringt6    define ls_temp2"/>
+  <com id="cl_replace_str" desc="取代字串.">
+    <param name="ps_source" type="string" desc="來源字串"/>
+    <param name="ps_old" type="string" desc="舊字串"/>
+    <param name="ps_new" type="string" desc="新字串"/>
+    <rtn name="" type="string" desc="取代後的新字串"/>
+  </com>
+  <com id="cl_replace_str_by_index" desc="依據索引位置取代字串">
+    <param name="ps_source" type="sting" desc="來源字串"/>
+    <param name="pi_from" type="number(5)" desc="起始索引位置"/>
+    <param name="pi_end" type="number(5)" desc="結束索引位置"/>
+    <param name="ps_new" type="string" desc="新字串"/>
+    <rtn name="" type="string" desc="取代後的新字串"/>
+  </com>
+  <com id="cl_reset_action_active" desc="將隱藏的action屬性active改為0"/>
+  <com id="cl_reset_local_action" desc="讀入action資料">
+    <param name="ps_act_names" type="string" desc=""/>
+    <param name="pi_visible" type="number(5)" desc=""/>
+  </com>
+  <com id="cl_select_plant" desc=""/>
+  <com id="cl_set_act_lang" desc="設定所要載入actionlist的語言別">
+    <param name="pc_lang" type="char(1)" desc="語言別"/>
+  </com>
+  <com id="cl_set_act_visible" desc="動態顯現/隱藏畫面上的action.">
+    <param name="ps_act_names" type="string" desc="要顯現/隱藏action的名稱字串(中間以逗點分隔)"/>
+    <param name="pi_visible" type="number(5)" desc="是否顯現(true→顯現,false→隱藏)"/>
+  </com>
+  <com id="cl_set_comp_att_text" desc="設定欄位的顯示名稱 (元件前面label的text)">
+    <param name="ps_fields" type="string" desc="欲轉換哪個欄位前的label或是table title"/>
+    <param name="ps_att_value" type="string" desc="欲轉換的字串"/>
+  </com>
+  <com id="cl_set_comp_entry" desc="動態設定元件是否可輸入">
+    <param name="ps_fields" type="string" desc="要設定元件是否可輸入的欄位名稱字串(中間以逗點分隔)"/>
+    <param name="pi_entry" type="number(5)" desc="是否可輸入(true→可輸入,false→不可輸入)"/>
+  </com>
+  <com id="cl_set_comp_required" desc="動態設定元件是否需輸入值">
+    <param name="ps_fields" type="string" desc="要設定元件是否需輸入值的欄位名稱字串(中間以逗點分隔)"/>
+    <param name="pi_required" type="number(5)" desc="是否需輸入值(true→需要輸入值,false→不需輸入值)"/>
+  </com>
+  <com id="cl_set_comp_visible" desc="動態顯現/隱藏畫面上的元件.">
+    <param name="ps_fields" type="string" desc="要顯現/隱藏元件的欄位名稱字串(中間以逗點分隔)"/>
+    <param name="pi_visible" type="number(5)" desc="是否顯現(true→顯現,false→隱藏)"/>
+  </com>
+  <com id="cl_set_detail_auth_string" desc="檢查是否允許在單身中有insert或delete的權限">
+    <param name="ps_detail_auth" type="string" desc="要檢查的字串"/>
+  </com>
+  <com id="cl_set_head_visible" desc="動態顯現/隱藏畫面上的單頭元件.">
+    <param name="ps_comps" type="string" desc="要顯現/隱藏元件的欄位名稱字串(中間以逗點分隔)"/>
+    <param name="ps_visible" type="string" desc="是否顯現(yes→顯現,no→隱藏,auto→自動判斷)"/>
+  </com>
+  <com id="cl_set_toolbaritem_visible" desc="控制toolbaritem隱藏或顯示">
+    <param name="ps_act_names" type="string" desc="action名稱串"/>
+    <param name="pi_visible" type="number(5)" desc="true/false"/>
+  </com>
+  <com id="cl_set_user_auth" desc="設定程式執行權限">
+    <rtn name="" type="boolean" desc="ture/false"/>
+  </com>
+  <com id="cl_show_fld_cont" desc="設定p_per內有特殊格式設定的欄位t6    define lnode_root      om.domnodet6    define lwin_curr       ui.windowt6    define lnode_frm       om.domnodet6    define ls_formname     stringt6    define li_gav_cnt      like type_t.num10t6    define l"/>
+  <com id="cl_show_help" desc="顯示程式的說明文件"/>
+  <com id="cl_show_req_fields" desc="顯現畫面上需要輸入卻還未輸入的所有欄位."/>
+  <com id="cl_showmsg" desc="錯誤訊息統整顯示"/>
+  <com id="cl_showmsg_init" desc="錯誤訊息統整初始化函式  #背景執行時，不呼叫 cl_showmsg() 顯示錯誤 array, 依舊維持 call cl_err().     #"/>
+  <com id="cl_splite" desc=""/>
+  <com id="cl_sql_dup_value" desc="insert sql 語句執行後判斷是否為 key value 重複錯誤 範例     call cl_sql_dup_value(sqlca.sqlcode)">
+    <param name="ps_sqlcode" type="number(5)" desc=""/>
+    <rtn name="" type="number(5)" desc="true(key 值重複錯誤) / false(非 key 值重複錯誤)"/>
+  </com>
+  <com id="cl_str_sepcnt" desc="依分隔符號分隔字串後的item數量">
+    <param name="p_str" type="string" desc="原字串"/>
+    <param name="p_sep" type="string" desc="分隔符號"/>
+    <rtn name="" type="number(5)" desc="分隔後的item數量"/>
+  </com>
+  <com id="cl_str_sepsub" desc="依分隔符號分隔字串後，截取指定起點至終點的item">
+    <param name="p_str" type="string" desc="原字串"/>
+    <param name="p_sep" type="string" desc="分隔符號"/>
+    <param name="p_spos" type="number(5)" desc="起點"/>
+    <param name="p_epos" type="number(5)" desc="終點"/>
+    <rtn name="" type="string" desc="子字串"/>
+  </com>
+  <com id="cl_str_trans_ascii" desc="把字串轉為ascii code">
+    <param name="l_str" type="string" desc=""/>
+    <rtn name="" type="string" desc=""/>
+  </com>
+  <com id="cl_system3_err3" desc="for license control"/>
+  <com id="cl_system3_qbe" desc="for license control"/>
+  <com id="cl_tp_tochar" desc="回傳 to_char的字串">
+    <param name="lc_colid" type="char(50)" desc="欄位名稱"/>
+    <param name="lc_type" type="char(50)" desc="可接受型態 mm-dd-yy 或 yy/mm/dd 或 yymmdd (yy可代換用 yyyy,大小寫"/>
+    <rtn name="" type="string" desc="調整過的 sql 字串"/>
+  </com>
+  <com id="cl_trans_singlequota" desc="當傳入的參數是用單引號括住時,改為使用雙引號括住">
+    <param name="ls_param" type="string" desc="string參數"/>
+    <rtn name="" type="string" desc="string參數"/>
+  </com>
+  <com id="cl_trans_time" desc="轉換時間t6 # input parameter: l_date   - 待轉換時間 (date) t6 #                  lc_azp01 - 待變換的目標營運中心t6 # memo...........: 時間傳入時通常是沒有 time (date only),此時應該如何轉換?t6 #                  有以"/>
+  <com id="cl_trans_utf8_twzh" desc="unicode碼別中，提供繁簡體資料轉換功能">
+    <param name="lc_gzzy001" type="number(5)" desc="目前所在的語言別(僅限於繁簡體轉換)"/>
+    <param name="ls_str" type="string" desc="欲參考的繁體或簡體字串"/>
+    <rtn name="" type="string" desc="轉換完碼別的繁體或簡體字串"/>
+  </com>
+  <com id="cl_updlang" desc=""/>
+  <com id="cl_user_has_plant_auth" desc="判斷使用者是否具有plant權限.t6 # input parameter: p_user   使用者 t6 #                : p_plant  營運中心t6 # return code....: l_result true/falset6 # usage..........: call cl_user_has_plant_auth(gac05)t6 t6 public function cl_user_has_p"/>
+  <com id="cl_wait" desc="顯示等待訊息"/>
+  <com id="cl_wcchp" desc="wc 內重要字句中文化 (changing pattern in p_wc)t6 # input parameter: p_wc like type_t.chr1000   # where condition  t6 #                  p_oldp varchar(60)   # pattern (column list) to be changedt6 # return code....: p_newwc varchar(300) # new wher"/>
+  <com id="cl_wcsub" desc="1.text mode:p_str中用&quot;取代&apos; / 2.gui/web  mode:p_str中用&apos;取代&quot;">
+    <param name="p_str" type="char(1000)" desc=""/>
+    <rtn name="" type="char(1000)" desc=""/>
+  </com>
+  <com id="cl_where" desc="組合sql語句的where條件">
+    <param name="l_conditions" type="char(30)" desc=""/>
+    <param name="l_objectname" type="char(20)" desc=""/>
+    <rtn name="" type="string" desc=""/>
+  </com>
+  <com id="cl_ymtodate" desc="將輸入之年月轉成日期輸出">
+    <param name="l_year1" type="number(10)" desc="起始年"/>
+    <param name="l_mon1" type="number(10)" desc="起始月"/>
+    <param name="l_year2" type="number(10)" desc="截止年"/>
+    <param name="l_mon2" type="number(10)" desc="截止月"/>
+    <rtn name="" type="date" desc="起始日期"/>
+    <rtn name="" type="date" desc="截止日期"/>
+  </com>
+</coms>

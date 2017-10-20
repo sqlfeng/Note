@@ -1,0 +1,10 @@
+            #應用 a08 樣板自動產生(Version:3)
+            #開窗c段
+            INITIALIZE g_qryparam.* TO NULL
+            LET g_qryparam.state = 'c' 
+            LET g_qryparam.reqry = FALSE
+            CALL ${mdl_form}()                           #呼叫開窗
+            DISPLAY g_qryparam.return1 TO ${mdl_field1}  #顯示到畫面上
+            NEXT FIELD ${mdl_field1}                     #返回原欄位
+    
+

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmaz_t" module="APM" text="经销商储运能力档" type="D" version="1">
+  <column name="pmazent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmaz001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaz002" text="车辆类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaz003" text="数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmazent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmaz001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaz002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaz003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmaz_t" depend_field="pmaz002" correspon_key="&apos;2074&apos;,pmaz002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

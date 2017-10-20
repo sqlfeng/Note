@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sten_t" module="AST" text="合同费用优惠审批明细档" type="D" version="1">
+  <column name="stenent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stenunit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stensite" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stenseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stendocno" text="审批单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stenacti" text="有效" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sten001" text="优惠类型" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="sten002" text="费用编码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sten003" text="优惠开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sten004" text="优惠结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sten005" text="优惠金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="sten006" text="优惠幅度" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="sten007" text="优惠单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="sten008" text="原单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="sten009" text="优惠原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sten010" text="优惠前情况说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="sten011" text="运行优惠否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sten012" text="优惠面积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stenent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stenunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stensite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stenseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stendocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stenacti" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten001" widget="ComboBox" items="6783" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sten002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="sten006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="sten007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sten008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sten009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sten011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sten012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sten_t" depend_field="sten002" correspon_key="sten002" ref_table="stael_t" ref_fk="stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

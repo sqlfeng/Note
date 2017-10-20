@@ -1,0 +1,12 @@
+               #應用 a41 樣板自動產生(Version:3)
+               #使用JSON格式組合參數與作業編號(串查)
+               INITIALIZE la_param.* TO NULL
+               LET la_param.prog     = '${mdl_prog}'
+               ${mdl_link_mark}LET la_param.param[1] = ${mdl_link_para}
+               #mdls - Start -
+               LET la_param.param[${mdl}] = ${mdl_link_para${mdl}}
+               #mdls -  End  -
+               LET ls_js = util.JSON.stringify(la_param)
+               CALL cl_cmdrun_wait(ls_js)
+ 
+

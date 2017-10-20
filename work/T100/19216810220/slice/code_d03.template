@@ -1,0 +1,43 @@
+           #報表 d03 樣板自動產生(Version:3)
+           #add-point:rep.sub${subseq}.before name="rep.sub${subseq}.before"
+           {<point name="rep.sub${subseq}.before"/>}
+           #end add-point:rep.sub${subseq}.before
+
+           #add-point:rep.sub${subseq}.sql name="rep.sub${subseq}.sql"
+           {<point name="rep.sub${subseq}.sql" mark="Y"/>}
+           #end add-point:rep.sub${subseq}.sql
+
+           LET g_sql = ${sub_query}
+           #add-point:rep.sub${subseq}.afsql name="rep.sub${subseq}.afsql"
+           {<point name="rep.sub${subseq}.afsql"/>}
+           #end add-point:rep.sub${subseq}.afsql           
+           LET l_cnt = 0
+           LET l_sub_sql = ""
+           LET l_subrep${subseq}_show ="N"
+           LET l_sub_sql = "SELECT COUNT(1) FROM (",g_sql,")"
+           PREPARE ${component_name}_repcur${subseq}_cnt_pre FROM l_sub_sql
+           EXECUTE ${component_name}_repcur${subseq}_cnt_pre INTO l_cnt
+           IF l_cnt > 0 THEN 
+              LET l_subrep${subseq}_show ="Y"
+           END IF
+           PRINTX l_subrep${subseq}_show
+           START REPORT ${component_name}_subrep${subseq}
+           DECLARE ${component_name}_repcur${subseq} CURSOR FROM g_sql
+           FOREACH ${component_name}_repcur${subseq} INTO sr${sub_recordname}.*
+              IF STATUS THEN 
+                 INITIALIZE g_errparam TO NULL
+                 LET g_errparam.extend = "${component_name}_repcur${subseq}:"
+                 LET g_errparam.code   = SQLCA.sqlcode
+                 LET g_errparam.popup  = FALSE
+                 CALL cl_err()                  
+                 EXIT FOREACH 
+              END IF
+              #add-point:rep.sub${subseq}.foreach name="rep.sub${subseq}.foreach"
+              {<point name="rep.sub${subseq}.foreach"/>}
+              #end add-point:rep.sub${subseq}.foreach
+              OUTPUT TO REPORT ${component_name}_subrep${subseq}(sr${sub_recordname}.*)
+           END FOREACH
+           FINISH REPORT ${component_name}_subrep${subseq}
+           #add-point:rep.sub${subseq}.after name="rep.sub${subseq}.after"
+           {<point name="rep.sub${subseq}.after"/>}
+           #end add-point:rep.sub${subseq}.after

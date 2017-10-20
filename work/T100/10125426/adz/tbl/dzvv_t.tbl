@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzvv_t" module="ADZ" text="组件前置档(版次归1)" type="M" version="1">
+  <column name="dzvvstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvv001" text="组件代号" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="dzvv002" text="序号" attribute="N002" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="dzvv003" text="识别码版次" attribute="C902" type="varchar2(15)" pk="Y" req="Y"/>
+  <column name="dzvv004" text="前置组件" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dzvv005" text="使用标示" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="dzvvownid" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvcrtid" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvcrtdt" text="资料创建日" attribute="D002" type="date()" pk="N" req="N"/>
+  <column name="dzvvmodid" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvmoddt" text="最近修改日" attribute="D002" type="date()" pk="N" req="N"/>
+  <column name="dzvvcnfid" text="资料确认者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvvcnfdt" text="数据确认日" attribute="D002" type="date()" pk="N" req="N"/>
+  <column name="dzvv006" text="客户代号" attribute="C003" type="" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzvvstus" widget="ComboBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvv001" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzvv002" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvv003" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvv004" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzvv005" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="dzvvownid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvowndp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvcrtid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvcrtdp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvcrtdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzvvmodid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvmoddt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzvvcnfid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzvvcnfdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzvv006" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzvv_t" depend_filed="dzvvcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzvv_t" depend_filed="dzvvcnfid" correspon_key="dzvvcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzvv_t" depend_filed="dzvvcrtdp" correspon_key="dzvvcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzvv_t" depend_filed="dzvvcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzvv_t" depend_filed="dzvvcrtid" correspon_key="dzvvcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzvv_t" depend_filed="dzvvmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzvv_t" depend_filed="dzvvmodid" correspon_key="dzvvmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzvv_t" depend_filed="dzvvowndp" correspon_key="dzvvowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzvv_t" depend_filed="dzvvownid" correspon_key="dzvvownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

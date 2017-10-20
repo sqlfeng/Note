@@ -1,0 +1,43 @@
+#應用 a06 樣板自動產生(Version:5)
+#次要單頭table相關處理
+PRIVATE FUNCTION ${general_prefix}_${mdl_tbl_name}(ps_type) 
+   DEFINE li_cnt    LIKE type_t.num10
+   DEFINE ps_type   STRING  
+   DEFINE ls_sql    STRING  
+  
+   IF ps_type = "s" THEN 
+      ${mdl_select}
+      IF SQLCA.sqlcode THEN
+         ${mdl_vars_init}
+      END IF 
+      RETURN 
+   END IF 
+ 
+   ${mdl_chk}
+   
+   IF ps_type = "i" THEN 
+      ${mdl_insert}
+   END IF 
+   
+   IF li_cnt = 0 AND ps_type = "u" THEN 
+      ${mdl_insert}
+   END IF 
+ 
+   IF li_cnt > 0 AND ps_type = "u" THEN 
+      ${mdl_update}
+   END IF 
+ 
+   IF li_cnt > 0 AND ps_type = "d" THEN 
+      ${mdl_delete}
+   END IF 
+ 
+   IF SQLCA.sqlcode THEN
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = "${general_prefix}" 
+      LET g_errparam.code   = SQLCA.sqlcode 
+      LET g_errparam.popup  = FALSE 
+      CALL cl_err()
+   END IF 
+ 
+END FUNCTION
+

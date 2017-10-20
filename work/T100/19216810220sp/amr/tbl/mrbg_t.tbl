@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mrbg_t" module="AMR" text="资源保险信息档" type="M" version="1">
+  <column name="mrbgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mrbgsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrbg001" text="资源编号" attribute="C403" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrbg002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mrbg003" text="保险内容" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="mrbg004" text="保险厂商" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrbg005" text="保险单号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mrbg006" text="保险生效日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mrbg007" text="保险到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mrbg008" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mrbgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrbgsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrbg001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrbg002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mrbg003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mrbg004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrbg005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mrbg006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrbg007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrbg008" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mrbg_t" depend_field="mrbg004" correspon_key="&apos;1107&apos;,mrbg004" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

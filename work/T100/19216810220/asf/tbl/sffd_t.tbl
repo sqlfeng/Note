@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sffd_t" module="ASF" text="报工单不良原因档" type="D" version="1">
+  <column name="sffdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sffdsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sffddocno" text="报工单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sffdseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sffdseq1" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sffd001" text="异常项目" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="sffd002" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sffd003" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sffdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sffdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sffddocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sffdseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sffdseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sffd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1053" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sffd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sffd003" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sffd_t" depend_field="sffd001" correspon_key="&apos;1053&apos;,sffd001" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

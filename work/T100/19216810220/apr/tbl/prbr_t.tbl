@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prbr_t" module="APR" text="门店商品削价单明细表" type="T" version="1">
+  <column name="prbrent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prbrunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbrsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbrdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prbrseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prbr001" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prbr002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prbr003" text="商品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="prbr004" text="计价单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbr005" text="进价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr006" text="售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr007" text="原毛利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr008" text="削价条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prbr009" text="削价说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="prbr010" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr011" text="削价单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr012" text="削价金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr013" text="实际销售数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbr014" text="削价原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbr015" text="新毛利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prbrent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbrunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbrsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbrdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prbrseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prbr001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtdx001_8" c_zoom="q_rtdx001_8" chk_ref="v_rtdx001_7" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prbr002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtdx002_1" c_zoom="q_rtdx002_1" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbr003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbr004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbr005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="prbr008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbr009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbr010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr012" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbr014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="v_oocq002_2098" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbr015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prbr_t" depend_field="prbr004" correspon_key="prbr004" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="prbr_t" depend_field="prbr014" correspon_key="&apos;2098&apos;,prbr014" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,95 @@
+{<section id="${app_id}.tree_expand" >}
+#應用 qs21 樣板自動產生(Version:7)
+#+ tree節點展開程式段
+PRIVATE FUNCTION ${general_prefix}_tree_expand(p_id)
+   #add-point:tree_expand段define-客製 name="tree_expand.define_customerization"
+   {<point name="tree_expand.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE p_id          LIKE type_t.num10
+   DEFINE l_id          LIKE type_t.num10
+   DEFINE l_cnt         LIKE type_t.num10
+   DEFINE l_keyvalue    LIKE type_t.chr50
+   DEFINE l_typevalue   LIKE type_t.chr50
+   DEFINE l_type        LIKE type_t.chr50
+   DEFINE l_sql         LIKE type_t.chr500
+   DEFINE ls_source     LIKE type_t.chr500
+   DEFINE ls_exp_code   LIKE type_t.chr500
+   DEFINE l_return      LIKE type_t.num5
+   #add-point:tree_expand段define-標準  (請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="tree_expand.define"
+   {<point name="tree_expand.define"/>}
+   #end add-point
+ 
+   #add-point:FUNCTION前置處理 name="tree_expand.before_function"
+   {<point name="tree_expand.before_function" />}
+   #end add-point
+ 
+   #若已經展開
+   IF ${detail_var_title}[p_id].isExp = 1 THEN
+      RETURN
+   END IF
+ 
+   LET l_return = FALSE
+ 
+   CASE ${detail_var_title}[p_id].expcode
+      WHEN -1
+         CALL ${detail_var_title}.deleteElement(p_id)
+      WHEN 0
+         RETURN
+      WHEN 1
+         #add-point:tree_expand段資料來源table name="tree_expand.expcode_1"
+         {<point name="tree_expand.expcode_1"/>}
+         #end add-point
+         LET ls_exp_code = "exp_code"
+      WHEN 2
+         #add-point:tree_expand段資料來源table name="tree_expand.expcode_2"
+         {<point name="tree_expand.expcode_2"/>}
+         #end add-point
+         LET ls_exp_code = "'2'"
+   END CASE
+ 
+ 
+   #add-point:tree_expand段sql組成 name="tree_expand.sql"
+   {<point name="tree_expand.sql"/>}
+   #end add-point
+ 
+   LET l_sql = cl_sql_add_mask(l_sql)              #遮蔽特定資料
+   PREPARE tree_expand_pre FROM l_sql
+   DECLARE tree_expand_cur CURSOR FOR tree_expand_pre
+ 
+   LET l_id = p_id + 1
+   CALL ${detail_var_title}.insertElement(l_id)
+   LET l_cnt = 1
+   FOREACH tree_expand_cur INTO ${detail_var_title}[l_id].*
+      #(ver:7) ---start---
+      IF SQLCA.SQLCODE THEN
+         INITIALIZE g_errparam TO NULL
+         LET g_errparam.extend = "tree_expand_cur FOREACH:",SQLERRMESSAGE
+         LET g_errparam.code   = SQLCA.SQLCODE
+         LET g_errparam.popup  = TRUE
+         CALL cl_err()
+         EXIT FOREACH
+      END IF
+      #(ver:7) --- end ---
+      #pid=父節點id
+      LET ${detail_var_title}[l_id].pid = ${detail_var_title}[p_id].id
+      #
+      #id=本身節點id(採流水號遞增)
+      LET ${detail_var_title}[l_id].id = ${detail_var_title}[p_id].id||"."||l_cnt
+      #
+      #isnode=確認該節點是否有子孫
+      CALL ${general_prefix}_desc_show(l_id)
+      LET ${detail_var_title}[l_id].isnode = ${general_prefix}_chk_isnode(l_id)
+      LET l_id = l_id + 1
+      CALL ${detail_var_title}.insertElement(l_id)
+      LET l_cnt = l_cnt + 1
+ 
+      LET l_return = TRUE
+   END FOREACH
+ 
+   #刪除空資料
+   CALL ${detail_var_title}.deleteElement(l_id)
+ 
+END FUNCTION
+{</section>}
+ 
+

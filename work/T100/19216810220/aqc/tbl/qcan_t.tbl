@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="qcan_t" module="AQC" text="品质检验项目单身档" type="D" version="1">
+  <column name="qcanent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="qcan001" text="参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="qcan002" text="品管分群" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcan003" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="qcan004" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="qcan005" text="作业编号" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcan006" text="加工序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="qcan007" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcan008" text="检验类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcan009" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="qcan010" text="检验项目" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan011" text="检验位置" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="qcan012" text="缺点等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan013" text="抽样计划" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan014" text="AQL" attribute="N304" type="number(7,3)" pk="N" req="N"/>
+  <column name="qcan015" text="测量值管制方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan016" text="检验方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan017" text="资源类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan018" text="指定仪器" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcan019" text="规范上限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="qcan020" text="检验上限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="qcan021" text="检验标准值" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="qcan022" text="检验下限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="qcan023" text="规范下限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="qcan024" text="计量单位" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="qcan025" text="检验规格说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="qcan026" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="qcanent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="qcan001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="qcan004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="qcan005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="qcan007" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="qcan010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="qcan012" widget="ComboBox" items="5057" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan013" widget="ComboBox" items="5058" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="###&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan015" widget="ComboBox" items="5059" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan017" widget="ComboBox" items="5202" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcan019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="qcan024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="qcan025" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="qcan026" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="qcan_t" depend_field="qcan010" correspon_key="qcanent,&apos;1051&apos;,qcan010" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="qcan_t" depend_field="qcan016" correspon_key="qcanent,&apos;1052&apos;,qcan016" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

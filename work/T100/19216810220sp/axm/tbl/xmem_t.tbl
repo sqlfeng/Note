@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmem_t" module="AXM" text="包装单明细档" type="D" version="1">
+  <column name="xmement" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmemsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmemdocno" text="包装单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmemseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmem001" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmem002" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmem003" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmem004" text="包装序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmem005" text="包装方式" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmem006" text="每箱装数" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmem007" text="箱数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem008" text="字轨" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmem009" text="栈板号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmem010" text="起始包装箱号" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmem011" text="截止包装箱号" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="xmem012" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem013" text="重量单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmem014" text="单位净重" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem015" text="总净重" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem016" text="单位毛重" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem017" text="总毛重" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem018" text="单位材积" attribute="N104" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmem019" text="总材积" attribute="N104" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmement" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmemsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmemdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmemseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmem001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmel005" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmem002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmem003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmem004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmem005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_12" c_zoom="q_imaf001_12" chk_ref="v_imaf001_2" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmem006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmem007" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmem008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmem009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmem010" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="xmem011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="xmem012" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmem014" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem015" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem016" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem017" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem018" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmem019" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmem_t" depend_field="xmem003" correspon_key="xmem003" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

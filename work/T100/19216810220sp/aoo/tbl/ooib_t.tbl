@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="ooib_t" module="AOO" text="收付款条件主档" type="B" version="1">
+  <column name="ooibent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="ooibownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooibowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooibcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooibcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooibcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="ooibmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooibmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="ooibstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib001" text="收款/付款" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="ooib002" text="收付款条件编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooib004" text="款别类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib005" text="惯用缴款优惠条件" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib006" text="订金收取否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="ooib007" text="现付交易否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="ooib011" text="应收付款起算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib012" text="应收付款日加(季)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib013" text="应收付款日加(月)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib014" text="应收付款日加(日)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib021" text="帐款兑现起算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib022" text="帐款兑现日加(季)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib023" text="帐款兑现日加(月)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib024" text="帐款兑现日加(日)" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="ooib025" text="惯用多帐期类型　" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooib026" text="尾款性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="ooibent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="ooibownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooibowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooibcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooibcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooibcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="ooibmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooibmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="ooibstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="ooib001" widget="Edit" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooib001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib004" widget="ComboBox" items="8310" default="&apos;10&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooid001_1" c_zoom="q_ooid001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib006" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib011" widget="ComboBox" items="8312" default="&apos;05&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib012" widget="Edit" items="" default="0" max_compare="&lt;=" max="4.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib013" widget="Edit" items="" default="0" max_compare="&lt;=" max="12.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib014" widget="Edit" items="" default="0" max_compare="&lt;=" max="365.000" min_compare="&gt;=" min="-365.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib021" widget="ComboBox" items="8312" default="&apos;05&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib022" widget="Edit" items="" default="0" max_compare="&lt;=" max="4.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib023" widget="Edit" items="" default="0" max_compare="&lt;=" max="12.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib024" widget="Edit" items="" default="0" max_compare="&lt;=" max="365.000" min_compare="&gt;=" min="-365.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="ooib025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooib026" widget="ComboBox" items="8335" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree>
+    <type no="1" table="ooib_t" col=""/>
+    <id no="2" table="ooib_t" col="ooib002"/>
+    <pid no="3" table="ooib_t" col="ooib001"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="ooibs_t" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="ooib_t" depend_field="ooib005" correspon_key="ooibent,ooib005" ref_table="ooidl_t" ref_fk="ooidlent,ooidl001" ref_dlang="ooidl002" ref_rtn="ooidl003"/>
+    <field depend_table="ooib_t" depend_field="ooib025" correspon_key="ooibent,&apos;3114&apos;,ooib025" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="ooib_t" depend_field="ooibcrtdp" correspon_key="ooibcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooib_t" depend_field="ooibcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="ooib_t" depend_field="ooibcrtid" correspon_key="ooibcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="ooib_t" depend_field="ooibmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="ooib_t" depend_field="ooibmodid" correspon_key="ooibmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="ooib_t" depend_field="ooibowndp" correspon_key="ooibowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooib_t" depend_field="ooibownid" correspon_key="ooibownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="ooib_t" depend_field="ooib002" correspon_key="ooibent,ooib002" lang_table="ooibl_t" lang_fk="ooiblent,ooibl002" lang_dlang="ooibl003" lang_rtn="ooibl004"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="ooibstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtdi_t" module="ART" text="供应商清退表" type="T" version="1">
+  <column name="rtdient" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtdisite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdiunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdidocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtdidocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtdi001" text="供应商编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdi002" text="清退原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdi003" text="申请人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdi004" text="申请部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdi005" text="供应商生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdi006" text="商品生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdi007" text="终止合同" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtdi008" text="退库存商品" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtdi009" text="库存总额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtdi010" text="未结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtdistus" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdiownid" text="資料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdiowndp" text="資料所屬部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdicrtid" text="資料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdicrtdp" text="資料建立部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdicrtdt" text="資料創建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtdimodid" text="資料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdimoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtdicnfid" text="資料確認者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdicnfdt" text="資料確認日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtdient" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdisite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdiunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdidocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtdidocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdi001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi007" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi008" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdi009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtdi010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtdistus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdiownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdiowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdicrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdicrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdicrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtdimodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdimoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtdicnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdicnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtdi_t" depend_field="rtdicnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtdi_t" depend_field="rtdicnfid" correspon_key="rtdicnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtdi_t" depend_field="rtdicrtdp" correspon_key="rtdicrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdi_t" depend_field="rtdicrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtdi_t" depend_field="rtdicrtid" correspon_key="rtdicrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtdi_t" depend_field="rtdimoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtdi_t" depend_field="rtdimodid" correspon_key="rtdimodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtdi_t" depend_field="rtdiowndp" correspon_key="rtdiowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdi_t" depend_field="rtdiownid" correspon_key="rtdiownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtdistus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

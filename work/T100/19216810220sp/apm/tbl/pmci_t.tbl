@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmci_t" module="APM" text="供应商评核定性评分明细档" type="D" version="1">
+  <column name="pmcient" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmcidocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmciseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmci001" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmci002" text="评核项目" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmci003" text="得分" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmcient" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcidocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmciseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmci001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmci001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmci002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmci002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmci003" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmci_t" depend_field="pmci001" correspon_key="pmci001,pmcient" ref_table="pmaal_t" ref_fk="pmaal001,pmaalent" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="pmci_t" depend_field="pmci002" correspon_key="&apos;2052&apos;,pmci002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pjec_t" module="APJ" text="项目费用分摊明细档" type="B" version="1">
+  <column name="pjecent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pjeccomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjecld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="pjec002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pjec003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pjecseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pjec004" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjec005" text="WBS编号" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec010" text="科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="pjec011" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec012" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec013" text="交易对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec014" text="客群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec015" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec016" text="成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec017" text="经营类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec018" text="渠道" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec019" text="品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec020" text="品牌" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec021" text="项目编号（核算项）" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjec022" text="WBS（核算项）" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec099" text="项目工时" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pjec100" text="分摊金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec110" text="分摊金额(本位币二)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec120" text="分摊金额(本位币三)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec200" text="分摊基数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec300" text="分摊单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec310" text="分摊单价(本位币二)" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjec320" text="分摊单价(本位币三)" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjecownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjecowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjeccrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjeccrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjeccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pjecmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pjecmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pjecstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjec023" text="自由核算项一" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec024" text="自由核算项二" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec025" text="自由核算项三" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec026" text="自由核算项四" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec027" text="自由核算项五" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec028" text="自由核算项六" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec029" text="" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec030" text="自由核算项八" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec031" text="自由核算项九" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pjec032" text="自由核算项十" attribute="C507" type="varchar2(30)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pjecent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjeccomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjecld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="pjec002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="pjec003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="pjecseq" widget="ButtonEdit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="####&amp;" prog_rel="" case="upper"/>
+    <field name="pjec004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pjec005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjec010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjec011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjec021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pjec022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjec099" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec100" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec110" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec120" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec200" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec300" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec310" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjec320" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjecownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjecowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjeccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjeccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjeccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pjecmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjecmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pjecstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjec023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec030" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjec032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pjec_t" depend_field="pjeccrtdp" correspon_key="pjeccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pjec_t" depend_field="pjeccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pjec_t" depend_field="pjeccrtid" correspon_key="pjeccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pjec_t" depend_field="pjecmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pjec_t" depend_field="pjecmodid" correspon_key="pjecmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pjec_t" depend_field="pjecowndp" correspon_key="pjecowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pjec_t" depend_field="pjecownid" correspon_key="pjecownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pjecstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

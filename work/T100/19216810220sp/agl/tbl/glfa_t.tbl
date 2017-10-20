@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glfa_t" module="AGL" text="报表设置单头档" type="B" version="1">
+  <column name="glfaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glfa001" text="报表模板编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glfa002" text="报表类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfa003" text="排列方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfa004" text="科目参照表" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glfa005" text="测试账套" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="glfa006" text="测试年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa007" text="测试期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa008" text="测试金额单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glfa009" text="测试小数字数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa010" text="本期年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa011" text="本期起始期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa012" text="本期截止期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa013" text="上期年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa014" text="上期起始期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfa015" text="上期截止期别" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glfaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glfacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glfacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glfacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glfamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glfamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glfa016" text="财报类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glfaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glfa001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_glfa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfa002" widget="ComboBox" items="9930" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfa003" widget="ComboBox" items="9931" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfa004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002" c_zoom="q_ooal002" chk_ref="v_ooal002_7" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfa005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glaald" c_zoom="q_glaald" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glfa006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glfa007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glfa008" widget="ComboBox" items="8705" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfa009" widget="Edit" items="" default="2" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="glfa010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glfa011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glfa012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glfa013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="glfa014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glfa015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="glfaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glfamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glfa016" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glfa_t" depend_field="glfa004" correspon_key="glfaent,&apos;0&apos;,glfa004" ref_table="ooall_t" ref_fk="ooallent,ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="glfa_t" depend_field="glfa005" correspon_key="glfaent,glfa005" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="glfa_t" depend_field="glfacrtdp" correspon_key="glfacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glfa_t" depend_field="glfacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glfa_t" depend_field="glfacrtid" correspon_key="glfacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glfa_t" depend_field="glfamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glfa_t" depend_field="glfamodid" correspon_key="glfamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glfa_t" depend_field="glfaowndp" correspon_key="glfaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glfa_t" depend_field="glfaownid" correspon_key="glfaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

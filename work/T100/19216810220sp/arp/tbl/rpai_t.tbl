@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rpai_t" module="ARP" text="APP打印的报表元件明细档" type="D" version="1">
+  <column name="rpai001" text="APP编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rpai002" text="功能编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rpai003" text="报表作业" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rpai004" text="报表作业参数" attribute="C107" type="varchar2(500)" pk="N" req="N"/>
+  <column name="rpai005" text="报表元件参数" attribute="C107" type="varchar2(500)" pk="N" req="N"/>
+  <column name="rpai006" text="主要" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rpaistus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rpaiseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rpai007" text="单据字段名称" attribute="C804" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rpai001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rpai002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rpai003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rpai004" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rpai005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rpai006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rpaistus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rpaiseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rpai007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rpaistus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

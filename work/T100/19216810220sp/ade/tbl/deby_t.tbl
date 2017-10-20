@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="deby_t" module="ADE" text="门店收款日结档" type="S" version="1">
+  <column name="debyent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="debysite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="deby001" text="款别性质" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deby002" text="款别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="deby003" text="统计日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="deby004" text="收款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby005" text="款别类型对应凭证号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="deby006" text="支票面额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby007" text="票据到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="deby008" text="票据付款银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="deby009" text="开客票" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="deby010" text="开票人全名" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="deby011" text="卡/券种编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="deby012" text="票券溢交金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby013" text="冲预收款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deby014" text="抵现积分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="deby015" text="退款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deby016" text="主账套立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby017" text="次账套一立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby018" text="次账套二立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby019" text="代收银主帐套立帐金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby020" text="代收银次帐套一立帐金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="deby021" text="代收银次帐套二立帐金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="debyent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="debysite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby001" widget="ComboBox" items="8310" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001_04" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="deby004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="deby006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="deby008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_nmab001" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="deby009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="deby011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mman001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deby016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="deby021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="deby_t" depend_field="deby002" correspon_key="debyent,deby002" ref_table="ooial_t" ref_fk="ooialent,ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="deby_t" depend_field="deby008" correspon_key="debyent,deby008" ref_table="nmabl_t" ref_fk="nmablent,nmabl001" ref_dlang="nmabl002" ref_rtn="nmabl003"/>
+    <field depend_table="deby_t" depend_field="deby011" correspon_key="debyent,deby011" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="deby_t" depend_field="debysite" correspon_key="debyent,debysite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmbe_t" module="ANM" text="收支项目对应存提码数据档" type="B" version="1">
+  <column name="nmbeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmbeownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbeowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbecrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbecrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbecrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmbemodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbemoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmbestus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbe001" text="收支项目版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmbe002" text="收支项目代码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmbe003" text="存提码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="nmbeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbeownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbeowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbecrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbecrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbecrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmbemodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbemoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmbestus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbe001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmbd002" c_zoom="q_nmbd002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbe003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmaj001" c_zoom="q_nmaj001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree>
+    <type no="1" table="nmbe_t" col="nmbe001"/>
+    <id no="2" table="nmbe_t" col="nmbe003"/>
+    <pid no="3" table="nmbe_t" col="nmbe003"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="nmbes_t" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="nmbe_t" depend_field="nmbe002" correspon_key="nmbeent,nmbe001,nmbe002" ref_table="nmbdl_t" ref_fk="nmbdlent,nmbdl001,nmbdl002" ref_dlang="nmbdl003" ref_rtn="nmbdl004"/>
+    <field depend_table="nmbe_t" depend_field="nmbe003" correspon_key="nmbeent,nmbe003" ref_table="nmajl_t" ref_fk="nmajlent,nmajl001" ref_dlang="nmajl002" ref_rtn="nmajl003"/>
+    <field depend_table="nmbe_t" depend_field="nmbecrtdp" correspon_key="nmbecrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmbe_t" depend_field="nmbecrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmbe_t" depend_field="nmbecrtid" correspon_key="nmbecrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmbe_t" depend_field="nmbemoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmbe_t" depend_field="nmbemodid" correspon_key="nmbemodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmbe_t" depend_field="nmbeowndp" correspon_key="nmbeowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmbe_t" depend_field="nmbeownid" correspon_key="nmbeownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="nmbestus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmfb_t" module="AXM" text="销售报价范本分类明细单身档" type="D" version="1">
+  <column name="xmfbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmfbsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmfbdocno" text="范本料号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmfb001" text="版本" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmfb002" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmfb003" text="分类" attribute="C816" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmfb004" text="单选" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <column name="xmfb005" text="数量下限" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmfb006" text="数量上限" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmfbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmfbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmfb001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmfb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmfb003" widget="ButtonEdit" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfb004" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfb005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmfb006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmfb_t" depend_field="xmfb003" correspon_key="xmfbent,&apos;803&apos;,xmfb003" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

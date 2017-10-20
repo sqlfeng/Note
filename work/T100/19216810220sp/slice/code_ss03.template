@@ -1,0 +1,30 @@
+     #此段落由子樣板ss03產生(Version:2)
+             
+             IF NOT cl_null(${var})  AND ${var} <> ${var_t}  THEN  
+                
+                #exist-Start-
+                #設定g_chkparam.*的參數前，先將其初始化，避免之前設定遺留的參數值造成影響。
+                INITIALIZE g_chkparam.* TO NULL
+                #設定g_chkparam.*的參數
+                LET g_chkparam.arg${mdl} = ${var}
+                #呼叫檢查存在的library
+                IF NOT cl_chk_exist("${mdl_chkid}") THEN
+                  INITIALIZE g_errparam TO NULL
+                  LET g_errparam.extend = ${var}
+                  LET g_errparam.code   = "lib-00089"
+                  LET g_errparam.popup  = TRUE
+                  CALL cl_err()
+                  LET ${var} = ${var_t} #放回舊值
+                  NEXT FIELD ${ps_field} 
+                END IF
+                #exist-End-
+                
+                #extra-Start-
+                #設定額外檢查功能 (gzsv007)         
+                IF NOT ${extra_chk} THEN  
+                  LET ${var} = ${var_t} #放回舊值 
+                  NEXT FIELD  ${ps_field} #原欄位  
+                END IF 
+                #extra-End-
+            END IF
+      

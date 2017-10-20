@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imeh_t" module="AIM" text="规则化规格可选项档" type="D" version="1">
+  <column name="imehent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imeh001" text="品名种类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imeh002" text="节点编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imeh003" text="选项值" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="imehent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imeh001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeh002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeh003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imef003" c_zoom="q_imef003" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang>
+    <field depend_table="imeh_t" depend_field="imeh003" correspon_key="imehent,imeh001,imeh002,imeh003" lang_table="imehl_t" lang_fk="imehlent,imehl001,imehl002,imehl003" lang_dlang="imehl004" lang_rtn="imehl005"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

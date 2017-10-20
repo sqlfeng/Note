@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmia_t" module="AXM" text="销售预测编号设置档" type="B" version="1">
+  <column name="xmiaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmiaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmiaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmiacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmiacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmiacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmiamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmiamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmiastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia001" text="预测编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmia002" text="预测期数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="xmia003" text="预测起始日" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="xmia004" text="预测币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia005" text="汇率参照表号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia006" text="汇率取得方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia007" text="汇率日期" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia008" text="取价方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia009" text="集团预测" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia010" text="预测方式-营运据点" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia011" text="预测方式-组织" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia012" text="预测方式-业务员" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia013" text="预测方式-客户" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia014" text="预测方式-通路" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia015" text="预测方式-产品特征" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmia016" text="预测起始日指定方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmia017" text="消化警示比例%(正负范围)" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmiaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmiaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmiaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmiacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmiacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmiacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmiamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmiamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmiastus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmia001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmia001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia002" widget="Edit" items="" default="" max_compare="&lt;=" max="24.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmia003" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmia004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001_1" c_zoom="q_ooai001_1" chk_ref="v_ooai001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_0" c_zoom="q_ooal002_0" chk_ref="v_ooal002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia006" widget="ComboBox" items="40" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia007" widget="ComboBox" items="3012" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmah001" c_zoom="q_xmah001" chk_ref="v_xmah001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia009" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia010" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia011" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia012" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia013" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia014" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia015" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmia017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmia_t" depend_field="xmia001" correspon_key="b_xmia001" ref_table="xmial_t" ref_fk="xmial001" ref_dlang="xmial002" ref_rtn="xmial003"/>
+    <field depend_table="xmia_t" depend_field="xmia004" correspon_key="xmia004" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="xmia_t" depend_field="xmia005" correspon_key="&apos;1&apos;,xmia005" ref_table="ooall_t" ref_fk="ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="xmia_t" depend_field="xmia008" correspon_key="xmia008" ref_table="xmahl_t" ref_fk="xmahl001" ref_dlang="xmahl002" ref_rtn="xmahl003"/>
+    <field depend_table="xmia_t" depend_field="xmiacrtdp" correspon_key="xmiacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmia_t" depend_field="xmiacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmia_t" depend_field="xmiacrtid" correspon_key="xmiacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmia_t" depend_field="xmiamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmia_t" depend_field="xmiamodid" correspon_key="xmiamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmia_t" depend_field="xmiaowndp" correspon_key="xmiaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmia_t" depend_field="xmiaownid" correspon_key="xmiaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="xmia_t" depend_field="xmia001" correspon_key="xmia001" lang_table="xmial_t" lang_fk="xmial001" lang_dlang="xmial002" lang_rtn="xmial003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="xmiastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

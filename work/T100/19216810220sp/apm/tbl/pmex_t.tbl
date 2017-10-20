@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmex_t" module="APM" text="采购折扣合约单明细档" type="D" version="1">
+  <column name="pmexent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmexsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmexdocno" text="合约单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmexseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmex001" text="类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmex002" text="数据编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmex003" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pmex005" text="折扣方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmex006" text="计价单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmex007" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmex008" text="折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmex009" text="分段折扣否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmex010" text="最近结算日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmex011" text="结算起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmex012" text="结算截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmex020" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmexent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmexsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmexdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmexseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmex001" widget="ComboBox" items="2104" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmex002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmex003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmex005" widget="ComboBox" items="2105" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmex006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmex007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmex008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmex009" widget="CheckBox" items="" default="N" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmex010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmex011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmex012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmex020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmex_t" depend_field="pmex006" correspon_key="pmex006" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmar_t" module="AFM" text="融资资金到帐档" type="T" version="1">
+  <column name="fmarent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="fmar001" text="融资资金到帐单编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fmar002" text="融资合同号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fmar003" text="融资组织" attribute="C007" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="fmar004" text="收支单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmar005" text="到帐日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmar006" text="收支单项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmar007" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="fmar008" text="金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmar009" text="资金中心" attribute="C007" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="fmar010" text="融资合同项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmarownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmarowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmarcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmarcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmarcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmarmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmarmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmarcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmarcnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="fmarstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmarent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fmar001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmaj001_1" c_zoom="q_fmar002" chk_ref="v_fmar002" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_fmar003" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmbadocno_1" c_zoom="q_nmbadocno_1" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="fmar005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="q_nmbadocno_1" c_zoom="q_nmbadocno_1" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="fmar007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="fmar009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeb005_3" c_zoom="q_ooeb005_3" chk_ref="v_fmar009" widget_width="10" format="" prog_rel=""/>
+    <field name="fmar010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmak001" c_zoom="q_fmar010" chk_ref="v_fmaw010" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="fmarownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmarmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmarcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="fmarcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="fmarstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmar_t" depend_field="fmar002" correspon_key="fmarent,fmar002" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmar_t" depend_field="fmar003" correspon_key="fmarent,fmar003" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmar_t" depend_field="fmar009" correspon_key="fmarent,fmar009" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmar_t" depend_field="fmarcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmar_t" depend_field="fmarcnfid" correspon_key="fmarcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmar_t" depend_field="fmarcrtdp" correspon_key="fmarcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmar_t" depend_field="fmarcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmar_t" depend_field="fmarcrtid" correspon_key="fmarcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmar_t" depend_field="fmarmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="fmar_t" depend_field="fmarmodid" correspon_key="fmarmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="fmar_t" depend_field="fmarowndp" correspon_key="fmarowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmar_t" depend_field="fmarownid" correspon_key="fmarownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="fmarstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+    </field>
+  </scc>
+</table>

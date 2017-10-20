@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stdj_t" module="AST" text="市场活动费用核销明细数据表" type="D" version="1">
+  <column name="stdjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stdjunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdjsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdjdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stdjseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stdj001" text="申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdj002" text="申请项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="stdj003" text="对象类型" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj004" text="经销商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj005" text="网点编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj006" text="费用编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj007" text="价款类型" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj008" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj009" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj010" text="申请金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdj011" text="核销金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stdj012" text="起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stdj013" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stdj014" text="结算会计期" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="stdj015" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdj016" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj017" text="结算方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj018" text="结算类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj019" text="结算中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj020" text="促销方案" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="stdj021" text="销售范围" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj022" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj023" text="销售通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj024" text="产品组" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj025" text="办事处" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdj026" text="备注" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stdjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdjunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdjsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdjdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stdjseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stdj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdj003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_18" c_zoom="q_pmaa001_18" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj006" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stae001" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj007" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdj011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stdj012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdj013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdj014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdj015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stdj016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="stdj021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdj026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stdj_t" depend_field="stdj005" correspon_key="stdj005" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="stdj_t" depend_field="stdj006" correspon_key="stdj006" ref_table="stael_t" ref_fk="stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

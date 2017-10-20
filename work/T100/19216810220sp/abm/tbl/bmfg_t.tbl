@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmfg_t" module="ABM" text="ECN损耗率档" type="D" version="1">
+  <column name="bmfgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bmfgsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmfgdocno" text="ECN单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bmfg002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmfg003" text="生产起始量" attribute="N101" type="number(20,6)" pk="Y" req="Y"/>
+  <column name="bmfg004" text="生产截止量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfg005" text="变动损耗率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfg006" text="固定损耗量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmfgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfgsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfgdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfg002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmfg003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="bmfg004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="bmfg005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="bmfg006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

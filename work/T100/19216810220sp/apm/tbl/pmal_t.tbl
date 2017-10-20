@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmal_t" module="APM" text="采购控制组供应商缺省条件档" type="B" version="1">
+  <column name="pmalent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmal001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmal002" text="控制组编号" attribute="C020" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmal003" text="惯用交易币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal004" text="惯用税务规则" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal005" text="惯用发票开立方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal006" text="惯用付款条件" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmal008" text="惯用采购通路" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal009" text="惯用采购分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal010" text="惯用报表语言" attribute="C800" type="varchar2(6)" pk="N" req="N"/>
+  <column name="pmal011" text="惯用交运方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal012" text="惯用交运起点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal013" text="惯用交运终点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal014" text="惯用卸货港" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal015" text="惯用佣金率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmal016" text="折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmal017" text="惯用ForWarder" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal018" text="惯用Notify" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pmal019" text="负责采购人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmal020" text="惯用交易条件" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal021" text="惯用取价方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal022" text="惯用票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="pmal023" text="惯用内外购" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal024" text="惯用汇率计算基准" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmalownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmalowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmalcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmalcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmalcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmalmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmalmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmalstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmal025" text="负责采购部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmalent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmal001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooha001" c_zoom="q_ooha001" chk_ref="v_ooha001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooai001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_2" c_zoom="q_oodb002_2" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal005" widget="ComboBox" items="8322" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmad002_2" c_zoom="q_pmad002_2" chk_ref="v_pmad002_1" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmal008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal010" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="6" format="" prog_rel="" case=""/>
+    <field name="pmal011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal015" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmal016" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmal017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_4" c_zoom="q_pmaa001_4" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmal019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmam001" c_zoom="q_pmam001" chk_ref="v_pmam001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002_1" c_zoom="q_isac002_1" chk_ref="v_isac002_1" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="pmal023" widget="ComboBox" items="2087" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmal024" widget="ComboBox" items="2086" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmalmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmalmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmalstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmal025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmal_t" depend_field="pmal001" correspon_key="pmal001" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmal_t" depend_field="pmal002" correspon_key="pmal002" ref_table="oohal_t" ref_fk="oohal001" ref_dlang="oohal002" ref_rtn="oohal003"/>
+    <field depend_table="pmal_t" depend_field="pmal003" correspon_key="pmal003" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmal_t" depend_field="pmal004" correspon_key="pmal004" ref_table="oodbl_t" ref_fk="oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="pmal_t" depend_field="pmal006" correspon_key="pmal006" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="pmal_t" depend_field="pmal008" correspon_key="&apos;275&apos;,pmal008" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal009" correspon_key="&apos;264&apos;,pmal009" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal011" correspon_key="&apos;263&apos;,pmal011" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal012" correspon_key="&apos;262&apos;,pmal012" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal013" correspon_key="&apos;262&apos;,pmal013" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal014" correspon_key="&apos;262&apos;,pmal014" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal017" correspon_key="pmal017" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmal_t" depend_field="pmal019" correspon_key="pmal019" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmal_t" depend_field="pmal020" correspon_key="&apos;238&apos;,pmal020" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmal_t" depend_field="pmal021" correspon_key="pmal021" ref_table="pmaml_t" ref_fk="pmaml001" ref_dlang="pmaml002" ref_rtn="pmaml003"/>
+    <field depend_table="pmal_t" depend_field="pmal022" correspon_key="pmal022" ref_table="isacl_t" ref_fk="isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="pmal_t" depend_field="pmalcrtdp" correspon_key="pmalcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmal_t" depend_field="pmalcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmal_t" depend_field="pmalcrtid" correspon_key="pmalcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmal_t" depend_field="pmalmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmal_t" depend_field="pmalmodid" correspon_key="pmalmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmal_t" depend_field="pmalowndp" correspon_key="pmalowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmal_t" depend_field="pmalownid" correspon_key="pmalownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmalstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

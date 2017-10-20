@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtad_t" module="ART" text="品类策略品类明细档" type="D" version="1">
+  <column name="rtadent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtad001" text="策略编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtad002" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtad003" text="角色编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtad004" text="SKU占比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtad005" text="SKU上限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtad006" text="SKU下限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtad007" text="毛利率上限" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtad008" text="毛利率下限" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtadstus" text="资料有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtadsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="rtadent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtad001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtad002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtad003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtad004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtad005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtad006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtad007" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtad008" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtadstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtadsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtad_t" depend_field="rtad002" correspon_key="rtadent,rtad002" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="rtad_t" depend_field="rtad003" correspon_key="rtad003" ref_table="gzaal_t" ref_fk="gzaal001" ref_dlang="gzaal002" ref_rtn="gzaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtadstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isak_t" module="AIS" text="交易对象税务基本数据档" type="B" version="1">
+  <column name="isakent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="isak001" text="交易对象代码" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isak002" text="税区" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isak008" text="纳税人识别号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isak009" text="开立发票地址" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <column name="isak010" text="开立发票电话" attribute="C150" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isak011" text="开立发票银行名称" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isak012" text="开立发票银行帐号" attribute="C504" type="varchar2(30)" pk="N" req="N"/>
+  <column name="isakstus" text="状态码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isakownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isakowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isakcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isakcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isakcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isakmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isakmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isak003" text="电子发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="isak004" text="电子发票启用日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="isakent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isak001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmab001" c_zoom="q_isak001" chk_ref="v_pmab001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isak002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_3" c_zoom="q_oodb002_3" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isak008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isak009" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isak010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isak011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isak012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isakstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isakmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isakmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isak003" widget="ComboBox" items="9722" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isak004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isak_t" depend_field="isak001" correspon_key="isakent,isak001" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="isak_t" depend_field="isak002" correspon_key="isakent,&apos;&apos;,isak002" ref_table="oodbl_t" ref_fk="oodblent,oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="isak_t" depend_field="isak003" correspon_key="isakent,&apos;&apos;,isak003" ref_table="isacl_t" ref_fk="isaclent,isacl001,isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="isak_t" depend_field="isak004" correspon_key="isakent,&apos;&apos;,isak004" ref_table="oodbl_t" ref_fk="oodblent,oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="isak_t" depend_field="isak005" correspon_key="isakent,&apos;&apos;,isak005" ref_table="isacl_t" ref_fk="isaclent,isacl001,isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="isak_t" depend_field="isakcrtdp" correspon_key="isakcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isak_t" depend_field="isakcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="isak_t" depend_field="isakcrtid" correspon_key="isakcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="isak_t" depend_field="isakmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="isak_t" depend_field="isakmodid" correspon_key="isakmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="isak_t" depend_field="isakowndp" correspon_key="isakowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isak_t" depend_field="isakownid" correspon_key="isakownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="isakstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

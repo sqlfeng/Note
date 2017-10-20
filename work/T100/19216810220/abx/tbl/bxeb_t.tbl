@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bxeb_t" module="ABX" text="放行单身档" type="D" version="1">
+  <column name="bxebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bxebsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bxebdocno" text="放行申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bxebseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bxeb001" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bxeb002" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="bxeb003" text="料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="bxeb004" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bxeb005" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="bxeb006" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bxeb007" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="bxeb008" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="bxeb009" text="台币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bxebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bxebsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bxebdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bxebseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="bxeb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bxeb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="bxeb003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bxeb004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bxeb005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel="" case=""/>
+    <field name="bxeb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bxeb007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="bxeb008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="" prog_rel="" case=""/>
+    <field name="bxeb009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bxeb_t" depend_field="bxeb003" correspon_key="bxeb003" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

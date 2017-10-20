@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmdt_t" module="APM" text="收货/入库单身明细档" type="D" version="1">
+  <column name="pmdtent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmdtsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdtdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmdtseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmdt001" text="采购单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt002" text="采购项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt003" text="采购项序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt004" text="采购分批序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt005" text="子件特性" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt006" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdt007" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pmdt008" text="包装容器" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdt009" text="作业编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt010" text="作业序" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt011" text="冲销顺序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt016" text="库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt017" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt018" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmdt019" text="收货/入库单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt020" text="收货/入库数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt021" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt022" text="参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt023" text="计价单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt024" text="计价数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt025" text="紧急度" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt026" text="检验否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmdt027" text="收货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt028" text="收货项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt036" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt037" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="pmdt038" text="税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt039" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt040" text="价格核决" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt041" text="保税否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmdt042" text="取价来源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt043" text="价格参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt044" text="取出单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt045" text="价差比" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt046" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt047" text="税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt051" text="理由码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt052" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt053" text="允收数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt054" text="已入库量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt055" text="验退量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt056" text="主账套已请款数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt057" text="账套二已请款数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt058" text="账套三已请款数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt059" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmdt060" text="供应商批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmdt061" text="供应商送货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt062" text="多库储批收货入库" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmdt063" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmdt064" text="出货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt065" text="出货单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt066" text="主账套暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt067" text="账套二暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt068" text="账套三暂估数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt069" text="已开发票数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt081" text="QC单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt082" text="QC判定项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt083" text="判定结果" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt084" text="须自立AP否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmdt085" text="多角流程编号" attribute="C480" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt086" text="采购多角性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt087" text="采购单开立据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt088" text="存货备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmdt089" text="有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmdt900" text="保留字段str" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt999" text="保留字段end" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdtud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdtud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdtud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmdt200" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmdt201" text="收货包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt202" text="收货包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt203" text="采购组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt204" text="采购中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt205" text="要货组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt206" text="预约收货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt207" text="预约收货项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt208" text="采购渠道" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt209" text="渠道性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt210" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt211" text="结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt212" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt213" text="协议编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdtorga" text="账务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt070" text="参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt071" text="参考项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt214" text="采购方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt215" text="最终收货组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt048" text="价格参考项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt216" text="退货申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt217" text="退货申请项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmdt090" text="借货还价数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt091" text="借货还价参考数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt092" text="还价税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt093" text="还价含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt218" text="采购价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmdt219" text="制造日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmdt072" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt073" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmdt074" text="活动编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmdt227" text="补货规格说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pmdt049" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt050" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmdt075" text="预算细项" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="pmdt220" text="商品品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdt221" text="来源单据商品品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmdtua001" text="制造日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmdtent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdtsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdtdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdtseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmdldocno" c_zoom="q_pmdldocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt005" widget="ComboBox" items="2055" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_14" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_5" c_zoom="q_imaf001_5" chk_ref="v_imaf001_2" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdt011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_6" c_zoom="q_inaa001_6" chk_ref="v_inaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_6" c_zoom="q_inab002_6" chk_ref="v_inab002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt025" widget="ComboBox" items="2036" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt026" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt036" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt037" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmdt038" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt039" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt040" widget="ComboBox" items="2039" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt041" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt042" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt043" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt044" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt045" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt046" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_2" c_zoom="q_oodb002_2" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt047" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt051" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt052" widget="ComboBox" items="2035" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt053" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt054" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt055" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt056" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt057" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt058" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt059" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt060" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt061" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt062" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt063" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt064" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt065" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt066" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt067" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt068" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt069" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt081" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_qcbadocno" c_zoom="q_qcbadocno" chk_ref="v_qcbadocno" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt082" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt083" widget="ComboBox" items="5073" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_qcao002_1" c_zoom="q_qcao002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt084" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt085" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_icaa001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt086" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt087" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt088" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt089" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdt900" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt999" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdtud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdtud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdtud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmdt200" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt201" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt202" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt203" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt204" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt205" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt206" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt207" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt208" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt209" widget="ComboBox" items="6739" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt210" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt211" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt212" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmdt213" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmdtorga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt070" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt071" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt214" widget="ComboBox" items="6014" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt215" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt048" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt216" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt217" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmdt090" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt091" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt092" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt093" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt218" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmdt219" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmdt072" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjba001" c_zoom="q_pjba001" chk_ref="v_pjba001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt073" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbb002_1" c_zoom="q_pjbb002_1" chk_ref="v_pjbb002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdt074" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbm002" c_zoom="q_pjbm002" chk_ref="v_pjbm002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmdt227" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmdt049" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmdt075" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt220" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdt221" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmdtua001" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmdt_t" depend_field="pmdt006" correspon_key="pmdt006" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt008" correspon_key="pmdt008" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt009" correspon_key="&apos;221&apos;,pmdt009" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt016" correspon_key="pmdt016" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="pmdt_t" depend_field="pmdt017" correspon_key="pmdt016,pmdt017" ref_table="inab_t" ref_fk="inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt019" correspon_key="pmdt019" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt021" correspon_key="pmdt021" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt023" correspon_key="pmdt023" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt046" correspon_key="pmdt046" ref_table="oodbl_t" ref_fk="oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt051" correspon_key="&apos;269&apos;,pmdt051" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt072" correspon_key="pmdt072" ref_table="pjbal_t" ref_fk="pjbal001" ref_dlang="pjbal002" ref_rtn="pjbal003"/>
+    <field depend_table="pmdt_t" depend_field="pmdt073" correspon_key="pmdt072,pmdt073" ref_table="pjbbl_t" ref_fk="pjbbl001,pjbbl002" ref_dlang="pjbbl003" ref_rtn="pjbbl004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt074" correspon_key="pmdt072,pmdt074" ref_table="pjbml_t" ref_fk="pjbml001,pjbml002" ref_dlang="pjbml003" ref_rtn="pjbml004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt083" correspon_key="pmdt083" ref_table="qcaol_t" ref_fk="qcaol002" ref_dlang="qcaol003" ref_rtn="qcaol004"/>
+    <field depend_table="pmdt_t" depend_field="pmdt085" correspon_key="pmdt085" ref_table="icaal_t" ref_fk="icaal001" ref_dlang="icaal002" ref_rtn="icaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

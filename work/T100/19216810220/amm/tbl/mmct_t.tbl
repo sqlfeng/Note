@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmct_t" module="AMM" text="会员等级升降策略卡种范围设置申请档" type="D" version="1">
+  <column name="mmctent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmctunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmctsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmctdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmct001" text="升降等策略编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmct002" text="卡种编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmctacti" text="数据有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmctent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmctunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmctsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmctdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmct001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmct002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mman001" c_zoom="q_mman001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmctacti" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmct_t" depend_field="mmct002" correspon_key="mmctent,mmct002" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

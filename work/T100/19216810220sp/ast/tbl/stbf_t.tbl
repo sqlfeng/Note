@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stbf_t" module="AST" text="结算单发票明细数据" type="D" version="1">
+  <column name="stbfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stbfsite" text="所属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbfcomp" text="所属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbfdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stbfseq" text="单据项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stbf001" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stbf002" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stbf003" text="发票日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stbf004" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbf005" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="stbf006" text="税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbf007" text="税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbf008" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbf009" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbf010" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="stbf011" text="供应商编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbf012" text="已认证否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stbf013" text="发票内容" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="stbf014" text="费用归属日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stbf015" text="费用归属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbf016" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stbfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbfcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stbfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stbf001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stbf003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbf004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stbf006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbf007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbf008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbf009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbf011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf013" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="stbf014" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbf015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbf016" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

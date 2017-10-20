@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbn_t" module="APM" text="供应商评核公式定性评核项目档(制造)" type="B" version="1">
+  <column name="pmbnent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbnsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbn001" text="公式编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbn002" text="项目编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbn003" text="权重" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbnent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbnsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbn001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbn002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_01" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbn003" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbn_t" depend_field="pmbn002" correspon_key="&apos;2052&apos;,pmbn002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

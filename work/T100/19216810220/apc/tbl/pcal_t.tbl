@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcal_t" module="APC" text="接口款别数据表" type="B" version="1">
+  <column name="pcalent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcalunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcalsite" text="营运据点" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcal001" text="POS款别" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcal002" text="对应款别编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcal003" text="是否先输入金额" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal004" text="可手工录入号码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal005" text="录入号码最小长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pcal006" text="可退款" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal007" text="可找零" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal008" text="可整单取消" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal009" text="可溢收" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal010" text="是否执行接口进程" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal011" text="扣款金额自动取值" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal012" text="接口小数倍数" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal013" text="允许空单交易" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal014" text="transflag标记" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pcal015" text="接口进程返回的打印文档" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcal016" text="执行的接口进程" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcal017" text="执行接口传入的文档名" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcal018" text="执行接口传入文档数据类型ID" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcal019" text="执行接口后返回接口文档" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcal020" text="执行接口返回文档数据类型" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pcalstamp" text="时间戳记" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <column name="pcalstus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcalownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcalowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcalcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcalcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcalcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pcalmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pcalmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pcalent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcalunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalsite" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004_2" c_zoom="q_ooed004_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pcal001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal003" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal004" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pcal006" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal008" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal009" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal010" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal011" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal012" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal013" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal014" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcal015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcal016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcal017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcal018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcal019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcal020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcalstamp" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pcalstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pcalmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcalmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcal_t" depend_field="pcal002" correspon_key="pcalent,pcal002" ref_table="ooia_t" ref_fk="ooiaent,ooia001" ref_dlang=" " ref_rtn="ooia002"/>
+    <field depend_table="pcal_t" depend_field="pcalcrtdp" correspon_key="pcalcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcal_t" depend_field="pcalcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcal_t" depend_field="pcalcrtid" correspon_key="pcalcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcal_t" depend_field="pcalmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pcal_t" depend_field="pcalmodid" correspon_key="pcalmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcal_t" depend_field="pcalowndp" correspon_key="pcalowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcal_t" depend_field="pcalownid" correspon_key="pcalownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pcal_t" depend_field="pcalsite" correspon_key="pcalent,pcalsite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pcal_t" depend_field="pcal001" correspon_key="pcalent,pcalsite,pcal001" lang_table="pcall_t" lang_fk="pcallent,pcallsite,pcall001" lang_dlang="pcall002" lang_rtn="pcall003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="pcalstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

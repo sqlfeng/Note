@@ -1,0 +1,35 @@
+#應用 a40 樣板自動產生(Version:9)
+#+ BPM抽單
+PRIVATE FUNCTION ${general_prefix}_draw_out()
+   #add-point:draw段define name="draw.define_customerization"
+   {<point name="draw.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   #add-point:draw段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="draw.define"
+   {<point name="draw.define"/>}
+   #end add-point
+   
+   #add-point:Function前置處理  name="draw.pre_function"
+   {<point name="draw.pre_function"/>}
+   #end add-point
+   
+   #抽單失敗
+   IF NOT cl_bpm_draw_out() THEN 
+      RETURN FALSE
+   END IF    
+          
+   #重新指定此筆單據資料狀態圖片=>抽單
+   LET g_browser[g_current_idx].b_statepic = "stus/16/draw_out.png"
+ 
+   #重新取得單頭/單身資料,DISPLAY在畫面上
+   ${mdl_mark}CALL ${general_prefix}_ui_headershow()  
+   ${mdl_mark}CALL ${general_prefix}_ui_detailshow()
+ 
+   #add-point:Function後置處理  name="draw.after_function"
+   {<point name="draw.after_function"/>}
+   #end add-point
+ 
+   RETURN TRUE
+   
+END FUNCTION
+ 
+

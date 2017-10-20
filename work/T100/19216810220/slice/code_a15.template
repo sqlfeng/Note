@@ -1,0 +1,6 @@
+#應用 a15 樣板自動產生(Version:3)
+            #確認欄位值在特定區間內
+            IF NOT cl_ap_chk_range(${mdl_var},"${mdl_min}","${mdl_mintype}","${mdl_max}","${mdl_maxtype}","${mdl_error}",${mdl_ow}) THEN
+               NEXT FIELD ${mdl_field}
+            END IF 
+

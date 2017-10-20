@@ -1,0 +1,10 @@
+#應用 a49 樣板自動產生(Version:4)
+            #過濾瀏覽頁資料
+            ON ACTION filter
+               LET g_action_choice = "fetch"
+               #add-point:filter action name="ui_dialog.action.filter"
+               {<point name="ui_dialog.action.filter"/>}
+               #end add-point
+               CALL ${general_prefix}_filter()
+               EXIT DIALOG
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="icag_t" module="AIC" text="多角贸易计价方式设置档" type="B" version="1">
+  <column name="icagent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="icagsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icag001" text="流程编号" attribute="C480" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="icag002" text="生效日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="icag003" text="站别" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="icag004" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icag005" text="计价方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icag006" text="计价基准" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icag007" text="采购计价比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="icag008" text="采购币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icagownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icagowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icagcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icagcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icagcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="icagmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icagmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="icagent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="icagsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icag001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_icaa001" c_zoom="q_icaa001" chk_ref="v_icaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icag002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="icag003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_icab002" c_zoom="q_icab002" chk_ref="v_icab002" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="icag004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_12" c_zoom="q_ooef001_12" chk_ref="v_ooef001_13" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icag005" widget="ComboBox" items="2505" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icag006" widget="ComboBox" items="2504" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icag007" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="icag008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_3" c_zoom="q_ooaj002_3" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="icagmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icagmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="icag_t" depend_field="icag001" correspon_key="icag001" ref_table="icaal_t" ref_fk="icaal001" ref_dlang="icaal002" ref_rtn="icaal003"/>
+    <field depend_table="icag_t" depend_field="icag004" correspon_key="icag004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icag_t" depend_field="icag008" correspon_key="icag008" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="icag_t" depend_field="icagcrtdp" correspon_key="icagcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icag_t" depend_field="icagcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="icag_t" depend_field="icagcrtid" correspon_key="icagcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="icag_t" depend_field="icagmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="icag_t" depend_field="icagmodid" correspon_key="icagmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="icag_t" depend_field="icagowndp" correspon_key="icagowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icag_t" depend_field="icagownid" correspon_key="icagownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

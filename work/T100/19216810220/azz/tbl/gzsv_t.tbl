@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzsv_t" module="AZZ" text="参数作业设置表" type="X" version="1">
+  <column name="gzsv001" text="设置作业名称" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzsv002" text="分页编号" attribute="C101" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="gzsv003" text="分项编号" attribute="C101" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="gzsv004" text="设置序号" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="gzsv005" text="表格编号" attribute="C803" type="varchar2(15)" pk="N" req="N"/>
+  <column name="gzsv006" text="参数编号" attribute="C012" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzsvownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzsvowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzsvcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzsvcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzsvcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzsvmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzsvmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzsv007" text="设置额外检查功能" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gzsv008" text="设置更改后追改功能" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gzsv009" text="客制调整" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzsv001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzsv002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzsv003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzsv004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gzsv005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dzea002_1" c_zoom="q_gzsv001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzsv006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzsz002" c_zoom="q_gzsv002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzsvmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzsvmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzsv007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzde003" c_zoom="q_gzsv003" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzsv008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzsv009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzsv_t" depend_field="gzsv005" correspon_key="gzsv005" ref_table="dzeal_t" ref_fk="dzeal001" ref_dlang="dzeal002" ref_rtn="dzeal003"/>
+    <field depend_table="gzsv_t" depend_field="gzsvcrtdp" correspon_key="gzsvcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzsv_t" depend_field="gzsvcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzsv_t" depend_field="gzsvcrtid" correspon_key="gzsvcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzsv_t" depend_field="gzsvmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzsv_t" depend_field="gzsvmodid" correspon_key="gzsvmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzsv_t" depend_field="gzsvowndp" correspon_key="gzsvowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzsv_t" depend_field="gzsvownid" correspon_key="gzsvownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

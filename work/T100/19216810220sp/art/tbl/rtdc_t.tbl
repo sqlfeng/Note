@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtdc_t" module="ART" text="生命周期限定表" type="B" version="1">
+  <column name="rtdcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtdc001" text="进程编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtdc002" text="生命周期类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtdc003" text="生命周期编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtdcstus" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdcownid" text="資料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdcowndp" text="資料所屬部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdccrtid" text="資料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdccrtdp" text="資料建立部門" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdccrtdt" text="資料創建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtdcmodid" text="資料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtdcmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtdcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdc001" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtdc002" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdc003" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdcstus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdcownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdcowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtdcmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdcmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtdc_t" depend_field="rtdccrtdp" correspon_key="rtdccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdc_t" depend_field="rtdccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtdc_t" depend_field="rtdccrtid" correspon_key="rtdccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtdc_t" depend_field="rtdcmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtdc_t" depend_field="rtdcmodid" correspon_key="rtdcmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtdc_t" depend_field="rtdcowndp" correspon_key="rtdcowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtdc_t" depend_field="rtdcownid" correspon_key="rtdcownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtdcstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

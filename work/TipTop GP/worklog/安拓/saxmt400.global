@@ -1,0 +1,668 @@
+# Prog. Version..: '3.50.01-12.09.11(00010)'     #
+# Pattern name...: saxmt400.global
+# Descriptions...: saxmt400系列.4gl需用到的全域變數
+# Date & Author..: 06/12/11 By kim (FUN-6C0006)
+# Modify.........: No:FUN-710037 07/01/17 By kim GP3.6 add saxmt400icd
+# Modify.........: No:FUN-6C0050 07/01/30 By rainy 新增g_pmn2
+# Modify.........: No:FUN-720009 07/02/09 By kim 行業別架構變更
+# Modify.........: No:FUN-730018 07/03/28 By kim 行業別架構
+# Modify.........: No:FUN-740016 07/04/16 By Nicola 借出管理修改
+# Modify.........: No:TQC-750110 07/05/21 By rainy 單身由報價單轉入手動輸入料號會擋axm-813
+# Modify.........: No:CHI-7B0023/CHI-7B0039 07/11/14 By kim 移除GP5.0行業別功能的所有程式段
+# Modify.........: No:FUN-810016 08/01/31 hongmei 
+# Modify.........: No:FUN-810045 08/02/13 rainy 項目管理，單身新增專案代號oeb41/WBS編號oeb42/活動代號oeb43
+# Modify.........: No.FUN-7C0017 08/02/26 By bnlent 新增ICD行業字段 
+# Modify.........: No.FUN-820033 08/03/14 By wujie  新增oeb935,oeb936,oeb93欄位
+# Modify.........: No:FUN-840011 08/04/02 By saki 增加單身自定義欄位
+# Modify.........: No:MOD-890150 08/09/18 By Smapmin 增加l_table變數
+# Modify.........: No:CHI-930018 09/03/11 By jan g_program 改定義成STRING
+# Modify.........: No.FUN-960007 09/06/03 By chenmoyan 該global檔內不可定義rowid變量
+# Modify.........: No.FUN-870007 09/07/24 By Zhangyajun 流通零售功能修改
+# Modify.........: No.FUN-A80024 10/08/09 By wujie      增加oeb32  
+# Modify.........: No.FUN-A80102 10/08/09 By kim GP5.25號機管理
+# Modify.........: No.FUN-A80054 10/08/25 By jan GP5.25工單合拼
+# Modify.........: No.FUN-A70146 10/09/09 By lilingyu過單 
+# Modify.........: No.FUN-A90040 10/10/08 By shenyang新增oeb49,oeb50欄位
+# Modify.........: No.FUN-AB0061 10/11/17 By vealxu  add g_oeb37
+# Modify.........: No:TQC-AB0204 10/11/30 By shiwuying Add g_oeb17_t
+# Modify.........: No:FUN-B20060 11/04/07 By zhangll add oeb72
+# Modify.........: No:TQC-B40205 11/04/25 By lilingyu 重新過單
+# Modify.........: No:FUN-C90011 12/09/05 By baogc 單身添加欄位"交貨時間/oeb51"
+# Modify.........: No:MOD-D50102 13/04/13 By zhangll 增加变量g_oeb_o
+# Modify.........: ------------- 15/06/11 By caohp 增加tc_oaf03,更改oebud02位置
+
+DATABASE ds
+
+GLOBALS #FUN-6C0006 全部模組變數改為全域變數 #FUN-730018
+DEFINE
+    g_slip  LIKE oay_file.oayslip, #No.FUN-680137 CHAR(5)     #No.FUN-550052   #FUN-A70146
+    g_poz   RECORD LIKE poz_file.*,        #多角流程代碼(單頭) No.7946
+    g_oeb2  RECORD LIKE oeb_file.*,
+    g_pml2  RECORD LIKE pml_file.*,
+    g_pmn2  RECORD LIKE pmn_file.*,              #FUN-6C0050
+    g_oea   RECORD LIKE oea_file.*,
+    g_oea_t RECORD LIKE oea_file.*,
+    g_oea_o RECORD LIKE oea_file.*,                          #TQC-B40205
+    g_occm  RECORD LIKE occm_file.*,
+#   g_oea_rowid     LIKE type_file.chr18,         #No.FUN-680137 INT #No.FUN-960007
+    g_oap   RECORD LIKE oap_file.*,
+    b_oeb   RECORD LIKE oeb_file.*,
+    b_tc_oeb RECORD LIKE tc_oeb_file.*,
+    b_oebi  RECORD LIKE oebi_file.*,              #No.FUN-810016
+    g_oeb           DYNAMIC ARRAY OF RECORD    #程式變數(Program Variables)
+                    oeb03     LIKE oeb_file.oeb03,
+                    oebislk01 LIKE oebi_file.oebislk01, #FUN-810016
+                    oeb71     LIKE oeb_file.oeb71,    #TQC-750110 
+#No.FUN-820033 --begin
+                    oeb935    LIKE oeb_file.oeb935,
+                    oeb936    LIKE oeb_file.oeb936,
+                    oeb937    LIKE oeb_file.oeb937,
+#No.FUN-820033 --end
+#No.FUN-A90040 --begin
+                    oeb49    LIKE oeb_file.oeb49,
+                    oeb50    LIKE oeb_file.oeb50,
+#No.FUN-A90040 --end
+                    oeb11     LIKE oeb_file.oeb11,
+                    ta_obk01  LIKE obk_file.ta_obk01,
+                    oebud10 LIKE oeb_file.oebud10,
+                    oeb04     LIKE oeb_file.oeb04,
+                    
+                    #150610:str---add by caohp 20150610
+                    oebud02 LIKE oeb_file.oebud02,
+                    oebud03 LIKE oeb_file.oebud03,
+                    oebud05 LIKE oeb_file.oebud05,                
+                    obe02   LIKE obe_file.obe02,
+                    #150610:end---add by caohp 20150610
+                    oebud06 LIKE oeb_file.oebud06,
+                    oebud06_s like tc_oaf_file.tc_oaf03,
+                    #FUN-550103 --Begin
+                    att00     LIKE imx_file.imx00, #No.FUN-640013
+                    att01     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att01_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att03     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att03_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att05     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att05_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att08     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att08_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att10     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att10_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    #FUN-550103 --End
+                    oeb06     LIKE oeb_file.oeb06,
+                    ima021    LIKE ima_file.ima021,
+                    #FUN-610055 --begin
+                    ima1002   LIKE ima_file.ima1002,
+                    ima135    LIKE ima_file.ima135,                    
+                    oeb918    LIKE oeb_file.oeb918,   #FUN-A80054
+                    #oeb11     LIKE oeb_file.oeb11,
+                    #FUN-610055 --end
+                    #oeb71     LIKE oeb_file.oeb71,   #TQC-750110 移到前面
+                    oeb1001   LIKE oeb_file.oeb1001,  #FUN-610055
+                    oeb1012   LIKE oeb_file.oeb1012,  #FUN-610055
+                    oeb906    LIKE oeb_file.oeb906,    #FUN-5C0076
+                    oeb092    LIKE oeb_file.oeb092,
+                    oeb15     LIKE oeb_file.oeb15,     #FUN-610055
+                    oeb51     LIKE oeb_file.oeb51,     #FUN-C90011 Add
+                    oeb72     LIKE oeb_file.oeb72,     #FUN-B20060
+                    oeb30     LIKE oeb_file.oeb30,   #No:FUN-740016
+                    oeb31     LIKE oeb_file.oeb31,   #No:FUN-740016
+                    oeb32     LIKE oeb_file.oeb32,   #No.FUN-A80024
+                    oeb05     LIKE oeb_file.oeb05,
+                    oeb12     LIKE oeb_file.oeb12,
+                    #No.FUN-540049  --begin                    
+                    oeb913    LIKE oeb_file.oeb913,
+                    oeb914    LIKE oeb_file.oeb914,
+                    oeb915    LIKE oeb_file.oeb915,
+                    oeb910    LIKE oeb_file.oeb910,
+                    oeb911    LIKE oeb_file.oeb911,
+                    oeb912    LIKE oeb_file.oeb912,
+                    oeb916    LIKE oeb_file.oeb916,
+                    oeb917    LIKE oeb_file.oeb917,
+                    oeb29     LIKE oeb_file.oeb29,   #No:FUN-740016
+                    #No.FUN-540049  --end
+                    oeb24     LIKE oeb_file.oeb24,
+                    oeb25     LIKE oeb_file.oeb25,   #No:FUN-740016
+                    oeb27     LIKE oeb_file.oeb27,    #NO.FUN-670007 add 
+                    oeb28     LIKE oeb_file.oeb28,    #NO.FUN-670007 add
+                    #FUN-610055 --begin
+                    oeb1004   LIKE oeb_file.oeb1004,
+                    oeb1002   LIKE oeb_file.oeb1002,
+                    #FUN-610055 --end
+                    oeb37     LIKE oeb_file.oeb37,    #FUN-AB0061 
+                    oeb13     LIKE oeb_file.oeb13,
+                    oebud07 LIKE oeb_file.oebud07,
+                    oebud08 LIKE oeb_file.oebud08,
+                    oeb1006   LIKE oeb_file.oeb1006,  #FUN-610055                    
+                    oeb14     LIKE oeb_file.oeb14,
+                    oeb14t    LIKE oeb_file.oeb14t,
+                    oeb919    LIKE oeb_file.oeb919,   #FUN-A80102
+                  #FUN-810045 begin
+                    oeb41     LIKE oeb_file.oeb41,
+                    oeb42     LIKE oeb_file.oeb42,
+                    oeb43     LIKE oeb_file.oeb43,
+                  #FUN-810045 end
+                    #FUN-610055 --begin
+                    oeb09     LIKE oeb_file.oeb09,
+                    oeb091    LIKE oeb_file.oeb091,
+                    #FUN-610055 --end
+                    oeb930    LIKE oeb_file.oeb930, #FUN-670063
+                    gem02c    LIKE gem_file.gem02 , #FUN-670063
+                    oeb908    LIKE oeb_file.oeb908, #add 0212118 NO.A041
+                    oeb22     LIKE oeb_file.oeb22,
+                    oeb19     LIKE oeb_file.oeb19,
+                    oeb70     LIKE oeb_file.oeb70,
+                    ima15     LIKE ima_file.ima15,
+                    oeb16     LIKE oeb_file.oeb16,   #NO.FUN-6A0151 add oeb16
+                    #No.FUN-7C0017 ...begin
+                    oebiicd01 LIKE oebi_file.oebiicd01,
+                    oebiicd03 LIKE oebi_file.oebiicd03,
+                    spare_qty LIKE oeb_file.oeb912,
+                    oebiicd05 LIKE oebi_file.oebiicd05,
+                    oebiicd07 LIKE oebi_file.oebiicd07,
+                    #No.FUN-7C0017 ...end
+                    #FUN-710074
+                    #No:FUN-840011 --start--
+                    oebud01 LIKE oeb_file.oebud01,
+                    #oebud02 LIKE oeb_file.oebud02,         #mark by caohp 20150610
+                    #oebud03 LIKE oeb_file.oebud03,         #mark by donghy 150623
+                    oebud04 LIKE oeb_file.oebud04,
+                    #oebud05 LIKE oeb_file.oebud05,
+                    #oebud07 LIKE oeb_file.oebud07,
+                    #oebud08 LIKE oeb_file.oebud08,
+                    oebud09 LIKE oeb_file.oebud09,
+                    #oebud10 LIKE oeb_file.oebud10,
+                    oebud11 LIKE oeb_file.oebud11,
+                    oebud12 LIKE oeb_file.oebud12,
+                    oebud13 LIKE oeb_file.oebud13,
+                    oebud14 LIKE oeb_file.oebud14,
+                    oebud15 LIKE oeb_file.oebud15,
+                    #No:FUN-840011 ---end---
+                    #No.FUN-870007-start-
+                    oeb44   LIKE oeb_file.oeb44,
+                    oeb45   LIKE oeb_file.oeb45,  
+                    oeb46   LIKE oeb_file.oeb46,  
+                    oeb47   LIKE oeb_file.oeb47,  
+                    oeb48   LIKE oeb_file.oeb48,
+                    tc_oeb04 LIKE tc_oeb_file.tc_oeb04,
+                    tc_oeb05 LIKE tc_oeb_file.tc_oeb05,
+                    tc_oeb06 LIKE tc_oeb_file.tc_oeb06,
+                    tc_oeb07 LIKE tc_oeb_file.tc_oeb07,
+                    tc_oeb08 LIKE tc_oeb_file.tc_oeb08,
+                    tc_oeb09 LIKE tc_oeb_file.tc_oeb09,
+                    tc_oeb10 LIKE tc_oeb_file.tc_oeb10                      
+                    #No.FUN-870007--end--
+                    END RECORD,
+    g_oeb_t         RECORD
+                    oeb03     LIKE oeb_file.oeb03,
+                    oebislk01 LIKE oebi_file.oebislk01,  #No.FUN-810016
+                    oeb71     LIKE oeb_file.oeb71, 
+#No.FUN-820033 --begin
+                    oeb935    LIKE oeb_file.oeb935,
+                    oeb936    LIKE oeb_file.oeb936,
+                    oeb937    LIKE oeb_file.oeb937,
+#No.FUN-820033 --end
+#No.FUN-A90040 --begin
+                    oeb49    LIKE oeb_file.oeb49,
+                    oeb50    LIKE oeb_file.oeb50,
+#No.FUN-A90040 --end
+                    oeb11     LIKE oeb_file.oeb11,
+                    ta_obk01  LIKE obk_file.ta_obk01,
+                    oebud10 LIKE oeb_file.oebud10,
+                    oeb04     LIKE oeb_file.oeb04,                    
+                    #150610:str---add by caohp 20150610
+                    oebud02 LIKE oeb_file.oebud02,
+                    oebud03 LIKE oeb_file.oebud03,
+                    oebud05 LIKE oeb_file.oebud05,
+                    obe02   LIKE obe_file.obe02,
+                    #150610:end---add by caohp 20150610
+                    oebud06 LIKE oeb_file.oebud06,
+                    oebud06_s like tc_oaf_file.tc_oaf03,
+                    #FUN-550103 --Begin
+                    att00     LIKE imx_file.imx00,  #No.FUN-640013
+                    att01     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att01_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att03     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att03_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att05     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att05_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att08     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att08_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att10     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att10_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    #FUN-550103 --End
+                    oeb06     LIKE oeb_file.oeb06,
+                    ima021    LIKE ima_file.ima021,
+                    #FUN-610055 --begin
+                    ima1002   LIKE ima_file.ima1002,
+                    ima135    LIKE ima_file.ima135,                   
+                    oeb918    LIKE oeb_file.oeb918,   #FUN-A80054
+                    #oeb11     LIKE oeb_file.oeb11,
+                    #FUN-610055 --end
+                    #oeb71     LIKE oeb_file.oeb71,   #TQC-750110 移到前面
+                    oeb1001   LIKE oeb_file.oeb1001,  #FUN-610055
+                    oeb1012   LIKE oeb_file.oeb1012,  #FUN-610055
+                    oeb906    LIKE oeb_file.oeb906,    #FUN-5C0076
+                    oeb092    LIKE oeb_file.oeb092,
+                    oeb15     LIKE oeb_file.oeb15,     #FUN-610055
+                    oeb51     LIKE oeb_file.oeb51,     #FUN-C90011 Add
+                    oeb72     LIKE oeb_file.oeb72,     #FUN-B20060
+                    oeb30     LIKE oeb_file.oeb30,   #No:FUN-740016
+                    oeb31     LIKE oeb_file.oeb31,   #No:FUN-740016
+                    oeb32     LIKE oeb_file.oeb32,   #No.FUN-A80024
+                    oeb05     LIKE oeb_file.oeb05,
+                    oeb12     LIKE oeb_file.oeb12,
+                    #No.FUN-540049  --begin
+                    oeb913    LIKE oeb_file.oeb913,
+                    oeb914    LIKE oeb_file.oeb914,
+                    oeb915    LIKE oeb_file.oeb915,
+                    oeb910    LIKE oeb_file.oeb910,
+                    oeb911    LIKE oeb_file.oeb911,
+                    oeb912    LIKE oeb_file.oeb912,
+                    oeb916    LIKE oeb_file.oeb916,
+                    oeb917    LIKE oeb_file.oeb917,
+                    oeb29     LIKE oeb_file.oeb29,   #No:FUN-740016
+                    #No.FUN-540049  --end
+                    oeb24     LIKE oeb_file.oeb24,
+                    oeb25     LIKE oeb_file.oeb25,   #No:FUN-740016
+                    oeb27     LIKE oeb_file.oeb27,    #NO.FUN-670007 add 
+                    oeb28     LIKE oeb_file.oeb28,    #NO.FUN-670007 add
+                    #FUN-610055 --begin
+                    oeb1004   LIKE oeb_file.oeb1004,
+                    oeb1002   LIKE oeb_file.oeb1002,
+                    #FUN-610055 --end
+                    oeb37     LIKE oeb_file.oeb37,     #FUN-AB0061 
+                    oeb13     LIKE oeb_file.oeb13,
+                    oebud07   LIKE oeb_file.oebud07,
+                    oebud08   LIKE oeb_file.oebud08,
+                    oeb1006   LIKE oeb_file.oeb1006,  #FUN-610055
+                    oeb14     LIKE oeb_file.oeb14,
+                    oeb14t    LIKE oeb_file.oeb14t,
+                    oeb919    LIKE oeb_file.oeb919,   #FUN-A80102
+                  #FUN-810045 begin
+                    oeb41     LIKE oeb_file.oeb41,
+                    oeb42     LIKE oeb_file.oeb42,
+                    oeb43     LIKE oeb_file.oeb43,
+                  #FUN-810045 end
+                    #FUN-610055 --begin
+                    oeb09     LIKE oeb_file.oeb09,
+                    oeb091    LIKE oeb_file.oeb091,
+                    #FUN-610055 --end
+                    oeb930    LIKE oeb_file.oeb930, #FUN-670063
+                    gem02c    LIKE gem_file.gem02 , #FUN-670063
+                    oeb908    LIKE oeb_file.oeb908, #add 0212118 NO.A041
+                    oeb22     LIKE oeb_file.oeb22,
+                    oeb19     LIKE oeb_file.oeb19,
+                    oeb70     LIKE oeb_file.oeb70,
+                    ima15     LIKE ima_file.ima15,
+                    oeb16     LIKE oeb_file.oeb16,   #No.FUN-6A0151 add oeb16
+                    #No.FUN-7C0017 ...begin
+                    oebiicd01 LIKE oebi_file.oebiicd01,
+                    oebiicd03 LIKE oebi_file.oebiicd03,
+                    spare_qty LIKE oeb_file.oeb912,
+                    oebiicd05 LIKE oebi_file.oebiicd05,
+                    oebiicd07 LIKE oebi_file.oebiicd07,
+                    #No.FUN-7C0017 ...end
+                    #No:FUN-840011 --start--
+                    oebud01 LIKE oeb_file.oebud01,
+                    #oebud02 LIKE oeb_file.oebud02,     #mark by caohp 20150610
+                    #oebud03 LIKE oeb_file.oebud03,     #mark by donghy 150623
+                    oebud04 LIKE oeb_file.oebud04,
+                    #oebud05 LIKE oeb_file.oebud05,
+                    #oebud07 LIKE oeb_file.oebud07,
+                    #oebud08 LIKE oeb_file.oebud08,
+                    oebud09 LIKE oeb_file.oebud09,
+                    #oebud10 LIKE oeb_file.oebud10,
+                    oebud11 LIKE oeb_file.oebud11,
+                    oebud12 LIKE oeb_file.oebud12,
+                    oebud13 LIKE oeb_file.oebud13,
+                    oebud14 LIKE oeb_file.oebud14,
+                    oebud15 LIKE oeb_file.oebud15,
+                    #No:FUN-840011 ---end---
+                    #No.FUN-870007-start-
+                    oeb44   LIKE oeb_file.oeb44,
+                    oeb45   LIKE oeb_file.oeb45,
+                    oeb46   LIKE oeb_file.oeb46,
+                    oeb47   LIKE oeb_file.oeb47,
+                    oeb48   LIKE oeb_file.oeb48,
+                    tc_oeb04 LIKE tc_oeb_file.tc_oeb04,
+                    tc_oeb05 LIKE tc_oeb_file.tc_oeb05,
+                    tc_oeb06 LIKE tc_oeb_file.tc_oeb06,
+                    tc_oeb07 LIKE tc_oeb_file.tc_oeb07,
+                    tc_oeb08 LIKE tc_oeb_file.tc_oeb08,
+                    tc_oeb09 LIKE tc_oeb_file.tc_oeb09,
+                    tc_oeb10 LIKE tc_oeb_file.tc_oeb10
+                    #No.FUN-870007--end--
+                    END RECORD,
+    #MOD-D50102 add
+    g_oeb_o         RECORD
+                    oeb03     LIKE oeb_file.oeb03,
+                    oebislk01 LIKE oebi_file.oebislk01,  #No.FUN-810016
+                    oeb71     LIKE oeb_file.oeb71, 
+#No.FUN-820033 --begin
+                    oeb935    LIKE oeb_file.oeb935,
+                    oeb936    LIKE oeb_file.oeb936,
+                    oeb937    LIKE oeb_file.oeb937,
+#No.FUN-820033 --end
+#No.FUN-A90040 --begin
+                    oeb49    LIKE oeb_file.oeb49,
+                    oeb50    LIKE oeb_file.oeb50,
+#No.FUN-A90040 --end
+                    oeb11     LIKE oeb_file.oeb11,
+                    ta_obk01  LIKE obk_file.ta_obk01,
+                    oebud10 LIKE oeb_file.oebud10,
+                    oeb04     LIKE oeb_file.oeb04,                    
+                    #150610:str---add by caohp 20150610
+                    oebud02 LIKE oeb_file.oebud02,
+                    oebud03 LIKE oeb_file.oebud03,
+                    oebud05 LIKE oeb_file.oebud05,
+                    obe02   LIKE obe_file.obe02,
+                    #150610:end---add by caohp 20150610
+                    oebud06 LIKE oeb_file.oebud06,
+                    oebud06_s like tc_oaf_file.tc_oaf03,
+                    #FUN-550103 --Begin
+                    att00     LIKE imx_file.imx00,  #No.FUN-640013
+                    att01     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att01_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att02_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)                    
+                    att03     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att03_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att04_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att05     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)                    
+                    att05_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att06_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att07_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)                    
+                    att08     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att08_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att09_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    att10     LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)                    
+                    att10_c   LIKE imx_file.imx03, #No.FUN-680137 CHAR(10)
+                    #FUN-550103 --End
+                    oeb06     LIKE oeb_file.oeb06,
+                    ima021    LIKE ima_file.ima021,
+                    #FUN-610055 --begin
+                    ima1002   LIKE ima_file.ima1002,
+                    ima135    LIKE ima_file.ima135,                    
+                    oeb918    LIKE oeb_file.oeb918,   #FUN-A80054
+                    #oeb11     LIKE oeb_file.oeb11,
+                    #FUN-610055 --end
+                    #oeb71     LIKE oeb_file.oeb71,   #TQC-750110 移到前面
+                    oeb1001   LIKE oeb_file.oeb1001,  #FUN-610055
+                    oeb1012   LIKE oeb_file.oeb1012,  #FUN-610055
+                    oeb906    LIKE oeb_file.oeb906,    #FUN-5C0076
+                    oeb092    LIKE oeb_file.oeb092,
+                    oeb15     LIKE oeb_file.oeb15,     #FUN-610055
+                    oeb51     LIKE oeb_file.oeb51,     #FUN-C90011 Add
+                    oeb72     LIKE oeb_file.oeb72,     #FUN-B20060
+                    oeb30     LIKE oeb_file.oeb30,   #No:FUN-740016
+                    oeb31     LIKE oeb_file.oeb31,   #No:FUN-740016
+                    oeb32     LIKE oeb_file.oeb32,   #No.FUN-A80024
+                    oeb05     LIKE oeb_file.oeb05,
+                    oeb12     LIKE oeb_file.oeb12,
+                    #No.FUN-540049  --begin
+                    oeb913    LIKE oeb_file.oeb913,
+                    oeb914    LIKE oeb_file.oeb914,
+                    oeb915    LIKE oeb_file.oeb915,
+                    oeb910    LIKE oeb_file.oeb910,
+                    oeb911    LIKE oeb_file.oeb911,
+                    oeb912    LIKE oeb_file.oeb912,
+                    oeb916    LIKE oeb_file.oeb916,
+                    oeb917    LIKE oeb_file.oeb917,
+                    oeb29     LIKE oeb_file.oeb29,   #No:FUN-740016
+                    #No.FUN-540049  --end
+                    oeb24     LIKE oeb_file.oeb24,
+                    oeb25     LIKE oeb_file.oeb25,   #No:FUN-740016
+                    oeb27     LIKE oeb_file.oeb27,    #NO.FUN-670007 add 
+                    oeb28     LIKE oeb_file.oeb28,    #NO.FUN-670007 add
+                    #FUN-610055 --begin
+                    oeb1004   LIKE oeb_file.oeb1004,
+                    oeb1002   LIKE oeb_file.oeb1002,
+                    #FUN-610055 --end
+                    oeb37     LIKE oeb_file.oeb37,     #FUN-AB0061 
+                    oeb13     LIKE oeb_file.oeb13,
+                    oebud07   LIKE oeb_file.oebud07,
+                    oebud08   LIKE oeb_file.oebud08,
+                    oeb1006   LIKE oeb_file.oeb1006,  #FUN-610055
+                    oeb14     LIKE oeb_file.oeb14,
+                    oeb14t    LIKE oeb_file.oeb14t,
+                    oeb919    LIKE oeb_file.oeb919,   #FUN-A80102
+                  #FUN-810045 begin
+                    oeb41     LIKE oeb_file.oeb41,
+                    oeb42     LIKE oeb_file.oeb42,
+                    oeb43     LIKE oeb_file.oeb43,
+                  #FUN-810045 end
+                    #FUN-610055 --begin
+                    oeb09     LIKE oeb_file.oeb09,
+                    oeb091    LIKE oeb_file.oeb091,
+                    #FUN-610055 --end
+                    oeb930    LIKE oeb_file.oeb930, #FUN-670063
+                    gem02c    LIKE gem_file.gem02 , #FUN-670063
+                    oeb908    LIKE oeb_file.oeb908, #add 0212118 NO.A041
+                    oeb22     LIKE oeb_file.oeb22,
+                    oeb19     LIKE oeb_file.oeb19,
+                    oeb70     LIKE oeb_file.oeb70,
+                    ima15     LIKE ima_file.ima15,
+                    oeb16     LIKE oeb_file.oeb16,   #No.FUN-6A0151 add oeb16
+                    #No.FUN-7C0017 ...begin
+                    oebiicd01 LIKE oebi_file.oebiicd01,
+                    oebiicd03 LIKE oebi_file.oebiicd03,
+                    spare_qty LIKE oeb_file.oeb912,
+                    oebiicd05 LIKE oebi_file.oebiicd05,
+                    oebiicd07 LIKE oebi_file.oebiicd07,
+                    #No.FUN-7C0017 ...end
+                    #No:FUN-840011 --start--
+                    oebud01 LIKE oeb_file.oebud01,
+                    #oebud02 LIKE oeb_file.oebud02,         #mark by caohp 20150610
+                    #oebud03 LIKE oeb_file.oebud03,
+                    oebud04 LIKE oeb_file.oebud04,
+                    #oebud05 LIKE oeb_file.oebud05,
+                    #oebud07 LIKE oeb_file.oebud07,
+                    #oebud08 LIKE oeb_file.oebud08,
+                    oebud09 LIKE oeb_file.oebud09,
+                    #oebud10 LIKE oeb_file.oebud10,
+                    oebud11 LIKE oeb_file.oebud11,
+                    oebud12 LIKE oeb_file.oebud12,
+                    oebud13 LIKE oeb_file.oebud13,
+                    oebud14 LIKE oeb_file.oebud14,
+                    oebud15 LIKE oeb_file.oebud15,
+                    #No:FUN-840011 ---end---
+                    #No.FUN-870007-start-
+                    oeb44   LIKE oeb_file.oeb44,
+                    oeb45   LIKE oeb_file.oeb45,
+                    oeb46   LIKE oeb_file.oeb46,
+                    oeb47   LIKE oeb_file.oeb47,
+                    oeb48   LIKE oeb_file.oeb48,
+                    tc_oeb04 LIKE tc_oeb_file.tc_oeb04,
+                    tc_oeb05 LIKE tc_oeb_file.tc_oeb05,
+                    tc_oeb06 LIKE tc_oeb_file.tc_oeb06,
+                    tc_oeb07 LIKE tc_oeb_file.tc_oeb07,
+                    tc_oeb08 LIKE tc_oeb_file.tc_oeb08,
+                    tc_oeb09 LIKE tc_oeb_file.tc_oeb09,
+                    tc_oeb10 LIKE tc_oeb_file.tc_oeb10
+                    #No.FUN-870007--end--
+                    END RECORD,
+    #MOD-D50102 add--end
+    #FUN-610055 --begin
+    g_oeb1          DYNAMIC ARRAY OF RECORD    #程式變數(Program Variables)
+                    oeb03_1   LIKE oeb_file.oeb03,
+                    oeb1007   LIKE oeb_file.oeb1007,
+                    tqw16     LIKE tqw_file.tqw16,
+                    tqw07     LIKE tqw_file.tqw07,
+                    tqw08     LIKE tqw_file.tqw08,
+                    oeb1008   LIKE oeb_file.oeb1008,
+                    oeb1009   LIKE oeb_file.oeb1009,
+                    oeb1010   LIKE oeb_file.oeb1010,
+                    oeb1011   LIKE oeb_file.oeb1011,
+                    oeb1001_1 LIKE oeb_file.oeb1001, 
+                    oeb14_1   LIKE oeb_file.oeb14,
+                    oeb14t_1  LIKE oeb_file.oeb14t 
+                    END RECORD,
+    g_oeb1_t        RECORD
+                    oeb03_1   LIKE oeb_file.oeb03,
+                    oeb1007   LIKE oeb_file.oeb1007,
+                    tqw16     LIKE tqw_file.tqw16,
+                    tqw07     LIKE tqw_file.tqw07,
+                    tqw08     LIKE tqw_file.tqw08,
+                    oeb1008   LIKE oeb_file.oeb1008,
+                    oeb1009   LIKE oeb_file.oeb1009,
+                    oeb1010   LIKE oeb_file.oeb1010,
+                    oeb1011   LIKE oeb_file.oeb1011,
+                    oeb1001_1 LIKE oeb_file.oeb1001, 
+                    oeb14_1   LIKE oeb_file.oeb14,
+                    oeb14t_1  LIKE oeb_file.oeb14t 
+                    END RECORD,
+    #FUN-610055 --end
+    #FUN-540049  --begin
+    g_change        LIKE type_file.chr1,   #No.FUN-680137 CHAR(01)
+    g_change1       LIKE type_file.chr1,   #No.FUN-680137 CHAR(01)
+    g_img09         LIKE img_file.img09,
+    g_ima25         LIKE ima_file.ima25,
+    g_ima31         LIKE ima_file.ima31,
+    g_ima906        LIKE ima_file.ima906,
+    g_ima907        LIKE ima_file.ima907,
+    g_ima908        LIKE ima_file.ima908,
+    g_sw            LIKE type_file.num5,   #No.FUN-680137 SMALLINT
+    g_factor        LIKE img_file.img21,
+    g_tot1          LIKE img_file.img10,
+    #FUN-540049  --end
+    g_oeb17         LIKE oeb_file.oeb17,
+    g_oeb37         LIKE oeb_file.oeb37,    #FUN-AB0061  
+    g_oeb04_o       LIKE oeb_file.oeb04,
+    g_oea01_t       LIKE oea_file.oea01,
+    g_cmd           LIKE type_file.chr1000, #No.FUN-680137 CHAR(200)
+#    g_wc,g_wc2,g_sql    LIKE type_file.chr1000, #No.9556  #NO.TQC-630166 mark  #No.FUN-680137 CHAR(1000)
+    g_wc,g_wc2,g_sql     STRING,
+    l_table         STRING,   #MOD-890150
+    #g_wc3,g_wc4          LIKE type_file.chr1000,#FUN-610055  #No.FUN-680137 CHAR(300)
+    g_wc3,g_wc4     STRING,
+    g_buf           LIKE type_file.chr1000, #No.FUN-680137 CHAR(30)
+    g_buf1          LIKE type_file.chr1000, #No.FUN-680137 CHAR(30)
+    g_buf2          LIKE type_file.chr1000, #No.FUN-680137 CHAR(01)
+    g_diff          LIKE oea_file.oea55,
+    g_flag          LIKE type_file.chr1,    #No.FUN-680137 CHAR(1)
+    g_sta           LIKE type_file.chr6,    #No.FUN-680137 CHAR(6)
+    #g_tot           LIKE type_file.num5,   #No.FUN-680137 SMALLINT
+    g_tot3           LIKE type_file.num5,   #No.FUN-680137 SMALLINT
+    tot             LIKE oeb_file.oeb14,
+    exT             LIKE type_file.chr1,   #No.FUN-680137 CHAR(01)
+    g_t1            LIKE oay_file.oayslip,              #No.FUN-550052  #No.FUN-680137 CHAR(05)
+    g_rec_b         LIKE type_file.num5,                #單身1筆數  #No.FUN-680137 SMALLINT
+    g_rec_b1        LIKE type_file.num5,                #單身2筆數  #No.FUN-680137 SMALLINT
+    g_rec_b2        LIKE type_file.num5,                #修改價格單身筆數 #No:FUN-870007
+    g_rec_b3        LIKE type_file.num5,                #修改扣率單身筆數 #No:FUN-870007
+    l_ac            LIKE type_file.num5,                #目前處理的ARRAY CNT  #No.FUN-680137 SMALLINT
+    g_sql1          LIKE type_file.chr1000, #No.FUN-680137 CHAR(1000)
+    g_sql2          LIKE type_file.chr1000, #No.FUN-680137 CHAR(1000)
+    g_sql3          LIKE type_file.chr1000, #No.FUN-680137 CHAR(1000)
+    g_nn            LIKE type_file.num5,   #No.FUN-680137 SMALLINT
+    g_choice1       LIKE type_file.chr1,   #No.FUN-680137 CHAR(1)
+    g_nopen         LIKE oeb_file.oeb12,
+   #g_program       LIKE imd_file.imd01 #No.FUN-680137 CHAR(10)  #MOD-550004 add#CHI-930018
+    g_program       STRING              #CHI-930018
+
+DEFINE g_argv1      LIKE type_file.chr1    #No.FUN-680137 CHAR(1)  # 0.合約 1.訂單/換貨訂單
+DEFINE g_argv2      LIKE oea_file.oea01    # 訂單單號/合約單號  #FUN-580155
+DEFINE g_argv3      STRING                 # No:FUN-640024
+DEFINE g_oea901     LIKE type_file.chr1    #No.FUN-680137 CHAR(1)   # 多角貿易否 No.7946
+DEFINE tm           RECORD
+                    msa01 LIKE msa_file.msa01,
+                    msb01 LIKE msb_file.msb01,
+                    msb02 LIKE msb_file.msb02,
+                    msb03 LIKE msb_file.msb03,
+                    bdate LIKE type_file.dat,    #No.FUN-680137 DATE
+                    num   LIKE type_file.num10,  #No.FUN-680137 INTEGER
+                    msm06 LIKE msm_file.msm06,
+                    msm02 LIKE msm_file.msm02,
+                    msp01 LIKE msp_file.msp01,
+                    ware  LIKE img_file.img02
+                    END RECORD
+DEFINE p_row,p_col     LIKE type_file.num5    #No.FUN-680137 SMALLINT
+DEFINE g_laststage  LIKE type_file.chr1    #No.FUN-680137 CHAR(1)              #FUN-580155
+DEFINE g_forupd_sql STRING   #SELECT ... FOR UPDATE SQL
+DEFINE g_before_input_done  LIKE type_file.num5    #No.FUN-680137 SMALLINT
+DEFINE g_chr           LIKE type_file.chr1    #No.FUN-680137 CHAR(1)
+DEFINE g_chr1          LIKE type_file.chr1      #No.FUN-640074  #No.FUN-680137 CHAR(1)
+DEFINE g_cnt           LIKE type_file.num10   #No.FUN-680137 INTEGER
+DEFINE g_i             LIKE type_file.num5     #count/index for any purpose  #No.FUN-680137 SMALLINT
+DEFINE g_msg           LIKE type_file.chr1000 #No.FUN-680137 CHAR(72)
+DEFINE i               LIKE type_file.num5    #No.FUN-680137 SMALLINT
+
+# 2004/02/06 by Hiko : 為了上下筆資料的控制而加的變數.
+DEFINE g_curs_index   LIKE type_file.num10   #No.FUN-680137 INTEGER
+DEFINE g_row_count    LIKE type_file.num10   #No.FUN-680137 INTEGER
+DEFINE g_jump         LIKE type_file.num10,   #No.FUN-680137 INTEGER
+       mi_no_ask       LIKE type_file.num5    #No.FUN-680137 SMALLINT
+# 2004/05/17 by saki : 確認/核准/結案....碼
+DEFINE g_void         LIKE type_file.chr1    #No.FUN-680137 CHAR(1)
+DEFINE g_approve      LIKE type_file.chr1    #No.FUN-680137 CHAR(1)
+#FUN-610055 --begin
+DEFINE g_action_flag   STRING
+DEFINE g_tt11         LIKE oea_file.oea61
+DEFINE g_tt12         LIKE oea_file.oea61
+DEFINE g_tt13         LIKE oea_file.oea61
+DEFINE cb             ui.ComboBox 
+DEFINE cb1            ui.ComboBox 
+#FUN-610055 --end
+DEFINE g_pml930      LIKE pml_file.pml930  #FUN-670061
+DEFINE g_pmn930      LIKE pmn_file.pmn930  #FUN-6C0050
+
+#No.FUN-640013  --start--
+DEFINE   arr_detail    DYNAMIC ARRAY OF RECORD
+         imx00      LIKE imx_file.imx00,
+         imx        ARRAY[10] OF LIKE imx_file.imx01 
+         END RECORD
+DEFINE   lr_agc        DYNAMIC ARRAY OF RECORD LIKE agc_file.*
+DEFINE   lg_oay22      LIKE oay_file.oay22   #在oay_file中定義的與當前單別關聯的組別   
+DEFINE   lg_oay221     LIKE oay_file.oay22   #No.TQC-650111  By Rayven
+DEFINE   lg_group      LIKE oay_file.oay22   #當前單身中采用的組別
+#No.FUN-640013  --end--
+
+DEFINE   g_value       LIKE ima_file.ima01   #No.TQC-640171
+DEFINE   g_oeb04       LIKE oeb_file.oeb04   #No.TQC-640171
+DEFINE   g_chr2        LIKE type_file.chr1                 #No.TQC-640171  #No.FUN-680137 CHAR(1)
+DEFINE   g_chr3        LIKE type_file.chr1                 #No.TQC-640171  #No.FUN-680137 CHAR(1)
+
+DEFINE   l_t1          LIKE type_file.chr5    #No.FUN-680137  CHAR(05)              #No.TQC-650111  By Rayven
+DEFINE   g_chg_oea21   LIKE type_file.num5    #FUN-6C0006
+DEFINE   g_oea49       LIKE oea_file.oea49    #FUN-6C0006 
+#NO.FUN-870007-start-
+DEFINE   g_oeb7        DYNAMIC ARRAY OF RECORD
+             status        LIKE type_file.chr1,
+             oeb03         LIKE oeb_file.oeb03,
+             oeb04         LIKE oeb_file.oeb04,
+             oeb06         LIKE oeb_file.oeb06,
+             ima021        LIKE ima_file.ima021,
+             oeb05         LIKE oeb_file.oeb05,
+             oeb12         LIKE oeb_file.oeb12,
+             oeb47         LIKE oeb_file.oeb47
+          END RECORD
+#NO.FUN-870007--end--
+DEFINE g_oeb17_t  LIKE oeb_file.oeb17 #TQC-AB0204
+END GLOBALS
+
+#FUN-720009
+#CHI-7B0023/CHI-7B0039

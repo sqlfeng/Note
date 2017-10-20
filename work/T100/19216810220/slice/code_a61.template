@@ -1,0 +1,14 @@
+   #應用 a61 樣板自動產生(Version:3)
+   INITIALIZE g_ref_fields TO NULL
+   LET g_ref_fields[1] = ${mdl_para}
+   #mdls - Start -
+   LET g_ref_fields[${mdl}] = ${mdl_para${mdl}}
+   #mdls -  End  -
+   CALL ap_ref_array2(g_ref_fields,${mdl_sql},"") RETURNING g_rtn_fields
+   LET ${mdl_return} = g_rtn_fields[1]
+   #mdls2 - Start -
+   LET ${mdl_return${mdl}} = g_rtn_fields[${mdl}]
+   #mdls -  End  -
+   DISPLAY ${mdl_returns} TO ${mdl_target}
+  
+

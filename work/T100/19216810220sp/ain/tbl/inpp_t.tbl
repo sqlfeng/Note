@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inpp_t" module="AIN" text="存货周期律数据单身档" type="B" version="1">
+  <column name="inppent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inppsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inpp001" text="计算原则编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inpp002" text="计算分类码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inpp003" text="权重" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpp004" text="存货周转率目标" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inppent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inppsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpp001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpp002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpp003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="inpp004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inpp_t" depend_field="inppcrtdp" correspon_key="inppcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inpp_t" depend_field="inppcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="inpp_t" depend_field="inppcrtid" correspon_key="inppcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="inpp_t" depend_field="inppmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="inpp_t" depend_field="inppmodid" correspon_key="inppmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="inpp_t" depend_field="inppowndp" correspon_key="inppowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inpp_t" depend_field="inppownid" correspon_key="inppownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="inppstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

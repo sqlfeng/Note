@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmet_t" module="AXM" text="销售估价范本组成明细单身档" type="D" version="1">
+  <column name="xmetent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmetsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmetdocno" text="范本料号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmet001" text="版次" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmet002" text="阶层项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmet003" text="部位编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmet004" text="作业编号" attribute="C402" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmet005" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmet006" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="xmet007" text="辅助说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xmet008" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmet009" text="组成用量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmet010" text="主件底数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmet011" text="客供料" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmet012" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmet013" text="指定厂商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmet014" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmetent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmetsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmetdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmet001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmet002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1000.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmet003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_15" c_zoom="q_imaf001_15" chk_ref="v_imaf001_14" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmet006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmet007" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmet008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imao002" c_zoom="q_imao002" chk_ref="v_imao002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet009" widget="Edit" items="" default="1" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmet010" widget="Edit" items="" default="1" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmet011" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_ooaj002_1" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_3" c_zoom="q_pmaa001_3" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmet014" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmet_t" depend_field="xmet003" correspon_key="xmetent,&apos;215&apos;,xmet003" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmet_t" depend_field="xmet004" correspon_key="xmetent,&apos;221&apos;,xmet004" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmet_t" depend_field="xmet005" correspon_key="xmetent,xmet005" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmet_t" depend_field="xmet008" correspon_key="xmet008" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmet_t" depend_field="xmet012" correspon_key="xmet012" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="xmet_t" depend_field="xmet013" correspon_key="xmetent,xmet013" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

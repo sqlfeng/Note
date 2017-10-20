@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtig_t" module="ART" text="销售交易开立余额券档" type="D" version="1">
+  <column name="rtigent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtigsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtigunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtigdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtig001" text="券号" attribute="C602" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="rtig002" text="券种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtig003" text="券开立金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtigent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtigsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtigunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtigdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtig001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtig002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gcaf001_3" c_zoom="q_gcaf001_3" chk_ref="v_gcaf001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtig003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtig_t" depend_field="rtig002" correspon_key="rtig002" ref_table="gcafl_t" ref_fk="gcafl001" ref_dlang="gcafl002" ref_rtn="gcafl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

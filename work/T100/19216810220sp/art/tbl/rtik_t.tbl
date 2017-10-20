@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtik_t" module="ART" text="销售交易特殊条码明细档" type="D" version="1">
+  <column name="rtikent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtiksite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtikunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtikorg" text="账务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtikdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtikseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtik001" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtik002" text="来源单号项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="rtik003" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtik004" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtik005" text="特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="rtik006" text="税别编号" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtik007" text="销售开立发票" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtik008" text="标准售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik009" text="促销售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik010" text="交易售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik011" text="成本售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik012" text="销售数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik013" text="销售单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtik014" text="折价金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik015" text="应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik016" text="未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik017" text="成本金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtik018" text="理由码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtik019" text="库区" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtik020" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtik021" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="rtik022" text="专柜编号" attribute="C601" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtik023" text="分摊积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtikent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtiksite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtikunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtikorg" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtikdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtikseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtik001" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtik002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtik003" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtik003" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtik004" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtik005" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtik006" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtdx014" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik007" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik013" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtik018" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik019" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inag004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik020" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inag005_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtik021" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inag006" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtik022" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa120" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtik023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

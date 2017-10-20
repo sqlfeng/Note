@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmie_t" module="AXM" text="集团销售预测分配比率设置单头档" type="D" version="1">
+  <column name="xmieent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmie001" text="预测编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmieseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmie002" text="产品分类" attribute="C002" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmie003" text="预测料号" attribute="C301" type="varchar2(40)" pk="N" req="Y"/>
+  <column name="xmie004" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmie005" text="客户" attribute="C004" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmie006" text="通路" attribute="C002" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmie007" text="业务员" attribute="C006" type="varchar2(20)" pk="N" req="Y"/>
+  <column name="xmie008" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="Y"/>
+  <col_attr>
+    <field name="xmieent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmie001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmia001_1" c_zoom="q_xmia001_1" chk_ref="v_xmia001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmieseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmie002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="v_rtax001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmie003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmie004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_xmij001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmie005" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_13" c_zoom="q_pmaa001_13" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmie006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmie007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmie008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_5" c_zoom="q_ooef001_5" chk_ref="v_ooef001_13" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmie_t" depend_field="xmie001" correspon_key="xmie001" ref_table="xmial_t" ref_fk="xmial001" ref_dlang="xmial002" ref_rtn="xmial003"/>
+    <field depend_table="xmie_t" depend_field="xmie002" correspon_key="xmie002" ref_table="rtaxl_t" ref_fk="rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="xmie_t" depend_field="xmie003" correspon_key="xmie003" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmie_t" depend_field="xmie004" correspon_key="xmie004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmie_t" depend_field="xmie005" correspon_key="xmie005" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xmie_t" depend_field="xmie006" correspon_key="&apos;275&apos;,xmie006" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmie_t" depend_field="xmie007" correspon_key="xmie007" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xmie_t" depend_field="xmie008" correspon_key="xmie008" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

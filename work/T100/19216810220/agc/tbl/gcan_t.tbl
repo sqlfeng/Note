@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gcan_t" module="AGC" text="券状态异动单身档" type="M" version="1">
+  <column name="gcanent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gcansite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcanunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcandocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gcanseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="gcan001" text="券号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="gcan002" text="券种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcan003" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcan004" text="异动前券状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gcanent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcansite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcanunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcandocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="gcanseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="gcan001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gcao001" c_zoom="q_gcao001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gcan002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gcaf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcan003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcan004" widget="ComboBox" items="6551" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gcan_t" depend_field="gcan001" correspon_key="gcanent,gcan001" ref_table="gcao_t" ref_fk="gcaoent,gcao001" ref_dlang=" " ref_rtn="gcao004"/>
+    <field depend_table="gcan_t" depend_field="gcan002" correspon_key="gcanent,gcan002" ref_table="gcafl_t" ref_fk="gcaflent,gcafl001" ref_dlang="gcafl002" ref_rtn="gcafl003"/>
+    <field depend_table="gcan_t" depend_field="gcansite" correspon_key="gcanent,gcansite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

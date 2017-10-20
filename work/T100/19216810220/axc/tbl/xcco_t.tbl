@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcco_t" module="AXC" text="本期库存成本调整档" type="T" version="1">
+  <column name="xccoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xccold" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xccocomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcco001" text="账套本位币顺序" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xcco002" text="成本域" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xcco003" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcco004" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcco005" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcco006" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="xcco007" text="特性" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="xcco008" text="批号" attribute="C304" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xcco009" text="参考单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xcco010" text="数据源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcco011" text="调整说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="xcco102" text="当月调整金额-金额合计" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102a" text="当月调整金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102b" text="当月调整金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102c" text="当月调整金额-委外加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102d" text="当月调整金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102e" text="当月调整金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102f" text="当月调整金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102g" text="当月调整金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcco102h" text="当月调整金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccoownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xccoowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xccocrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xccocrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xccocrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xccomodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xccomoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xccocnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xccocnfdt" text="数据确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xccopstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xccopstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xccostus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xccoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xccold" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xccocomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco001" widget="ComboBox" items="8914" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcbf001" c_zoom="q_xcbf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcat001" c_zoom="q_xcat001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcco005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcco006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imag001_2" c_zoom="q_imag001_2" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcco007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag006_2" c_zoom="q_inag006_2" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcco008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaj010" c_zoom="q_inaj010" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcco009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco010" widget="CheckBox" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcco011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcco102" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102a" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102b" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102c" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102d" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102e" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102f" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102g" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcco102h" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccoownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccoowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccocrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccocrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccocrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xccomodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccomoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xccocnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccocnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xccopstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccopstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xccostus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcco_t" depend_field="xcco002" correspon_key="xccoent,xccocomp,xcco002" ref_table="xcbfl_t" ref_fk="xcbflent,xcbflcomp,xcbfl001" ref_dlang="xcbfl002" ref_rtn="xcbfl003"/>
+    <field depend_table="xcco_t" depend_field="xcco003" correspon_key="xccoent,xcco003" ref_table="xcatl_t" ref_fk="xcatlent,xcatl001" ref_dlang="xcatl002" ref_rtn="xcatl003"/>
+    <field depend_table="xcco_t" depend_field="xcco006" correspon_key="xccoent,xcco006" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xcco_t" depend_field="xccocnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcco_t" depend_field="xccocnfid" correspon_key="xccocnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcco_t" depend_field="xccocomp" correspon_key="xccoent,xccocomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcco_t" depend_field="xccocrtdp" correspon_key="xccocrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcco_t" depend_field="xccocrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcco_t" depend_field="xccocrtid" correspon_key="xccocrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcco_t" depend_field="xccold" correspon_key="xccoent,xccold" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="xcco_t" depend_field="xccomoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcco_t" depend_field="xccomodid" correspon_key="xccomodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcco_t" depend_field="xccoowndp" correspon_key="xccoowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcco_t" depend_field="xccoownid" correspon_key="xccoownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcco_t" depend_field="xccopstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcco_t" depend_field="xccopstid" correspon_key="xccopstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xccostus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

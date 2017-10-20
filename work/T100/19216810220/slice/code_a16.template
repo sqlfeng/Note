@@ -1,0 +1,6 @@
+#應用 a16 樣板自動產生(Version:3)
+               #確認欄位值為特定內容
+               IF NOT ap_chk_metch(${mdl_var},"${mdl_sql}","${mdl_error}",${mdl_ow}) THEN
+                  NEXT FIELD ${mdl_field}
+               END IF
+

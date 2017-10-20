@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oobe_t" module="AOO" text="单据别库存标签限定档" type="D" version="1">
+  <column name="oobeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oobe001" text="参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobe002" text="单据别" attribute="C202" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobe003" text="库存标签编号From" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="oobe004" text="库存标签编号To" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="oobe005" text="可用From" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oobe006" text="可用To" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oobe007" text="MRP可用From" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oobe008" text="MRP可用To" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oobe009" text="成本仓From" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oobe010" text="成本仓To" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="oobeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oobe001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="oobe004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="oobe005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe006" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe008" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe009" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobe010" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oobe_t" depend_field="oobe003" correspon_key="oobeent,&apos;220&apos;,oobe003" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="oobe_t" depend_field="oobe004" correspon_key="oobeent,&apos;220&apos;,oobe004" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

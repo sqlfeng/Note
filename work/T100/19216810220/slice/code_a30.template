@@ -1,0 +1,320 @@
+#應用 a30 樣板自動產生(Version:10)
+#+ 瀏覽頁簽資料填充(六階樹狀)
+PRIVATE FUNCTION ${general_prefix}_browser_fill(ps_wc,ps_page_action) 
+   #add-point:browser_fill段define(客製用) name="browser_fill.define_customerization"
+   {<point name="browser_fill.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE ps_wc              STRING
+   DEFINE ps_page_action     STRING
+   DEFINE ls_sql             STRING
+   DEFINE li_idx             LIKE type_t.num10
+   DEFINE li_idx2            LIKE type_t.num10
+   #add-point:browser_fill段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="browser_fill.define"
+   {<point name="browser_fill.define"/>}
+   #end add-point
+   
+   #add-point:Function前置處理 name="browser_fill.before_fill"
+   {<point name="browser_fill.before_fill"/>}
+   #end add-point
+   
+   CLEAR FORM
+   INITIALIZE ${master_var_title}.* TO NULL
+   CALL g_browser.clear()
+    
+   LET ls_sql = " SELECT DISTINCT ${master_field_type} ",
+                " FROM ${master_tbl_name} ${browser_addiction_sql}",
+                " ${master_join_all} ",
+                " ${master_append_join} ",
+                " WHERE ${master_append_wc_s} ", g_wc ,cl_sql_add_filter("${master_tbl_name}")
+   #add-point:browser_fill段fill_wc name="browser_fill.fill_wc"
+   {<point name="browser_fill.fill_wc"/>}
+   #end add-point
+   #LET g_sql = cl_sql_add_tabid(g_sql,"${master_tbl_name}")             #WC重組           
+   LET g_sql = cl_sql_add_mask(g_sql)              #遮蔽特定資料             
+   PREPARE browse_pre FROM ls_sql
+   DECLARE browse_cur CURSOR FOR browse_pre
+   
+   LET li_idx = 1 
+   FOREACH browse_cur INTO g_browser[li_idx].b_${master_field_type}
+      
+      LET g_browser[li_idx].b_pid     = 0
+      LET g_browser[li_idx].b_id      = 0, ".", li_idx USING "<<<"
+      LET g_browser[li_idx].b_exp     = FALSE
+      LET g_browser[li_idx].b_expcode = 1
+      LET g_browser[li_idx].b_hasC    = TRUE
+      LET g_browser[li_idx].b_show    = g_browser[li_idx].b_${master_field_type}
+      CALL ${general_prefix}_desc_show(li_idx)
+      LET li_idx = li_idx + 1
+      
+      IF li_idx > g_max_rec THEN
+         EXIT FOREACH
+      END IF
+      
+   END FOREACH
+   
+   IF li_idx > g_max_rec AND g_error_show = 1 THEN
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = li_idx
+      LET g_errparam.code   = 9035 
+      LET g_errparam.popup  = TRUE 
+      CALL cl_err()
+   END IF
+   
+   LET g_error_show = 0
+   
+   CALL g_browser.deleteElement(g_browser.getLength())
+   
+   LET g_browser_cnt = g_browser.getLength()
+ 
+   #瀏覽頁筆數顯示
+   DISPLAY g_browser_cnt TO FORMONLY.b_count        #總筆數
+   DISPLAY g_browser_cnt TO FORMONLY.h_count        #總筆數
+   
+   #樹展開
+   FOR li_idx = 1 TO g_browser.getLength()
+      FOR li_idx2 = 1 TO g_browser_expand.getLength()
+         IF g_browser_expand[li_idx2].b_${master_field_type}.equals(g_browser[li_idx].b_${master_field_type})
+            ${master_type_mark2}AND g_browser_expand[li_idx2].b_${master_field_type2}.equals(g_browser[li_idx].b_${master_field_type2})
+            ${master_type_mark3}AND g_browser_expand[li_idx2].b_${master_field_type3}.equals(g_browser[li_idx].b_${master_field_type3})
+            ${master_type_mark4}AND g_browser_expand[li_idx2].b_${master_field_type4}.equals(g_browser[li_idx].b_${master_field_type4})
+            ${master_type_mark5}AND g_browser_expand[li_idx2].b_${master_field_type5}.equals(g_browser[li_idx].b_${master_field_type5})
+            ${master_type_mark6}AND g_browser_expand[li_idx2].b_${master_field_type6}.equals(g_browser[li_idx].b_${master_field_type6}) 
+            THEN
+            CALL ${general_prefix}_browser_expand(li_idx)
+            LET g_browser[li_idx].b_isExp = 1  
+            LET g_browser[li_idx].b_exp = TRUE
+         END IF 
+      END FOR
+   END FOR
+   
+   FREE browse_pre
+   
+END FUNCTION
+ 
+#+ Tree子節點展開
+PRIVATE FUNCTION ${general_prefix}_browser_expand(pi_id)
+   #add-point:browser_expand段define(客製用) name="browser_expand.define_customerization"
+   {<point name="browser_expand.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_id            LIKE type_t.num10
+   DEFINE li_lv            LIKE type_t.num10
+   DEFINE li_idx           LIKE type_t.num10
+   DEFINE ls_wc            STRING
+   DEFINE ls_type_list     STRING
+   DEFINE ls_sql           STRING
+   #add-point:browser_expand段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="browser_expand.define"
+   {<point name="browser_expand.define"/>}
+   #end add-point
+   
+   #已經展開過或展開leaf
+   IF g_browser[pi_id].b_isExp = TRUE OR g_browser[pi_id].b_expcode > (${browser_max_lv}-1) THEN
+      RETURN
+   END IF
+   
+   #leaf展開
+   IF g_browser[pi_id].b_expcode = (${browser_max_lv}-1) THEN
+      CALL ${general_prefix}_browser_expand_leaf(pi_id)
+      RETURN
+   END IF
+   
+   LET li_lv = g_browser[pi_id].b_expcode
+   LET g_browser[pi_id].b_isExp = TRUE
+   
+   CASE li_lv
+      WHEN 1
+         LET ls_wc = " AND ${master_field_type} = '",g_browser[pi_id].b_${master_field_type},"' "
+         LET ls_type_list = "${master_field_type}"
+                            ${master_type_mark2},",${master_field_type2}"
+      WHEN 2               
+         LET ls_wc = " AND ${master_field_type} = '", g_browser[pi_id].b_${master_field_type}, "'"
+                     ${master_type_mark2}," AND ${master_field_type2} = '", g_browser[pi_id].b_${master_field_type2}, "'"
+         LET ls_type_list = "${master_field_type}"
+                            ${master_type_mark2},",${master_field_type2}"
+                            ${master_type_mark3},",${master_field_type3}"
+      WHEN 3
+         LET ls_wc = " AND ${master_field_type} = '", g_browser[pi_id].b_${master_field_type}, "'"
+                     ${master_type_mark2}," AND ${master_field_type2} = '", g_browser[pi_id].b_${master_field_type2}, "'"
+                     ${master_type_mark3}," AND ${master_field_type3} = '", g_browser[pi_id].b_${master_field_type3}, "'"
+         LET ls_type_list = "${master_field_type}"
+                            ${master_type_mark2},",${master_field_type2}"
+                            ${master_type_mark3},",${master_field_type3}"
+                            ${master_type_mark4},",${master_field_type4}"
+      WHEN 4                
+         LET ls_wc = " AND ${master_field_type} = '", g_browser[pi_id].b_${master_field_type}, "'"
+                     ${master_type_mark2}," AND ${master_field_type2} = '", g_browser[pi_id].b_${master_field_type2}, "'"
+                     ${master_type_mark3}," AND ${master_field_type3} = '", g_browser[pi_id].b_${master_field_type3}, "'"
+                     ${master_type_mark4}," AND ${master_field_type4} = '", g_browser[pi_id].b_${master_field_type4}, "'"
+         LET ls_type_list = "${master_field_type}"
+                            ${master_type_mark2},",${master_field_type2}"
+                            ${master_type_mark3},",${master_field_type3}"
+                            ${master_type_mark4},",${master_field_type4}"
+                            ${master_type_mark5},",${master_field_type5}"
+      WHEN 5
+         LET ls_wc = " AND ${master_field_type} = '", g_browser[pi_id].b_${master_field_type}, "'"
+                     ${master_type_mark2}," AND ${master_field_type2} = '", g_browser[pi_id].b_${master_field_type2}, "'"
+                     ${master_type_mark3}," AND ${master_field_type3} = '", g_browser[pi_id].b_${master_field_type3}, "'"
+                     ${master_type_mark4}," AND ${master_field_type4} = '", g_browser[pi_id].b_${master_field_type4}, "'"
+                     ${master_type_mark5}," AND ${master_field_type5} = '", g_browser[pi_id].b_${master_field_type5}, "'"
+         LET ls_type_list = "${master_field_type}"
+                            ${master_type_mark2},",${master_field_type2}"
+                            ${master_type_mark3},",${master_field_type3}"
+                            ${master_type_mark4},",${master_field_type4}"
+                            ${master_type_mark5},",${master_field_type5}"
+                            ${master_type_mark6},",${master_field_type6}"
+   END CASE
+   
+   LET ls_sql = " SELECT DISTINCT   ", ls_type_list, 
+                " FROM ${master_tbl_name} ${browser_addiction_sql}",
+                " ${master_join_all} ",
+                " ${master_append_join} ",
+                " WHERE ${master_append_wc_s} ", g_wc, ls_wc #,cl_get_extra_cond('zzuser', 'zzgrup')
+ 
+   LET li_lv = g_browser[pi_id].b_expcode 
+    
+   #add-point:browser_expand段before prepare name="browser_expand.before_prepare"
+   {<point name="browser_expand.before_prepare"/>}
+   #end add-point
+                
+   PREPARE expand_pre FROM ls_sql
+   DECLARE expand_cur CURSOR FOR expand_pre
+   
+   LET li_idx = pi_id + 1
+   CALL g_browser.insertElement(li_idx)
+   FOREACH expand_cur INTO ${browser_vars_type_list}
+      LET g_browser[li_idx].b_pid     = g_browser[pi_id].b_id 
+      LET g_browser[li_idx].b_id      = g_browser[pi_id].b_id , ".", li_idx USING "<<<"
+      LET g_browser[li_idx].b_exp     = FALSE
+      LET g_browser[li_idx].b_expcode = li_lv + 1
+      LET g_browser[li_idx].b_hasC    = TRUE
+      CASE li_lv
+         WHEN 1
+            ${master_type_mark2}LET g_browser[li_idx].b_show = g_browser[li_idx].b_${master_field_type2}
+         WHEN 2
+            ${master_type_mark3}LET g_browser[li_idx].b_show = g_browser[li_idx].b_${master_field_type3}
+         WHEN 3
+            ${master_type_mark4}LET g_browser[li_idx].b_show = g_browser[li_idx].b_${master_field_type4}
+         WHEN 4
+            ${master_type_mark5}LET g_browser[li_idx].b_show = g_browser[li_idx].b_${master_field_type5}
+         WHEN 5
+            ${master_type_mark6}LET g_browser[li_idx].b_show = g_browser[li_idx].b_${master_field_type6}
+      END CASE
+      CALL ${general_prefix}_desc_show(li_idx)
+      LET li_idx = li_idx + 1
+      CALL g_browser.insertElement(li_idx)
+   END FOREACH
+   
+   CALL g_browser.deleteElement(li_idx)
+   
+   LET g_browser_cnt = g_browser.getLength()
+ 
+   #瀏覽頁筆數顯示
+   DISPLAY g_browser_cnt TO FORMONLY.b_count        #總筆數
+   DISPLAY g_browser_cnt TO FORMONLY.h_count        #總筆數
+ 
+END FUNCTION
+ 
+#+ Tree leaf節點展開
+PRIVATE FUNCTION ${general_prefix}_browser_expand_leaf(pi_id)
+   #add-point:browser_expand_leaf段define(客製用) name="browser_expand_leaf.define_customerization"
+   {<point name="browser_expand_leaf.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_id            LIKE type_t.num10
+   DEFINE li_lv            LIKE type_t.num10
+   DEFINE li_idx           LIKE type_t.num10
+   DEFINE ls_wc            STRING
+   DEFINE ls_sql           STRING
+   DEFINE ls_type_list     STRING
+   #add-point:browser_expand_leaf段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="browser_expand_leaf.define"
+   {<point name="browser_expand_leaf.define"/>}
+   #end add-point
+   
+   LET ls_wc = " AND ${master_field_type} = '", g_browser[pi_id].b_${master_field_type}, "'"
+               ${master_type_mark2}," AND ${master_field_type2} = '", g_browser[pi_id].b_${master_field_type2}, "'"
+               ${master_type_mark3}," AND ${master_field_type3} = '", g_browser[pi_id].b_${master_field_type3}, "'"
+               ${master_type_mark4}," AND ${master_field_type4} = '", g_browser[pi_id].b_${master_field_type4}, "'"
+               ${master_type_mark5}," AND ${master_field_type5} = '", g_browser[pi_id].b_${master_field_type5}, "'"
+               ${master_type_mark6}," AND ${master_field_type6} = '", g_browser[pi_id].b_${master_field_type6}, "'"
+ 
+   LET ls_sql = " SELECT DISTINCT ${browser_fields_all} ${browser_reference_select_field}",
+                " FROM ${master_tbl_name} t0 ${browser_addiction_sql}",
+                " ${master_join_all} ",
+                ${browser_reference_join_sql}
+                " WHERE ${master_append_wc_s} ", g_wc, ls_wc #,cl_get_extra_cond('zzuser', 'zzgrup')
+ 
+   LET li_lv = g_browser[pi_id].b_expcode 
+          
+   LET ls_sql = ls_sql, " ORDER BY t0.${master_field_lid}"
+          
+   #add-point:browser_expand_leaf段before prepare name="browser_expand_leaf.before_prepare"
+   {<point name="browser_expand_leaf.before_prepare"/>}
+   #end add-point 
+          
+   PREPARE leaf_pre FROM ls_sql
+   DECLARE leaf_cur CURSOR FOR leaf_pre
+   
+   LET g_cnt = pi_id + 1
+   CALL g_browser.insertElement(g_cnt)
+   FOREACH leaf_cur INTO ${browser_vars_all}${browser_reference_fetch_field}
+      LET g_browser[g_cnt].b_pid     = g_browser[pi_id].b_id 
+      LET g_browser[g_cnt].b_id      = g_browser[pi_id].b_id , ".", g_cnt USING "<<<"
+      LET g_browser[g_cnt].b_exp     = FALSE
+      LET g_browser[g_cnt].b_expcode = li_lv + 1
+      LET g_browser[g_cnt].b_hasC    = FALSE
+      LET g_browser[g_cnt].b_show = g_browser[g_cnt].b_${master_field_lid}
+      CALL ${general_prefix}_desc_show(g_cnt)
+      LET g_cnt = g_cnt + 1
+      CALL g_browser.insertElement(g_cnt)
+   END FOREACH
+   
+   CALL g_browser.deleteElement(g_cnt)
+   
+   LET g_browser_cnt = g_browser.getLength()
+ 
+   #瀏覽頁筆數顯示
+   DISPLAY g_browser_cnt TO FORMONLY.b_count        #總筆數
+   DISPLAY g_browser_cnt TO FORMONLY.h_count        #總筆數
+                      
+END FUNCTION
+ 
+#+ 組合顯示在畫面上的資訊
+PRIVATE FUNCTION ${general_prefix}_desc_show(pi_ac)
+   #add-point:desc_show段define (客製用) name="desc_show.define_customerization"
+   {<point name="desc_show.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_ac   LIKE type_t.num10
+   DEFINE li_tmp  LIKE type_t.num10
+   #add-point:desc_show段define (請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="desc_show.define"
+   {<point name="desc_show.define"/>}
+   #end add-point
+   
+   LET li_tmp = g_cnt
+   LET g_cnt = pi_ac
+   ${browser_vars_reference}
+   #add-point:desc_show段desc處理 name="desc_show.show"
+   {<point name="desc_show.show"/>} 
+   #end add-point
+   LET g_cnt = li_tmp
+   
+END FUNCTION
+ 
+#+ 簡易快速查詢
+PRIVATE FUNCTION ${general_prefix}_browser_search()
+   #add-point:browser_search段define(客製用) name="browser_search.define_customerization"
+   {<point name="browser_search.define_customerization" edit="c" mark="Y"/>}
+   #END add-point
+   DEFINE ls_wc       STRING   #若有輸入g_searchstr時用來代換g_wc的暫存變數
+   #add-point:browser_search段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="browser_search.define"
+   {<point name="browser_search.define"/>}
+   #END add-point
+   
+   IF NOT cl_null(g_searchstr) THEN
+      LET ls_wc = " lower(", g_searchcol, ") LIKE '", g_searchstr, "%'"
+      LET ls_wc = ls_wc.toLowerCase()
+   ELSE
+      LET ls_wc = " 1=1 "
+   END IF
+ 
+   LET g_wc = ls_wc
+ 
+END FUNCTION
+

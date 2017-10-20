@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcbn_t" module="AXC" text="转拨计价档" type="T" version="1">
+  <column name="xcbnent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcbn001" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcbn002" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcbn003" text="拨出营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcbn004" text="拨入营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcbn005" text="料号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="xcbn006" text="特性" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="xcbn010" text="计价币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbn102" text="转拨单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102a" text="材料单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102b" text="人工单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102c" text="委外加工单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102d" text="制费一单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102e" text="制费二单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102f" text="制费三单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102g" text="制费四单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbn102h" text="制费五单价" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbnownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbnowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbncrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbncrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbncrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcbnmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbnmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcbnent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcbn001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcbn002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcbn003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_10" c_zoom="q_ooef001_10" chk_ref="v_ooef001_11" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbn004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_10" c_zoom="q_ooef001_10" chk_ref="v_ooef001_11" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbn005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcbn006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xcbn006" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcbn010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooai001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbn102" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbn102h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbnownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbnowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbncrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbncrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbncrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcbnmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbnmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcbn_t" depend_field="xcbn003" correspon_key="xcbnent,xcbn003" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbn_t" depend_field="xcbn004" correspon_key="xcbnent,xcbn004" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbn_t" depend_field="xcbn005" correspon_key="xcbnent,xcbn005" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xcbn_t" depend_field="xcbncrtdp" correspon_key="xcbncrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbn_t" depend_field="xcbncrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbn_t" depend_field="xcbncrtid" correspon_key="xcbncrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbn_t" depend_field="xcbnmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbn_t" depend_field="xcbnmodid" correspon_key="xcbnmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbn_t" depend_field="xcbnowndp" correspon_key="xcbnowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbn_t" depend_field="xcbnownid" correspon_key="xcbnownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="xcbn_t" depend_field="xcbn005" correspon_key="xcbnent,xcbn005" lang_table="imaal_t" lang_fk="imaalent,imaal001" lang_dlang="imaal002" lang_rtn="imaal004"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

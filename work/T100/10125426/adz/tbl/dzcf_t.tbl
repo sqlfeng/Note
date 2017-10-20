@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzcf_t" module="ADZ" text="" type="M" version="1">
+  <column name="dzcfstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcf001" text="DZCF001_MEMO" attribute="" type="VARCHAR2" pk="Y" req=""/>
+  <column name="dzcf002" text="DZCF002_MEMO" attribute="" type="NUMBER" pk="Y" req=""/>
+  <column name="dzcf003" text="DZCF003_MEMO" attribute="" type="VARCHAR2" pk="" req=""/>
+  <column name="dzcf004" text="DZCF004_MEMO" attribute="" type="VARCHAR2" pk="" req=""/>
+  <column name="dzcf005" text="DZCF005_MEMO" attribute="" type="VARCHAR2" pk="" req=""/>
+  <column name="dzcf006" text="DZCF006_MEMO" attribute="" type="VARCHAR2" pk="" req=""/>
+  <column name="dzcfownid" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfcrtid" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfcrtdt" text="资料创建日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzcfmodid" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfmoddt" text="最近修改日" attribute="D002" type="date" pk="N" req="N"/>
+  <column name="dzcfcnfid" text="资料确认者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzcfcnfdt" text="数据确认日" attribute="D002" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzcfstus" widget="ComboBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcf001" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcf002" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcf003" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcf004" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcf005" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcf006" widget="" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="" format="" prog_rel=""/>
+    <field name="dzcfownid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfowndp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfcrtid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfcrtdp" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfcrtdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzcfmodid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfmoddt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="dzcfcnfid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dzcfcnfdt" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzcf_t" depend_filed="dzcfcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzcf_t" depend_filed="dzcfcnfid" correspon_key="dzcfcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzcf_t" depend_filed="dzcfcrtdp" correspon_key="dzcfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzcf_t" depend_filed="dzcfcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzcf_t" depend_filed="dzcfcrtid" correspon_key="dzcfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzcf_t" depend_filed="dzcfmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="dzcf_t" depend_filed="dzcfmodid" correspon_key="dzcfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="dzcf_t" depend_filed="dzcfowndp" correspon_key="dzcfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzcf_t" depend_filed="dzcfownid" correspon_key="dzcfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

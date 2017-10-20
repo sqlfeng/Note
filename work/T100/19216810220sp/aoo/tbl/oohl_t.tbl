@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oohl_t" module="AOO" text="控制组据点库位档" type="D" version="1">
+  <column name="oohlent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oohl001" text="控制组编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohl002" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohl003" text="库位编号" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohl004" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="oohl005" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="oohlent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohl001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohl002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohl003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_3" c_zoom="q_inaa001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohl004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohl005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oohl_t" depend_field="oohl002" correspon_key="oohl002,oohlent" ref_table="ooefl_t" ref_fk="ooefl001,ooeflent" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oohl_t" depend_field="oohl003" correspon_key="oohl003,oohl002,oohlent" ref_table="inaa_t" ref_fk="inaa001,inaasite,inaaent" ref_dlang="" ref_rtn="inaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sfkf_t" module="ASF" text="工单变更单产品序号档" type="D" version="1">
+  <column name="sfkfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sfkfsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfkfdocno" text="工单单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sfkfseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfkf001" text="产品序号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="sfkf900" text="变更序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfkf901" text="变更类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sfkf902" text="变更日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="sfkf905" text="变更理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfkf906" text="变更备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sfkfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfkfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfkfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfkfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfkf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfkf900" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfkf901" widget="ComboBox" items="5443" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfkf902" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfkf905" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfkf906" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sfkf_t" depend_field="sfkf905" correspon_key="&apos; &apos;,sfkf905" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

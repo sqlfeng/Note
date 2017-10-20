@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbq_t" module="APM" text="供应商评核综合总得分档(制造)" type="S" version="1">
+  <column name="pmbqent" text="企业编号" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbqsite" text="营运据点" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbq001" text="评核年度" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pmbq002" text="评核月份" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pmbq003" text="评公式编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbq004" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbq005" text="系统得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmbq006" text="调整后得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmbq007" text="评核等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbq008" text="建议处理方案" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbq009" text="调整次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmbq010" text="调整人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmbq011" text="调整日期时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbq012" text="调整理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbqent" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbqsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmbq002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmbq003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmbk001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq005" widget="Edit" items="" default="" max_compare="&lt;=" max="0.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbq006" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbq007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmbq010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbq011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbq012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbq_t" depend_field="pmbq003" correspon_key="b_pmbq003" ref_table="pmbk_t" ref_fk="pmbk001" ref_dlang="" ref_rtn="pmbk002"/>
+    <field depend_table="pmbq_t" depend_field="pmbq004" correspon_key="b_pmbq004" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmbq_t" depend_field="pmbq007" correspon_key="&apos;2053&apos;,b_pmbq007" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmbq_t" depend_field="pmbq008" correspon_key="&apos;2054&apos;,b_pmbq008" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmbq_t" depend_field="pmbq010" correspon_key="pmbq010" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="pmbq_t" depend_field="pmbq012" correspon_key="&apos;301&apos;,pmbq012" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

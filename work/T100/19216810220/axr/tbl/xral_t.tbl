@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xral_t" module="AXR" text="递延认列各期明细设置主档" type="B" version="1">
+  <column name="xralent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xralld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xral001" text="递延认列类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xralseq" text="主项次" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xralseq1" text="摊销期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xral002" text="摊销比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xralent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xralld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xral001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xralseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xralseq1" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xral002" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xral_t" depend_field="xralcrtdp" correspon_key="xralcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xral_t" depend_field="xralcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="xral_t" depend_field="xralcrtid" correspon_key="xralcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xral_t" depend_field="xralmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="xral_t" depend_field="xralmodid" correspon_key="xralmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="xral_t" depend_field="xralowndp" correspon_key="xralowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xral_t" depend_field="xralownid" correspon_key="xralownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xralstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

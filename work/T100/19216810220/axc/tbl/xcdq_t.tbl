@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcdq_t" module="AXC" text="每月工单人工制费成本次要素档" type="B" version="1">
+  <column name="xcdqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcdqld" text="账套编号" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xcdqcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcdq001" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcdq002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcdq003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcdq004" text="成本中心" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcdq005" text="费用分类(成本次要素)" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcdq006" text="工单编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xcdq007" text="分摊方式" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xcdq100" text="工单分摊数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq101" text="单位成本(本位币一)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq111" text="单位成本(本位币二)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq121" text="单位成本(本位币三)" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq202" text="分摊金额(本位币一)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq212" text="分摊金额(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdq222" text="分摊金额(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcdqownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcdqowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcdqcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcdqcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcdqcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcdqmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcdqmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcdqstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcdqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcdqld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcdqcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcdq003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcdq004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq007" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdq100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq111" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq121" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq202" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq212" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdq222" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcdqownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdqowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdqcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdqcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdqcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcdqmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcdqmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcdqstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcdq_t" depend_field="xcdq001" correspon_key="xcdqent,xcdq001" ref_table="xcatl_t" ref_fk="xcatlent,xcatl001" ref_dlang="xcatl002" ref_rtn="xcatl003"/>
+    <field depend_table="xcdq_t" depend_field="xcdqcrtdp" correspon_key="xcdqcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcdq_t" depend_field="xcdqcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdqcrtid" correspon_key="xcdqcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcdq_t" depend_field="xcdqmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdqmodid" correspon_key="xcdqmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcdq_t" depend_field="xcdqowndp" correspon_key="xcdqowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcdq_t" depend_field="xcdqownid" correspon_key="xcdqownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code>
+    <field depend_table="xcdq_t" depend_field="xcdq001" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq002" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq003" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq004" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq006" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq100" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq101" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdq202" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdqcomp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcdq_t" depend_field="xcdqld" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+  </help_code>
+  <scc>
+    <field name="xcdqstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

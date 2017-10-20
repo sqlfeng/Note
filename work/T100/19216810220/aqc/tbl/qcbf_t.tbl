@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="qcbf_t" module="AQC" text="品质检验问题制造批序号档" type="D" version="1">
+  <column name="qcbfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="qcbfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="qcbfdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="qcbfseq" text="行序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="qcbf001" text="不良原因" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="qcbf002" text="问题制造序号" attribute="C304" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="qcbf003" text="问题制造批号" attribute="C304" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="qcbf004" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="qcbfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="qcbfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcbfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="qcbfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="qcbf001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1053" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="qcbf002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="qcbf003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="qcbf004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="qcbf_t" depend_field="qcbf001" correspon_key="&apos;1053&apos;,qcbf001" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

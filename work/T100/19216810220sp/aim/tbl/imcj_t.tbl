@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imcj_t" module="AIM" text="料件主分群成份与物质档" type="D" version="1">
+  <column name="imcjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imcj001" text="主分群码" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcj002" text="类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcj003" text="成份/物质" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imcj004" text="含量" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="imcj005" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imcj006" text="管制类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="imcjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imcj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcj002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcj003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imcj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001" c_zoom="q_ooca001" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imcj006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imcj_t" depend_field="imcj002" correspon_key="imcjent,imcj002" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imcj_t" depend_field="imcj003" correspon_key="imcjent,imcj003" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imcj_t" depend_field="imcj005" correspon_key="imcjent,imcj005" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="imcj_t" depend_field="imcj006" correspon_key="imcjent,imcj006" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcac_t" module="APC" text="收银人员使用组织及收银机权限档" type="D" version="1">
+  <column name="pcacent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcacunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcac001" text="收银人员编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcac002" text="组织编号" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcac003" text="收银机编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcacstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcacstamp" text="时间戳记" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <column name="pcac004" text="铺位编号" attribute="C601" type="varchar2(20)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="pcacent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcacunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcac001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcac002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcac003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pcaa001_1" c_zoom="q_pcaa001_1" chk_ref="v_pcaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcacstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcacstamp" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pcac004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mhbe001" c_zoom="q_mhbe001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcac_t" depend_field="pcac002" correspon_key="pcacent,pcac002" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pcac_t" depend_field="pcac003" correspon_key="pcacent,pcacsite,pcac003" ref_table="pcaal_t" ref_fk="pcaalent,pcaalsite,pcaal001" ref_dlang="pcaal002" ref_rtn="pcaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pcacstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

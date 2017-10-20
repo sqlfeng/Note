@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzrd_t" module="ADZ" text="GR报表样板主档(备份)" type="X" version="1">
+  <column name="dzrdstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzrd000" text="报表样板ID" attribute="C103" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="dzrd001" text="报表组件代号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzrd002" text="样板代号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzrd003" text="客制" attribute="C911" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzrd004" text="角色" attribute="C904" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dzrd005" text="用户" attribute="C811" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzrd006" text="序号" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="dzrd007" text="样板名称(4rp)" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dzrd008" text="默认样板" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzrd009" text="打印签核" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzrd010" text="签核位置" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzrd011" text="报表执行逾期时间(分)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="dzrd012" text="中越样板" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzrd013" text="客户纸张" attribute="C951" type="varchar2(100)" pk="N" req="N"/>
+  <column name="dzrdownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzrdowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzrdcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzrdcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzrdcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dzrdmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzrdmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dzrd014" text="表头位置" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzrdstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzrd000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="dzrd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dzga001" c_zoom="q_dzga001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzrd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzrd003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzya001" c_zoom="q_gzya001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzxa003_2" c_zoom="q_gzxa003_2" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzrd006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="dzrd007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="dzrd008" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd010" widget="ComboBox" items="145" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="dzrd012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrd013" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzrdownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrdowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrdcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrdcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrdcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dzrdmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzrdmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dzrd014" widget="ComboBox" items="164" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzrd_t" depend_field="dzrd001" correspon_key="dzrd001" ref_table="type_t" ref_fk="gzgd000" ref_dlang=" " ref_rtn="chr80"/>
+    <field depend_table="dzrd_t" depend_field="dzrd002" correspon_key="dzrd002" ref_table="gzgdl_t" ref_fk="gzgdl000" ref_dlang=" " ref_rtn="gzgdl002"/>
+    <field depend_table="dzrd_t" depend_field="dzrd004" correspon_key="dzrd004" ref_table="type_t" ref_fk=" " ref_dlang=" " ref_rtn="chr80"/>
+    <field depend_table="dzrd_t" depend_field="dzrd005" correspon_key="dzrd005" ref_table="type_t" ref_fk=" " ref_dlang=" " ref_rtn="chr80"/>
+    <field depend_table="dzrd_t" depend_field="dzrdcrtdp" correspon_key="dzrdcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzrd_t" depend_field="dzrdcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzrd_t" depend_field="dzrdcrtid" correspon_key="dzrdcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzrd_t" depend_field="dzrdmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzrd_t" depend_field="dzrdmodid" correspon_key="dzrdmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzrd_t" depend_field="dzrdowndp" correspon_key="dzrdowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzrd_t" depend_field="dzrdownid" correspon_key="dzrdownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="dzrdstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

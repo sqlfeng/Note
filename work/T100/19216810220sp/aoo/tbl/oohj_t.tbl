@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oohj_t" module="AOO" text="控制组营业渠道档" type="D" version="1">
+  <column name="oohjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oohj001" text="控制组编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohj002" text="营业通路" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohj003" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="oohj004" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="oohjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohj003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohj004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oohj_t" depend_field="oohj002" correspon_key="oohj002,oohjent" ref_table="ooefl_t" ref_fk="ooefl001,ooeflent" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

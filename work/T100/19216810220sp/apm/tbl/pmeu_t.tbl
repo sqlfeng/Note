@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmeu_t" module="APM" text="要货组织默认要货数据单身档" type="D" version="1">
+  <column name="pmeuent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmeusite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmeuunit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeuseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmeu001" text="要货部门" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmeu002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmeu003" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmeu004" text="要货包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeu005" text="要货包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmeu006" text="要货单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmeu007" text="要货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmeustus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmeuent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmeusite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeuunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeuseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmeu001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeu002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imay003_2" c_zoom="q_imay003_2" chk_ref="v_imay003_1" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmeu003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_18" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmeu004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imao002" c_zoom="q_ooca001" chk_ref="v_imao002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeu005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmeu006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmeu007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmeustus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmeu_t" depend_field="pmeu003" correspon_key="pmeu003" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmeu_t" depend_field="pmeu004" correspon_key="pmeu004" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmeu_t" depend_field="pmeu006" correspon_key="pmeu006" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmeustus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

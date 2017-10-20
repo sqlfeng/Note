@@ -1,0 +1,75 @@
+{<section id="${app_id}.get_hyper_data" >}
+#應用 qs01 樣板自動產生(Version:9)
+#+ 取得單身串查網址(包含程式代號及參數)
+PRIVATE FUNCTION ${general_prefix}_get_hyper_data(ps_field_name)
+   #add-point:get_hyper_data段define-客製 name="get_hyper_data.define_customerization"
+   {<point name="get_hyper_data.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE ps_field_name    STRING
+   DEFINE ps_url           STRING
+   DEFINE ls_js            STRING
+   DEFINE la_param         RECORD
+                           prog       STRING,
+                           actionid   STRING,
+                           background LIKE type_t.chr1,
+                           param      DYNAMIC ARRAY OF STRING
+                           END RECORD
+   DEFINE ps_type          LIKE type_t.chr10
+   #add-point:get_hyper_data段define-標準  (請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="get_hyper_data.define"
+   {<point name="get_hyper_data.define"/>}
+   #end add-point
+ 
+ 
+   #add-point:FUNCTION前置處理 name="get_hyper_data.before_function"
+   {<point name="get_hyper_data.before_function" />}
+   #end add-point
+ 
+   LET ps_url = NULL
+ 
+   # 設定要做串查的程式代碼
+   CASE
+      WHEN ps_field_name = "${detail_hyper_field1}"
+         LET la_param.prog = "${detail_hyper_prog1}"
+ 
+         # 設定傳入參數，請依序放置於 la_param.param[1]、la_param.param[2]、...
+         ${detail_hyper_field_para1}
+         #add-point:傳入參數設定 name="get_hyper_data.set_parameter_${detail_hyper_field1}"
+         {<point name="get_hyper_data.set_parameter_${detail_hyper_field1}"/>}
+         #end add-point
+ 
+      #hyperlink - Start -
+      WHEN ps_field_name = "${detail_hyper_field${hyper_field_count_all}}"
+         LET la_param.prog = "${detail_hyper_prog${hyper_field_count_all}}"
+ 
+         # 設定傳入參數，請依序放置於 la_param.param[1]、la_param.param[2]、...
+         ${detail_hyper_field_para${hyper_field_count_all}}
+         #add-point:傳入參數設定 name="get_hyper_data.set_parameter_${detail_hyper_field${hyper_field_count_all}}"
+         {<point name="get_hyper_data.set_parameter_${detail_hyper_field${hyper_field_count_all}}"/>}
+         #end add-point
+      #hyperlink -  End  -
+   END CASE
+ 
+   # 設定傳入參數，請依序放置於 la_param.param[1]、la_param.param[2]、...
+   #add-point:傳入參數設定 name="get_hyper_data.set_parameter"
+   {<point name="get_hyper_data.set_parameter"/>}
+   #end add-point
+ 
+   #將陣列資料組合成一個string字串
+   LET ls_js = util.JSON.stringify(la_param)
+ 
+   #依環境設定要走GDC或GWC模式 (""表示會依據目前的環境判斷，若有自行定義，會依據所定義的模式去執行)
+   LET ps_type = ""
+   #add-point:定義執行模式 name="get_hyper_data.set_env"
+   {<point name="get_hyper_data.set_env"/>}
+   #end add-point
+ 
+   #呼叫lib，取得完整的url資訊
+   CALL cl_ap_url(ps_type,ls_js) RETURNING ps_url
+
+   LET ps_url = cl_replace_str(ps_url, "&", "&amp;") 
+   RETURN ps_url
+ 
+END FUNCTION
+{</section>}
+ 
+

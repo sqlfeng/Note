@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="srcd_t" module="ASR" text="重复性生产计划制程Check in/Check out项目变更档" type="D" version="1">
+  <column name="srcdent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="srcdsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcd000" text="类型" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="srcd001" text="生产计划" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcd002" text="制程编号" attribute="C404" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srcd004" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="srcd005" text="BOM特性" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="srcd006" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="srcd007" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcdseq" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcd008" text="Check in/Check out" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srcd009" text="项目" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcd010" text="形态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcd011" text="下限" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srcd012" text="上限" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srcd013" text="默认值" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="srcd014" text="必要" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srcd900" text="变更序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srcd901" text="变更类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srcd902" text="变更日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="srcd905" text="变更理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srcd906" text="变更备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="srcdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srcdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd000" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd001" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd002" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srcd004" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srcd005" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcd006" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcd007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcdseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcd008" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd009" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd010" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srcd012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srcd013" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srcd014" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd900" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srcd901" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd902" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srcd905" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srcd906" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

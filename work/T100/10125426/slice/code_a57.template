@@ -1,0 +1,25 @@
+#應用 a57 樣板自動產生(Version:3)
+         INPUT BY NAME ${master_input_fields} 
+            ATTRIBUTE(WITHOUT DEFAULTS)
+            
+            #自訂ACTION(master_input)
+            ${master_iaction_call}
+         
+            BEFORE INPUT
+               #add-point:資料輸入前 name="input.m.before_input"
+               {<point name="input.m.before_input"/>}
+               #end add-point
+         
+            ${master_fields_check}
+            ${master_fields_ctrlp_i}
+               
+            AFTER INPUT
+               #add-point:資料輸入後 name="input.m.after_input"
+               {<point name="input.m.after_input"/>}
+               #end add-point
+               
+            #add-point:其他管控(on row change, etc...) name="input.other"
+            {<point name="input.other"/>}
+            #end add-point
+         END INPUT
+

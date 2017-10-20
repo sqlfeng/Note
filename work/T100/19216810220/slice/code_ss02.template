@@ -1,0 +1,11 @@
+#此段落由子樣板ss02產生
+            IF NOT cl_null(${mdl_var}) THEN
+               IF NOT cl_chk_discrete_data("${mdl_var_list}",${mdl_var}) THEN                    
+                   INITIALIZE g_errparam TO NULL
+                   LET g_errparam.extend = ${mdl_var}
+                   LET g_errparam.code   = "azz-00144"
+                   LET g_errparam.popup  = TRUE
+                   CALL cl_err()
+                   NEXT FIELD ${mdl_field}
+               END IF   
+            END IF

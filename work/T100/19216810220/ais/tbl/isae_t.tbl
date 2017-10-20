@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isae_t" module="AIS" text="发票簿数据档" type="M" version="1">
+  <column name="isaeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="isaecomp" text="法人" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isaeownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaeowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaecrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaecrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaecrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaemodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaemoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaestus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaesite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isae001" text="发票簿号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isae002" text="生效日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="isae003" text="失效日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="isae004" text="发票类型" attribute="C550" type="varchar2(2)" pk="Y" req="Y"/>
+  <column name="isae005" text="电子发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isae006" text="开立方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isae007" text="发票字轨" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isae008" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isae009" text="起始号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isae010" text="结束号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isae011" text="发票张数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="isae012" text="下次打印号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isae013" text="已使用张数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="isae014" text="已打印发票日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="isae015" text="下传 pos否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isae016" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="isae017" text="起始月份" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="isae018" text="结束月份" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="isae019" text="数据源" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isae020" text="发票限额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isae021" text="发票开立系统" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isae022" text="发票取用门市" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isae023" text="收银机编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="isaeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isaecomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_isaesite" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaeownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaeowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaecrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaecrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaecrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isaemodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaemoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isaestus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isaesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_isaesite" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_isaesite" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="isae002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="isae003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="isae004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isae004" c_zoom="q_isac002" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isae005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_isad005" c_zoom="q_isad005" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isae006" widget="ComboBox" items="9713" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isae007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isad005()" c_zoom="q_isad005()" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002" c_zoom="q_isac002" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="isae010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isae011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="isae012" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="isae013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="isae014" widget="Edit" items="" default="N" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="isae015" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="isae017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="isae018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="isae019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isae021" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isae023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isae_t" depend_field="isae004" correspon_key="isaeent,isae001,isae004" ref_table="isacl_t" ref_fk="isaclent,isacl001,isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="isae_t" depend_field="isae009" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isae_t" depend_field="isae018" correspon_key="isae018" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isae_t" depend_field="isaecomp" correspon_key="isaeent,isaecomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isae_t" depend_field="isaecrtdp" correspon_key="isaecrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isae_t" depend_field="isaecrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isae_t" depend_field="isaecrtid" correspon_key="isaecrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isae_t" depend_field="isaemoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isae_t" depend_field="isaemodid" correspon_key="isaemodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isae_t" depend_field="isaeowndp" correspon_key="isaeowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isae_t" depend_field="isaeownid" correspon_key="isaeownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isae_t" depend_field="isaesite" correspon_key="isaeent,isaesite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="isaestus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

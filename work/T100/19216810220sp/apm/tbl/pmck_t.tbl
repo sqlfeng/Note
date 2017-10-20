@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmck_t" module="APM" text="供应商评核总得分档" type="S" version="1">
+  <column name="pmckent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmck001" text="评估期别" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmck002" text="评估品类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmck003" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmck004" text="系统得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmck005" text="调整后得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmck006" text="评核等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmck007" text="处理方案" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmckent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmck001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmcc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmck002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtax001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmck003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmck004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmck005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmck006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmck007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmck_t" depend_field="pmck002" correspon_key="pmckent,pmck002" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="pmck_t" depend_field="pmck003" correspon_key="pmckent,pmck003" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmck_t" depend_field="pmck006" correspon_key="pmckent,pmck006" ref_table="oocql_t" ref_fk="ppcqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmck_t" depend_field="pmck007" correspon_key="pmckent,pmck007" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

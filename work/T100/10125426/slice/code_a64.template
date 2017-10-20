@@ -1,0 +1,26 @@
+#應用 a64 樣板自動產生(Version:4)
+#+ 資料遮罩
+PRIVATE FUNCTION ${general_prefix}_${mdl_tbl_name}_mask()
+   #add-point:mask段define name="${mdl_tbl_name}_mask.define_customerization"
+   {<point name="${mdl_tbl_name}_mask.define_customerization" edit="c" mark="Y"/>}
+   #end add-point 
+   #add-point:mask段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="${mdl_tbl_name}_mask.define"
+   {<point name="${mdl_tbl_name}_mask.define"/>}
+   #end add-point   
+   
+   #先判斷是否有遮罩, 若無則不做處理
+   IF g_priv_col.getLength() = 0 THEN
+      RETURN
+   END IF
+   
+   #進行遮罩處理
+   ${mdl_mark}CALL cl_mask_trans_method('${mdl_field}',${mdl_var}) 
+   ${mdl_mark}RETURNING ${mdl_var}
+   
+   #mdls - Start -
+   CALL cl_mask_trans_method('${mdl_field${mdl}}',${mdl_var${mdl}}) 
+   RETURNING ${mdl_var${mdl}}
+   #mdls -  End  -
+   
+END FUNCTION
+

@@ -1,0 +1,12 @@
+      #應用 a21 樣板自動產生(Version:3)
+	  #根據當下狀態碼顯示圖片
+      CASE ${master_var_stus} 
+         WHEN "${mdl_stus1}"
+            CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic1}.png")
+         #mdls - Start -
+         WHEN "${mdl_stus${mdl}}"
+            CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic${mdl}}.png")
+         #mdls -  End  -
+         ${mdl_a34}
+      END CASE
+

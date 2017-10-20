@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="debi_t" module="ADE" text="门店专柜款别统计日结档" type="S" version="1">
+  <column name="debient" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="debisite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debi001" text="层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debi002" text="统计日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="debi003" text="会计周" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debi004" text="会计期" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debi005" text="专柜编号" attribute="C601" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="debi006" text="专柜类型" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debi007" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debi008" text="税别编号" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debi009" text="款别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debi010" text="款别分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debi011" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="debient" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debisite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debi004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debi005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="debi006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debi011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="debi_t" depend_field="debi009" correspon_key="debi009" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="decd_t" module="ADE" text="会员卡积点日结档" type="S" version="1">
+  <column name="decdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="decd001" text="卡种" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decd002" text="异动日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="decd003" text="本日期初点数" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="decd004" text="本日新增点数" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="decd005" text="本日使用点数" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="decd006" text="本日失效点数" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="decd007" text="本日期末点数" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="decd008" text="日结人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="decd009" text="日结日期" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="decdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="decd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mman001_7" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decd002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="decd003" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decd004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decd005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decd006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decd007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decd008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decd009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="decd_t" depend_field="decdmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="decd_t" depend_field="decdmodid" correspon_key="decdmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

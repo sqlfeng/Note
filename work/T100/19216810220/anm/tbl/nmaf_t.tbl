@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmaf_t" module="ANM" text="银行支票簿数据档" type="B" version="1">
+  <column name="nmafent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmafcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmaf001" text="交易账户编码" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmaf002" text="票据类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmaf003" text="套印格式编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmaf004" text="支票簿号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmaf005" text="领用日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmaf006" text="支票起始号码" attribute="C505" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmaf007" text="支票截止号码" attribute="C505" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmaf008" text="张数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="nmaf009" text="流水号长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="nmaf010" text="下次打印号码" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmaf011" text="套印否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmaf012" text="领用否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmafownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmafowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmafcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmafcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmafcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmafmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmafmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="nmafstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmafent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmafcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmas_01" c_zoom="q_nmas_01" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooia001" c_zoom="q_ooia001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmaf006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="nmaf007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="nmaf008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="nmaf009" widget="Edit" items="" default="" max_compare="&lt;=" max="5.000" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="nmaf010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="nmaf011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmaf012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmafmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmafmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmafstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="nmaf_t" depend_field="nmaf001" correspon_key="nmafent,nmaf001" ref_table="nmaal_t" ref_fk="nmmalent,nmaal001" ref_dlang="nmaal002" ref_rtn="nmaal003"/>
+    <field depend_table="nmaf_t" depend_field="nmaf002" correspon_key="nmafent,nmaf002" ref_table="ooial_t" ref_fk="ooialent,ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="nmaf_t" depend_field="nmafcrtdp" correspon_key="nmafcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmaf_t" depend_field="nmafcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmaf_t" depend_field="nmafcrtid" correspon_key="nmafcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmaf_t" depend_field="nmafmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="nmaf_t" depend_field="nmafmodid" correspon_key="nmafmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="nmaf_t" depend_field="nmafowndp" correspon_key="nmafowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmaf_t" depend_field="nmafownid" correspon_key="nmafownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="nmafstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>
+

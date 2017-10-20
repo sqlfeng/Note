@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prbj_t" module="APR" text="生鲜调价单明细数据表" type="D" version="1">
+  <column name="prbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prbjunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbjsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbjdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prbjseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prbjseq1" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prbj001" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prbj002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prbj003" text="商品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="prbj004" text="PLU码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbj005" text="包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbj006" text="整包件数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj007" text="价格因子" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="prbj008" text="进项税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbj009" text="进价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj010" text="销项税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbj011" text="售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj012" text="会员价1" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj013" text="会员价2" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj014" text="会员价3" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj015" text="毛利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="prbj016" text="进价开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prbj017" text="进价截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prbj018" text="售价开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="prbj019" text="售价截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="prbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbjunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbjsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbjdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prbjseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prbjseq1" widget="ComboBox" items="6032" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prbj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prbj001" c_zoom="q_prbj001" chk_ref="v_prbj001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prbj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prbj001" c_zoom="q_prbj001" chk_ref="v_prbj002" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prbj001" c_zoom="q_prbj001" chk_ref="v_prbj004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="prbj008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_8" c_zoom="q_oodb002_8" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbj009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_8" c_zoom="q_oodb002_8" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbj011" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj012" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj013" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj014" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prbj015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="prbj016" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbj017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbj018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbj019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prbj_t" depend_field="prbj001" correspon_key="prbjent,prbj001" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="prbj_t" depend_field="prbj005" correspon_key="prbjent,prbj005" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="prbj_t" depend_field="prbj008" correspon_key="prbjent,prbj008" ref_table="oodbl_t" ref_fk="oodblent,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="prbj_t" depend_field="prbj010" correspon_key="prbjent,prbj010" ref_table="oodbl_t" ref_fk="oodblent,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="prbj_t" depend_field="prbjsite" correspon_key="prbjent,prbjsite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

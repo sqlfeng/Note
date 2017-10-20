@@ -1,0 +1,33 @@
+#應用 a66 樣板自動產生(Version:6)
+PRIVATE FUNCTION ${general_prefix}_msgcentre_notify(lc_state)
+   #add-point:msgcentre_notify段define name="msgcentre_notify.define_customerization"
+   {<point name="msgcentre_notify.define_customerization" edit="c" mark="Y"/>}
+   #end add-point   
+   DEFINE lc_state LIKE type_t.chr80
+   #add-point:msgcentre_notify段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="msgcentre_notify.define"
+   {<point name="msgcentre_notify.define"/>}
+   #end add-point
+   
+   #add-point:Function前置處理  name="msgcentre_notify.pre_function"
+   {<point name="msgcentre_notify.pre_function"/>}
+   #end add-point
+   
+   INITIALIZE g_msgparam TO NULL
+ 
+   #action-id與狀態填寫
+   LET g_msgparam.state = lc_state
+ 
+   #PK資料填寫
+   CALL ${general_prefix}_set_pk_array()
+   #單頭資料填寫
+   LET g_msgparam.data[1] = util.JSON.stringify(${mdl_var_title})
+ 
+   #add-point:msgcentre其他通知 name="msgcentre_notify.process"
+   {<point name="msgcentre_notify.process"/>}
+   #end add-point
+ 
+   #呼叫訊息中心傳遞本關完成訊息
+   CALL cl_msgcentre_notify()
+ 
+END FUNCTION
+

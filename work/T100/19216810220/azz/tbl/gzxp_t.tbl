@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzxp_t" module="AZZ" text="待追踪单据纪录表" type="D" version="1">
+  <column name="gzxpent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzxpstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxp001" text="员工编号" attribute="C006" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzxp002" text="作业编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzxp003" text="单据组合Key" attribute="C104" type="varchar2(500)" pk="Y" req="Y"/>
+  <column name="gzxp004" text="未使用属性" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzxp005" text="未使用属性" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzxp006" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzxp007" text="分类" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzxp008" text="说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzxp009" text="建立追踪时间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzxp010" text="数据存放营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzxpent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxpstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxp002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzxp003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzxp008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzxp009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxp010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="gzxpstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

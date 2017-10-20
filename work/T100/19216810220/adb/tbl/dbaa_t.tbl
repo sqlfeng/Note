@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dbaa_t" module="ADB" text="销售区域层级数据档" type="B" version="1">
+  <column name="dbaaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="dbaa001" text="地区编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dbaa002" text="层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaa003" text="上级地区编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaa004" text="上层层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaastus" text="有效码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbaaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbaacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbaacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dbaamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbaamoddt" text="资料修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dbaaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbaa001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001" c_zoom="q_dbaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaa002" widget="ComboBox" items="6701" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaa003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001" c_zoom="q_dbaa003" chk_ref="v_dbaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaa004" widget="ComboBox" items="6701" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaastus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dbaamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbaamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dbaa_t" depend_field="dbaa001" correspon_key="dbaaent,dbaa001" ref_table="dbaal_t" ref_fk="dbaalent,dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="dbaa_t" depend_field="dbaa003" correspon_key="dbaaent,dbaa001" ref_table="dbaal_t" ref_fk="dbaalent,dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="dbaa_t" depend_field="dbaacrtdp" correspon_key="dbaacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbaa_t" depend_field="dbaacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbaa_t" depend_field="dbaacrtid" correspon_key="dbaacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbaa_t" depend_field="dbaamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbaa_t" depend_field="dbaamodid" correspon_key="dbaamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbaa_t" depend_field="dbaaowndp" correspon_key="dbaaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbaa_t" depend_field="dbaaownid" correspon_key="dbaaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="dbaa_t" depend_field="dbaa001" correspon_key="dbaaent,dbaa001" lang_table="dbaal_t" lang_fk="dbaalent,dbaal001" lang_dlang="dbaal002" lang_rtn="dbaal003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="dbaastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

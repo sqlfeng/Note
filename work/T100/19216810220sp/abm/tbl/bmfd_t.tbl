@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmfd_t" module="ABM" text="ECN联产品档" type="D" version="1">
+  <column name="bmfdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bmfdsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmfddocno" text="ECN单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bmfd002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmfd003" text="变更方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmfd004" text="联产品料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="bmfd005" text="预估比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfd006" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="bmfd007" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmfdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfddocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmfd003" widget="ComboBox" items="1207" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001_2" c_zoom="q_imaa001_2" chk_ref="v_imaa001_5" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfd005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="bmfd006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfd007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmfd_t" depend_field="bmfd004" correspon_key="bmfdent,bmfd004" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtka_t" module="ART" text="自动补货供应商出单日设置档" type="B" version="1">
+  <column name="rtkaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtkaunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtka001" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtka002" text="数据类型" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="rtka003" text="店群门店编号" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="rtka004" text="出单周期类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtka005" text="出单日" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="rtka006" text="出单周" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="rtka007" text="送货时段" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtka008" text="最小送货量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtka009" text="最小送货金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtka010" text="订单有效期" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtka011" text="要货频率" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtka012" text="送货天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="rtkaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtkaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkacrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtkacrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtkacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtkamodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtkamoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtkastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtkaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtkaunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka002" widget="ComboBox" items="6030" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka004" widget="ComboBox" items="6019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtka006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtka007" widget="ComboBox" items="274" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_01" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtka008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtka009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtka010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtka011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtka012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="rtkaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtkaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtkacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtkacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtkacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtkamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtkamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtkastus" widget="ComboBox" items="" default="&apos;Ｙ&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtka_t" depend_field="rtka001" correspon_key=" " ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang=" " ref_rtn="pmaal003"/>
+    <field depend_table="rtka_t" depend_field="rtka003" correspon_key="rtkaent,rtka003" ref_table="rtaal_t" ref_fk="rtaalent,rtaal001" ref_dlang="rtaal002" ref_rtn="rtaal003"/>
+    <field depend_table="rtka_t" depend_field="rtka007" correspon_key="rtkaent,rtka001" ref_table="oocql_t" ref_fk="oocqlent,ppcql001" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="rtka_t" depend_field="rtkacrtdp" correspon_key="rtkacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtka_t" depend_field="rtkacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtka_t" depend_field="rtkacrtid" correspon_key="rtkacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtka_t" depend_field="rtkamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="rtka_t" depend_field="rtkamodid" correspon_key="rtkamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="rtka_t" depend_field="rtkaowndp" correspon_key="rtkaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="rtka_t" depend_field="rtkaownid" correspon_key="rtkaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="rtkastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

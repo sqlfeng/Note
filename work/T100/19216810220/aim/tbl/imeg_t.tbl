@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imeg_t" module="AIM" text="规则化规格设置数据档" type="B" version="1">
+  <column name="imegent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imegownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imegowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imegcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imegcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imegcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imegmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imegmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="imegstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imeg001" text="规格种类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imeg002" text="案例" attribute="C302" type="varchar2(255)" pk="N" req="N"/>
+  <column name="imeg003" text="节点编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imeg004" text="前段节点编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imeg005" text="段次" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="imeg006" text="节点型态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imeg007" text="规格固定值" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imeg008" text="人工输入检查类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imeg009" text="人工输入文本长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="imeg010" text="人工输入数值格式" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imeg011" text="人工输入数值下限" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="imeg012" text="人工输入数值上限" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="imegent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imegownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imegowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imegcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imegcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imegcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imegmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imegmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="imegstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imeg001" widget="ButtonEdit" items="" default="&apos;0&apos;" max_compare="&gt;=" max="0.000" min_compare="&lt;" min="100.000" i_zoom="q_imee001" c_zoom="q_imee001" chk_ref="v_imee001_test01" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeg002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="imeg003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imee003" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeg004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imee003" c_zoom="q_imee003" chk_ref="v_imee003" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeg005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="imeg006" widget="ComboBox" items="48" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeg007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="imeg008" widget="RadioGroup" items="51" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imeg009" widget="Edit" items="" default="" max_compare="&lt;=" max="255.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="imeg010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="imeg011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="imeg012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imeg_t" depend_field="imeg004" correspon_key="imegent,imeg001,imeg004" ref_table="imeel_t" ref_fk="imeelent,imeel001,imeel002" ref_dlang="imeel003" ref_rtn="imeel004"/>
+    <field depend_table="imeg_t" depend_field="imegcrtdp" correspon_key="imegcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imeg_t" depend_field="imegcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="imeg_t" depend_field="imegcrtid" correspon_key="imegcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="imeg_t" depend_field="imegmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="imeg_t" depend_field="imegmodid" correspon_key="imegmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="imeg_t" depend_field="imegowndp" correspon_key="imegowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="imeg_t" depend_field="imegownid" correspon_key="imegownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="imegstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

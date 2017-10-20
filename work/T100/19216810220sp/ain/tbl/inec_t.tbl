@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inec_t" module="AIN" text="盘点范围数据表" type="D" version="1">
+  <column name="inecent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inecdocno" text="盘点计划单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inec001" text="组别" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inec002" text="属性" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inec003" text="属性代码" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="inecstus" text="状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inecent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inecdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inec001" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inec002" widget="CheckBox" items="" default="&apos;4&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inec003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inecstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inec_t" depend_field="inec003" correspon_key="ineaunit,inec003" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="inecstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

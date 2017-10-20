@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmfc_t" module="AXM" text="销售报价范本料号明细单身档" type="D" version="1">
+  <column name="xmfcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmfcsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmfcdocno" text="范本料号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmfc001" text="版次" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmfc002" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmfc003" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmfc004" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="Y"/>
+  <column name="xmfc005" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="xmfc006" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmfc007" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="xmfc008" text="限定字符" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmfcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmfcsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfcdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmfc001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmfc002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmfc003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmfc004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_15" c_zoom="q_imaf001_15" chk_ref="v_imaf001_14" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmfc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmfc006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmfc007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imao002" c_zoom="q_imao002" chk_ref="v_imao002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfc008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmfb003" c_zoom="q_xmfb003" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmfc_t" depend_field="xmfc004" correspon_key="xmfcent,xmfc004" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmfc_t" depend_field="xmfc007" correspon_key="xmfcent,xmfc007" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

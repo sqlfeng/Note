@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oohh_t" module="AOO" text="控制组产品分类档" type="D" version="1">
+  <column name="oohhent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oohh001" text="控制组编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohh002" text="产品分类" attribute="C012" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oohh003" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="oohh004" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="oohhent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohh001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohh002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oohh003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oohh004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oohh_t" depend_field="oohh002" correspon_key="oohhent,oohh002" ref_table="rtaxl_t" ref_fk="rtaxlent,rtax001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

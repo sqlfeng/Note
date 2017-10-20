@@ -1,0 +1,15 @@
+#應用 a53 樣板自動產生(Version:3)
+               ON EXPAND (g_row_index)
+                  #樹展開
+                  CALL ${general_prefix}_browser_expand(g_row_index)
+                  LET g_browser[g_row_index].b_isExp = 1
+                  LET g_browser_expand[g_browser_expand.getLength()+1].b_${master_field_type} = g_browser[g_row_index].b_${master_field_type}
+                  ${master_type_mark2}LET g_browser_expand[g_browser_expand.getLength()].b_${master_field_type2}  = g_browser[g_row_index].b_${master_field_type2}
+                  ${master_type_mark3}LET g_browser_expand[g_browser_expand.getLength()].b_${master_field_type3}  = g_browser[g_row_index].b_${master_field_type3}
+                  ${master_type_mark4}LET g_browser_expand[g_browser_expand.getLength()].b_${master_field_type4}  = g_browser[g_row_index].b_${master_field_type4}
+                  ${master_type_mark5}LET g_browser_expand[g_browser_expand.getLength()].b_${master_field_type5}  = g_browser[g_row_index].b_${master_field_type5}
+                  ${master_type_mark6}LET g_browser_expand[g_browser_expand.getLength()].b_${master_field_type6}  = g_browser[g_row_index].b_${master_field_type6}
+                  
+               ON COLLAPSE (g_row_index)
+                  #樹關閉
+

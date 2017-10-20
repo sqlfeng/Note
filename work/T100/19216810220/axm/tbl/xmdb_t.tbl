@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmdb_t" module="AXM" text="订单多账期预收款档" type="D" version="1">
+  <column name="xmdbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmdbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdbdocno" text="订单单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmdb001" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmdb002" text="收款条件" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdb003" text="预计应收款日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdb004" text="预计票据到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdb005" text="未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb006" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb007" text="应收账款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdb008" text="主账套立账未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb009" text="主账套立账含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb010" text="账套二立账未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb011" text="账套二立账含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb014" text="账套三立账未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb015" text="账套三立账含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdb016" text="账款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdb017" text="账款影响出货模式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdb200" text="本币含税总金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmdbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdb001" widget="Edit" items="" default="1" max_compare="" max="" min_compare="" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xmdb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmad002_1" c_zoom="q_ooib002_2" chk_ref="v_pmad002_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdb003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdb004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdb008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdb016" widget="ComboBox" items="3015" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdb017" widget="ComboBox" items="3016" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdb200" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmdb_t" depend_field="xmdb002" correspon_key="xmdb002" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

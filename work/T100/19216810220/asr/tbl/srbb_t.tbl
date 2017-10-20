@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="srbb_t" module="ASR" text="重复性生产期末盘点单身档" type="D" version="1">
+  <column name="srbbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="srbbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbbdocno" text="盘点单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="srbbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srbb001" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="srbb002" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="srbb003" text="库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbb004" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbb005" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="srbb006" text="库存特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="srbb007" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbb008" text="账面数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srbb009" text="盘点数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srbb010" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srbb011" text="参考账面数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srbb012" text="参考盘点数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="srbbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="srbbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srbbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="srbb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_7" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="srbb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srbb003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_2" c_zoom="q_inaa001_2" chk_ref="v_inaa001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbb004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_3" c_zoom="q_inab002_3" chk_ref="v_inab002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbb005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag006" c_zoom="q_inag006" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srbb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="srbb007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbb008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srbb009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srbb010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="srbb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="srbb012" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="srbb_t" depend_field="srbb001" correspon_key="srbbent,srbb001" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="srbb_t" depend_field="srbb003" correspon_key="srbbent,srbbsite,srbb003" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="srbb_t" depend_field="srbb004" correspon_key="srbbent,srbbsite,srbb004" ref_table="inab_t" ref_fk="inabent,inabsite,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="srbb_t" depend_field="srbb007" correspon_key="srbbent,srbb007" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="srbb_t" depend_field="srbb010" correspon_key="srbbent,srbb010" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

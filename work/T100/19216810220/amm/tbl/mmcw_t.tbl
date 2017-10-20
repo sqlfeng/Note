@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmcw_t" module="AMM" text="会员等级升降策略卡种范围设置档" type="D" version="1">
+  <column name="mmcwent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmcw001" text="升降等策略编号" attribute="C092" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmcw002" text="卡种编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmcwstus" text="资料有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmcwent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmcw001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmcw002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mman001" c_zoom="q_mman001" chk_ref="v_mman001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmcwstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmcw_t" depend_field="mmcw002" correspon_key="mmcwent,mmcw002" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmcwstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

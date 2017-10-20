@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbv_t" module="AMM" text="卡积点除外规则单身档" type="D" version="1">
+  <column name="mmbvent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbv001" text="活动规则编号" attribute="C092" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmbv002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbv003" text="规则类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbv004" text="规则编码" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="mmbvstus" text="资料有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbvent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbv001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmbv002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbv003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbv004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmbvstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmbvstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

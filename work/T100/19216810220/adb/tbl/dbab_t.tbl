@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dbab_t" module="ADB" text="路线基本数据档" type="B" version="1">
+  <column name="dbabent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="dbab001" text="路线编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dbab002" text="装载点编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbab011" text="预估行驶时数(去程)" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab012" text="预估总时数(去程)" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab013" text="预估油费(去程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab014" text="预估过路费(去程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab015" text="预估总费用(去程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab021" text="预估行驶时数(回程)" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab022" text="预估总时数(回程)" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab023" text="预估油费(回程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab024" text="预估过路费(回程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab025" text="预估总费用(回程)" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab031" text="总预估行驶时数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab032" text="总预估时数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="dbab035" text="总预估油费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab034" text="总预估过路费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbab033" text="总预估费用" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbabownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbabowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbabcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbabcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbabcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dbabmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbabmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dbabstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dbabent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbab001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbab002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbae001" c_zoom="q_dbae001" chk_ref="v_dbae001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbab011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbab033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbabownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbabowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbabcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbabcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbabcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dbabmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbabmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="dbabstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dbab_t" depend_field="dbab002" correspon_key="dbab002" ref_table="dbael_t" ref_fk="dbael001" ref_dlang="dbael002" ref_rtn="dbael003"/>
+    <field depend_table="dbab_t" depend_field="dbabcrtdp" correspon_key="dbabcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbab_t" depend_field="dbabcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbab_t" depend_field="dbabcrtid" correspon_key="dbabcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbab_t" depend_field="dbabmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dbab_t" depend_field="dbabmodid" correspon_key="dbabmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dbab_t" depend_field="dbabowndp" correspon_key="dbabowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dbab_t" depend_field="dbabownid" correspon_key="dbabownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="dbab_t" depend_field="dbab001" correspon_key="dbab001" lang_table="dbabl_t" lang_fk="dbabl001" lang_dlang="dbabl002" lang_rtn="dbabl003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="dbabstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmcg_t" module="AMM" text="卡折扣一般规则设置单身档" type="D" version="1">
+  <column name="mmcgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmcg001" text="活动规则编号" attribute="C092" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmcg002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmcg003" text="规则类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmcg004" text="规则编码" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="mmcg005" text="折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmcgstus" text="资料有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmcgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmcg001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmcg002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmcg003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmcg004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmbu004" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmcg005" widget="Edit" items="" default="100" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="mmcgstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmcgstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

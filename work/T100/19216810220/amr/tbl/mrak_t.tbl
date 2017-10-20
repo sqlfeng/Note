@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mrak_t" module="AMR" text="资源保修零件更换明细档" type="D" version="1">
+  <column name="mrakent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mraksite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrak001" text="资源分类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrak002" text="资源编号" attribute="C403" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrak003" text="保修类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mrakseq" text="保修项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mrakseq1" text="保修零件项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mrak004" text="零件品号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mrak005" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mrak006" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrak007" text="旧零件处理方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrak008" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mrakent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mraksite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrak001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrak002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrak003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrakseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mrakseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mrak004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrak005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mrak006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imao002" c_zoom="q_ooca001_1" chk_ref="v_imao002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrak007" widget="ComboBox" items="5213" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrak008" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mrak_t" depend_field="mrak004" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="mrak_t" depend_field="mrak006" correspon_key="mrak006" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

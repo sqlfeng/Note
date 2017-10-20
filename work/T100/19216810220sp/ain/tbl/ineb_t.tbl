@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="ineb_t" module="AIN" text="生效组织数据表" type="D" version="1">
+  <column name="inebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inebdocno" text="盘点计划" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="ineb001" text="生效组织" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inebstus" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inebdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="ineb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004_3" c_zoom="q_ooed004_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inebstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="ineb_t" depend_field="ineb001" correspon_key="inebent,ineb001" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="inebstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>
+

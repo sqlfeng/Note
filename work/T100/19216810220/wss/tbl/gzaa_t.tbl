@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzaa_t" version="1">
+  <column name="gzaamodu" text="资料修改者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzaadate" text="最近修改日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzaaoriu" text="资料所有者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzaaorid" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzaauser" text="资料建立者" attribute="C006" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzaadept" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzaabuid" text="资料创建日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gzaastus" text="状态码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzaa001" text="应用分类" attribute="N805" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzaa002" text="系统专用" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <column name="gzaa003" text="" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <col_attr>
+    <field name="gzaamodu" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaadate" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaaoriu" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaaorid" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaauser" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaadept" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaabuid" widget="DateEdit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaastus" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaa001" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="" c_zoom="q_gzaa001" chk_ref="" widget_width="5"/>
+    <field name="gzaa002" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzaa003" widget="CheckBox" items="" default="Y" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+  </col_attr>
+  <tree id="gzaa_t" type="" lid="" pid="" desc="" speed="" stype="" slid="" spid=""/>
+  <ref_field/>
+  <multi_lang>
+    <field depend_table="gzaa_t" depend_filed="gzaa001" correspon_key="gzaa001" lang_table="gzaal_t" lang_fk="gzaal001" lang_dlang="gzaal002" lang_rtn="gzaal003"/>
+  </multi_lang>
+  <help_code/>
+</table>

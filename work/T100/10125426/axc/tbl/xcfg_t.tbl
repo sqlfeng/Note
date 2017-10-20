@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcfg_t" module="AXC" text="LCM存货成本和市价期数据档" type="S" version="1">
+  <column name="xcfgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcfgcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcfgld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xcfg001" text="账套本位币顺序" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xcfg002" text="成本域" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xcfg003" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcfg004" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcfg005" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcfg006" text="料件" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="xcfg007" text="特性" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="xcfg008" text="批号" attribute="C304" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xcfg010" text="存货类别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcfg011" text="材料分类" attribute="C012" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcfg012" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcfg013" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcfg014" text="库存数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg015" text="进货单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg016" text="销售单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg017" text="单位成本" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg018" text="ROLLUP单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg019" text="净变现单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg020" text="净变现市价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg021" text="净变现逆推顺序" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcfg022" text="净变现销售费用率类别" attribute="C012" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcfg023" text="净变现销售费用率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg024" text="净变现逆推顺序" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xcfg025" text="净变现逆推成品料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xcfg026" text="净变现逆推成品平均单位成本" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg027" text="净变现逆推成品平均净变现单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcfg028" text="净变现逆推参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcfg029" text="净变现逆推参考项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="xcfg030" text="净变现逆推单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcfgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcfgcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfgld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_glaald" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcfg001" widget="ComboBox" items="8914" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg002" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_xcbf001" c_zoom="q_xcbf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg003" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_xcat001" c_zoom="q_xcat001" chk_ref="v_xcat001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcfg005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcfg006" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_imag001_2" c_zoom="q_imag001_2" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcfg007" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_inag006_2" c_zoom="q_inag006_2" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcfg008" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_inaj010" c_zoom="q_inaj010" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcfg010" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg011" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg012" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg013" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg021" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg022" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xcfg024" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcfg025" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcfg026" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg027" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcfg028" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcfg029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xcfg030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code>
+    <field depend_table="xcfg_t" depend_field="xcfg002" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg003" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg004" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg005" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg006" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg007" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg008" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg015" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg016" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg017" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg018" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg019" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg023" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg025" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg028" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfg029" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfgcomp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xcfg_t" depend_field="xcfgld" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+  </help_code>
+  <scc/>
+</table>

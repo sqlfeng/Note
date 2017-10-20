@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzza_t" module="AZZ" text="程序数据表" type="B" version="1">
+  <column name="gzzastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzza001" text="程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzza002" text="程序类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzza003" text="归属模块" attribute="C808" type="varchar2(4)" pk="N" req="N"/>
+  <column name="gzza004" text="系统运行指令" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="gzza005" text="单身显示笔数处理方法" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza006" text="可于更改时调整主要键值(PK)数据" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza007" text="最大单身显示笔数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="gzza008" text="引用主程序编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzza009" text="执行时生成SQL操作历程档 (在 $LOGDIR)" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza010" text="将错误消息写入LOG" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza011" text="客制" attribute="C911" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza012" text="处理闲置连接方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza013" text="处理闲置连接关闭的作法" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza014" text="闲置时间 (秒)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="gzza015" text="归属行业别" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzza016" text="程序可维护(特别开发属性)" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzzaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzzacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzzacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzzamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzzamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzza017" text="单据日期控管方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza018" text="过账日期控管方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza019" text="Q类作业上阶串查作业编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzza020" text="Q类作业上阶串查使用字段" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzza021" text="允许运行环境" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza022" text="可不受闲置时间控管的营运据点" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzza023" text="与POI串接" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzza024" text="POI内存使用上限(1-80)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzzastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzza001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gzza001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzza002" widget="ComboBox" items="99" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gzzo001" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzza004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzza005" widget="ComboBox" items="96" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gzza008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gzza001_1" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzza009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza012" widget="ComboBox" items="96" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza013" widget="ComboBox" items="95" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza014" widget="Edit" items="" default="60" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gzza015" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzza016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzzamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzzamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzza017" widget="ComboBox" items="54" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza018" widget="ComboBox" items="54" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzza020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzza021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzza023" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzza024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzza_t" depend_field="gzza001" correspon_key=" " ref_table="gzzt_t" ref_fk="gzzt001" ref_dlang="gzzt002" ref_rtn="gzzt003"/>
+    <field depend_table="gzza_t" depend_field="gzza003" correspon_key=" " ref_table="gzzt_t" ref_fk="gzzt003" ref_dlang="gzzt002" ref_rtn="gzzt003"/>
+    <field depend_table="gzza_t" depend_field="gzza008" correspon_key="gzza008" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="gzza_t" depend_field="gzza015" correspon_key="gzza015" ref_table="gzoi_t" ref_fk="gzoi001" ref_dlang=" " ref_rtn="gzoi002"/>
+    <field depend_table="gzza_t" depend_field="gzzacrtdp" correspon_key="gzzacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzza_t" depend_field="gzzacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzza_t" depend_field="gzzacrtid" correspon_key="gzzacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzza_t" depend_field="gzzamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzza_t" depend_field="gzzamodid" correspon_key="gzzamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzza_t" depend_field="gzzaowndp" correspon_key="gzzaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzza_t" depend_field="gzzaownid" correspon_key="gzzaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="gzza_t" depend_field="gzza001" correspon_key="gzza001" lang_table="gzzal_t" lang_fk="gzzal001" lang_dlang="gzzal002" lang_rtn="gzzal003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="gzzastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

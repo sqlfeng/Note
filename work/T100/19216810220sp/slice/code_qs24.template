@@ -1,0 +1,13 @@
+#應用 qs24 樣板自動產生(Version:5)
+      #+ b_fill段欄位串查功能設定
+      IF FGL_GETENV("GUIMODE") = "GWC" THEN
+         #hyperlink - Start -
+         LET g_hyper_url = ${general_prefix}_get_hyper_data("${detail_hyper_field${hyper_field_count_all}}")
+         LET ${detail_hyper_b_fill_url_field${hyper_field_count_all}} = "<a href = '",g_hyper_url,"'>",cl_bpm_replace_xml_specail_char(${detail_hyper_b_fill_field${hyper_field_count_all}}),"</a>"
+         #hyperlink -  End  -
+      ELSE
+         #hyperlink - Start -
+         LET ${detail_hyper_b_fill_url_field${hyper_field_count_all}} = ${detail_hyper_b_fill_field${hyper_field_count_all}}
+         #hyperlink -  End  -
+      END IF
+

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmce_t" module="APM" text="供应商评核定性项目设置档" type="D" version="1">
+  <column name="pmceent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmce001" text="评核期别" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmce002" text="评核品类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmce003" text="评核项目" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmce004" text="评分部门" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmce005" text="权重" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmceent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmce001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmce002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmce003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmce004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001" c_zoom="q_ooea001" chk_ref="v_ooeg001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmce005" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmce_t" depend_field="pmce003" correspon_key="&apos;2052&apos;,pmce003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmce_t" depend_field="pmce004" correspon_key="pmce004,pmceent" ref_table="ooefl_t" ref_fk="ooefl001,ooeflent" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

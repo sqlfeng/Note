@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stah_t" module="AST" text="自营合同模板费用设置档" type="D" version="1">
+  <column name="stahent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stah001" text="模板编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="stah002" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stah003" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah004" text="会计期间" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah005" text="价款类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah006" text="计算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah007" text="费用周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah008" text="费用周期方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah009" text="条件基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah010" text="计算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah011" text="费用净额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stah012" text="费用比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stah013" text="保底" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah014" text="保底金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stah015" text="保底扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stah016" text="分量扣点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stah017" text="是否参与现金折扣" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stahent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stah001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stah003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stae001" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="asti203" case="upper"/>
+    <field name="stah004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah005" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah006" widget="ComboBox" items="6007" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah007" widget="ComboBox" items="6008" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah008" widget="ComboBox" items="6009" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stah012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stah013" widget="ComboBox" items="6010" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stah015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stah016" widget="ComboBox" items="6011" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stah017" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stah_t" depend_field="stah009" correspon_key="stahent,stah009" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+    <field depend_table="stah_t" depend_field="stah010" correspon_key="stahent,stah010" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

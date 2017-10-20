@@ -1,0 +1,169 @@
+#應用 a29 樣板自動產生(Version:15)
+#+ 瀏覽頁簽資料填充(一般單檔)
+PRIVATE FUNCTION ${general_prefix}_browser_fill(p_wc,ps_page_action) 
+   #add-point:browser_fill段define name="browser_fill.define_customerization"
+   {<point name="browser_fill.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE p_wc              STRING
+   DEFINE ls_wc             STRING
+   DEFINE ps_page_action    STRING
+   DEFINE l_searchcol       STRING
+   DEFINE l_sql             STRING
+   DEFINE l_sql_rank        STRING
+   #add-point:browser_fill段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="browser_fill.define"
+   {<point name="browser_fill.define"/>}
+   #end add-point
+   
+   #add-point:Function前置處理  name="browser_fill.pre_function"
+   {<point name="browser_fill.pre_function"/>}
+   #end add-point
+   
+   ${general_i01_mark}${general_i10_mark}${general_c01a_mark}#搜尋用
+   ${general_i01_mark}${general_i10_mark}${general_c01a_mark}IF cl_null(g_searchcol) OR g_searchcol = "0" THEN
+   LET l_searchcol = "${master_field_allkeys}"
+   ${general_i01_mark}${general_i10_mark}${general_c01a_mark}ELSE
+   ${general_i01_mark}${general_i10_mark}${general_c01a_mark}   LET l_searchcol = g_searchcol
+   ${general_i01_mark}${general_i10_mark}${general_c01a_mark}END IF
+ 
+   LET p_wc = p_wc.trim() #當查詢按下Q時 按下放棄 g_wc = "  " 所以要清掉空白
+   IF cl_null(p_wc) THEN  #p_wc 查詢條件
+      LET p_wc = " 1=1 " 
+   END IF
+   #add-point:browser_fill段wc控制 name="browser_fill.wc"
+   {<point name="browser_fill.wc"/>}
+   #end add-point
+ 
+   LET g_sql = " SELECT COUNT(1) FROM ${master_tbl_name} ",
+               " ${master_join_all} ",
+               " ${master_append_join} ",
+               " WHERE ${master_append_wc_s} ", 
+               p_wc CLIPPED, cl_sql_add_filter("${master_tbl_name}")
+                
+   #add-point:browser_fill段cnt_sql name="browser_fill.cnt_sql"
+   {<point name="browser_fill.cnt_sql"/>}
+   #end add-point
+                
+   IF g_sql.getIndexOf(" 1=2",1) THEN
+      DISPLAY "INFO: 1=2 jumped!"
+   ELSE
+      PREPARE header_cnt_pre FROM g_sql
+      EXECUTE header_cnt_pre INTO g_browser_cnt
+      FREE header_cnt_pre 
+   END IF
+   
+   #若超過最大顯示筆數
+   IF g_browser_cnt > g_max_browse THEN
+      IF g_error_show = 1 THEN
+         INITIALIZE g_errparam TO NULL 
+         LET g_errparam.extend = g_browser_cnt 
+         LET g_errparam.code   = 9035
+         LET g_errparam.popup  = TRUE 
+         CALL cl_err()
+      END IF
+   END IF
+   
+   ${general_i10_mark}${general_c01a_mark}LET g_error_show = 0
+   
+   IF ps_page_action = "F" OR
+      ps_page_action = "P"  OR
+      ps_page_action = "N"  OR
+      ps_page_action = "L"  THEN
+      LET g_page_action = ps_page_action
+   END IF
+   
+   IF cl_null(g_add_browse) THEN
+      #清除畫面
+      CLEAR FORM
+      INITIALIZE ${master_var_title}.* TO NULL
+      CALL g_browser.clear()
+      LET g_cnt = 1
+      LET ls_wc = p_wc
+   ELSE
+      LET ls_wc = g_add_browse
+      LET g_cnt = g_current_idx
+   END IF
+   
+   LET g_sql = " SELECT ${browser_field_stus}${browser_fields_all}${browser_reference_select_field}",
+               " FROM ${master_tbl_name} t0 ${browser_addiction_sql}",
+               " ${master_join_all} ",
+               ${browser_reference_join_sql}
+               " WHERE ${master_append_wc_s_t0} ", ls_wc, cl_sql_add_filter("${master_tbl_name}")
+   #add-point:browser_fill段fill_wc name="browser_fill.fill_wc"
+   {<point name="browser_fill.fill_wc"/>}
+   #end add-point 
+   LET g_sql = g_sql, " ORDER BY ",l_searchcol," ",g_order
+   #add-point:browser_fill段before_pre name="browser_fill.before_pre"
+   {<point name="browser_fill.before_pre"/>}
+   #end add-point                    
+ 
+   #LET g_sql = cl_sql_add_tabid(g_sql,"${master_tbl_name}")             #WC重組
+   LET g_sql = cl_sql_add_mask(g_sql)              #遮蔽特定資料
+   
+   IF g_sql.getIndexOf(" 1=2",1) THEN
+      DISPLAY "INFO: 1=2 jumped!"
+   ELSE
+      PREPARE browse_pre FROM g_sql
+      DECLARE browse_cur CURSOR FOR browse_pre
+      
+      FOREACH browse_cur INTO g_browser[g_cnt].b_statepic,${browser_vars_all}${browser_reference_fetch_field}
+         IF SQLCA.sqlcode THEN
+            INITIALIZE g_errparam TO NULL 
+            LET g_errparam.extend = "foreach:" 
+            LET g_errparam.code   = SQLCA.sqlcode 
+            LET g_errparam.popup  = TRUE 
+            CALL cl_err()
+            EXIT FOREACH
+         END IF
+         
+         ${browser_vars_reference}
+         
+         #add-point:browser_fill段reference name="browser_fill.reference"
+         {<point name="browser_fill.reference"/>}
+         #end add-point
+         
+         ${general_i10_mark}${general_c01a_mark}#遮罩相關處理
+         ${general_i10_mark}${general_c01a_mark}CALL ${general_prefix}_browser_mask()
+         
+         ${browser_state_define}
+         LET g_cnt = g_cnt + 1
+         IF g_cnt > g_max_rec THEN
+            EXIT FOREACH
+         END IF
+      END FOREACH
+
+      FREE browse_pre
+ 
+   END IF
+ 
+   #清空g_add_browse, 並指定指標位置
+   IF NOT cl_null(g_add_browse) THEN
+      LET g_add_browse = ""
+      CALL g_curr_diag.setCurrentRow("s_browse",g_current_idx)
+   END IF
+   
+   IF cl_null(g_browser[g_cnt].b_${master_field_pk01}) THEN
+      CALL g_browser.deleteElement(g_cnt)
+   END IF
+   
+   LET g_header_cnt = g_browser.getLength()
+   LET g_current_cnt = g_browser.getLength()
+   LET g_browser_cnt = g_browser.getLength()
+   LET g_rec_b = g_browser.getLength()
+   LET g_cnt = 0
+   DISPLAY g_browser_cnt TO FORMONLY.b_count
+   DISPLAY g_browser_cnt TO FORMONLY.h_count
+   
+   #若無資料則關閉相關功能
+   IF g_browser_cnt = 0 THEN
+      CALL cl_set_act_visible("statechange,modify,delete,reproduce,mainhidden", FALSE)
+      CALL cl_navigator_setting(0,0)
+   ELSE
+      CALL cl_set_act_visible("mainhidden", TRUE)
+   END IF
+   
+   #add-point:browser_fill段結束前 name="browser_fill.after"
+   {<point name="browser_fill.after"/>}
+   #end add-point   
+   
+END FUNCTION
+

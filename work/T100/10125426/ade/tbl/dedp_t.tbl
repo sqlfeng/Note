@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dedp_t" module="ADE" text="门店款别统计月结档" type="S" version="1">
+  <column name="dedpent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="dedpsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dedp001" text="层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dedp005" text="款别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dedp006" text="款别类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dedp007" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="dedp008" text="统计年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="dedp009" text="统计月份" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="dedpent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dedpsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dedp001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dedp005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001_04" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dedp006" widget="ComboBox" items="8310" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="dedp007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="dedp008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel=""/>
+    <field name="dedp009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dedp_t" depend_field="dedp005" correspon_key="dedp005" ref_table="ooial_t" ref_fk="ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pspa_t" module="APS" text="MRP供需明细档" type="H" version="1">
+  <column name="pspaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pspasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pspa001" text="APS版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pspa002" text="运行日期时间" attribute="C204" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pspa003" text="实际供需区间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pspa004" text="供需日期(实际)" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pspa005" text="供需类别" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pspa006" text="来源单号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pspa007" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pspa008" text="冻结交期" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pspa009" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pspa010" text="规划供需区间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pspa011" text="供需日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pspa012" text="品号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pspa013" text="品号特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pspa014" text="工单品号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pspa015" text="工单特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pspa016" text="流水编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pspa017" text="被替代品号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pspa018" text="被替代特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pspa019" text="替代型态" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pspa020" text="供需码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pspa021" text="保税否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pspaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pspasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pspa001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pspa002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pspa003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pspa004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pspa005" widget="ComboBox" items="5440" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pspa006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pspa007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pspa008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pspa009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pspa010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pspa011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pspa012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pspa013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pspa014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pspa015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pspa016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pspa017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pspa018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pspa019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pspa020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pspa021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

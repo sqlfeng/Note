@@ -1,0 +1,54 @@
+            #報表 d04 樣板自動產生(Version:2)
+            LET g_select = ""
+            LET g_from = ""
+            LET g_where = ""
+            LET g_order = ""
+            #add-point:rep.sub${subseq}.before name="rep.sub${subseq}.before"
+            {<point name="rep.sub${subseq}.before"/>}
+            #end add-point:rep.sub${subseq}.before
+
+            #add-point:rep.sub${subseq} g_select name="rep.sub${subseq}.g_select"
+            {<point name="rep.sub${subseq}.g_select"/>}
+            #end add-point
+            ${g_select_subrep${subseq}_query}
+
+            #add-point:rep.sub${subseq} g_from name="rep.sub${subseq}.g_from"
+            {<point name="rep.sub${subseq}.g_from"/>}
+            #end add-point
+            ${g_from_subrep${subseq}_query}
+
+            #add-point:$rep.sub${subseq} g_where name="$rep.sub${subseq}.g_where"
+            {<point name="$rep.sub${subseq}.g_where"/>}
+            #end add-point
+            ${g_where_subrep${subseq}_query}
+
+            #add-point:$rep.sub${subseq} g_order name="$rep.sub${subseq}.g_order"
+            {<point name="$rep.sub${subseq}.g_order"/>}
+            #end add-point
+            ${g_order_subrep${subseq}_query}
+
+            LET g_sql = g_select CLIPPED ," ",g_from CLIPPED ," ",g_where CLIPPED ," ",g_order CLIPPED
+            #add-point:rep.sub${subseq}.sql name="rep.sub${subseq}.sql"
+            {<point name="rep.sub${subseq}.sql"/>}
+            #end add-point:rep.sub${subseq}.sql
+
+            START REPORT ${component_name}_subrep${subseq}
+            DECLARE ${component_name}_repcur${subseq} CURSOR FROM g_sql
+            FOREACH ${component_name}_repcur${subseq} INTO sr${sub_recordname}.*
+               IF STATUS THEN                  
+                  INITIALIZE g_errparam TO NULL
+                  LET g_errparam.extend = "${component_name}_repcur${subseq}:"
+                  LET g_errparam.code   = SQLCA.sqlcode
+                  LET g_errparam.popup  = FALSE
+                  CALL cl_err()                  
+                  EXIT FOREACH 
+               END IF
+               #add-point:rep.sub${subseq}.foreach name="rep.sub${subseq}.foreach"
+               {<point name="rep.sub${subseq}.foreach"/>}
+               #end add-point:rep.sub${subseq}.foreach
+               OUTPUT TO REPORT ${component_name}_subrep${subseq}(sr${sub_recordname}.*)
+               END FOREACH
+            FINISH REPORT ${component_name}_subrep${subseq}
+            #add-point:rep.sub${subseq}.after name="rep.sub${subseq}.after"
+            {<point name="rep.sub${subseq}.after"/>}
+            #end add-point:rep.sub${subseq}.after

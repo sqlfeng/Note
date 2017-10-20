@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbu_t" module="AMM" text="卡积点一般规则单身档" type="D" version="1">
+  <column name="mmbuent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbu001" text="活动规则编号" attribute="C092" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmbu002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbu003" text="规则类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbu004" text="规则编码" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="mmbu005" text="基准单位" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mmbu006" text="基准额满" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmbu007" text="积点基准" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmbu008" text="单位积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="mmbustus" text="数据有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mmbu009" text="特价积点基准" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmbu010" text="特价单位积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbuent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbu001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="mmbu002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbu003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbu004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmbu004" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmbu005" widget="ComboBox" items="6503" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbu006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmbu007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmbu008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmbustus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbu009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmbu010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmbustus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

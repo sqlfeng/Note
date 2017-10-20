@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mrdb_t" module="AMR" text="资源保校记录明细档" type="D" version="1">
+  <column name="mrdbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mrdbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrdbdocno" text="保校单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mrdbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mrdb001" text="保修项目" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrdb002" text="保修部位" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrdb003" text="保修内容" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="mrdb004" text="完成否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mrdb005" text="仪表编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrdb006" text="仪表值(校正前)" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="mrdb007" text="仪表值(校正后)" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="mrdb012" text="缺失原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mrdb013" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="mrdb014" text="仪表标准值" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="mrdb015" text="花费时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="mrdb016" text="时间单位" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mrdbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrdbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mrdbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mrdb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdb003" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mrdb004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdb005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mrbc002_1" c_zoom="q_mrbc002_1" chk_ref="v_mrbc002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mrdb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mrdb012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mrdb013" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mrdb014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mrdb015" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mrdb016" widget="CheckBox" items="5204" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mrdb_t" depend_field="mrdb001" correspon_key="&apos;1110&apos;,mrdb001" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="mrdb_t" depend_field="mrdb002" correspon_key="&apos;1114&apos;,mrdb002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="mrdb_t" depend_field="mrdb005" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="mrdb_t" depend_field="mrdb012" correspon_key="&apos;1106&apos;,mrdb012" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

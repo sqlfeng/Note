@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmdk_t" module="AXM" text="出货/签收/销退单单头档" type="T" version="1">
+  <column name="xmdkent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmdksite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdkunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdkdocno" text="单据单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmdkdocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk000" text="单据性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk001" text="扣账日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk002" text="出货性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk003" text="业务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk004" text="业务部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk005" text="出通/出货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk006" text="订单单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk007" text="订单客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk008" text="收款客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk009" text="收货客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk010" text="收款条件" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk011" text="交易条件" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk012" text="税种" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk013" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="xmdk014" text="单价含税否" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk015" text="发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="xmdk016" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk017" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="xmdk018" text="取价方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk019" text="优惠条件" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk020" text="送货供应商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk021" text="送货地址" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk022" text="运输方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk023" text="交运起点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk024" text="交运终点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk025" text="航次/航班/车号" attribute="C403" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk026" text="起运日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk027" text="唛头编号" attribute="C450" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdk028" text="包装单制作" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk029" text="Invoice制作" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk030" text="销售渠道" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk031" text="销售分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk032" text="结关日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk033" text="额外品名规格" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk034" text="留置原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk035" text="多角序号" attribute="C481" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk036" text="集成单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk037" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk038" text="运输状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk039" text="在途成本库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk040" text="在途非成本库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk041" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk042" text="内外销" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk043" text="汇率计算基准" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk044" text="多角流程编号" attribute="C480" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk045" text="多角性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk051" text="总税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdk052" text="总含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdk053" text="总税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdk054" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xmdk055" text="客户收货日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk081" text="对应的签收单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk082" text="销退方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk083" text="多角贸易已抛转" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdk084" text="折让证明单开立否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk200" text="调货经销商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk201" text="代送商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk202" text="发票客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk203" text="促销方案编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xmdk204" text="整单折扣" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdk205" text="送货站点编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk206" text="运输路线编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk207" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk208" text="调货出货单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk209" text="No Use" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk210" text="No Use" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk211" text="No Use" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk212" text="No Use" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk213" text="本币含税总金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdk214" text="收款完成否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdkownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdkowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdkcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdkcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdkcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdkmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkcnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdkcnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkpstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdkpstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdkud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmdkud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmdkud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdkud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmdk085" text="数据源(销退)" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk086" text="来源单号(销退)" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk046" text="集成来源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk087" text="出货走发票仓调拨" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmdk047" text="一次性交易对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk088" text="来源类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmdk089" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk048" text="进口报单" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmdk049" text="进口日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmdk050" text="保税异动原因编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmdkent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdksite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_xmdkdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdkdocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk000" widget="ComboBox" items="2077" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk001" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk002" widget="ComboBox" items="2063" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="cl_user_contact(&quot;aooi130&quot;, &quot;ooag_t&quot;, &quot;ooag002&quot;, &quot;ooag001&quot;)" case="upper"/>
+    <field name="xmdk004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmdgdocno" c_zoom="q_xmdgdocno" chk_ref="v_xmdgdocno" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmdadocno_2" c_zoom="q_xmdadocno_2" chk_ref="v_xmdadocno_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_6" c_zoom="q_pmaa001_6" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmac002" c_zoom="q_pmac002" chk_ref="v_pmac002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmac002" c_zoom="q_pmac002" chk_ref="v_pmac002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmad002_3" c_zoom="q_pmad002_3" chk_ref="v_pmad002_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_238" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_2" c_zoom="q_oodb002_2" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk013" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmdk014" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002_1" c_zoom="q_isac002_1" chk_ref="v_isac002" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="xmdk016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001_1" c_zoom="q_ooai001_1" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdk018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmam001" c_zoom="q_pmam001" chk_ref="v_pmam001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooid001_1" c_zoom="q_ooid001_1" chk_ref="v_ooid001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_3" c_zoom="q_pmaa001_3" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oofb019_1" c_zoom="q_oofb019_1" chk_ref="v_oofb019_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_263" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xmdk028" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk029" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_275" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk032" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk035" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmdk035" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk036" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmdk036" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk037" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk038" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk039" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag004_3" c_zoom="q_inag004_3" chk_ref="v_inag004_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk040" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag004_3" c_zoom="q_inag004_3" chk_ref="v_inag004_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk041" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk042" widget="ComboBox" items="2085" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk043" widget="ComboBox" items="2084" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk044" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk045" widget="ComboBox" items="2064" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk051" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdk052" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdk053" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdk054" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmdk055" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk081" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmdkdocno_2" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk082" widget="ComboBox" items="2088" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk083" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk084" widget="ComboBox" items="8325" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk200" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_20" c_zoom="q_pmaa001_20" chk_ref="v_pmaa001_16" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk201" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="xmdhseq" c_zoom="q_pmaa001_10" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk202" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmac002_3" c_zoom="q_pmac002_7" chk_ref="v_pmac002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk203" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdk204" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmdk205" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbad001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk206" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk207" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk208" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmdk208" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk209" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001_1" c_zoom="q_dbaa001_1" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk210" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001_1" c_zoom="q_dbaa001_1" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk211" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001_1" c_zoom="q_dbaa001_1" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk212" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbaa001_1" c_zoom="q_dbaa001_1" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk213" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdk214" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkpstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdkpstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdkud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xmdkud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmdkud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdkud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmdk085" widget="ComboBox" items="3085" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk086" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk046" widget="ComboBox" items="4060" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk087" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk047" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xmdk088" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmdk089" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmdk048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="xmdk049" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmdk050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmdk_t" depend_field="xmdk002" correspon_key="xmdk0021" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdk003" correspon_key="xmdk003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdk004" correspon_key="xmdk004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk007" correspon_key="xmdk007" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk008" correspon_key="xmdk008" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk009" correspon_key="xmdk009" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk010" correspon_key="xmdk010" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk011" correspon_key="&apos;238&apos;,xmdk011" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk012" correspon_key="xmdk012" ref_table="oodbl_t" ref_fk="oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk015" correspon_key="xmdk015" ref_table="isacl_t" ref_fk="isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk016" correspon_key="xmdk016" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk018" correspon_key="xmdk018" ref_table="xmahl_t" ref_fk="xmahl001" ref_dlang="xmahl002" ref_rtn="xmahl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk019" correspon_key="xmdk019" ref_table="ooidl_t" ref_fk="ooidl001" ref_dlang="ooidl002" ref_rtn="ooidl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk020" correspon_key="xmdk020" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk021" correspon_key="xmdk021" ref_table="oofb_t" ref_fk="oofb001" ref_dlang=" " ref_rtn="oofb011"/>
+    <field depend_table="xmdk_t" depend_field="xmdk022" correspon_key="&apos;263&apos;,xmdk022" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk023" correspon_key="&apos;263&apos;,xmdk023" ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdk024" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdk030" correspon_key="&apos;275&apos;,xmdk030" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk031" correspon_key="&apos;295&apos;,xmdk031" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk033" correspon_key="&apos;209&apos;,xmdk033" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk034" correspon_key="&apos;297&apos;,xmdk034" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk038" correspon_key="&apos;299&apos;,xmdk038" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk039" correspon_key="xmdksite,xmdk039" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="xmdk_t" depend_field="xmdk040" correspon_key="xmdksite,xmdk040" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="xmdk_t" depend_field="xmdk200" correspon_key="xmdk200" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal003" ref_rtn="pmaal004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk201" correspon_key="xmdk201" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xmdk_t" depend_field="xmdk202" correspon_key="cmdk202" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk205" correspon_key="xmdk205" ref_table="dbadl_t" ref_fk="dbadl001" ref_dlang="dbadl002" ref_rtn="dbadl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk206" correspon_key="xmdk206" ref_table="dbabl_t" ref_fk="dbabl001" ref_dlang="dbabl002" ref_rtn="dbabl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk207" correspon_key="xmdkunit" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk209" correspon_key="xmdk209" ref_table="dbaal_t" ref_fk="dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk210" correspon_key="xmdk210" ref_table="dbaal_t" ref_fk="dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk211" correspon_key="xmdk211" ref_table="dbaal_t" ref_fk="dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdk212" correspon_key="xmdk212" ref_table="dbaal_t" ref_fk="dbaal001" ref_dlang="dbaal002" ref_rtn="dbaal003"/>
+    <field depend_table="xmdk_t" depend_field="xmdkcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdkcnfid" correspon_key="xmdkcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdkcrtdp" correspon_key="xmdkcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdkcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdkcrtid" correspon_key="xmdkcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdkdocno" correspon_key="xmdkdocno" ref_table="oobal_t" ref_fk="oobal002" ref_dlang="oobal003" ref_rtn="oobal004"/>
+    <field depend_table="xmdk_t" depend_field="xmdkmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdkmodid" correspon_key="xmdkmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdkowndp" correspon_key="xmdkowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdkownid" correspon_key="xmdkownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdkpstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmdk_t" depend_field="xmdkpstid" correspon_key="xmdkpstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmdk_t" depend_field="xmdksite" correspon_key="xmdksite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmdk_t" depend_field="xmdkunit" correspon_key="xmdkunit" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xmdkstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="S" desc="已过账"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="UH" desc="取消留置"/>
+      <code value="H" desc="留置"/>
+      <code value="Z" desc="扣账还原"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

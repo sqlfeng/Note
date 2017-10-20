@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtlf_t" module="ART" text="缴款明细表" type="D" version="1">
+  <column name="rtlfent" text="企業編號" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtlfsite" text="營運據點" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlfunit" text="應用組織" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlfdocno" text="收银缴款单单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtlfseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtlfseq1" text="收款序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="rtlf001" text="款别类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf002" text="款别编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf003" text="收款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf004" text="入账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf005" text="刷卡机号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtlf006" text="刷卡手续费率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf007" text="刷卡手续金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf008" text="支票面额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf009" text="票据到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtlf010" text="票据付款银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="rtlf013" text="卡/券种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf014" text="会员卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="rtlf015" text="券面额编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf016" text="起始券号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="rtlf017" text="结束券号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="rtlf018" text="券数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf020" text="票券溢收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtlf021" text="冲预收款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf022" text="抵现积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="rtlf024" text="退款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtlf025" text="收款日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtlf026" text="收款时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="rtlf032" text="自定義欄位(日期時間)032" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="rtlf036" text="卡号/票号/账号/待抵单号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtlf037" text="是否已入账" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtlf103" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtlfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtlfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlfunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtlfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtlfseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtlf001" widget="ComboBox" items="8310" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooie001_1" c_zoom="q_ooie001_1" chk_ref="v_ooie001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf003" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case="upper"/>
+    <field name="rtlf005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="rtlf006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtlf007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtlf010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmab001" c_zoom="q_nmab001" chk_ref="v_nmab001" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtlf013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtlf015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtlf017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtlf018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtlf024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtlf026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtlf032" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="rtlf036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf037" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtlf103" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtlf_t" depend_field="rtlf002" correspon_key="rtlf002" ref_table="ooial_t" ref_fk="ooial001" ref_dlang="ooial003" ref_rtn="ooial002"/>
+    <field depend_table="rtlf_t" depend_field="rtlf010" correspon_key="rtlf010" ref_table="nmabl_t" ref_fk="nmabl001" ref_dlang="nmabl003" ref_rtn="nmabl002"/>
+    <field depend_table="rtlf_t" depend_field="rtlf013" correspon_key="rtlf013" ref_table="gcafl_t" ref_fk="gcafl001" ref_dlang="gcafl003" ref_rtn="gcafl002"/>
+    <field depend_table="rtlf_t" depend_field="rtlf015" correspon_key="rtlf015" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql004" ref_rtn="oocql003"/>
+    <field depend_table="rtlf_t" depend_field="rtlfsite" correspon_key="rtlfsitev" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

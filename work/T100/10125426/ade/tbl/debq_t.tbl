@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="debq_t" module="ADE" text="门店款别统计日结档" type="S" version="1">
+  <column name="debqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="debqsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debq001" text="层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debq002" text="统计日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="debq003" text="会计周" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debq004" text="会计期" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debq005" text="款别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debq006" text="款别类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debq007" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="debqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debqsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debq002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debq003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debq004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debq005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001_04" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debq006" widget="ComboBox" items="8310" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debq007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="debq_t" depend_field="debq005" correspon_key="debq005" ref_table="ooial_t" ref_fk="ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

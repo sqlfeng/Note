@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmfe_t" module="AMM" text="赠品兑换单身档" type="D" version="1">
+  <column name="mmfeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmfesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfeunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfedocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmfeseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmfe001" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="mmfe002" text="特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="mmfe003" text="面额编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfe004" text="起始券号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmfe005" text="截止券号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmfe006" text="加价金额" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmfe007" text="兑换份数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmfe008" text="总兑换数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmfe009" text="加价总金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmfe010" text="换赠库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfe011" text="兑换方案组别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfe012" text="数据类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmfe013" text="数据编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmfeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmfesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfeunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfedocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmfeseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmfe001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmfe001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmfe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="mmfe003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfe004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmfe004" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmfe005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmfe005" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmfe006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmfe007" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmfe008" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmfe009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmfe010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_6" c_zoom="q_inaa001_6" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfe011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfe012" widget="ComboBox" items="6517" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmfe013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmfe013" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmfe_t" depend_field="mmfe001" correspon_key="mmfe001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="mmfe_t" depend_field="mmfe003" correspon_key="mmfe003" ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mmfe_t" depend_field="mmfe010" correspon_key="mmfe010" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

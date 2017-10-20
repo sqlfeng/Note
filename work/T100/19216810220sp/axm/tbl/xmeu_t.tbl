@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmeu_t" module="AXM" text="销售估价范本制程明细单身档" type="D" version="1">
+  <column name="xmeuent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmeusite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmeudocno" text="范本料号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmeu001" text="版次" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmeu002" text="部位编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmeu003" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="xmeu004" text="制程项序" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmeu005" text="作业编号" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmeu006" text="作业序" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmeu007" text="工作站编号" attribute="C401" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmeu008" text="预估工时" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="xmeu009" text="预估机时" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="xmeu010" text="工作单位" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmeu011" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmeuent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmeusite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeudocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmeu001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xmeu002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_15" c_zoom="q_imaf001_15" chk_ref="v_imaf001_14" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmeu004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_5" c_zoom="q_oocq002_5" chk_ref="v_oocq002_221" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ecaa001_1" c_zoom="q_ecaa001_1" chk_ref="v_ecaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmeu009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmeu010" widget="ComboBox" items="3018" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmeu011" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmeu_t" depend_field="xmeu002" correspon_key="xmeuent,&apos;215&apos;,xmeu002" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmeu_t" depend_field="xmeu003" correspon_key="xmeuent,xmeu003" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmeu_t" depend_field="xmeu005" correspon_key="xmeuent,&apos;221&apos;,xmeu005" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="xmeu_t" depend_field="xmeu007" correspon_key="xmeuent,xmeusite,xmeu007" ref_table="ecaa_t" ref_fk="ecaaent,ecaasite,ecaa001" ref_dlang=" " ref_rtn="ecaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

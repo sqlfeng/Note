@@ -1,0 +1,10 @@
+            #應用 a05 樣板自動產生(Version:3)
+            #確認資料無重複
+            IF ${mdl_filled_chk} THEN 
+               IF ${mdl_loc} = 'a' OR (${mdl_modify_chk}) THEN 
+                  IF NOT ap_chk_notDup("",${mdl_sql},'std-00004',0) THEN 
+                     NEXT FIELD CURRENT
+                  END IF
+               END IF
+            END IF
+

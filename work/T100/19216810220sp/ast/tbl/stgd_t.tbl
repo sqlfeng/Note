@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stgd_t" module="AST" text="专柜每日收款小票明细档" type="S" version="1">
+  <column name="stgdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stgdsite" text="营运组织" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="stgdunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd001" text="收款序号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="stgd002" text="销售日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stgd003" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="stgd004" text="库区编号" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd005" text="专柜/铺位编号" attribute="C601" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stgd006" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd007" text="销售收银单号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="stgd008" text="收银大类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd009" text="收银小类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd010" text="收银分摊否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stgd011" text="小票实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgd012" text="小票明细实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgdseq" text="销售单项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stgd013" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd014" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stgd015" text="商品品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgd016" text="手续费金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgd017" text="储值折扣金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stgdent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgdunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgd001" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="####&amp;" prog_rel="" case="upper"/>
+    <field name="stgd002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgd003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgd005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhae001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgd010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgd011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgd012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgdseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stgd013" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgd014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stgd015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgd016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgd017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmff_t" module="ABM" text="ECN多产出主件档" type="D" version="1">
+  <column name="bmffent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bmffsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmffdocno" text="ECN单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bmff002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmff003" text="变更方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmff004" text="产出料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="bmff005" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmff006" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmff007" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="bmff008" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmffent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmffsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmffdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmff002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmff003" widget="ComboBox" items="1207" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="1" format="" prog_rel="" case="upper"/>
+    <field name="bmff004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001_2" c_zoom="q_imaa001_2" chk_ref="v_imaa001_5" widget_width="40" format="" prog_rel="" case="upper"/>
+    <field name="bmff005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="bmff006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmff007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmff008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmff_t" depend_field="bmff004" correspon_key="bmffent,bmff004" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

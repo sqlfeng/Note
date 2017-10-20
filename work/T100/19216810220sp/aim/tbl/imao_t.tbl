@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imao_t" module="AIM" text="料件使用单位档" type="D" version="1">
+  <column name="imaoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imao001" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="imao002" text="可用交易单位编号" attribute="C009" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="imaoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imao001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="imao002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imao_t" depend_field="imao002" correspon_key="imaoent,imao002" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

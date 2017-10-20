@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="logt_t" module="ALO" text="事件查看器数据表" type="D" version="1">
+  <column name="logtent" text="企业编号" attribute="N802" type="number(5)" pk="N" req="N"/>
+  <column name="logt001" text="事件类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="logt002" text="事件时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="logt003" text="用户编号" attribute="C820" type="varchar2(20)" pk="N" req="N"/>
+  <column name="logt004" text="作业编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="logt005" text="说明" attribute="C823" type="varchar2(1000)" pk="N" req="N"/>
+  <column name="logt006" text="营运据点编号" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="logt007" text="ClientIP" attribute="C801" type="varchar2(20)" pk="N" req="N"/>
+  <column name="logt008" text="ServerIP" attribute="C801" type="varchar2(20)" pk="N" req="N"/>
+  <column name="logt009" text="等级" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="logtent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="logt001" widget="ComboBox" items="116" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="logt002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="logt003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="logt004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="logt005" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="logt006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="logt007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="logt008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="logt009" widget="ComboBox" items="110" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="logt_t" depend_field="logt004" correspon_key="logt004" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

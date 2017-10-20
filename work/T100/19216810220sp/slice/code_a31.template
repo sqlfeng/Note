@@ -1,0 +1,83 @@
+#應用 a31 樣板自動產生(Version:7)
+#+ 單身陣列填充2
+PRIVATE FUNCTION ${general_prefix}_b_fill2(pi_idx)
+   #add-point:fetch段define(客製用) name="fetch.define_customerization"
+   {<point name="fetch.define_customerization" edit="c" mark="Y"/>}
+   #end add-point
+   DEFINE pi_idx          LIKE type_t.num10
+   DEFINE li_ac           LIKE type_t.num10
+   #add-point:fetch段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="fetch.define"
+   {<point name="fetch.define"/>}
+   #end add-point
+   
+   #pages - Start -
+   ${general_master_mark${page}}CALL ${detail_var_title${page}}.clear()
+   #pages -  End  -
+   
+   LET li_ac = l_ac 
+   
+   #tables_d2 - Start -
+   IF pi_idx = ${table} THEN
+      LET g_sql = "${detail_fill_sql_pre${table}} t0 ",    
+                  "${detail_append_join_b_fill${table}}",
+                  "${detail_fill_sql_post${table}}"
+      
+      IF NOT cl_null(g_wc2_table${table}) THEN
+         LET g_sql = g_sql CLIPPED," AND ",g_wc2_table${table} CLIPPED
+      END IF
+      
+      LET g_sql = g_sql, " ORDER BY ${detail_tbl_name_by_tbl${table}}.${detail_by_tbl${table}_field_pk01} " 
+                         
+      #add-point:單身填充前 name="fetch.before_fill"
+      {<point name="fetch.before_fill" />}
+      #end add-point
+      
+      PREPARE ${general_prefix}_pb${table} FROM g_sql
+      DECLARE b_fill_curs${table} CURSOR FOR ${general_prefix}_pb${table}
+      
+      OPEN b_fill_curs${table} USING ${detail_var_append}${detail_var_pk01}
+                                     #detail_keys - Start -
+                                     ,${detail_var_pk${key}}
+                                     #keys -  End  -
+      LET l_ac = 1
+      FOREACH b_fill_curs${table} INTO ${detail_vars_all_by_tbl${table}}
+         IF SQLCA.sqlcode THEN
+            INITIALIZE g_errparam TO NULL 
+            LET g_errparam.extend = "FOREACH:" 
+            LET g_errparam.code   = SQLCA.sqlcode 
+            LET g_errparam.popup  = TRUE 
+            CALL cl_err()
+ 
+            EXIT FOREACH
+         END IF
+         
+         #add-point:b_fill段資料填充 name="fetch.fill${table}"
+         {<point name="fetch.fill${table}"/>}
+         #end add-point
+         
+         LET l_ac = l_ac + 1
+         IF l_ac > g_max_rec THEN
+            INITIALIZE g_errparam TO NULL 
+            LET g_errparam.extend =  '' 
+            LET g_errparam.code   =  9035 
+            LET g_errparam.popup  = TRUE 
+            CALL cl_err()
+            EXIT FOREACH
+         END IF
+         
+      END FOREACH
+      #tables -  End  -
+      
+      #add-point:單身填充後 name="fetch.after_fill"
+      {<point name="fetch.after_fill" />}
+      #end add-point
+      
+      #pages - Start -
+      ${general_master_mark${page}}CALL ${detail_var_title${page}}.deleteElement(${detail_var_title${page}}.getLength())   
+      #pages -  End  -
+      
+      LET l_ac = li_ac
+   END IF
+   
+END FUNCTION
+

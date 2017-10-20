@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glfb_t" module="AGL" text="表报设置单身档" type="D" version="1">
+  <column name="glfbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glfb001" text="报表模板编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glfbseq" text="行次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="glfbseq1" text="列次" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="glfb002" text="" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glfb003" text="报表行序" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="glfb004" text="取数公式来源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfb005" text="数值取数公式" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="glfb006" text="画面上面的行" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="glfb007" text="画面上面的列" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="glfb008" text="XBRL科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glfb009" text="百分比基准" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfb010" text="呈现格式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfb011" text="公式属性" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glfb012" text="计算年度" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glfbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glfb001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glfbseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glfb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_glfc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="glfb004" widget="ComboBox" items="9935" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfb005" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="glfb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glfb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glfb008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glfb009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfb010" widget="ComboBox" items="9994" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glfb011" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="glfb012" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glfb_t" depend_field="glfb002" correspon_key="glfbent,glfb001,glfbseq,glfb002" ref_table="glfbl_t" ref_fk="glfblent,glfbl001,glfblseq,glfbl002" ref_dlang="glfbl003" ref_rtn="glfbl004"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="glfb_t" depend_field="glfb002" correspon_key="glfbent,glfb001,glfbseq,glfb002" lang_table="glfbl_t" lang_fk="glfblent,glfbl001,glfblseq,glfbl002" lang_dlang="glfbl003" lang_rtn="glfbl004"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

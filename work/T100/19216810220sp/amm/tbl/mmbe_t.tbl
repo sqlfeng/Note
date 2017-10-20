@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbe_t" module="AMM" text="会员卡状态异动单身档" type="D" version="1">
+  <column name="mmbeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbedocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmbeseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmbe001" text="会员卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmbe002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbe003" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmbe004" text="数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="mmbe005" text="异动前卡状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mmbe006" text="有效期至" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmbeunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooef001_4" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbedocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmbeseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmbe001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mmbe001" c_zoom="q_mmbe001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmbe002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mman001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbe003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmaf001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmbe004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="mmbe005" widget="ComboBox" items="6515" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbe006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbeunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmbe_t" depend_field="mmbe002" correspon_key="mmbeent,mmbe002" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmbe_t" depend_field="mmbe003" correspon_key="mmbeent,mmbe003" ref_table="mmaf_t" ref_fk="mmafent,mmaf001" ref_dlang="" ref_rtn="mmaf008"/>
+    <field depend_table="mmbe_t" depend_field="mmbesite" correspon_key="mmbeent,mmbesite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

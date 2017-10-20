@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzpe_t" module="AZZ" text="排程细项信件清单" type="B" version="1">
+  <column name="gzpeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzpe001" text="排程编号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="gzpe002" text="序号" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="gzpe003" text="执行状况" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="gzpe004" text="收件人员工编号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gzpe005" text="信件主旨" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="gzpe006" text="信件内文" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzpe007" text="形式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzpe008" text="收件者名称" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzpe009" text="E-mail Address(报表用)" attribute="C153" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzpe010" text="报表mail文件格式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzpe011" text="执行状况序号" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="gzpe012" text="联络对象类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzpeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzpe001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpe002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gzpe003" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpe004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_3" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpe005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzpe006" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzpe007" widget="ComboBox" items="157" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpe008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzpe009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzpe010" widget="ComboBox" items="158" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpe011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gzpe012" widget="ComboBox" items="1" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzpe_t" depend_field="gzpe004" correspon_key="gzpe003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

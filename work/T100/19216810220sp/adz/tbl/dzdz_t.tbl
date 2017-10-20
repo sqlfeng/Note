@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzdz_t" module="ADZ" text="样板及版本更新基本数据表" type="X" version="1">
+  <column name="dzdz001" text="样板编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzdz002" text="样板版本" attribute="N903" type="number(10)" pk="Y" req="Y"/>
+  <column name="dzdz003" text="样板实体内容" attribute="B001" type="clob" pk="N" req="N"/>
+  <column name="dzdz004" text="样板MD5" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="dzdz005" text="样板更新说明" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="dzdz006" text="版差更改方法" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="dzdz007" text="上传更新时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="dzdz008" text="上传更新帐号" attribute="C820" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzdz009" text="关联主要需求单" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="dzdz010" text="适用生成器版本" attribute="N903" type="number(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzdz001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzdz002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dzdz003" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzdz004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzdz005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzdz006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzdz007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dzdz008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzdz009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="dzdz010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzdz_t" depend_field="dzdzcrtdp" correspon_key="dzdzcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzdz_t" depend_field="dzdzcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzdz_t" depend_field="dzdzcrtid" correspon_key="dzdzcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzdz_t" depend_field="dzdzmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzdz_t" depend_field="dzdzmodid" correspon_key="dzdzmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzdz_t" depend_field="dzdzowndp" correspon_key="dzdzowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzdz_t" depend_field="dzdzownid" correspon_key="dzdzownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="dzdzstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

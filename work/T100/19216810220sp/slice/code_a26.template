@@ -1,0 +1,112 @@
+#應用 a26 樣板自動產生(Version:7)
+#+ 作業開始(主程式類型)
+MAIN
+   #add-point:main段define(客製用) name="main.define_customerization"
+   {<point name="main.define_customerization" edit="c" mark="Y"/>}
+   #end add-point   
+   #add-point:main段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="main.define"
+   {<point name="main.define"/>}
+   #end add-point   
+   
+   OPTIONS
+   INPUT NO WRAP
+   DEFER INTERRUPT
+   
+   #設定SQL錯誤記錄方式 (模組內定義有效)
+   WHENEVER ERROR CALL cl_err_msg_log
+       
+   #依模組進行系統初始化設定(系統設定)
+   CALL cl_ap_init("${general_module}","${jobmode}")
+ 
+   #add-point:作業初始化 name="main.init"
+   {<point name="main.init" />}
+   #end add-point
+   
+   ${general_lob_start}
+ 
+   #LOCK CURSOR (identifier)
+   #add-point:SQL_define name="main.define_sql"
+   {<point name="main.define_sql" />}
+   #end add-point
+   ${mdl_mark}LET g_forupd_sql = " ${master_sql_forupd_pre}", 
+   ${mdl_mark}                   " FROM ${master_tbl_name}",
+   ${mdl_mark}                   " ${master_sql_forupd_post}"
+   ${mdl_mark}#add-point:SQL_define name="main.after_define_sql"
+   ${mdl_mark}{<point name="main.after_define_sql"/>}
+   ${mdl_mark}#end add-point
+   ${mdl_mark}LET g_forupd_sql = cl_sql_forupd(g_forupd_sql)                #轉換不同資料庫語法
+   ${mdl_mark}LET g_forupd_sql = cl_sql_add_mask(g_forupd_sql)              #遮蔽特定資料
+   ${mdl_mark}DECLARE ${general_prefix}_cl CURSOR FROM g_forupd_sql                 # LOCK CURSOR
+ 
+   ${mdl_mark}LET g_sql = " SELECT ${master_refresh_unique} ${master_field_list}${master_reference_select_field}",
+   ${mdl_mark}            " FROM ${master_tbl_name} t0",
+   ${mdl_mark}            ${master_reference_join_sql}
+   ${mdl_mark}            " WHERE ${master_append_wc_s_refresh} ${master_key_wc}"
+   ${mdl_mark}LET g_sql = cl_sql_add_mask(g_sql)              #遮蔽特定資料
+   ${mdl_mark}#add-point:SQL_define name="main.after_refresh_sql"
+   ${mdl_mark}{<point name="main.after_refresh_sql"/>}
+   ${mdl_mark}#end add-point
+   ${mdl_mark}PREPARE ${general_prefix}_master_referesh FROM g_sql
+ 
+   ${mdl_mark2}#add-point:main段define_sql name="main.body.define_sql"
+   ${mdl_mark2}{<point name="main.body.define_sql" mark="Y"/>}
+   ${mdl_mark2}#end add-point 
+   ${mdl_mark2}LET g_forupd_sql = "${detail_sql_forupd}"
+   ${mdl_mark2}#add-point:main段define_sql name="main.body.after_define_sql"
+   ${mdl_mark2}{<point name="main.body.after_define_sql"/>}
+   ${mdl_mark2}#end add-point 
+   ${mdl_mark2}LET g_forupd_sql = cl_sql_forupd(g_forupd_sql)
+   ${mdl_mark2}LET g_forupd_sql = cl_sql_add_mask(g_forupd_sql)              #遮蔽特定資料
+   ${mdl_mark2}DECLARE ${general_prefix}_bcl CURSOR FROM g_forupd_sql
+    
+   ${mdl_mark2}#tables - Start - 
+   ${mdl_mark2}#add-point:main段define_sql name="main.body${table}.define_sql"
+   ${mdl_mark2}{<point name="main.body${table}.define_sql" mark="Y"/>}
+   ${mdl_mark2}#end add-point 
+   ${mdl_mark2}LET g_forupd_sql = "${detail_sql_forupd${table}}"
+   ${mdl_mark2}#add-point:main段define_sql name="main.body${table}.after_define_sql"
+   ${mdl_mark2}{<point name="main.body${table}.after_define_sql"/>}
+   ${mdl_mark2}#end add-point 
+   ${mdl_mark2}LET g_forupd_sql = cl_sql_forupd(g_forupd_sql)
+   ${mdl_mark2}LET g_forupd_sql = cl_sql_add_mask(g_forupd_sql)              #遮蔽特定資料
+   ${mdl_mark2}DECLARE ${detail_table_bcl${table}} CURSOR FROM g_forupd_sql
+   ${mdl_mark2}#tables -  End  -
+   
+   IF g_bgjob = "Y" THEN
+      #add-point:Service Call name="main.servicecall"
+      {<point name="main.servicecall" />}
+      #end add-point
+   ELSE
+      #畫面開啟 (identifier)
+      OPEN WINDOW w_${general_prefix} WITH FORM cl_ap_formpath("${general_module}",g_code)
+   
+      #瀏覽頁簽資料初始化
+      CALL cl_ui_init()
+   
+      #程式初始化
+      CALL ${general_prefix}_init()   
+ 
+      #進入選單 Menu (${general_bgjob}="N")
+      CALL ${general_prefix}_ui_dialog() 
+      
+      #add-point:畫面關閉前 name="main.before_close"
+      {<point name="main.before_close" />}
+      #end add-point
+ 
+      #畫面關閉
+      CLOSE WINDOW w_${general_prefix}
+      
+   END IF 
+   
+   ${mdl_mark}CLOSE ${general_prefix}_cl
+   
+   ${general_lob_end}
+ 
+   #add-point:作業離開前 name="main.exit"
+   {<point name="main.exit" />}
+   #end add-point
+ 
+   #離開作業
+   CALL cl_ap_exitprogram("0")
+END MAIN
+

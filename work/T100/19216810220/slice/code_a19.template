@@ -1,0 +1,21 @@
+#應用 a19 樣板自動產生(Version:3)
+               #校驗代值
+               #設定g_chkparam.*的參數前，先將其初始化，避免之前設定遺留的參數值造成影響。
+               INITIALIZE g_chkparam.* TO NULL
+               #設定g_chkparam.*的參數
+               LET g_chkparam.arg1 = ${mdl_var1}
+               #mdls - Start -
+               LET g_chkparam.arg${mdl} = ${mdl_var${mdl}}
+               #mdls -  End  -
+                  
+               #呼叫檢查存在並帶值的library
+               IF ${mdl_func}("${mdl_chkid}") THEN
+                  #檢查成功時後續處理
+                  #LET ${mdl_var_ref1} = g_chkparam.return1
+                  #DISPLAY BY NAME ${mdl_var_ref1}
+               ELSE
+                  #檢查失敗時後續處理
+                  NEXT FIELD CURRENT
+               END IF
+            
+

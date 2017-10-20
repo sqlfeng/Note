@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="debh_t" module="ADE" text="门店专柜会员消费统计日结档" type="S" version="1">
+  <column name="debhent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="debhsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debh001" text="层级类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="debh002" text="统计日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="debh003" text="会计周" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debh004" text="会计期" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="debh005" text="专柜编号" attribute="C601" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="debh006" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debh007" text="税别编号" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debh008" text="会员卡种" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debh009" text="会员等级" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="debh010" text="销售数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh011" text="销售成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh012" text="进价金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh013" text="原价金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh014" text="未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh015" text="应收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh016" text="毛利" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh017" text="毛利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh018" text="会员积分" attribute="N601" type="number(22,2)" pk="N" req="N"/>
+  <column name="debh019" text="单据数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh020" text="抵扣券金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh021" text="会员折扣金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="debh022" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="debhent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debhsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debh004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel=""/>
+    <field name="debh005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="debh006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mman001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002_16" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="debh010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="debh011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="debh012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel=""/>
+    <field name="debh018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22,2" format="---,---,---,---,--&amp;" prog_rel=""/>
+    <field name="debh019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="debh020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="debh022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="debh_t" depend_field="debh008" correspon_key="debhent,debh008" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="debh_t" depend_field="debh009" correspon_key="debhent,debh009" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

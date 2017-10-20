@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stev_t" module="AST" text="交款汇总明细数据" type="S" version="1">
+  <column name="stevent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stevsite" text="所属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stevcomp" text="所属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stevdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stevseq" text="单据项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stev001" text="来源类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev002" text="来源单据" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stev003" text="来源项次" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="stev004" text="来源日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stev005" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev006" text="起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stev007" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stev008" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev009" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev010" text="价款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev011" text="方向" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stev012" text="价外金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev013" text="价内金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev014" text="未结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev015" text="已结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev016" text="本次结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev017" text="结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev018" text="结算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev019" text="所属品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev020" text="所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev021" text="主账套账款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev022" text="次账套一账款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev023" text="次账套二账款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev024" text="专柜编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev025" text="已交款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev026" text="纳入结算单否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stev027" text="票扣否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stev028" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev029" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="stev030" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="stev031" text="费用归属类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stev032" text="费用归属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stevent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stevsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stevcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stevdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stevseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stev001" widget="ComboBox" items="6703" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stev003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stev004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stev005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stev007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stev008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev010" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stev012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev025" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev026" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev027" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev028" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev029" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="stev030" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="stev031" widget="ComboBox" items="6932" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stev032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_24" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

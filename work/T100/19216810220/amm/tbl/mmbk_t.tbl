@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbk_t" module="AMM" text="会员卡券存放位置统计档" type="S" version="1">
+  <column name="mmbkent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbksite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbk000" text="数据类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbk001" text="卡种编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbk002" text="存放库位" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbk003" text="存放数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbkent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbksite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbk000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbk001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbk002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbk003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmbk_t" depend_field="mmbk001" correspon_key="mmbk001" ref_table="mmanl_t" ref_fk="mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

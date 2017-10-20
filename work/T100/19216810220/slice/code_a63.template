@@ -1,0 +1,5 @@
+   #應用 a63 樣板自動產生(Version:2)
+   IF ${mdl_var_stus} NOT MATCHES "[NDR]" THEN   # N未確認/D抽單/R已拒絕允許修改
+      CALL cl_set_act_visible("modify,delete,modify_detail", FALSE)
+   END IF
+

@@ -1,0 +1,14 @@
+#應用 a60 樣板自動產生(Version:3)
+               INITIALIZE l_var_keys TO NULL
+               INITIALIZE l_field_keys TO NULL
+               INITIALIZE l_vars TO NULL
+               INITIALIZE l_fields TO NULL
+               INITIALIZE l_var_keys_bak TO NULL 
+               IF (${mdl_chk1}) 
+               OR (${mdl_chk2}) THEN
+               ELSE
+${mdl_set_value}
+                  CALL cl_multitable(l_var_keys,l_field_keys,l_vars,l_fields,l_var_keys_bak,'${mdl_table}')
+               END IF
+ 
+

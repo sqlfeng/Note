@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmby_t" module="APM" text="交易对象准入-经销商市场能力" type="D" version="1">
+  <column name="pmbyent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbydocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmby001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmby002" text="终端通路类别" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmby003" text="终端通路编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmby004" text="通路岗位经理人数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmby005" text="覆盖终端店数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbyent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbydocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmby001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmby002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmby003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmby004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="" prog_rel="" case=""/>
+    <field name="pmby005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmby_t" depend_field="pmby002" correspon_key="&apos;2073&apos;,pmby002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmby_t" depend_field="pmby003" correspon_key="&apos;2035&apos;,pmby003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

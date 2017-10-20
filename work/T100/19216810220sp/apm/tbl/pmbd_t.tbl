@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbd_t" module="APM" text="交易对象申请-允许收/付款条件档" type="D" version="1">
+  <column name="pmbdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbddocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmbd001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbd002" text="交易条件编号" attribute="C005" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbd003" text="交易类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbd004" text="主要否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmbdstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbddocno" widget="ButtonEdit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmbd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbd002" widget="ButtonEdit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib002_1" c_zoom="q_ooib002_1" chk_ref="v_ooib002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbd003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbd004" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbdstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbd_t" depend_field="pmbd002" correspon_key="pmad002" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmbdstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

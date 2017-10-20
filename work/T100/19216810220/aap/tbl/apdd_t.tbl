@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apdd_t" module="AAP" text="员工报销分摊费用明细档" type="D" version="1">
+  <column name="apddent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="apddlegl" text="核算组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apddorga" text="账务归属组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apddsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apddcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apddld" text="账别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="apdddocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="apddseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="apdd001" text="分摊供应商" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apdd002" text="分摊合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apdd003" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apdd004" text="分摊比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="apdd005" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apdd006" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apdd007" text="税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apdd008" text="请款原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apdd009" text="请款本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apdd010" text="来源类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apdd011" text="抛转否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apdd012" text="品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apdd013" text="应付日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apdd014" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="apdd015" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apdd016" text="纳入结算单否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apdd017" text="票扣否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apdd018" text="含发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apddent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apddlegl" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apddorga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apddsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apddcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apddld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="apdddocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apddseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apdd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="apdd003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="apdd005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apdd007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apdd009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apdd010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd011" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apdd014" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="apdd015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apdd016" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd017" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apdd018" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

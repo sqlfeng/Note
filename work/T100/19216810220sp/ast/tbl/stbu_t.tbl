@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stbu_t" module="AST" text="结算单明细数据" type="D" version="1">
+  <column name="stbuent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stbusite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbucomp" text="所属法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbudocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stbuseq" text="单据项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stbu001" text="来源类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu002" text="来源单据" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stbu003" text="来源项次" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="stbu004" text="来源日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stbu005" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu006" text="起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stbu007" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stbu008" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu009" text="税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu010" text="价款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu011" text="方向" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stbu012" text="价外金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu013" text="价内金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu014" text="未结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu015" text="已结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu016" text="本次结算金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu017" text="结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu018" text="结算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu019" text="所属品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu020" text="所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stbu021" text="结算会计期" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="stbu022" text="财务会计年度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stbu023" text="财务会计期别" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="stbu024" text="主账套已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu025" text="账套二已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu026" text="账套三已立账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stbu027" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stbuent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbusite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbucomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbudocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stbuseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stbu001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stbu003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="stbu004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbu005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbu007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stbu008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_aooi001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oodb002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stbu012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu016" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stbu021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="stbu022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stbu023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="stbu024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stbu027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stbu_t" depend_field="stbu005" correspon_key="stbtent,stbu005" ref_table="stael_t" ref_fk="staelent,stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+    <field depend_table="stbu_t" depend_field="stbu008" correspon_key="stbtent,stbu008" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="stbu_t" depend_field="stbu009" correspon_key="stbtent,stbu009" ref_table="oodbl_t" ref_fk="oodblent,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="stbu_t" depend_field="stbu017" correspon_key="stbtent,stbu017" ref_table="staal_t" ref_fk="staalent,staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="stbu_t" depend_field="stbu018" correspon_key="stbtent,&apos;2060&apos;,stbu018" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="stbu_t" depend_field="stbusite" correspon_key="stbtent,stbusite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

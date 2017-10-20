@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbw_t" module="AMM" text="卡积点高端规则单身档" type="D" version="1">
+  <column name="mmbwent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbw001" text="活动规则编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmbw002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbw003" text="高端规则类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbw004" text="高端规则编码" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbw005" text="互斥" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mmbw006" text="优先序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="mmbw007" text="纪念日回馈条件" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbw008" text="纪念日前(日)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmbw009" text="纪念日后(日)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmbw010" text="回馈类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbw011" text="加送倍数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmbw012" text="回馈基点基准" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmbw013" text="加送积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="mmbw014" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmbw015" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmbw016" text="每日开始时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="mmbw017" text="每日结束时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="mmbw018" text="固定日期" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbw019" text="固定星期" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="mmbwstus" text="资料有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbwent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbw001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmbw002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw003" widget="ComboBox" items="" default="&apos;Q&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmbw004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw005" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmbw007" widget="ComboBox" items="6518" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmbw009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmbw010" widget="ComboBox" items="6519" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmbw012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmbw013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmbw014" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbw015" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbw016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbw017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmbw018" widget="ComboBox" items="6520" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbw019" widget="ComboBox" items="30" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmbwstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmbwstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

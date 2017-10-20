@@ -1,0 +1,9 @@
+#應用 a32 樣板自動產生(Version:3)
+         #簽核狀況
+         ${general_mark_stus}ON ACTION bpm_status
+            #查詢簽核狀況, 統一建立HyperLink
+            ${general_mark_stus}CALL cl_bpm_status()
+            #add-point:ON ACTION bpm_status name="menu${mdl_num}.bpm_status"
+            {<point name="menu${mdl_num}.bpm_status" />}
+            #END add-point
+

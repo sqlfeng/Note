@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dbef_t" module="ADB" text="配送排车单单身档" type="D" version="1">
+  <column name="dbefent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="dbefsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbefunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbefdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="dbefseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="dbef000" text="来源类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef001" text="来源单据编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dbef002" text="来源单据项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="dbef003" text="出货日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="dbef004" text="送货客户编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef005" text="产品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dbef006" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef007" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbef008" text="包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef009" text="包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbef010" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dbef011" text="重量" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbef012" text="体积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbef013" text="站点" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef014" text="片区" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbef015" text="卸货顺序" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="dbef016" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dbefent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbefsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbefunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbefdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dbefseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="dbef000" widget="ComboBox" items="6090" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dbef001" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dbef002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="dbef003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbef004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmac002_6" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dbef006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbef008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbef010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="dbef011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbef012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbef013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbad001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbef015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="dbef016" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dbef_t" depend_field="dbef004" correspon_key="dbef004" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="dbef_t" depend_field="dbef005" correspon_key="dbef005" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="dbef_t" depend_field="dbef006" correspon_key="dbef006" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="dbef_t" depend_field="dbef008" correspon_key="dbef008" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="dbef_t" depend_field="dbef013" correspon_key="dbef013" ref_table="dbadl_t" ref_fk="dbadl001" ref_dlang="dbadl002" ref_rtn="dbadl003"/>
+    <field depend_table="dbef_t" depend_field="dbef014" correspon_key="dbef014" ref_table="dbacl_t" ref_fk="dbacl001" ref_dlang="dbacl002" ref_rtn="dbacl003"/>
+    <field depend_table="dbef_t" depend_field="dbefsite" correspon_key="dbefsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

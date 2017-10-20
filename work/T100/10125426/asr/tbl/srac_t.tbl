@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="srac_t" module="ASR" text="重复性生产计划制程档" type="D" version="1">
+  <column name="sracent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sracsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srac001" text="生产计划" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srac002" text="制程编号" attribute="C404" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="srac004" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="srac005" text="BOM特性" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="srac006" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="srac007" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="srac008" text="本站作业编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac009" text="作业序" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac010" text="群组性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac011" text="群组" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac012" text="上站作业" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac013" text="上站制进程" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac014" text="下站作业" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac015" text="下站制进程" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac016" text="工作站" attribute="C401" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac017" text="固定工时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="srac018" text="标准工时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="srac019" text="固定机时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="srac020" text="标准机时" attribute="N403" type="number(15,3)" pk="N" req="N"/>
+  <column name="srac021" text="Move in" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac022" text="Check in" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac023" text="报工站" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac024" text="PQC" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac025" text="Check out" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac026" text="Move out" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac027" text="转出单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac028" text="转出单位转换率分子" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac029" text="转出单位转换率分母" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac030" text="待Movie in 数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac031" text="待Check in数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac032" text="在制数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac033" text="待PQC数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac034" text="待Check out数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac035" text="待Move out数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac036" text="委外" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="srac037" text="委外厂商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac038" text="良品转入" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac039" text="重工转入" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac040" text="良品转出" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac041" text="重工转出" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac042" text="当站报废" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac043" text="当站下线" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac044" text="委外数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac045" text="委外完工数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac046" text="转入单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="srac047" text="转入单位转换率分子" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="srac048" text="转入单位转换率分母" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud001" text="自定义栏位(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud002" text="自定义栏位(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud003" text="自定义栏位(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud004" text="自定义栏位(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud005" text="自定义栏位(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud006" text="自定义栏位(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud007" text="自定义栏位(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud008" text="自定义栏位(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud009" text="自定义栏位(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud010" text="自定义栏位(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="sracud011" text="自定义栏位(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud012" text="自定义栏位(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud013" text="自定义栏位(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud014" text="自定义栏位(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud015" text="自定义栏位(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud016" text="自定义栏位(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud017" text="自定义栏位(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud018" text="自定义栏位(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud019" text="自定义栏位(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud020" text="自定义栏位(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="sracud021" text="自定义栏位(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud022" text="自定义栏位(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud023" text="自定义栏位(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud024" text="自定义栏位(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud025" text="自定义栏位(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud026" text="自定义栏位(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud027" text="自定义栏位(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud028" text="自定义栏位(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud029" text="自定义栏位(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="sracud030" text="自定义栏位(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="sracent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="sracsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_srza001" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmaa001_1" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="srac005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmaa002" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="srac006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_srab006_1" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="srac007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="srac008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_srac008_2" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac010" widget="ComboBox" items="1202" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="srac018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="srac019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="srac020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="7" format="---&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="srac021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac022" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac023" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac024" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac025" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac026" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac030" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac036" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac037" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac038" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac039" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac041" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac042" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac043" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac044" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac045" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac046" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="srac047" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="srac048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="sracud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="sracud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="sracud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="srac_t" depend_field="srac004" correspon_key="sracent,srac004_1" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="srac_t" depend_field="srac008" correspon_key="srac008" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="srac_t" depend_field="srac012" correspon_key="srac012" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="srac_t" depend_field="srac014" correspon_key="srac014" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="srac_t" depend_field="srac016" correspon_key="srac016" ref_table="ecaa_t" ref_fk="ecaa001" ref_dlang=" " ref_rtn="ecaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

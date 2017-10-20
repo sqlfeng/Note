@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmax_t" module="APM" text="经销商经营主品牌档" type="D" version="1">
+  <column name="pmaxent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmax001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmax002" text="商品品类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmax003" text="商品品牌" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmaxstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmaxent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmax001" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmax002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001" c_zoom="q_rtax001" chk_ref="v_rtax001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmax003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaxstus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmax_t" depend_field="pmax002" correspon_key="pmax002" ref_table="rtaxl_t" ref_fk="rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="pmax_t" depend_field="pmax003" correspon_key="&apos;2002&apos;,pmax003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmaxstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

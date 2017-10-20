@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcah_t" module="APC" text="POS角色功能数据表" type="B" version="1">
+  <column name="pcahent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcahunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcah001" text="角色编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcah002" text="模块编号" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pcah003" text="功能编号" attribute="C904" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pcah004" text="类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcahstus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pcahent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcahunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcah001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcah002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcah003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pcae001" c_zoom="q_pcae001" chk_ref="v_pcah003" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pcah004" widget="ComboBox" items="6026" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcahstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcah_t" depend_field="pcah003" correspon_key="pcafent,pcah003" ref_table="pcael_t" ref_fk="pcaelent,pcael001" ref_dlang="pcael002" ref_rtn="pcael003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pcahstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

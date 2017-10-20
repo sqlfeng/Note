@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apfb_t" module="AAP" text="集团代付款冲销账款明细档" type="D" version="1">
+  <column name="apfbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="apfbsite" text="账务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfbcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfblegl" text="核算组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfbld" text="账套" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="apfbdocno" text="代付款(核销)单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="apfbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="apfborga" text="账务归属组织(被代付组织)" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb001" text="来源作业" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb002" text="冲销类型" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb003" text="冲销账款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb004" text="冲销账款单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfb005" text="冲销账款单账期" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfb006" text="内部账户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb007" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb008" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb010" text="摘要说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="apfb011" text="内部账户存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb012" text="内部账户现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb013" text="转入客商码" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb014" text="转入账款单编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb015" text="冲销加减项" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apfb016" text="冲销科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="apfb017" text="业务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb018" text="业务部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb019" text="责任中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb020" text="产品类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb021" text="预算细项" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb022" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb023" text="WBS编号" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="apfb024" text="第二参考单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb025" text="第二参考单号项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfb028" text="生成方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="apfb029" text="付款申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb030" text="付款申请单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfb031" text="应付款日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apfb032" text="付款(票)到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apfb033" text="扣账核销者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfb034" text="扣账核销日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="apfb035" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb036" text="客户分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb037" text="预算编号" attribute="C509" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb038" text="交易对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb039" text="账款类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb040" text="税种" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb041" text="付款条件" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb100" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb101" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apfb109" text="原币冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb119" text="本币冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb120" text="本位币二币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb121" text="本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apfb129" text="本位币二冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb130" text="本位币三币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfb131" text="本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="apfb139" text="本位币三冲账金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb104" text="原币应税折抵税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb114" text="本币应税折抵税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb124" text="本位币二应税折抵税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfb134" text="本位币三应税折抵税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apfbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfbcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfblegl" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfbld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="apfbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfborga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb001" widget="Edit" items="" default="&apos;aapt351&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb002" widget="Edit" items="" default="&apos;41&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfb005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb010" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="apfb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb013" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="apfb016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfb017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="apfb024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfb025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfb028" widget="CheckBox" items="" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="apfb030" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfb031" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfb032" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfb033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb034" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfb035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb037" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb038" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb039" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb041" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb100" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb101" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb109" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb119" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb120" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb121" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb129" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb130" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfb131" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb139" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb114" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb124" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfb134" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="apfb_t" depend_field="apfb016" correspon_key="apfbent,apfbld,apfb016" ref_table="glacl_t" ref_fk="glaclent,glaclld,glacl" ref_dlang=" " ref_rtn=" "/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

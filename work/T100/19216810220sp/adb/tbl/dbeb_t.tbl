@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dbeb_t" module="ADB" text="配送预排路线单身档" type="D" version="1">
+  <column name="dbebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="dbebsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbebunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbebdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="dbeb001" text="路线编号" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="dbeb002" text="装载点" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbeb003" text="计划承载容积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbeb004" text="预排承载容积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbeb005" text="承载容积单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dbeb006" text="计划承载重量" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbeb007" text="预排承载重量" attribute="N102" type="number(20,6)" pk="N" req="N"/>
+  <column name="dbeb008" text="承载重量单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dbebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="dbebsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbebunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbebdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dbeb001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbab001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbeb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbeb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbeb004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbeb005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dbeb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbeb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="dbeb008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dbeb_t" depend_field="dbeb001" correspon_key="dbeb001" ref_table="dbabl_t" ref_fk="dbabl001" ref_dlang="dbabl002" ref_rtn="dbabl003"/>
+    <field depend_table="dbeb_t" depend_field="dbeb002" correspon_key="dbeb002" ref_table="dbael_t" ref_fk="dbael001" ref_dlang="dbael002" ref_rtn="dbael003"/>
+    <field depend_table="dbeb_t" depend_field="dbeb005" correspon_key="dbeb005" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="dbeb_t" depend_field="dbeb008" correspon_key="dbeb008" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

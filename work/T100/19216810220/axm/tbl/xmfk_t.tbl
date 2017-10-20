@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmfk_t" module="AXM" text="销售折扣结算对象档" type="D" version="1">
+  <column name="xmfkent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmfksite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmfkdocno" text="合约单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmfkseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmfk001" text="订单客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmfk002" text="最终客户" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmfkent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmfksite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfkdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmfkseq" widget="Edit" items="" default="1" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmfk001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_6" c_zoom="q_pmaa001_6" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmfk002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_6" c_zoom="q_pmaa001_6" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmfk_t" depend_field="xmfk001" correspon_key="xmfk001" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="xmfk_t" depend_field="xmfk002" correspon_key="xmfk002" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

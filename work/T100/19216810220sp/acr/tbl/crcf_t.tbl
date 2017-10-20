@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crcf_t" module="ACR" text="客户回访记录问卷明细档" type="D" version="1">
+  <column name="crcfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="crcfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crcfunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crcfdocno" text="回访单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="crcf001" text="问题编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="crcf002" text="本次得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crcf003" text="说明" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crcfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="crcfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcfunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcfdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="crcf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_crcc002" c_zoom="q_crcc002" chk_ref="v_crcc002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcf002" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crcf003" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

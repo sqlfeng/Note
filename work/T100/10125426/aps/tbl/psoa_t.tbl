@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="psoa_t" module="APS" text="MPS工单中介档" type="H" version="1">
+  <column name="psoaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="psoasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="psoa001" text="APS版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="psoa002" text="运行日期时间" attribute="C204" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="psoa003" text="工单编号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="psoa004" text="需求数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="psoa005" text="已生产量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="psoa006" text="EPR工单编号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="psoa007" text="ERP预计完工日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa008" text="ERP预计开立日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa009" text="品号" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="psoa010" text="工艺路线编号" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="psoa011" text="报废数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="psoa012" text="状态" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="psoa013" text="物料限制时间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa014" text="建议单据" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="psoa015" text="预计完工时间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa016" text="预计发放时间" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa017" text="使用工单工艺" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="psoa018" text="外包" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="psoa019" text="外包商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="psoa020" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="psoa021" text="锁定" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="psoa022" text="品号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="psoa023" text="品号特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="psoa024" text="bw_release_date" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="psoa025" text="bw_complete_date" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="psoaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psoa001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psoa002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="psoa003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="psoa004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="psoa005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="psoa006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="psoa007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="psoa010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="psoa011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="psoa012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="psoa013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="psoa015" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa016" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="psoa018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="psoa019" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psoa020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="psoa021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="psoa022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="psoa023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="psoa024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="psoa025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,26 @@
+      #報表 d06 樣板自動產生(Version:3)
+      LET g_rep_type = ${rep_type}              
+      CASE g_rep_type
+         #reptype - Start -
+         WHEN ${comp_name${key}}
+              LET la_param.prog = "${comp_name_prog${key}}"
+              LET ls_js = g_rep_wc${rep_arg${key}}
+              LET l_cmd_arg = "${prog_arg${key}}"
+         #reptype - End -
+      END CASE
+      ##組cmdrun的json
+      LET l_cmd_cnt = 1      
+      IF l_cmd_arg.getLength()> 0 THEN         
+         LET l_cmd_token = base.StringTokenizer.create(l_cmd_arg,",")
+         WHILE l_cmd_token.hasMoreTokens()
+            LET l_cmd_next = l_cmd_token.nextToken()
+            LET l_cmd_next = l_cmd_next.subString(l_cmd_next.getIndexOf("'",1)+1,l_cmd_next.getLength())
+            LET l_cmd_next = l_cmd_next.subString(1,l_cmd_next.getIndexOf("'",1)-1)            
+            LET la_param.param[l_cmd_cnt] = l_cmd_next
+            LET l_cmd_cnt = l_cmd_cnt + 1
+         END WHILE     
+      END IF 
+      LET la_param.param[l_cmd_cnt] = ls_js            
+      LET la_param.background = "T"
+      LET ls_js = util.JSON.stringify(la_param)
+      CALL cl_cmdrun(ls_js)  

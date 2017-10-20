@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stdb_t" module="AST" text="内部结算参数设置数据表" type="B" version="1">
+  <column name="stdbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="stdb001" text="流程代码" attribute="C480" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="stdb002" text="结算中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb003" text="业务类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb004" text="对象类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb005" text="供货对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb006" text="需求对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb007" text="关联交易频率" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb008" text="往来关系" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdb009" text="退可冲销" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stdb010" text="备注" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="stdbownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdbowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdbcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdbcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdbcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stdbmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stdbmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stdbstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stdbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_9" c_zoom="q_ooea001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb003" widget="ComboBox" items="6082" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb004" widget="ComboBox" items="6085" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_2" c_zoom="q_ooea001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_2" c_zoom="q_ooea001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb007" widget="ComboBox" items="6086" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb008" widget="ComboBox" items="6087" default="&apos;2&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb009" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdb010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="stdbownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdbowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdbcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdbcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdbcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stdbmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdbmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stdbstus" widget="ComboBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stdb_t" depend_field="stdb002" correspon_key="stdb002" ref_table="ooeal_t" ref_fk="ooeal001" ref_dlang="ooeal002" ref_rtn="ooeal003"/>
+    <field depend_table="stdb_t" depend_field="stdb005" correspon_key="stdb005" ref_table="ooeal_t" ref_fk="ooeal001" ref_dlang="ooeal002" ref_rtn="ooeal003"/>
+    <field depend_table="stdb_t" depend_field="stdb006" correspon_key="stdb006" ref_table="ooeal_t" ref_fk="ooeal001" ref_dlang="ooeal002" ref_rtn="ooeal003"/>
+    <field depend_table="stdb_t" depend_field="stdbcrtdp" correspon_key="stdbcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdb_t" depend_field="stdbcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stdb_t" depend_field="stdbcrtid" correspon_key="stdbcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stdb_t" depend_field="stdbmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stdb_t" depend_field="stdbmodid" correspon_key="stdbmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stdb_t" depend_field="stdbowndp" correspon_key="stdbowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdb_t" depend_field="stdbownid" correspon_key="stdbownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="stdbstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

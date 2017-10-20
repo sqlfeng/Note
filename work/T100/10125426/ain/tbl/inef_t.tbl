@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inef_t" module="AIN" text="盘点库存快照数据表" type="B" version="1">
+  <column name="inefent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inefunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inefsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inef001" text="盘点计划" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inef002" text="商品编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="inef003" text="商品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="inef004" text="库位特征" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="inef005" text="库位编号" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inef006" text="储位编号" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inef007" text="批号" attribute="C304" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="inef008" text="货架" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inef009" text="库存单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inef010" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inef011" text="单位成本" attribute="N204" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inefent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inefunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inefsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inef001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ineadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inef002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inef003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inef004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inef005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001_13" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inef006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inab002_7" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inef007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inef008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inef009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inef010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inef011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inef_t" depend_field="inef001" correspon_key="inefent,inef001" ref_table="inea_t" ref_fk="ineaent,ineadocno" ref_dlang=" " ref_rtn="inea001"/>
+    <field depend_table="inef_t" depend_field="inef002" correspon_key="inefent,inef002" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal004"/>
+    <field depend_table="inef_t" depend_field="inef009" correspon_key="inefent,inef009" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="inef_t" depend_field="inefsite" correspon_key="inefent,inefsite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

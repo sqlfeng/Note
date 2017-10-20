@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pjcb_t" module="APJ" text="专案成本调整" type="S" version="1">
+  <column name="pjcbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pjcbcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjcbld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="pjcb001" text="账套本位币顺序" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="pjcb002" text="成本域(项目编号)" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pjcb003" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pjcb004" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pjcb005" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pjcb006" text="本币运行预算" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb007" text="本币合同金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb008" text="核算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pjcb009" text="现场材料" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb010" text="现场包作" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb011" text="现场人工" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb012" text="现场费用" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjcb013" text="现场其他" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pjcbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjcbcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="v_glaald_5" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjcbld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_glaald" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="pjcb001" widget="ComboBox" items="8914" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjcb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjba001" c_zoom="q_pjba001" chk_ref="v_pjba001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjcb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcat001" c_zoom="q_xcat001" chk_ref="v_xcat001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjcb004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="pjcb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="pjcb006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjcb009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjcb013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pjcb_t" depend_field="pjcb002" correspon_key="pjcb002" ref_table="pjbal_t" ref_fk="pjbal001" ref_dlang="pjbal002" ref_rtn="pjbal003"/>
+    <field depend_table="pjcb_t" depend_field="pjcb003" correspon_key="pjcb003" ref_table="xcatl_t" ref_fk="xcatl001" ref_dlang="xcatl002" ref_rtn="xcatl003"/>
+    <field depend_table="pjcb_t" depend_field="pjcbcomp" correspon_key="pjcbcomp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pjcb_t" depend_field="pjcbld" correspon_key="pjcbld" ref_table="glaal_t" ref_fk="glaal001" ref_dlang=" " ref_rtn="glaal002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

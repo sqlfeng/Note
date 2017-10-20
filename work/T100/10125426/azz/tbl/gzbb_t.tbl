@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzbb_t" module="AZZ" text="流程图节点数据档" type="M" version="1">
+  <column name="gzbbent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzbb001" text="节点代号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="gzbb002" text="分类代号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="gzbb003" text="节点类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzbb004" text="节点信息" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="gzbb005" text="可用节点代号(gzbd001)" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gzbb006" text="程式代号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzbbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="gzbb001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="gzbb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="gzbb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel=""/>
+    <field name="gzbb004" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="gzbb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="gzbb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzbb_t" depend_field="gzbbcrtdp" correspon_key="gzbbcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzbb_t" depend_field="gzbbcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzbb_t" depend_field="gzbbcrtid" correspon_key="gzbbcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzbb_t" depend_field="gzbbmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzbb_t" depend_field="gzbbmodid" correspon_key="gzbbmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzbb_t" depend_field="gzbbowndp" correspon_key="gzbbowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzbb_t" depend_field="gzbbownid" correspon_key="gzbbownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="gzbbstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,186 @@
+#應用 a09 樣板自動產生(Version:17)
+#+ 確認碼變更 
+PRIVATE FUNCTION ${general_prefix}_statechange()
+   #add-point:statechange段define(客製用) name="statechange.define_customerization"
+   {<point name="statechange.define_customerization" edit="c" mark="Y"/>}
+   #end add-point  
+   DEFINE lc_state LIKE type_t.chr5
+   #add-point:statechange段define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="statechange.define"
+   {<point name="statechange.define"/>}
+   #end add-point  
+   
+   #add-point:Function前置處理 name="statechange.before"
+   {<point name="statechange.before"/>}
+   #end add-point  
+   
+   ERROR ""     #清空畫面右下側ERROR區塊
+ 
+   IF ${master_var_pk01} IS NULL
+      #master_keys - Start -
+      OR ${master_var_pk${key}} IS NULL
+      #keys -  End  -
+   THEN
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = "" 
+      LET g_errparam.code   = "std-00003" 
+      LET g_errparam.popup  = FALSE 
+      CALL cl_err()
+      RETURN
+   END IF
+ 
+   CALL s_transaction_begin()
+   
+   OPEN ${general_prefix}_cl USING ${master_var_append}${master_var_allkeys}
+   IF STATUS THEN
+      CLOSE ${general_prefix}_cl
+      CALL s_transaction_end('N','0')
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = "OPEN ${general_prefix}_cl:" 
+      LET g_errparam.code   = STATUS 
+      LET g_errparam.popup  = TRUE 
+      CALL cl_err()
+      RETURN
+   END IF
+   
+   #顯示最新的資料
+   ${master_refresh}
+   ${master_append_select}
+ 
+   #檢查是否允許此動作
+   IF NOT ${general_prefix}_action_chk() THEN
+      CLOSE ${general_prefix}_cl
+      CALL s_transaction_end('N','0')
+      RETURN
+   END IF
+ 
+   #將資料顯示到畫面上
+   DISPLAY BY NAME ${master_vars_all}
+ 
+   CASE ${master_var_stus}
+      WHEN "${mdl_stus1}"
+         CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic1}.png")
+      #mdls - Start -
+      WHEN "${mdl_stus${mdl}}"
+         CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic${mdl}}.png")
+      #mdls -  End  -
+      ${mdl_a37}
+   END CASE
+ 
+   #add-point:資料刷新後 name="statechange.after_refresh"
+   {<point name="statechange.after_refresh"/>}
+   #end add-point
+ 
+   MENU "" ATTRIBUTES (STYLE="popup")
+      BEFORE MENU
+         HIDE OPTION "approved"
+         HIDE OPTION "rejection"
+         CASE ${master_var_stus}
+            ${mdl_a35}
+            WHEN "${mdl_stus1}"
+               HIDE OPTION "${mdl_pic1}"
+            #mdls - Start -
+            WHEN "${mdl_stus${mdl}}"
+               HIDE OPTION "${mdl_pic${mdl}}"
+            #mdls -  End  -
+         END CASE
+     
+      #add-point:menu前 name="statechange.before_menu"
+      {<point name="statechange.before_menu"/>}
+      #end add-point
+      
+      ${mdl_a36}
+	  
+      ${mdl_mark1}ON ACTION ${mdl_pic1}
+      ${mdl_mark1}   IF cl_auth_chk_act("${mdl_pic1}") THEN
+      ${mdl_mark1}      LET lc_state = "${mdl_stus1}"
+      ${mdl_mark1}      #add-point:action控制 name="statechange.${mdl_pic1}"
+      ${mdl_mark1}      {<point name="statechange.${mdl_pic1}"/>}
+      ${mdl_mark1}      #end add-point
+      ${mdl_mark1}   END IF
+      ${mdl_mark1}   EXIT MENU
+      #mdls - Start -   
+      ${mdl_mark${mdl}}ON ACTION ${mdl_pic${mdl}}
+      ${mdl_mark${mdl}}   IF cl_auth_chk_act("${mdl_pic${mdl}}") THEN
+      ${mdl_mark${mdl}}      LET lc_state = "${mdl_stus${mdl}}"
+      ${mdl_mark${mdl}}      #add-point:action控制 name="statechange.${mdl_pic${mdl}}"
+      ${mdl_mark${mdl}}      {<point name="statechange.${mdl_pic${mdl}}"/>}
+      ${mdl_mark${mdl}}      #end add-point
+      ${mdl_mark${mdl}}   END IF
+      ${mdl_mark${mdl}}   EXIT MENU
+      #mdls -  End  -
+ 
+      #add-point:stus控制 name="statechange.more_control"
+      {<point name="statechange.more_control"/>}
+      #end add-point
+      
+   END MENU
+   
+   #確認被選取的狀態碼在清單中
+   IF (lc_state <> "${mdl_stus1}" 
+      #mdls - Start -   
+      AND lc_state <> "${mdl_stus${mdl}}"
+      #mdls -  End  -
+      ) OR 
+      ${master_var_stus} = lc_state OR cl_null(lc_state) THEN
+      CLOSE ${general_prefix}_cl
+      CALL s_transaction_end('N','0')
+      RETURN
+   END IF
+   
+   #add-point:stus修改前 name="statechange.b_update"
+   {<point name="statechange.b_update"/>}
+   #end add-point
+   
+   ${mdl_mark_modid}LET ${mdl_var_modid} = g_user
+   ${mdl_mark_moddt}LET ${mdl_var_moddt} = cl_get_current()
+   LET ${master_var_stus} = lc_state
+   
+   #異動狀態碼欄位/修改人/修改日期
+   UPDATE ${master_tbl_name} 
+      SET (${master_field_stus}${mdl_field_modid}${mdl_field_moddt}) 
+        = (${master_var_stus}${mdl_var_modid_d}${mdl_var_moddt_d})     
+    WHERE ${master_append_wc} ${master_field_pk01} = ${master_var_pk01}
+      #master_keys - Start -
+      AND ${master_field_pk${key}} = ${master_var_pk${key}}
+      #keys -  End  -
+    
+   IF SQLCA.sqlcode THEN
+      INITIALIZE g_errparam TO NULL 
+      LET g_errparam.extend = "" 
+      LET g_errparam.code   = SQLCA.sqlcode 
+      LET g_errparam.popup  = FALSE 
+      CALL cl_err()
+   ELSE
+      CASE lc_state
+         WHEN "${mdl_stus1}"
+            CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic1}.png")
+         #mdls - Start -
+         WHEN "${mdl_stus${mdl}}"
+            CALL gfrm_curr.setElementImage("statechange", "stus/32/${mdl_pic${mdl}}.png")
+         #mdls -  End  -
+         ${mdl_a37}
+      END CASE
+    
+      #撈取異動後的資料
+      ${master_refresh}
+      
+      #將資料顯示到畫面上
+      DISPLAY BY NAME ${master_vars_all}
+   END IF
+ 
+   #add-point:stus修改後 name="statechange.a_update"
+   {<point name="statechange.a_update"/>}
+   #end add-point
+ 
+   #add-point:statechange段結束前 name="statechange.after"
+   {<point name="statechange.after"/>}
+   #end add-point  
+ 
+   CLOSE ${general_prefix}_cl
+   CALL s_transaction_end('Y','0')
+ 
+   #功能已完成,通報訊息中心
+   CALL ${general_prefix}_msgcentre_notify('statechange:'||lc_state)
+   
+END FUNCTION
+

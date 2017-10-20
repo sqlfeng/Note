@@ -1,0 +1,13 @@
+#應用 qs26 樣板自動產生(Version:3)
+   #+ 組承接外部參數時資料庫欄位對應條件(單頭)
+   IF NOT cl_null(g_argv[${general_para01}]) THEN
+      LET g_wc = g_wc, " ${master_field_pk01} = '", g_argv[${general_para01}], "' AND "
+   END IF
+ 
+   #master_keys - Start -
+   IF NOT cl_null(g_argv[${general_para${key}}]) THEN
+      LET g_wc = g_wc, " ${master_field_pk${key}} = '", g_argv[${general_para${key}}], "' AND "
+   END IF
+   #keys -  End  -
+ 
+

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prcn_t" module="APR" text="促销任务量分配明细表" type="D" version="1">
+  <column name="prcnent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prcnunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcnsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcndocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prcnseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prcn001" text="申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prcn002" text="申请项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="prcn003" text="对象类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn004" text="经销商" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn005" text="网点" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn006" text="销售范围" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn007" text="销售通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn008" text="办事处" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn009" text="产品组" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn010" text="产品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="prcn011" text="包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prcn012" text="申请任务量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prcn013" text="分配任务量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prcn014" text="返利比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="prcn015" text="超任务返利比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="prcn016" text="承担比例" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="prcn017" text="特征码" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="prcn018" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prcnent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prcnunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcnsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcndocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prcnseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prcn001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prckdocno" c_zoom="q_prckdocno_01" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prcn002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prcn003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001_21" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbbc001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oojd001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_dbba001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prcn011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prcn012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prcn013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prcn014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="prcn015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="prcn016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="prcn017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prcn018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prcn_t" depend_field="prcn004" correspon_key="prcment,prcn004" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="prcn_t" depend_field="prcn005" correspon_key="prcment,prcn005" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="prcn_t" depend_field="prcn006" correspon_key="prcment,prcn006" ref_table="dbbcl_t" ref_fk="dbbclent,dbbcl001" ref_dlang="dbbcl002" ref_rtn="dbbcl003"/>
+    <field depend_table="prcn_t" depend_field="prcn007" correspon_key="prcment,prcn007" ref_table="oojdl_t" ref_fk="oojdlent,oojdl001" ref_dlang="oojdl002" ref_rtn="oojdl003"/>
+    <field depend_table="prcn_t" depend_field="prcn008" correspon_key="prcment,prcn008" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="prcn_t" depend_field="prcn009" correspon_key="prcment,prcn009" ref_table="dbbal_t" ref_fk="dbbalent,dbbal001" ref_dlang="dbbal002" ref_rtn="dbbal003"/>
+    <field depend_table="prcn_t" depend_field="prcn010" correspon_key="prcment,prcn010" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="prcn_t" depend_field="prcn011" correspon_key="prcment,prcn011" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

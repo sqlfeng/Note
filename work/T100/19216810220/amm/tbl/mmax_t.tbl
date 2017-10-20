@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmax_t" module="AMM" text="会员卡发行单身档" type="D" version="1">
+  <column name="mmaxent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmaxsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaxunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaxdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmaxseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmax001" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmax002" text="卡号总码长" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmax003" text="卡号固定代码长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmax004" text="卡号固定代码" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmax005" text="卡号流水码长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="mmax006" text="发行张数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="mmax007" text="开始卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmax008" text="结束卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmax009" text="空白卡库区" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmax010" text="发行卡库区" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmaxent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmaxsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaxunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaxdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmaxseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmax001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mman001" c_zoom="q_mman001" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="mmax002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmax003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmax004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmax005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="mmax006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="mmax007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmax008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmax009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_2" c_zoom="q_inaa001_2" chk_ref="v_inaa001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmax010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_2" c_zoom="q_inaa001_2" chk_ref="v_inaa001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmax_t" depend_field="mmax001" correspon_key="mmax001" ref_table="mmanl_t" ref_fk="mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmax_t" depend_field="mmax009" correspon_key="mmax009" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="mmax_t" depend_field="mmax010" correspon_key="mmax010" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

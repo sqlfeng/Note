@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmaz_t" module="AMM" text="会员卡领用申请单身档" type="D" version="1">
+  <column name="mmazent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmazsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmazunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmazdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmazseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmaz000" text="数据类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz001" text="卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz002" text="领出组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz003" text="领出库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz004" text="领用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz005" text="领用库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmaz006" text="申请数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="mmaz007" text="确认数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="mmaz008" text="会员卡调拨单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mmaz009" text="会员卡调拨项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmazent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmazsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmazunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmazdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmazseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmaz000" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mman001" c_zoom="q_mman001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_4" c_zoom="q_ooea001_4" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_2" c_zoom="q_inaa001_2" chk_ref="v_inaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001" c_zoom="q_ooea001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_2" c_zoom="q_inaa001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmaz006" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="mmaz007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="mmaz008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmaz009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmaz_t" depend_field="mmaz001" correspon_key="mmaz001" ref_table="mmanl_t" ref_fk="mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmaz_t" depend_field="mmaz002" correspon_key="mmaz002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mmaz_t" depend_field="mmaz003" correspon_key="mmaz003" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="mmaz_t" depend_field="mmaz004" correspon_key="mmaz004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mmaz_t" depend_field="mmaz005" correspon_key="mmaz005" ref_table="inaa_t" ref_fk="inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

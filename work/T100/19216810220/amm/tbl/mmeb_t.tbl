@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmeb_t" module="AMM" text="会员卡补卡数据档" type="D" version="1">
+  <column name="mmebent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmebsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmebunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmebdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmebseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="mmeb001" text="原卡卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmeb002" text="原卡卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmeb003" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmeb004" text="原卡效期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmeb005" text="原卡内积点" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="mmeb006" text="原卡内储值余额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmeb007" text="原卡内储值成本" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmeb008" text="新卡卡号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="mmeb009" text="新卡卡种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmeb010" text="新卡可储值" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmeb011" text="新卡储值折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmeb012" text="补卡工本费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="mmeb013" text="库区" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmeb014" text="理由码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmeb015" text="原卡状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmebent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmebsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmebunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmebdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="mmebseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mmeb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmeb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmeb003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmeb004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmeb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmeb006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmeb007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmeb008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmeb009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmeb010" widget="Edit" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmeb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="mmeb012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmeb013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag004" c_zoom="q_inag004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmeb014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmeb015" widget="ComboBox" items="6515" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmeb_t" depend_field="mmeb002" correspon_key="mmebent,mmeb002" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmeb_t" depend_field="mmeb009" correspon_key="mmebent,mmeb009" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmeb_t" depend_field="mmeb013" correspon_key="mmebsite,mmeb013" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="mmeb_t" depend_field="mmeb014" correspon_key="mmebent,&apos;295&apos;,mmeb014" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

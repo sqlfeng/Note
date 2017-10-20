@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmfc_t" module="ABM" text="ECN替代料档" type="D" version="1">
+  <column name="bmfcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bmfcsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bmfcdocno" text="ECN单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="bmfc002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmfc003" text="项次2" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmfc004" text="变更方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmfc005" text="替代料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="bmfc006" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="bmfc007" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="bmfc008" text="取替代量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfc009" text="组件底数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfc010" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmfc011" text="限定客户" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bmfc012" text="优先级" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="bmfc013" text="取替代方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmfc014" text="替代上限比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="bmfc015" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmfcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfcsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfcdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfc002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmfc003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmfc004" widget="ComboBox" items="1110" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmfc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001_2" c_zoom="q_imaa001_2" chk_ref="v_imaa001_5" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfc006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfc007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmfc008" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="bmfc009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="bmfc010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfc011" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="bmfc012" widget="Edit" items="" default="" max_compare="&lt;=" max="99.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="bmfc013" widget="ComboBox" items="1105" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmfc014" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="bmfc015" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmfc_t" depend_field="bmfc005" correspon_key="bmfcent,bmfc005" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

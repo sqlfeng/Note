@@ -1,0 +1,10 @@
+#應用 qs16 樣板自動產生(Version:3)
+         ON ACTION filter
+            LET g_action_choice="filter"
+            CALL ${general_prefix}_filter()
+            #add-point:ON ACTION filter name="menu.filter"
+            {<point name="menu.filter" />}
+            #END add-point
+            EXIT DIALOG
+ 
+

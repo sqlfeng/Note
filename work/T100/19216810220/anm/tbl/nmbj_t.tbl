@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmbj_t" module="ANM" text="资金计划明细档" type="D" version="1">
+  <column name="nmbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="nmbjdocno" text="资金计划单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="nmbjseq" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="nmbj001" text="组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbj002" text="收支项目" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbj003" text="编制起始日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmbj004" text="编制结束日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmbj005" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbj006" text="初编金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbj007" text="变更后金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbj008" text="审批金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbj009" text="最后异动金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbjdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmbjseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="nmbj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmbh004" c_zoom="q_nmbh004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmbh004" c_zoom="q_nmbh004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbj003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbj004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbj007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbj008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbj009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="nmbj_t" depend_field="nmbj001" correspon_key="nmbjent,nmbj001" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="nmbj_t" depend_field="nmbj002" correspon_key="nmbjent,nmbj002" ref_table="nmbdl_t" ref_fk="nmbdlent,nmbdl001,nmbdl002" ref_dlang="nmbh003" ref_rtn="nmbdl004"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="nmbj_t" depend_field="nmbj001" correspon_key="nmbjent,nmbj001" lang_table="" lang_fk="" lang_dlang="" lang_rtn=""/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

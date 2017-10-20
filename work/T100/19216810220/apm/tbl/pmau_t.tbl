@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmau_t" module="APM" text="弹性采购价格档" type="B" version="1">
+  <column name="pmauent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmau001" text="采购价格参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="pmau002" text="采购控制组" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau003" text="币别编号" attribute="C008" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau005" text="采购通路" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau006" text="作业编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmau011" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pmau012" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="pmau013" text="洲别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau014" text="国家编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau015" text="州省编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau016" text="供应商价格群组" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau017" text="供应商分类" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau018" text="计价单位" attribute="C009" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau019" text="税别编号" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau020" text="付款条件" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau021" text="交易条件" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau022" text="单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmau100" text="申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaustus" text="数据状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmauownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmauowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmaucrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaucrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmaucrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmaumodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmaumoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmau031" text="系列" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmau032" text="产品分类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="pmauent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmau001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_0" c_zoom="q_ooal002_0" chk_ref="v_ooal002_11" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooha001_4" c_zoom="q_ooha001_4" chk_ref="v_ooha001_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooai001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmau011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmau012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmau013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooce001_1" c_zoom="q_ooce001_1" chk_ref="v_ooce001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocg001" c_zoom="q_oocg001" chk_ref="v_oocg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooci002" c_zoom="q_ooci002" chk_ref="v_ooci002_01" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_3" c_zoom="q_oodb002_3" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib002_1" c_zoom="q_ooib002_1" chk_ref="v_ooib002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau022" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmau100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmbtdocno_1" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmaustus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmauownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmauowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaucrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaucrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaucrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmaumodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmaumoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmau031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmau032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmau_t" depend_field="pmau001" correspon_key="&apos;14&apos;,pmau001" ref_table="ooall_t" ref_fk="ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="pmau_t" depend_field="pmau002" correspon_key="pmau002" ref_table="oohal_t" ref_fk="oohal001" ref_dlang="oohal002" ref_rtn="oohal003"/>
+    <field depend_table="pmau_t" depend_field="pmau003" correspon_key="pmau003" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmau_t" depend_field="pmau005" correspon_key="&apos;275&apos;,pmau005" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmau_t" depend_field="pmau011" correspon_key="pmau011" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmau_t" depend_field="pmau013" correspon_key="pmau013" ref_table="oocel_t" ref_fk="oocel001" ref_dlang="oocel002" ref_rtn="oocel003"/>
+    <field depend_table="pmau_t" depend_field="pmau014" correspon_key="pmau014" ref_table="oocgl_t" ref_fk="oocgl001" ref_dlang="oocgl002" ref_rtn="oocgl003"/>
+    <field depend_table="pmau_t" depend_field="pmau015" correspon_key="pmau014,pmau015" ref_table="oocil_t" ref_fk="oocil001,oocil002" ref_dlang="oocil003" ref_rtn="oocil004"/>
+    <field depend_table="pmau_t" depend_field="pmau016" correspon_key="&apos;253&apos;,pmau016" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmau_t" depend_field="pmau017" correspon_key="&apos;251&apos;,pmau017" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmau_t" depend_field="pmau018" correspon_key="pmau018" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmau_t" depend_field="pmau019" correspon_key="&apos;&apos;,pmau019" ref_table="oodbl_t" ref_fk="oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="pmau_t" depend_field="pmau020" correspon_key="pmau020" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="pmau_t" depend_field="pmau021" correspon_key="&apos;238&apos;,pmau021" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmau_t" depend_field="pmaucrtdp" correspon_key="pmaucrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmau_t" depend_field="pmaucrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmau_t" depend_field="pmaucrtid" correspon_key="pmaucrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmau_t" depend_field="pmaumoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmau_t" depend_field="pmaumodid" correspon_key="pmaumodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmau_t" depend_field="pmauowndp" correspon_key="pmauowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmau_t" depend_field="pmauownid" correspon_key="pmauownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="pmaustus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

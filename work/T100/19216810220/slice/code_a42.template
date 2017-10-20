@@ -1,0 +1,29 @@
+#應用 a42 樣板自動產生(Version:3)
+   #進入程式時預設執行的動作
+   CASE g_actdefault
+      WHEN "${mdl_action}"
+         LET g_action_choice="${mdl_action}"
+         LET g_actdefault = ""
+         IF cl_auth_chk_act("${mdl_action}") THEN
+            CALL ${general_prefix}_${mdl_action}(${mdl_para})
+            #add-point:ON ACTION ${mdl_action} name="menu.default.${mdl_action}"
+            {<point name="menu.default.${mdl_action}" />}
+            #END add-point
+         END IF
+      #mdls - Start -
+      WHEN ${mdl_action${mdl}}
+         LET g_action_choice="${mdl_action${mdl}}"
+         LET g_actdefault = ""
+         IF cl_auth_chk_act("${mdl_action${mdl}}") THEN
+            CALL ${general_prefix}_${mdl_action${mdl}}(${mdl_para${mdl}})
+            #add-point:ON ACTION ${mdl_action${mdl}} name="menu.default.${mdl_action${mdl}}"
+            {<point name="menu.default.${mdl_action${mdl}}" />}
+            #END add-point
+         END IF
+      #mdls -  End  -
+      #add-point:action default自訂 name="ui_dialog.action_default"
+      {<point name="ui_dialog.action_default"/>}
+      #end add-point
+      OTHERWISE
+   END CASE
+

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcch_t" module="AXC" text="拆件在制主件成本期异动统计档" type="S" version="1">
+  <column name="xcchent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcchcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcchld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xcch001" text="账套本位币顺序" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xcch002" text="成本域" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xcch003" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcch004" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcch005" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcch006" text="拆件工单编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xcch007" text="主件料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xcch008" text="特性" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="xcch009" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xcch010" text="项目号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcch011" text="核算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcch101" text="上期结存数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102" text="上期结存金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102a" text="上期结存金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102b" text="上期结存金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102c" text="上期结存金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102d" text="上期结存金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102e" text="上期结存金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102f" text="上期结存金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102g" text="上期结存金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch102h" text="上期结存金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch200" text="本期投入工时" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch201" text="本期投入数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202" text="本期本阶投入金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202a" text="本期本阶投入金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202b" text="本期本阶投入金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202c" text="本期本阶投入金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202d" text="本期本阶投入金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202e" text="本期本阶投入金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202f" text="本期本阶投入金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202g" text="本期本阶投入金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch202h" text="本期本阶投入金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204" text="本期下阶投入金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204a" text="本期下阶投入金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204b" text="本期下阶投入金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204c" text="本期下阶投入金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204d" text="本期下阶投入金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204e" text="本期下阶投入金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204f" text="本期下阶投入金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204g" text="本期下阶投入金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch204h" text="本期下阶投入金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch301" text="本期转出数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302" text="本期转出金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302a" text="本期转出金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302b" text="本期转出金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302c" text="本期转出金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302d" text="本期转出金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302e" text="本期转出金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302f" text="本期转出金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302g" text="本期转出金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch302h" text="本期转出金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch303" text="差异转出数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304" text="差异转出金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304a" text="差异转出金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304b" text="差异转出金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304c" text="差异转出金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304d" text="差异转出金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304e" text="差异转出金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304f" text="差异转出金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304g" text="差异转出金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch304h" text="差异转出金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch901" text="期末结存数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902" text="期末结存金额" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902a" text="期末结存金额-材料" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902b" text="期末结存金额-人工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902c" text="期末结存金额-加工" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902d" text="期末结存金额-制费一" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902e" text="期末结存金额-制费二" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902f" text="期末结存金额-制费三" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902g" text="期末结存金额-制费四" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcch902h" text="期末结存金额-制费五" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcchtime" text="最近成本计算时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcchent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcchcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcchld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcch001" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcch002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcch003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcch004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcch005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcch006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcch007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcch008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xcch009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcch010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcch011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcch101" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch102h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch200" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch201" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch202h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch204h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch301" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch302h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch303" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch304h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch901" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcch902h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcchtime" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,10 @@
+#應用 qs20 樣板自動產生(Version:3)
+            ON EXPAND (g_row_index)
+               #樹展開
+               CALL ${general_prefix}_tree_expand(g_row_index)
+               LET ${detail_var_title}[g_row_index].isExp = 1
+ 
+            ON COLLAPSE (g_row_index)
+               #樹關閉
+ 
+

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prbm_t" module="APR" text="电子秤文件格式定义明细数据表" type="B" version="1">
+  <column name="prbment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prbmunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbm001" text="电子秤编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="prbm002" text="导出顺序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prbm003" text="描述" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="prbm004" text="长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="prbm005" text="对齐方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbm006" text="填充字符" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbm007" text="数据来源" attribute="C803" type="varchar2(15)" pk="N" req="N"/>
+  <column name="prbm008" text="来源字段名" attribute="C804" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prbm009" text="字段类型" attribute="C806" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prbm010" text="默认值" attribute="C807" type="varchar2(100)" pk="N" req="N"/>
+  <column name="prbmstus" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prbm011" text="转换类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prbment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbmunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbm001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbm002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prbm003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbm004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="prbm005" widget="ComboBox" items="6039" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbm006" widget="ComboBox" items="6040" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbm007" widget="ComboBox" items="6041" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbm008" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbm009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prbm010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="prbmstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prbm011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="prbmstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

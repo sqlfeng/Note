@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xccx_t" module="AXC" text="工艺在制成本本期调整档" type="T" version="1">
+  <column name="xccxent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xccxld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xccxcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xccx001" text="账套本位币顺序" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xccx002" text="成本域" attribute="C305" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="xccx003" text="成本计算类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xccx004" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xccx005" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xccx006" text="调整单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xccx007" text="工单编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xccx008" text="作业编号" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xccx009" text="作业序" attribute="C402" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xccx010" text="调整类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xccx011" text="调整说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="xccx101" text="当月调整数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102" text="当月调整金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102a" text="当月调整金额-材料" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102b" text="当月调整金额-人工" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102c" text="当月调整金额-委外加工" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102d" text="当月调整金额-制费一" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102e" text="当月调整金额-制费二" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102f" text="当月调整金额-制费三" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102g" text="当月调整金额-制费四" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xccx102h" text="当月调整金额-制费五" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xccxent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xccxld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_glaald" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xccxcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_8" c_zoom="q_ooef001_8" chk_ref="v_ooef001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx001" widget="ComboBox" items="8914" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xcbf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xcat001" c_zoom="q_xcat001" chk_ref="v_xcat001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xccx005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xccx006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xccx007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xccx008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx010" widget="ComboBox" items="8919" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xccx011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xccx101" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102a" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102b" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102c" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102d" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102e" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102f" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102g" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xccx102h" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gcao_t" module="AGC" text="券数据档" type="S" version="1">
+  <column name="gcaoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gcao001" text="券编号" attribute="C602" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="gcao002" text="券种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao003" text="券面额编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao004" text="券单位金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="gcao005" text="券流转状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gcao006" text="券发出方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gcao007" text="券递延金额" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="gcao008" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao009" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao010" text="可提货商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gcao011" text="发行营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao012" text="发行日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao013" text="发行异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao014" text="发售营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao015" text="发售日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao016" text="发售异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao017" text="销退营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao018" text="销退日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao019" text="销退异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao020" text="收券营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao021" text="收券日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao022" text="收券异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao023" text="核销营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao024" text="核销日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao025" text="核销异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao026" text="停用营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao027" text="停用日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao028" text="停用异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao029" text="作废营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao030" text="作废日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="gcao031" text="作废异动营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gcao032" text="售券实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="gcao033" text="折扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="gcao034" text="会员编号" attribute="C602" type="varchar2(30)" pk="N" req="N"/>
+  <column name="gcao100" text="GUID" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gcao035" text="失效券财务立账否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gcao036" text="校验码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gcaoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gcao001_9" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gcao002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gcaf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="gcao005" widget="ComboBox" items="6551" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao006" widget="ComboBox" items="6559" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="gcao008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="gcao011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao015" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao028" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao029" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gcao031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="gcao033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="gcao034" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gcao100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="gcao035" widget="CheckBox" items="" default="N" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gcao036" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gcao_t" depend_field="gcao002" correspon_key="gcao002" ref_table="gcafl_t" ref_fk="gcafl001" ref_dlang="gcafl002" ref_rtn="gcafl003"/>
+    <field depend_table="gcao_t" depend_field="gcao003" correspon_key="gcao003" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="gcao_t" depend_field="gcao011" correspon_key="gcao011" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao013" correspon_key="gcao013" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao014" correspon_key="gcao014" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao016" correspon_key="gcao016" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao017" correspon_key="gcao017" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao019" correspon_key="gcao019" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao020" correspon_key="gcao020" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao022" correspon_key="gcao022" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao023" correspon_key="gcao023" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao025" correspon_key="gcao025" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao026" correspon_key="gcao026" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao028" correspon_key="gcao028" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao029" correspon_key="gcao029" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gcao_t" depend_field="gcao031" correspon_key="gcao031" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

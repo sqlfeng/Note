@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glcc_t" module="AGL" text="产品科目依账套设置档" type="B" version="1">
+  <column name="glccent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glccownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glccowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcccrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glcccrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glccmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glccmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glccld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glcc001" text="设置类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="glccseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="glcc002" text="存货科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc003" text="进货(收入)科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc004" text="在制(销货成本)科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc005" text="委外加工费科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc006" text="会计科目编号(预留２)" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc007" text="科目汇总方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glcc008" text="其他设置值" attribute="C807" type="varchar2(100)" pk="N" req="N"/>
+  <column name="glcc011" text="成本分群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc012" text="采购(销售)分群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc013" text="交易通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc014" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc015" text="仓库别" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc016" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="glccstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glcc017" text="科目六(制费三）" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc018" text="科目七(制费四）" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc019" text="科目八(制费五）" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glcc020" text="标准成本价差科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glccent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glccownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glccowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glccmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glccmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glccld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glaald_1" c_zoom="q_glaald_1" chk_ref="v_glaald_2" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="glcc001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glccseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="glcc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc007" widget="ComboBox" items="8315" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="glcc011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="v_rtax001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_8" c_zoom="q_inaa001_8" chk_ref="v_inaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glcc016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaa001" c_zoom="q_imaa001" chk_ref="v_imaa001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="glccstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glcc020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="glcc_t" depend_field="glcc002" correspon_key="glccent,glaa004,glcc002" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="glcc_t" depend_field="glcc003" correspon_key="glccent,glaa004,glcc003" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="glcc_t" depend_field="glcc004" correspon_key="glccent,glaa004,glcc001" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="glcc_t" depend_field="glcc011" correspon_key="glccent,glcc011" ref_table="rtaxl_t" ref_fk="rtaxlent,rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="glcc_t" depend_field="glcc012" correspon_key="glccent,&apos;203&apos;,glcc012" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="glcc_t" depend_field="glcc013" correspon_key="glccent,&apos;275&apos;,glcc013" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="glcc_t" depend_field="glcc014" correspon_key="glccent,glcc014" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glcc_t" depend_field="glcc015" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glcc_t" depend_field="glcc016" correspon_key="glccent,glcc016" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="glcc_t" depend_field="glcccrtdp" correspon_key="glcccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glcc_t" depend_field="glcccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glcc_t" depend_field="glcccrtid" correspon_key="glcccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glcc_t" depend_field="glccld" correspon_key="glccent,glccld" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="glcc_t" depend_field="glccmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glcc_t" depend_field="glccmodid" correspon_key="glccmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glcc_t" depend_field="glccowndp" correspon_key="glccowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glcc_t" depend_field="glccownid" correspon_key="glccownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="glccstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

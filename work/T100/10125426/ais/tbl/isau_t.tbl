@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isau_t" module="AIS" text="进项发票历程档" type="T" version="1">
+  <column name="isauent" text="企业编码" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="isaucomp" text="法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaudocno" text="开票单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="isauseq" text="发票历程项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="isau001" text="发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="isau002" text="电子发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isau003" text="发票代码" attribute="C552" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="isau004" text="发票号码" attribute="C552" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="isau005" text="发票联数" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau006" text="发票防伪随机码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau007" text="发票日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="isau008" text="发票时间" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <column name="isau009" text="发票客户全名" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isau010" text="购货方税务编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isau011" text="购货方地址" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <column name="isau012" text="销方税务编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isau013" text="POS单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isau014" text="发票异动状态" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau015" text="异动理由码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau016" text="异动备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isau017" text="异动日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="isau018" text="异动时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="isau019" text="异动人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isau020" text="专案作废核准文号" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isau021" text="打印次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="isau022" text="发票联别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau023" text="课税别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isau024" text="税率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau100" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau101" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="isau103" text="发票原币未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau104" text="发票原币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau105" text="发票原币含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau106" text="已折让本币未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau107" text="已折让本币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau113" text="发票本币未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau114" text="发票本币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau115" text="发票本币含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau201" text="账款应税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau202" text="账款零税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau203" text="账款免税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isau204" text="爱心码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau205" text="载具类别号码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isau206" text="载具显码 ID" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isau207" text="载具隐码 ID" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isau208" text="电子发票导出状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isau209" text="电子发票导出序号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isauownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isauowndp" text="资料所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaucrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaucrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaucrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaumodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaumoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaucnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaucnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaupstid" text="资料过账者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isaupstdt" text="资料过账日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isaustus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isauud001" text="自定義欄位(文字)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud002" text="自定義欄位(文字)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud003" text="自定義欄位(文字)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud004" text="自定義欄位(文字)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud005" text="自定義欄位(文字)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud006" text="自定義欄位(文字)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud007" text="自定義欄位(文字)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud008" text="自定義欄位(文字)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud009" text="自定義欄位(文字)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud010" text="自定義欄位(文字)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="isauud011" text="自定義欄位(數字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud012" text="自定義欄位(數字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud013" text="自定義欄位(數字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud014" text="自定義欄位(數字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud015" text="自定義欄位(數字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud016" text="自定義欄位(數字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud017" text="自定義欄位(數字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud018" text="自定義欄位(數字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud019" text="自定義欄位(數字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud020" text="自定義欄位(數字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isauud021" text="自定義欄位(日期時間)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud022" text="自定義欄位(日期時間)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud023" text="自定義欄位(日期時間)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud024" text="自定義欄位(日期時間)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud025" text="自定義欄位(日期時間)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud026" text="自定義欄位(日期時間)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud027" text="自定義欄位(日期時間)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud028" text="自定義欄位(日期時間)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud029" text="自定義欄位(日期時間)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isauud030" text="自定義欄位(日期時間)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="isauent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaucomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaudocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isauseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel=""/>
+    <field name="isau001" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel=""/>
+    <field name="isau002" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau003" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau004" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau005" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau006" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau009" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau010" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau011" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isau012" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau013" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isau014" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau015" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau016" widget="TextEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isau017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau018" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau019" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau020" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isau021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="isau022" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau023" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel=""/>
+    <field name="isau100" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau101" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel=""/>
+    <field name="isau103" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau104" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau105" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau106" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau107" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau113" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau114" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau115" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau201" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau202" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau203" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel=""/>
+    <field name="isau204" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau205" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau206" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isau207" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isau208" widget="CheckBox" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isau209" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="isauownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isauowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaucrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaucrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaucrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isaumodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaumoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isaucnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaucnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isaupstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isaupstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isaustus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="isauud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel=""/>
+    <field name="isauud011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel=""/>
+    <field name="isauud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="isauud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isau_t" depend_field="isaucnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isau_t" depend_field="isaucnfid" correspon_key="isaucnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isau_t" depend_field="isaucrtdp" correspon_key="isaucrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isau_t" depend_field="isaucrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isau_t" depend_field="isaucrtid" correspon_key="isaucrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isau_t" depend_field="isaumoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isau_t" depend_field="isaumodid" correspon_key="isaumodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isau_t" depend_field="isauowndp" correspon_key="isauowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isau_t" depend_field="isauownid" correspon_key="isauownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isau_t" depend_field="isaupstdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isau_t" depend_field="isaupstid" correspon_key="isaupstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="isaustus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>

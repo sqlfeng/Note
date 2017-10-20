@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stcf_t" module="AST" text="分销合同费用设置主档" type="D" version="1">
+  <column name="stcfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stcfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcfunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcfseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stcf001" text="合同编号" attribute="C207" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stcf002" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf003" text="会计期间" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf004" text="价款类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf005" text="计算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf006" text="费用周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf007" text="费用周期方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf008" text="条件基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf009" text="计算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf010" text="费用净额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcf011" text="费用比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcf012" text="保底否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf013" text="保底金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcf014" text="保底扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stcf015" text="分量扣点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcf016" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcf017" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcf018" text="下次计算日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcf019" text="下次计算开始日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcf020" text="下次计算截止日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcf021" text="是否参与现金折扣" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stcfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcfunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stcf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stcf002" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stae001" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="asti203" case="upper"/>
+    <field name="stcf003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf004" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf005" widget="ComboBox" items="6007" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf006" widget="ComboBox" items="6008" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf007" widget="ComboBox" items="6009" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="asti202" case="upper"/>
+    <field name="stcf009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="asti202" case="upper"/>
+    <field name="stcf010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stcf011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stcf012" widget="ComboBox" items="6010" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stcf014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stcf015" widget="ComboBox" items="6011" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcf016" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcf017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcf018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcf019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcf020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcf021" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stcf_t" depend_field="stcf002" correspon_key="stcfent,stcf002" ref_table="stael_t" ref_fk="staelent,stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+    <field depend_table="stcf_t" depend_field="stcf008" correspon_key="stcfent,stcf008" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+    <field depend_table="stcf_t" depend_field="stcf009" correspon_key="stcfent,stcf009" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

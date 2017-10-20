@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtbh_t" module="ART" text="商品主供应商调整单身档" type="D" version="1">
+  <column name="rtbhent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtbhsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbhunit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbhdocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtbhseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtbh001" text="商品主条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtbh002" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtbh003" text="原默认供应商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbh004" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbh005" text="原结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbh006" text="新结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtbh007" text="原合同" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rtbh008" text="新合同" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtbhent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtbhsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_24" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbhunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbhdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtbhseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtbh001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stas003" c_zoom="q_stas003" chk_ref="v_stas003" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtbh002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stas003" c_zoom="q_stas003" chk_ref="v_stas003" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtbh003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_10" c_zoom="q_pmaa001_10" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbh004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_10" c_zoom="q_pmaa001_10" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbh005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbh006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtbh007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stan001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rtbh008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stan001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtbh_t" depend_field="rtbh002" correspon_key="rtbh002" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="rtbh_t" depend_field="rtbh003" correspon_key="rtbh003" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="rtbh_t" depend_field="rtbh004" correspon_key="rtbh004" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="rtbh_t" depend_field="rtbh005" correspon_key="rtbh005" ref_table="staal_t" ref_fk="staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="rtbh_t" depend_field="rtbh006" correspon_key="rtbh006" ref_table="staal_t" ref_fk="staal001" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="rtbh_t" depend_field="rtbhsite" correspon_key="rtbhsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pjbg_t" module="APJ" text="专案WBS费用预算档" type="D" version="1">
+  <column name="pjbgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pjbg001" text="专案编号" attribute="C090" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pjbg002" text="本阶WBS" attribute="C091" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="pjbg003" text="费用类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pjbg004" text="金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbg005" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pjbg006" text="稅別" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pjbg007" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="pjbg008" text="原币规划含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbg009" text="本币规划未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbg010" text="本币规划含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pjbg011" text="成本要素" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pjbgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pjbg001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pjbg002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pjbg003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_1" c_zoom="q_oocq002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pjbg004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbg005" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pjbg006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pjbg007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pjbg008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbg009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbg010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pjbg011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pjbg_t" depend_field="pjbg003" correspon_key="&apos;8003&apos;,pjbg003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

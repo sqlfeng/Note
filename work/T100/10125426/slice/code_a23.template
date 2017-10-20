@@ -1,0 +1,13 @@
+               #應用 a23 樣板自動產生(Version:3)
+               #設定g_chkparam參數前，先將其初始化，避免之前設定遺留的參數值造成影響。
+               INITIALIZE g_chkparam.* TO NULL
+               #設定g_chkparam.*的參數
+               #mdls - Start -
+               LET g_chkparam.arg${mdl} = ${mdl_var${mdl}}
+               #mdls -  End  -
+               CALL ${mdl_func}("${mdl_chkid}")  #呼叫帶值的library
+ 
+               #檢視回傳值
+               #LET ${mdl_var_ref1} = g_chkparam.return1
+               #DISPLAY BY NAME ${mdl_var_ref1}
+

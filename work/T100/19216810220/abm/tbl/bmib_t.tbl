@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmib_t" module="ABM" text="料件承认申请承认内容档" type="D" version="1">
+  <column name="bmibent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="bmibsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmibdocno" text="料件承认申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="bmibseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmib001" text="分类代码" attribute="C816" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="bmibseq1" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="bmib002" text="承认内容" attribute="C103" type="varchar2(80)" pk="N" req="Y"/>
+  <column name="bmib003" text="责任部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmib004" text="须回复否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bmib005" text="通过否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bmib006" text="其它说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="bmib007" text="回复人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bmib008" text="回复部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmib009" text="回复时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmibent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmibsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmibdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmibseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmib001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmibseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmib002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bmha003" c_zoom="q_bmha003" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="bmib003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_9" c_zoom="q_ooef001_9" chk_ref="v_ooef001_14" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmib004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmib005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmib006" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="bmib007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmib008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="v_ooeg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmib009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmib_t" depend_field="bmib001" correspon_key="&apos;1115&apos;,bmib001" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="bmib_t" depend_field="bmib003" correspon_key="bmib003" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="bmib_t" depend_field="bmib007" correspon_key="bmib007" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="bmib_t" depend_field="bmib008" correspon_key="bmib008" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

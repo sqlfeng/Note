@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inpf_t" module="AIN" text="在制工单盘点单头档" type="T" version="1">
+  <column name="inpfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inpfsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inpfdocno" text="标签编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inpfseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inpf001" text="工单单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf002" text="作业编号" attribute="C402" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpf003" text="生产料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inpf004" text="盘点计划单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf005" text="空白标签" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="inpf006" text="部门厂商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpf007" text="生产数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpf008" text="生产单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpf009" text="制程编号" attribute="C404" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpf010" text="已发料套数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpf011" text="已入库合格量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpf012" text="已入库不合格量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpf013" text="报废量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpf014" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="inpf015" text="产生人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf016" text="产生日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpf017" text="打印日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpf018" text="打印次数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="inpf020" text="输入人员-初盘一" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf021" text="输入日期-初盘一" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpf022" text="输入人员-初盘二" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf023" text="输入日期-初盘二" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpf024" text="输入人员-复盘一" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf025" text="输入日期-复盘一" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpf026" text="输入人员-复盘二" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpf027" text="输入日期-复盘二" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpfownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpfowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpfcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpfcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpfcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inpfmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpfmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inpfcnfid" text="资料确认者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpfcnfdt" text="资料确认日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inpfpstid" text="资料过帐者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpfpstdt" text="资料过帐日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="inpfstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inpfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inpfdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inpf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_sfbadocno_1" c_zoom="q_sfbadocno_1" chk_ref="v_inpf001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpf002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inpf003" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpf004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inpadocno_3" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpf005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_1" c_zoom="q_ooeg001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpf008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ecba002" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpf011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpf012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpf013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpf014" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpf015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf016" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="inpf020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpf026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpf027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpfownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inpfmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inpfcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inpfpstid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpfpstdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="inpfstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inpf_t" depend_field="inpf002" correspon_key="&apos;221&apos;,inpf002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="inpf_t" depend_field="inpf006" correspon_key="inpf006" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="inpf_t" depend_field="inpf009" correspon_key="inpfsite,inpf003,inpf009" ref_table="ecba_t" ref_fk="ecbasite,ecba001,ecba002" ref_dlang="" ref_rtn="ecba003"/>
+    <field depend_table="inpf_t" depend_field="inpf020" correspon_key="inpf020" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpf022" correspon_key="inpf022_desc" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpf024" correspon_key="inpf024" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpf026" correspon_key="inpf026" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpfcnfdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="inpf_t" depend_field="inpfcnfid" correspon_key="inpfcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpfcrtdp" correspon_key="inpfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inpf_t" depend_field="inpfcrtdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="inpf_t" depend_field="inpfcrtid" correspon_key="inpfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpfmoddt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="inpf_t" depend_field="inpfmodid" correspon_key="inpfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpfowndp" correspon_key="inpfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inpf_t" depend_field="inpfownid" correspon_key="inpfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+    <field depend_table="inpf_t" depend_field="inpfpstdt" correspon_key="" ref_table="" ref_fk="" ref_dlang="" ref_rtn=""/>
+    <field depend_table="inpf_t" depend_field="inpfpstid" correspon_key="inpfpstid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang="" ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="inpfstus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="5" desc="初盘审核"/>
+      <code value="6" desc="复盘审核"/>
+      <code value="S" desc="已过账"/>
+    </field>
+  </scc>
+</table>

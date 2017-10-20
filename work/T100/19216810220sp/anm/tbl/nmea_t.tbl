@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmea_t" module="ANM" text="待结算卡入帐明细档" type="D" version="1">
+  <column name="nmeaent" text="企业编码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="nmeacomp" text="法人" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="nmeadocno" text="单据单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="nmeaseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="nmeasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea001" text="卡号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmea002" text="收银时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="nmea003" text="款别类型" attribute="N806" type="number(10)" pk="N" req="N"/>
+  <column name="nmea004" text="款别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea005" text="卡种" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea006" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea007" text="POS机号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="nmea008" text="收款对象" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea009" text="收款金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmea010" text="交易对像识别码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea011" text="手续费率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmea012" text="手续费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmea013" text="交易账户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea014" text="存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea015" text="是否回款" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmea016" text="卡种说明" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmea017" text="第三方流水号" attribute="C806" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmea018" text="对账否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmea019" text="对账日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmea020" text="收款日期" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmeaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmeacomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmeadocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmeaseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="nmeasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmea002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmea003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmea004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="nmea008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmea010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="nmea012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmea013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea015" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmea018" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmea019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmea020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbr_t" module="APM" text="供应商评核项目得分档(制造)" type="S" version="1">
+  <column name="pmbrent" text="企业编号" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbrsite" text="营运据点" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbr001" text="评核年度" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pmbr002" text="评核月份" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="pmbr003" text="评公式编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbr004" text="供应商编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbr005" text="项目类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbr006" text="项目编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbr007" text="系统得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmbr008" text="调整后得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmbr009" text="调整次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmbr010" text="调整理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbrent" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbrsite" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbr001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="pmbr002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="pmbr003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbr004" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbr005" widget="ComboBox" items="6002" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbr006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="pmbr007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="pmbr008" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel=""/>
+    <field name="pmbr009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="pmbr010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbr_t" depend_field="pmbr006" correspon_key="&apos;2052&apos;,b_pmbr006" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmbr_t" depend_field="pmbr010" correspon_key="&apos;301&apos;,pmbr010" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

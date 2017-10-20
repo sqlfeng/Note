@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmap_t" module="AMM" text="生效营运据点设置档" type="D" version="1">
+  <column name="mmapent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="mmap001" text="程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="mmap002" text="卡种/券种" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="mmap003" text="生效营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmap004" text="卡/券安全库量" attribute="N101" type="number(20,6)" pk="N" req="Y"/>
+  <column name="mmap005" text="包括组织以下所有营运据点" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <column name="mmap006" text="上级发布卡储值规则自行确认" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <column name="mmap007" text="上级发布卡积点规则自行确认" attribute="C001" type="varchar2(1)" pk="N" req="Y"/>
+  <column name="mmapstus" text="有效" attribute="C822" type="varchar2(10)" pk="N" req="Y"/>
+  <col_attr>
+    <field name="mmapent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mmap001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="mmap002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmap003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001_20" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmap004" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mmap005" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmap006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmap007" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mmapstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmap_t" depend_field="mmap003" correspon_key="mmap003" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="mmapstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oofg_t" module="AOO" text="自动编码设置数据档" type="B" version="1">
+  <column name="oofgent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oofgownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofgowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofgcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofgcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofgcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="oofgmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofgmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="oofgstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg001" text="编码分类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oofg002" text="编码性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg003" text="总编号长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="oofg004" text="案例" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="oofg005" text="节点编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oofg006" text="前段节点编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg007" text="段次" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="oofg008" text="节点型态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg009" text="长度" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="oofg010" text="固定值" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="oofg011" text="数值范围起" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofg012" text="数值范围迄" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofg013" text="抓取字段值的SQL" attribute="C815" type="varchar2(2000)" pk="N" req="N"/>
+  <column name="oofg014" text="截取码长起" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="oofg015" text="截取码长迄" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="oofg016" text="使用转换表" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oofg017" text="转换表号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg018" text="连动字段" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oofg019" text="目的字段" attribute="C804" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofg020" text="字段值" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="oofg021" text="添加特征值" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="oofg022" text="特征组别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg023" text="特征类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oofg024" text="作业编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofg025" text="程序编号" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oofg026" text="画面字段" attribute="C804" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="oofgent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oofgownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofgowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofgcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofgcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofgcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="oofgmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofgmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="oofgstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oofg001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oofg001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg002" widget="ComboBox" items="15" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="oofg004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="oofg005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oofg005" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oofg005" c_zoom="q_oofg005" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="oofg008" widget="ComboBox" items="38" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="oofg010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="oofg011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg014" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="oofg015" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="oofg016" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oofj001" c_zoom="q_oofj001" chk_ref="v_oofj001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg018" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_dzeb002" c_zoom="q_dzeb002" chk_ref="v_dzeb001_1" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="oofg021" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oofg024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="oofg026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oofg_t" depend_field="oofg006" correspon_key="oofg001,oofg006" ref_table="oofgl_t" ref_fk="oofgl001,oofgl002" ref_dlang="oofgl003" ref_rtn="oofgl004"/>
+    <field depend_table="oofg_t" depend_field="oofg017" correspon_key="oofg017" ref_table="oofjl_t" ref_fk="oofjl001" ref_dlang="oofjl002" ref_rtn="oofjl003"/>
+    <field depend_table="oofg_t" depend_field="oofg022" correspon_key="&apos;211&apos;,oofg022" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="oofg_t" depend_field="oofg023" correspon_key="&apos;273&apos;,oofg023" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="oofg_t" depend_field="oofgcrtdp" correspon_key="oofgcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oofg_t" depend_field="oofgcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oofg_t" depend_field="oofgcrtid" correspon_key="oofgcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oofg_t" depend_field="oofgmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oofg_t" depend_field="oofgmodid" correspon_key="oofgmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oofg_t" depend_field="oofgowndp" correspon_key="oofgowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oofg_t" depend_field="oofgownid" correspon_key="oofgownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="oofg_t" depend_field="oofg001" correspon_key="oofgent,oofg001,&apos; &apos;" lang_table="oofgl_t" lang_fk="oofglent,oofgl001,oofgl002" lang_dlang="oofgl003" lang_rtn="oofgl005"/>
+    <field depend_table="oofg_t" depend_field="oofg005" correspon_key="oofgent,oofg001,oofg005" lang_table="oofgl_t" lang_fk="oofglent,oofgl001,oofgl002" lang_dlang="oofgl003" lang_rtn="oofgl004"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="oofgstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

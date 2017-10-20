@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmef_t" module="AXM" text="订单变更多账期预收款档" type="D" version="1">
+  <column name="xmefent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmefsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmefdocno" text="采购单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xmef001" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xmef002" text="收款条件" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmef003" text="预计应收款日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmef004" text="预计票据到期日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xmef005" text="未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef006" text="含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef007" text="应收账款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmef008" text="主账套已收未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef009" text="主账套已收含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef010" text="账套二已收未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef011" text="账套二已收含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef014" text="账套三已收未税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef015" text="账套三已收含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmef900" text="变更序" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xmef901" text="变更类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmef902" text="变更理由" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmef903" text="变更备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="xmef016" text="账款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmef017" text="账款影响出货模式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmefent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmefsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmefdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmef001" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xmef002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmad002_1" c_zoom="q_ooib002_2" chk_ref="v_pmad002_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmef003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmef004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmef005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmef008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmef900" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xmef901" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmef902" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmef903" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmef016" widget="ComboBox" items="3015" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmef017" widget="ComboBox" items="3016" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmef_t" depend_field="xmef002" correspon_key="xmef002" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="xmef_t" depend_field="xmef902" correspon_key="&apos;267&apos;,xmef902" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

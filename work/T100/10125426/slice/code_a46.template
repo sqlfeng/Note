@@ -1,0 +1,26 @@
+#應用 a46 樣板自動產生(Version:3)
+         #新增相關文件
+         ON ACTION related_document
+            CALL ${general_prefix}_set_pk_array()
+            IF cl_auth_chk_act("related_document") THEN
+               #add-point:ON ACTION related_document name="ui_dialog.${mdl_addpoint}.related_document"
+               {<point name="ui_dialog.${mdl_addpoint}.related_document"/>}
+               #END add-point
+               CALL cl_doc()
+            END IF
+            
+         ON ACTION agendum
+            CALL ${general_prefix}_set_pk_array()
+            #add-point:ON ACTION agendum name="ui_dialog.${mdl_addpoint}.agendum"
+            {<point name="ui_dialog.${mdl_addpoint}.agendum"/>}
+            #END add-point
+            CALL cl_user_overview()
+            CALL cl_user_overview_set_follow_pic()
+         
+         ON ACTION followup
+            CALL ${general_prefix}_set_pk_array()
+            #add-point:ON ACTION followup name="ui_dialog.${mdl_addpoint}.followup"
+            {<point name="ui_dialog.${mdl_addpoint}.followup"/>}
+            #END add-point
+            CALL cl_user_overview_follow(${mdl_docdt})
+

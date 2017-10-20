@@ -685,6 +685,12 @@ DEFINE
                LET INT_FLAG = 0
                CANCEL INSERT
             END IF
+            # add by lixwz 20170914 s
+            IF g_tc_cmm[l_ac].tc_cmmud11 < 0 THEN
+                     CALL cl_err('申请天数不得大于剩余天数','！',1)
+                    NEXT FIELD tc_cmm008
+            END IF
+            # add by lixwz 20170914 e
             INSERT INTO tc_cmm_file(tc_cmm003,tc_cmm004,tc_cmm002,tc_cmm001,tc_cmm005,tc_cmm006,tc_cmm007,
                                  tc_cmm008,tc_cmm009,tc_cmm010,tc_cmm011,tc_cmm012,tc_cmm013,
                                  tc_cmmud09,tc_cmmud10,tc_cmmud11,   # add by lixwz 20170825
@@ -774,25 +780,32 @@ DEFINE
             ELSE
             # 带出请假天数等
 
-                SELECT SUM(tc_cof008) INTO g_tc_cmm[l_ac].tc_cmmud09 FROM tc_cof_file
-                  WHERE tc_cofud06 = g_tc_cmm[l_ac].tc_cmm001
-                    AND tc_cof007 = g_tc_cmm[l_ac].tc_cmm007
-                    AND YEAR(tc_cof004) <= g_tc_cmm003
-                    AND MONTH(tc_cof004) <= g_tc_cmm004
-                    AND YEAR(tc_cof005) >= g_tc_cmm003
-                    AND MONTH(tc_cof005) >= g_tc_cmm004
-                    AND tc_cofconf1 = 'Y' AND tc_cofconf2='Y'
-                IF cl_null(g_tc_cmm[l_ac].tc_cmmud09) THEN LET g_tc_cmm[l_ac].tc_cmmud09=0 END IF
-                #IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
-
-                     SELECT SUM(tc_cmm012) INTO g_tc_cmm[l_ac].tc_cmmud10 FROM tc_cmm_file
-                      WHERE tc_cmm003 = g_tc_cmm003
-                        AND tc_cmm001 = g_tc_cmm[l_ac].tc_cmm001
-                        AND tc_cmm007 = g_tc_cmm[l_ac].tc_cmm007
-                    #LET g_tc_cmm[l_ac].tc_cmmud10 = g_tc_cmm[l_ac].tc_cmm012
-                    IF cl_null(g_tc_cmm[l_ac].tc_cmmud10) THEN LET g_tc_cmm[l_ac].tc_cmmud10=0 END IF
-                    LET g_tc_cmm[l_ac].tc_cmmud11 = g_tc_cmm[l_ac].tc_cmmud09-g_tc_cmm[l_ac].tc_cmmud10
-                    DISPLAY BY NAME g_tc_cmm[l_ac].tc_cmmud09,g_tc_cmm[l_ac].tc_cmmud10,g_tc_cmm[l_ac].tc_cmmud11
+              #  SELECT SUM(tc_cof008) INTO g_tc_cmm[l_ac].tc_cmmud09 FROM tc_cof_file
+              #    WHERE tc_cofud06 = g_tc_cmm[l_ac].tc_cmm001
+              #      AND tc_cof007 = g_tc_cmm[l_ac].tc_cmm007
+              #      AND YEAR(tc_cof004) <= g_tc_cmm003
+              #      AND MONTH(tc_cof004) <= g_tc_cmm004
+              #      AND YEAR(tc_cof005) >= g_tc_cmm003
+              #      AND MONTH(tc_cof005) >= g_tc_cmm004
+              #      AND tc_cofconf1 = 'Y' AND tc_cofconf2='Y'
+              #  IF cl_null(g_tc_cmm[l_ac].tc_cmmud09) THEN LET g_tc_cmm[l_ac].tc_cmmud09=0 END IF
+              #  #IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
+#
+              #       SELECT SUM(tc_cmm012) INTO g_tc_cmm[l_ac].tc_cmmud10 FROM tc_cmm_file
+              #        WHERE tc_cmm003 = g_tc_cmm003
+              #          AND tc_cmm001 = g_tc_cmm[l_ac].tc_cmm001
+              #          AND tc_cmm007 = g_tc_cmm[l_ac].tc_cmm007
+              #      #LET g_tc_cmm[l_ac].tc_cmmud10 = g_tc_cmm[l_ac].tc_cmm012
+              #      IF cl_null(g_tc_cmm[l_ac].tc_cmmud10) THEN LET g_tc_cmm[l_ac].tc_cmmud10=0 END IF
+              #      IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
+              #          LET g_tc_cmm[l_ac].tc_cmmud10 = g_tc_cmm[l_ac].tc_cmmud10+g_tc_cmm[l_ac].tc_cmm012
+              #      END IF
+              #      LET g_tc_cmm[l_ac].tc_cmmud11 = g_tc_cmm[l_ac].tc_cmmud09-g_tc_cmm[l_ac].tc_cmmud10
+              #      IF g_tc_cmm[l_ac].tc_cmmud11 < 0 THEN
+              #          CALL cl_err('申请天数不得大于剩余天数','！',1)
+              #          NEXT FIELD tc_cmm008
+              #      END IF
+              #      DISPLAY BY NAME g_tc_cmm[l_ac].tc_cmmud09,g_tc_cmm[l_ac].tc_cmmud10,g_tc_cmm[l_ac].tc_cmmud11
               	#END IF
             END IF
           END IF
@@ -951,11 +964,37 @@ DEFINE
             LET g_tc_cmm[l_ac].tc_cmm012 = g_day - l_n1
                       #add by lidj160310
             # add by lixwz 20170824 s
-            IF g_tc_cmm[l_ac].tc_cmm012 > g_tc_cmm[l_ac].tc_cmmud11 THEN
-                 CALL cl_err('申请天数不得大于剩余天数','！',1)
-                 NEXT FIELD tc_cmm007
-                NEXT FIELD tc_cmm008
+            IF g_tc_cmm[l_ac].tc_cmm007 = '1' OR g_tc_cmm[l_ac].tc_cmm007 = '7' THEN
+              SELECT SUM(tc_cof008) INTO g_tc_cmm[l_ac].tc_cmmud09 FROM tc_cof_file
+                  WHERE tc_cofud06 = g_tc_cmm[l_ac].tc_cmm001
+                    AND tc_cof007 = g_tc_cmm[l_ac].tc_cmm007
+                    AND YEAR(tc_cof004) <= g_tc_cmm003
+                    AND MONTH(tc_cof004) <= g_tc_cmm004
+                    AND YEAR(tc_cof005) >= g_tc_cmm003
+                    AND MONTH(tc_cof005) >= g_tc_cmm004
+                    AND tc_cofconf1 = 'Y' AND tc_cofconf2='Y'
+                IF cl_null(g_tc_cmm[l_ac].tc_cmmud09) THEN LET g_tc_cmm[l_ac].tc_cmmud09=0 END IF
+                #IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
+
+               SELECT SUM(tc_cmm012) INTO g_tc_cmm[l_ac].tc_cmmud10 FROM tc_cmm_file
+                WHERE tc_cmm003 = g_tc_cmm003
+                  AND tc_cmm004 = g_tc_cmm004
+                  AND tc_cmm001 = g_tc_cmm[l_ac].tc_cmm001
+                  AND tc_cmm007 = g_tc_cmm[l_ac].tc_cmm007
+              #LET g_tc_cmm[l_ac].tc_cmmud10 = g_tc_cmm[l_ac].tc_cmm012
+              IF cl_null(g_tc_cmm[l_ac].tc_cmmud10) THEN LET g_tc_cmm[l_ac].tc_cmmud10=0 END IF
+              IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
+                  LET g_tc_cmm[l_ac].tc_cmmud10 = g_tc_cmm[l_ac].tc_cmmud10+g_tc_cmm[l_ac].tc_cmm012
+              END IF
+              LET g_tc_cmm[l_ac].tc_cmmud11 = g_tc_cmm[l_ac].tc_cmmud09-g_tc_cmm[l_ac].tc_cmmud10
+              IF g_tc_cmm[l_ac].tc_cmmud11 < 0 THEN
+                  CALL cl_err('申请天数不得大于剩余天数','！',1)
+                  NEXT FIELD tc_cmm008
+              END IF
+              DISPLAY BY NAME g_tc_cmm[l_ac].tc_cmmud09,g_tc_cmm[l_ac].tc_cmmud10,g_tc_cmm[l_ac].tc_cmmud11
             END IF
+
+            DISPLAY BY NAME g_tc_cmm[l_ac].tc_cmmud09,g_tc_cmm[l_ac].tc_cmmud10,g_tc_cmm[l_ac].tc_cmmud11
             # 根据cooi101计算出申请天数，已休天数，剩余天数
             #IF g_tc_cmm[l_ac].tc_cmm007 = '1' OR g_tc_cmm[l_ac].tc_cmm007='7' THEN
             #		IF NOT cl_null(g_tc_cmm[l_ac].tc_cmm012) THEN
@@ -1008,6 +1047,12 @@ DEFINE
                ROLLBACK WORK
                EXIT INPUT
             END IF
+            # add by lixwz 20170914 s
+            IF g_tc_cmm[l_ac].tc_cmmud11 < 0 THEN
+                     CALL cl_err('申请天数不得大于剩余天数','！',1)
+                    NEXT FIELD tc_cmm008
+            END IF
+            # add by lixwz 20170914 e
             IF l_lock_sw = 'Y' THEN
                CALL cl_err(g_tc_cmm[l_ac].tc_cmm001,-263,1)
                LET g_tc_cmm[l_ac].* = g_tc_cmm_t.*

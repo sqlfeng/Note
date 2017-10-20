@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stca_t" module="AST" text="分销合同申请数据表" type="T" version="1">
+  <column name="stcaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stcasite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcaunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcadocdt" text="单据日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stcadocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stca000" text="申请类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca001" text="合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stca002" text="版本" attribute="C014" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca003" text="文档编号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stca004" text="模板编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca005" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca006" text="结算方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca007" text="结算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca008" text="对象类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca009" text="经销商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca010" text="网点编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca011" text="客户分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca012" text="通路" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca013" text="签订日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stca014" text="签订法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca015" text="签订人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stca016" text="签订部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca017" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stca018" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stca019" text="清退日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stca020" text="作废日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stca021" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca022" text="税目" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca023" text="收付款方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca024" text="结算中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca025" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca026" text="结算地" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stca027" text="结算合同编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcaacti" text="数据有效否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stcastus" text="状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stcacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stcamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stcacnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stcacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="stca028" text="销售范围" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stcaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stcasite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcaunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcadocdt" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stcadocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_stajdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stca000" widget="ComboBox" items="32" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stca001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stan001_1" c_zoom="q_stan001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stca002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stca004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stag001" c_zoom="q_stag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca005" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_staa001" c_zoom="q_staa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca009" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_1" c_zoom="q_pmaa001_1" chk_ref="" widget_width="10" format="" prog_rel="adbm200" case="upper"/>
+    <field name="stca010" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_18" c_zoom="q_pmaa001_18" chk_ref="" widget_width="10" format="" prog_rel="adbm201" case="upper"/>
+    <field name="stca011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_4" c_zoom="q_ooef001_4" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001" c_zoom="q_ooeg001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stca021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_aooi001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_1" c_zoom="q_oodb002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib002_2" c_zoom="q_ooib002_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_3" c_zoom="q_ooef001_3" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stca027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stcaacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcastus" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stcamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stcacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stcacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="stca028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stca_t" depend_field="stca004" correspon_key="stcaent,stca004" ref_table="stagl_t" ref_fk="staglent,stagl001" ref_dlang="stagl002" ref_rtn="stagl003"/>
+    <field depend_table="stca_t" depend_field="stca006" correspon_key="stcaent,stca006" ref_table="staal_t" ref_fk="staalent,staal002" ref_dlang="staal002" ref_rtn="staal003"/>
+    <field depend_table="stca_t" depend_field="stca007" correspon_key="stcaent,stca007" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="stca_t" depend_field="stca009" correspon_key="stcaent,stca009" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="stca_t" depend_field="stca010" correspon_key="stcaent,stca010" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="stca_t" depend_field="stca011" correspon_key="&apos;281&apos;,stca011" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="stca_t" depend_field="stca012" correspon_key="&apos;2035&apos;,stca012" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="stca_t" depend_field="stca014" correspon_key="stcaent,stca014" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stca015" correspon_key="stca015" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stca_t" depend_field="stca016" correspon_key="stcaent,stca016" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stca021" correspon_key="stcaent,stca021" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="stca_t" depend_field="stca022" correspon_key="stcaent,stca022" ref_table="oodbl_t" ref_fk="oodblent,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="stca_t" depend_field="stca023" correspon_key="stca023" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="stca_t" depend_field="stca024" correspon_key="stcaent,stca024" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stca025" correspon_key="stcaent,stca025" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stca026" correspon_key="stcaent,stca026" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stcacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stca_t" depend_field="stcacnfid" correspon_key="stcacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stca_t" depend_field="stcacrtdp" correspon_key="stcacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stcacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stca_t" depend_field="stcacrtid" correspon_key="stcacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stca_t" depend_field="stcamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="stca_t" depend_field="stcamodid" correspon_key="stcamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stca_t" depend_field="stcaowndp" correspon_key="stcaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stca_t" depend_field="stcaownid" correspon_key="stcaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="stca_t" depend_field="stcasite" correspon_key="stcaent,stcasite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="stcastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmcm_t" module="APM" text="供应商评核综合得分调整明细档" type="D" version="1">
+  <column name="pmcment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmcmdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmcmseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmcm001" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcm002" text="评核期别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcm003" text="评核品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcm004" text="系统得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmcm005" text="调整前得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmcm006" text="调整后得分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmcm007" text="调整次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmcm008" text="调整后等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmcm009" text="处理建议" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmcment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmcmdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmcmseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmcm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmck001" c_zoom="q_pmck001" chk_ref="" widget_width="10" format="" prog_rel="apmm800" case="upper"/>
+    <field name="pmcm002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmck001" c_zoom="q_pmck001" chk_ref="" widget_width="10" format="" prog_rel="apmi810" case="upper"/>
+    <field name="pmcm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmck001" c_zoom="q_pmck001" chk_ref="" widget_width="10" format="" prog_rel="arti202" case="upper"/>
+    <field name="pmcm004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmcm005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmcm006" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmcm007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmcm008" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="pmcm009" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmcm_t" depend_field="pmcm001" correspon_key="pmcment,pmcm001" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="pmcm_t" depend_field="pmcm003" correspon_key="pmcm003" ref_table="rtaxl_t" ref_fk="rtaxl001" ref_dlang="rtaxl002" ref_rtn="rtaxl003"/>
+    <field depend_table="pmcm_t" depend_field="pmcm008" correspon_key="&apos;2053&apos;,pmcm008" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmcm_t" depend_field="pmcm009" correspon_key="&apos;2054&apos;,pmcm009" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

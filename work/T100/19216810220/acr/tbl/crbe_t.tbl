@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crbe_t" module="ACR" text="客诉单处理说明档" type="M" version="1">
+  <column name="crbeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="crbesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="crbedocno" text="客诉单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="crbe000" text="类别" attribute="C105" type="varchar2(255)" pk="Y" req="Y"/>
+  <column name="crbeseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="crbe001" text="说明" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="crbe002" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crbeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="crbesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crbedocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="crbe000" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="crbeseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="crbe001" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="crbe002" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="crbe_t" depend_field="crbe001" correspon_key="crbeent,&apos;2106&apos;,crbe001" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

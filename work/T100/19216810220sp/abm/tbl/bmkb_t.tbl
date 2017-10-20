@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bmkb_t" module="ABM" text="ECR申请单变更原因档" type="D" version="1">
+  <column name="bmkbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="bmkbsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmkbdocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="bmkbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="bmkbseq1" text="项序" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="bmkb001" text="分类" attribute="C012" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmkb002" text="变更内容" attribute="C012" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bmkb003" text="回复值" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bmkb004" text="说明" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bmkbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bmkbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmkbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="bmkbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmkbseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="bmkb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmkb002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmkb003" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bmkb004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bmkb_t" depend_field="bmkb001" correspon_key="&apos;1117&apos;,bmkb001" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="bmkb_t" depend_field="bmkb002" correspon_key="&apos;1118&apos;,bmkb002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

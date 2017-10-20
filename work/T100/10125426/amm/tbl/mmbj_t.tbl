@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mmbj_t" module="AMM" text="会员卡券存放位置异动档" type="S" version="1">
+  <column name="mmbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mmbjsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mmbj000" text="数据类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbj001" text="会员卡号" attribute="C602" type="varchar2(30)" pk="Y" req="Y"/>
+  <column name="mmbj002" text="卡种编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbj003" text="异动作业" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mmbj004" text="异动单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mmbj005" text="异动日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmbj006" text="异动类型" attribute="N001" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="mmbj007" text="异动库位" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mmbj008" text="数据产生日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="mmbj009" text="数据产生时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mmbj010" text="数据产生人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mmbj011" text="异动数量" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mmbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbjsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004_3" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmaq001_2" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mman001" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_gzza001_2" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="mmbj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mmbj004" chk_ref="" widget_width="20" format="" prog_rel=""/>
+    <field name="mmbj005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj006" widget="ComboBox" items="6738" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel=""/>
+    <field name="mmbj007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001_2" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel=""/>
+    <field name="mmbj010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="mmbj011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mmbj_t" depend_field="mmbj002" correspon_key="mmbjent,mmbj002" ref_table="mmanl_t" ref_fk="mmanlent,mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+    <field depend_table="mmbj_t" depend_field="mmbj003" correspon_key="mmbj003" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="mmbj_t" depend_field="mmbj007" correspon_key="rtibsite,rtib025" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="mmbj_t" depend_field="mmbjsite" correspon_key="mmbjent,mmbjsite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

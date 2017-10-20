@@ -1,0 +1,42 @@
+#應用 a11 樣板自動產生(Version:3)
+         #共用欄位查詢處理  
+         ##----<<${mdl_field05}>>----
+         ${mdl_mark05}AFTER FIELD ${mdl_field05}
+         ${mdl_mark05}   CALL FGL_DIALOG_GETBUFFER() RETURNING ls_result
+         ${mdl_mark05}   IF NOT cl_null(ls_result) THEN
+         ${mdl_mark05}      IF NOT cl_chk_date_symbol(ls_result) THEN
+         ${mdl_mark05}         LET ls_result = cl_add_date_extra_cond(ls_result)
+         ${mdl_mark05}      END IF
+         ${mdl_mark05}   END IF
+         ${mdl_mark05}   CALL FGL_DIALOG_SETBUFFER(ls_result)
+ 
+         #----<<${mdl_field07}>>----
+         ${mdl_mark07}AFTER FIELD ${mdl_field07}
+         ${mdl_mark07}   CALL FGL_DIALOG_GETBUFFER() RETURNING ls_result
+         ${mdl_mark07}   IF NOT cl_null(ls_result) THEN
+         ${mdl_mark07}      IF NOT cl_chk_date_symbol(ls_result) THEN
+         ${mdl_mark07}         LET ls_result = cl_add_date_extra_cond(ls_result)
+         ${mdl_mark07}      END IF
+         ${mdl_mark07}   END IF
+         ${mdl_mark07}   CALL FGL_DIALOG_SETBUFFER(ls_result)
+         
+         #----<<${mdl_field09}>>----
+         ${mdl_mark09}AFTER FIELD ${mdl_field09}
+         ${mdl_mark09}   CALL FGL_DIALOG_GETBUFFER() RETURNING ls_result
+         ${mdl_mark09}   IF NOT cl_null(ls_result) THEN
+         ${mdl_mark09}      IF NOT cl_chk_date_symbol(ls_result) THEN
+         ${mdl_mark09}         LET ls_result = cl_add_date_extra_cond(ls_result)
+         ${mdl_mark09}      END IF
+         ${mdl_mark09}   END IF
+         ${mdl_mark09}   CALL FGL_DIALOG_SETBUFFER(ls_result)
+         
+         #----<<${mdl_field11}>>----
+         ${mdl_mark11}AFTER FIELD ${mdl_field11}
+         ${mdl_mark11}   CALL FGL_DIALOG_GETBUFFER() RETURNING ls_result
+         ${mdl_mark11}   IF NOT cl_null(ls_result) THEN
+         ${mdl_mark11}      IF NOT cl_chk_date_symbol(ls_result) THEN
+         ${mdl_mark11}         LET ls_result = cl_add_date_extra_cond(ls_result)
+         ${mdl_mark11}      END IF
+         ${mdl_mark11}   END IF
+         ${mdl_mark11}   CALL FGL_DIALOG_SETBUFFER(ls_result)
+

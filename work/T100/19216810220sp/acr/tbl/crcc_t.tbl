@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crcc_t" module="ACR" text="客户调查问卷问题明细档" type="D" version="1">
+  <column name="crccent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="crccstus" text="状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crcc001" text="调查问卷编号" attribute="C004" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="crcc002" text="问题编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="crcc003" text="问题内容" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="crcc004" text="分数" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="crcc005" text="答案类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="crcc006" text="计算类型" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="crccent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="crccstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcc001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_crcc002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcc003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="crcc004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="crcc005" widget="ComboBox" items="6057" default="&apos;S&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crcc006" widget="ComboBox" items="6058" default="&apos;0&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="crccstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

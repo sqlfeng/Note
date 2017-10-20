@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzzq_t" module="AZZ" text="ACTION多语言对照表" type="L" version="1">
+  <column name="gzzq001" text="程序编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzzq002" text="功能编号" attribute="C101" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="gzzq003" text="语言别" attribute="C800" type="varchar2(6)" pk="Y" req="Y"/>
+  <column name="gzzq004" text="功能名称" attribute="C817" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzzq005" text="功能说明" attribute="C104" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzzq006" text="使用标示" attribute="C911" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzzq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="gzzq002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzzq003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzzq004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzzq005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="gzzq006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzzq_t" depend_field="gzzq001" correspon_key="gzzq001" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

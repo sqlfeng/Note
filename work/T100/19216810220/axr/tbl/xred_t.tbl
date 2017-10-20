@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xred_t" module="AXR" text="账龄分析月结档" type="T" version="1">
+  <column name="xredent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xredcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xredsite" text="账务中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xredld" text="账别" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xred001" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xred002" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xred003" text="来源模块" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xred004" text="账款单性质" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xred005" text="单据号码" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="xred006" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xred007" text="分期期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xred008" text="应兑现日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xred009" text="逾期天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="xred010" text="信评等级" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xred011" text="账龄起算日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="xred012" text="坏账提列比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred013" text="账龄天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="xred014" text="提列坏账准备否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xred015" text="坏账提列传票号码" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xred016" text="来源组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xred103" text="原币扣抵金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred104" text="原币坏账提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred105" text="原币传票提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred113" text="本币扣抵金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred114" text="本币坏账提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred115" text="本币传票提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred123" text="本位币二扣抵金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred124" text="本位币二坏账提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred125" text="本位币二传票提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred133" text="本位币三扣抵金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred134" text="本位币三坏账提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xred135" text="本位币三传票提列数" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xredent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xredcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xredsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xredld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xred001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xred002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xred003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xred006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xred007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xred008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xred010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xred012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xred013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="xred014" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred015" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xred016" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xred103" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred104" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred105" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred113" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred114" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred115" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred123" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred124" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred125" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred133" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred134" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xred135" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code>
+    <field depend_table="xred_t" depend_field="xred001" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred002" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred003" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred010" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred011" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred016" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred103" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred113" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred123" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xred133" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xredcomp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xredld" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="xred_t" depend_field="xredsite" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+  </help_code>
+  <scc/>
+</table>

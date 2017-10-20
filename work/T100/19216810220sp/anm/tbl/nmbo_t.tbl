@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="nmbo_t" module="ANM" text="内部资金排程拨出明细档" type="D" version="1">
+  <column name="nmboent" text="企业编码" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="nmbodocno" text="调度单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="nmboseq" text="序号" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="nmboseq2" text="手续费序号" attribute="C007" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="nmbo001" text="组织代码" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo002" text="调度项目" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo003" text="开户银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="nmbo004" text="交易帐户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo005" text="内部帐户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo006" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo007" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="nmbo008" text="原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo009" text="本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo010" text="存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo011" text="现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo012" text="出帐日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmbo013" text="主帐套帐务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbo014" text="年利率" attribute="N303" type="number(5,3)" pk="N" req="N"/>
+  <column name="nmbo015" text="手续费原币" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo016" text="手续费本币" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo017" text="手续费存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo018" text="手续费现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="nmbo019" text="累积利息" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo020" text="已还原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="nmbo021" text="结案否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="nmbo022" text="结案日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="nmbo023" text="次帐一帐务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbo024" text="次帐二帐务单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="nmbo025" text="内部交易对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="nmboent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbodocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmboseq" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="nmboseq2" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmbn001" c_zoom="q_nmbn001" chk_ref="v_nmbn001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmab001" c_zoom="q_nmab001" chk_ref="v_nmab001" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="nmbo004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmas_01" c_zoom="q_nmas_01" chk_ref="v_nmas002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmas_01" c_zoom="q_nmas_01" chk_ref="v_nmas002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo008" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo009" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmaj001" c_zoom="q_nmaj001" chk_ref="v_nmaj001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmad003" c_zoom="q_nmad003" chk_ref="v_nmad002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbo013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmbo014" widget="Edit" items="" default="" max_compare="&lt;" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="9" format="----&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo015" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo016" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmaj001" c_zoom="" chk_ref="v_nmaj001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmad003" c_zoom="" chk_ref="v_nmad002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="nmbo021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="nmbo022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="nmbo023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmbo024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="nmbo025" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_5" c_zoom="q_pmaa001_5" chk_ref="v_pmaa001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

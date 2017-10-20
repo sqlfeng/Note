@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prdb_t" module="APR" text="促销规则申请对象主档" type="D" version="1">
+  <column name="prdbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prdbunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdbdocno" text="促销申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prdb001" text="规则编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prdb002" text="组别" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prdb003" text="对象类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdb004" text="条件组别" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prdb005" text="促销值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="prdbacti" text="有效否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdb006" text="积分优惠" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="prdb007" text="积分基准" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="prdb008" text="单位积分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="prdb009" text="加送积分" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="prdb010" text="会员达成次数限制" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="prdb011" text="总会员达成次数限制" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="prdb012" text="基数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prdb013" text="倍数" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="prdb014" text="对象幅度" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prdbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prdbunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prdb001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="prdb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prdb003" widget="ComboBox" items="6567" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdb004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_prdh002" c_zoom="" chk_ref="v_prdh002" widget_width="5" format="####&amp;" prog_rel="v_prdi002" case=""/>
+    <field name="prdb005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdbacti" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdb006" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdb007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdb008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdb009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdb010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="prdb011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="prdb012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdb013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="prdb014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prdb_t" depend_field="prdb003" correspon_key="prdb003" ref_table="oocql_t" ref_fk="oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

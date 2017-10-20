@@ -332,6 +332,7 @@ DEFINE  lc_qbe_sn       LIKE    gbm_file.gbm01    #No.FUN-580031  HCN
         oqaud01,oqaud02,oqaud03,oqaud04,oqaud05,
         oqaud06,oqaud07,oqaud08,oqaud09,oqaud10,
         oqaud11,oqaud12,oqaud13,oqaud14,oqaud15
+        ,ta_oqa01 # add by lixwz 20170930
                BEFORE CONSTRUCT
                   CALL cl_qbe_init()
 
@@ -794,7 +795,13 @@ FUNCTION t310_u()
         LET g_oqa01_t = g_oqa.oqa01
         LET g_oqa.oqamodu=g_user
         LET g_oqa.oqadate=g_today
-        CALL t310_i("u")                      #欄位更改
+        # add by lixwz 20170928 s
+        IF g_oqa.oqaconf = 'Y' THEN
+          CALL t310_i_c("u")
+        ELSE
+          CALL t310_i("u")
+        END IF                      #欄位更改
+        # add by lixwz 20170928 e
         IF INT_FLAG THEN
             LET INT_FLAG = 0
             LET g_oqa.*=g_oqa_t.*
@@ -862,7 +869,7 @@ DEFINE l_chk        LIKE type_file.chr1 # add by lixwz 20170822
         g_oqa.oqaud01,g_oqa.oqaud02,g_oqa.oqaud03,g_oqa.oqaud04,
         g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,
         g_oqa.oqaud09,g_oqa.oqaud10,g_oqa.oqaud11,g_oqa.oqaud12,
-        g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15,g_boxprice
+        g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15,g_oqa.ta_oqa01,g_boxprice
         WITHOUT DEFAULTS
         FROM oqaoriu,oqaorig,
         oqa01,oqa02,oqa03,oqa18,oqa031,oqa032, #CHI-DC0021 add oqa18,
@@ -875,7 +882,7 @@ DEFINE l_chk        LIKE type_file.chr1 # add by lixwz 20170822
         oqaud01,oqaud02,oqaud03,oqaud04,
         oqaud05,oqaud06,oqaud07,oqaud08,
         oqaud09,oqaud10,oqaud11,oqaud12,
-        oqaud13,oqaud14,oqaud15,boxprice
+        oqaud13,oqaud14,oqaud15,ta_oqa01,boxprice
 
 
         BEFORE INPUT
@@ -1242,6 +1249,11 @@ DEFINE l_chk        LIKE type_file.chr1 # add by lixwz 20170822
                 LET g_oqa.oqaud15 = 0
             END IF
             IF NOT cl_validate() THEN NEXT FIELD CURRENT END IF
+         AFTER FIELD ta_oqa01
+            IF cl_null(g_oqa.ta_oqa01) THEN
+                LET g_oqa.ta_oqa01 = 0
+            END IF
+            IF NOT cl_validate() THEN NEXT FIELD CURRENT END IF
 
         AFTER INPUT
            LET g_oqa.oqauser = s_get_data_owner("oqa_file") #FUN-C10039
@@ -1258,14 +1270,29 @@ DEFINE l_chk        LIKE type_file.chr1 # add by lixwz 20170822
                    NEXT FIELD oqa03
                 END IF
             END IF
-            SELECT ima02,ima021 INTO g_oqa.oqa031,g_oqa.oqa032
-              FROM ima_file
-             WHERE ima01=g_oqa.oqa03
-               AND imaacti = 'Y'
-            IF STATUS  AND g_oqa.oqa03[1,4] !='MISC' THEN #NO:6808
-               CALL cl_err3("sel","ima_file",g_oqa.oqa03,"",'mfg0002',"","",1)  #No.FUN-660167
-               NEXT FIELD oqa03
+            # add by lixwz 170911 s
+            # 规格品名为空时才命名为MISC
+            IF cl_null(g_oqa.oqa031) THEN
+                SELECT ima02 INTO g_oqa.oqa031
+                  FROM ima_file
+                 WHERE ima01=g_oqa.oqa03
+                   AND imaacti = 'Y'
+                IF STATUS  AND g_oqa.oqa03[1,4] !='MISC' THEN #NO:6808
+                   CALL cl_err3("sel","ima_file",g_oqa.oqa03,"",'mfg0002',"","",1)  #No.FUN-660167
+                   NEXT FIELD oqa03
+                END IF
             END IF
+            IF cl_null(g_oqa.oqa032) THEN
+                SELECT ima021 INTO g_oqa.oqa032
+                  FROM ima_file
+                 WHERE ima01=g_oqa.oqa03
+                   AND imaacti = 'Y'
+                IF STATUS  AND g_oqa.oqa03[1,4] !='MISC' THEN #NO:6808
+                   CALL cl_err3("sel","ima_file",g_oqa.oqa03,"",'mfg0002',"","",1)  #No.FUN-660167
+                   NEXT FIELD oqa03
+                END IF
+            END IF
+            # add by lixwz 170911 e
             SELECT gem02 INTO l_gem02 FROM gem_file WHERE gem01=g_oqa.oqa05
                AND gemacti='Y'   #NO:6950
             # add by lixwz 20170821 s
@@ -1605,7 +1632,8 @@ FUNCTION t310_show()
                       p_oqaud12  LIKE type_file.chr10,
                       p_oqaud13  LIKE type_file.chr10,
                       p_oqaud14  LIKE type_file.chr10,
-                      p_oqaud15  LIKE type_file.chr10
+                      p_oqaud15  LIKE type_file.chr10,
+                      p_ta_oqa01 LIKE type_file.chr10
                              END RECORD
 # add by lixwz 20170817 s
 
@@ -1619,6 +1647,7 @@ FUNCTION t310_show()
     LET l_oqa.p_oqaud13 = cl_replace_str(g_oqa.oqaud13/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud14 = cl_replace_str(g_oqa.oqaud14/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud15 = cl_replace_str(g_oqa.oqaud15/l_oqb_s *100," ","") , "%"
+    LET l_oqa.p_ta_oqa01 = cl_replace_str(g_oqa.ta_oqa01/l_oqb_s *100," ","") , "%" # add by lixwz 20170930
     # add by lixwz 20170817 e
     DISPLAY BY NAME g_oqa.oqaoriu,g_oqa.oqaorig,                              # 顯示單頭值
 
@@ -1632,10 +1661,11 @@ FUNCTION t310_show()
         g_oqa.oqaud01,g_oqa.oqaud02,g_oqa.oqaud03,g_oqa.oqaud04,
         g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,
         g_oqa.oqaud09,g_oqa.oqaud10,g_oqa.oqaud11,g_oqa.oqaud12,
-        g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15
+        g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15,g_oqa.ta_oqa01
         #   add by lixwz 20170817 s
         ,l_oqa.p_oqaud10,l_oqa.p_oqaud11,l_oqa.p_oqaud12
         ,l_oqa.p_oqaud13,l_oqa.p_oqaud14,l_oqa.p_oqaud15
+        ,l_oqa.p_ta_oqa01
         #  add by lixwz 20170817 e
     #CKP
     IF g_oqa.oqaconf='X' THEN LET g_chr='Y' ELSE LET g_chr='N' END IF  #FUN-730018 解除remark
@@ -1743,10 +1773,15 @@ DEFINE
     l_misc          LIKE type_file.chr4,    #No.FUN-680137 VARCHAR(04)
     l_allow_insert  LIKE type_file.num5,                #可新增否  #No.FUN-680137 SMALLINT
     l_allow_delete  LIKE type_file.num5                 #可刪除否  #No.FUN-680137 SMALLINT
-DEFINE l_str        STRING  # add by lixwz 20170829
-DEFINE l_azj02      LIKE azj_file.azj02  # add by lixwz 20170829
-DEFINE tok          base.StringTokenizer  # add by lixwz 20170829
-DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
+# add by lixwz 20170929 s
+DEFINE l_str        STRING
+DEFINE l_azj02      LIKE azj_file.azj02
+DEFINE tok          base.StringTokenizer
+DEFINE l_tok        LIKE type_file.num5
+DEFINE l_oqa01      LIKE oqa_file.oqa01
+DEFINE l_oqa        RECORD LIKE oqa_file.*
+DEFINE l_tc_ohi05   LIKE tc_ohi_file.tc_ohi05
+#  add by lixwz 20170929 s
 
     LET g_action_choice = ""
     IF s_shut(0) THEN RETURN END IF
@@ -1785,6 +1820,8 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
             IF g_rec_b != 0 THEN
                CALL fgl_set_arr_curr(l_ac)
             END IF
+
+            LET l_oqa01 ='' # add by lixwz 20170930
 
         BEFORE ROW
             LET l_ac = ARR_CURR()
@@ -1901,7 +1938,7 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
             CALL t310_set_entry_b(p_cmd)
 
        AFTER FIELD oqb03
-            IF NOT cl_null(g_oqb[l_ac].oqb03) THEN
+            IF NOT cl_null(g_oqb[l_ac].oqb03) AND g_oqb[l_ac].oqbud01 !='7' THEN
 #FUN-AA0059 ---------------------start----------------------------
                IF NOT s_chk_item_no(g_oqb[l_ac].oqb03,"") THEN
                   CALL cl_err('',g_errno,1)
@@ -1964,10 +2001,19 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                        INTO t_azi03,t_azi04,t_azi05     #No.CHI-6A0004
                        FROM azi_file
                       WHERE azi01 = g_oqb[l_ac].oqb07
+                     # add by lixwz 20171009 s
+                     # 美元料件优先取cxmi001 中的单价
+                     IF g_oqb[l_ac].oqb07 ='USD' THEN
+                        SELECT tc_ohi05 INTO l_tc_ohi05 FROM tc_ohi_file
+                          WHERE tc_ohi01 = g_oqb[l_ac].oqb03 AND tc_ohi04 = g_oqb[l_ac].oqb07
+                        IF NOT cl_null(l_tc_ohi05) THEN LET g_oqb[l_ac].oqb09 = l_tc_ohi05 END IF
+                     END IF
+                     # add by lixwz 20171009 e
                      IF g_oqb[l_ac].oqb09 IS NULL THEN LET g_oqb[l_ac].oqb09=0 END IF
                      LET g_oqb[l_ac].oqb09 = cl_digcut(g_oqb[l_ac].oqb09,t_azi03)       #No.CHI-6A0004
 
-                     CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oaz.oaz52)
+                     # CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oaz.oaz52) mark by lixwz 171013
+                     CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oqa.oqa02)
                           RETURNING g_oqb[l_ac].oqb08
                      # add by lixwz 20170829 s
                      # 汇率
@@ -1980,17 +2026,30 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                         LET l_str = YEAR(g_oqb[l_ac].oqb13),'0',MONTH(g_oqb[l_ac].oqb13)
                      END IF
                      LET l_azj02 = cl_replace_str(l_str," ","")
-                     IF g_oqb[l_ac].oqb07 = 'USD' THEN
-                        SELECT azj07 INTO g_oqb[l_ac].oqb08 FROM azj_file
-                          WHERE azj02 = l_azj02 AND azj01 = g_oqb[l_ac].oqb07
-                     END IF
+                     #IF g_oqb[l_ac].oqb07 = 'USD' THEN
+                     #   SELECT azj07 INTO g_oqb[l_ac].oqb08 FROM azj_file
+                     #     WHERE azj02 = l_azj02 AND azj01 = g_oqb[l_ac].oqb07
+                     #END IF
                      IF g_oqb[l_ac].oqb07 = 'RMB' THEN
                         LET g_oqb[l_ac].oqb08 = 1
+                     ELSE
+                        LET g_oqb[l_ac].oqb08 = g_oqa.oqaud02
                      END IF
                      # add by lixwz 20170829 e
-                     LET g_oqb[l_ac].oqb08=g_oqb[l_ac].oqb08/g_oqa.oqa09
+                     #LET g_oqb[l_ac].oqb08=g_oqb[l_ac].oqb08/g_oqa.oqa09
                      #估價單價
                      LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb08*g_oqb[l_ac].oqb09
+                     # add by lixwz 20171013 s
+                     # 当项目为”5运费/消毒“时,估价金额=原币单价/单头中（40HQ装箱量）/单头中（装箱量）
+                     IF g_oqb[l_ac].oqbud01 = '5' THEN
+                        IF g_oqa.oqa042 != 0 AND g_oqa.oqaud01 != 0 THEN
+                            LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb09 / g_oqa.oqa042 / g_oqa.oqaud01
+                        ELSE
+                            LET g_oqb[l_ac].oqb10 = 0
+                            CALL cl_err('40HQ装箱量和装箱量不可为0','!',1)
+                        END IF
+                     END IF
+                     # add by lixwz 20171013 e
                      IF g_oqb[l_ac].oqb10 IS NULL THEN LET g_oqb[l_ac].oqb10=0 END IF
                      LET g_oqb[l_ac].oqb10 = cl_digcut(g_oqb[l_ac].oqb10,t_azi03)
 
@@ -2008,6 +2067,26 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                END IF
                LET g_oqb_t.oqb03 = g_oqb[l_ac].oqb03
                CALL t310_set_no_entry_b(p_cmd)
+            ELSE
+            # add by lixwz 20170930  s
+                INITIALIZE l_oqa.* TO NULL
+                SELECT * INTO l_oqa.* FROM oqa_file
+                  WHERE oqa01 = g_oqb[l_ac].oqb03
+                IF SQLCA.sqlcode THEN
+                   CALL cl_err3("sel","oqa_file",g_oqa.oqa01,g_oqb_t.oqb02,SQLCA.sqlcode,"","",1)
+                END IF
+                LET g_oqb[l_ac].oqb031 = l_oqa.oqa031
+                LET g_oqb[l_ac].oqb032 = l_oqa.oqa032
+                LET g_oqb[l_ac].oqb04 = 'PCS'
+                LET g_oqb[l_ac].oqbud07 = 0
+                LET g_oqb[l_ac].oqb07 = l_oqa.oqaud03
+                LET g_oqb[l_ac].oqb08 = l_oqa.oqaud02
+                LET g_oqb[l_ac].oqb09 = l_oqa.oqaud09
+                LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb09 * g_oqb[l_ac].oqb08
+                LET g_oqb[l_ac].oqb12 = l_oqa01
+                LET g_oqb[l_ac].oqb13 = l_oqa.oqa02
+                LET l_oqa01 = ''
+            # add by lixwz 20170930  e
             END IF
             #NEXT FIELD oqbud07
 
@@ -2141,7 +2220,8 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                   CALL cl_err(g_oqb[l_ac].oqb07,g_errno,0)
                   NEXT FIELD oqb07
                END IF
-               CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oaz.oaz52)
+               #CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oaz.oaz52) mark by lixwz 20171013
+               CALL s_curr3(g_oqb[l_ac].oqb07,g_oqa.oqa02,g_oqa.oqa02)
                     RETURNING g_oqb[l_ac].oqb08
                # add by lixwz 20170829 s
                # 汇率
@@ -2160,12 +2240,26 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                END IF
                IF g_oqb[l_ac].oqb07 = 'RMB' THEN
                   LET g_oqb[l_ac].oqb08 = 1
+               ELSE
+               # 估价单价取单头
+                  LET g_oqb[l_ac].oqb08 = g_oqa.oqaud02
                END IF
                #　add by lixwz 20170829 e
-               LET g_oqb[l_ac].oqb08=g_oqb[l_ac].oqb08/g_oqa.oqa09
+               #LET g_oqb[l_ac].oqb08=g_oqb[l_ac].oqb08/g_oqa.oqa09
                IF p_cmd = 'u' THEN
                    #估價單價
                    LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb08*g_oqb[l_ac].oqb09
+                   # add by lixwz 20171013 s
+                   # 当项目为”5运费/消毒“时,估价金额=原币单价/单头中（40HQ装箱量）/单头中（装箱量）
+                   IF g_oqb[l_ac].oqbud01 = '5' THEN
+                      IF g_oqa.oqa042 != 0 AND g_oqa.oqaud01 != 0 THEN
+                          LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb09 / g_oqa.oqa042 / g_oqa.oqaud01
+                      ELSE
+                          LET g_oqb[l_ac].oqb10 = 0
+                          CALL cl_err('40HQ装箱量和装箱量不可为0','!',1)
+                      END IF
+                   END IF
+                   # add by lixwz 20171013 e
                    IF g_oqb[l_ac].oqb10 IS NULL THEN LET g_oqb[l_ac].oqb10=0 END IF
                    LET g_oqb[l_ac].oqb10 = cl_digcut(g_oqb[l_ac].oqb10,t_azi03)
 
@@ -2187,6 +2281,17 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                IF p_cmd = 'u' THEN
                    #估價單價
                    LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb08*g_oqb[l_ac].oqb09
+                   # add by lixwz 20171013 s
+                   # 当项目为”5运费/消毒“时,估价金额=原币单价/单头中（40HQ装箱量）/单头中（装箱量）
+                   IF g_oqb[l_ac].oqbud01 = '5' THEN
+                      IF g_oqa.oqa042 != 0 AND g_oqa.oqaud01 != 0 THEN
+                          LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb09 / g_oqa.oqa042 / g_oqa.oqaud01
+                      ELSE
+                          LET g_oqb[l_ac].oqb10 = 0
+                          CALL cl_err('40HQ装箱量和装箱量不可为0','!',1)
+                      END IF
+                   END IF
+                   # add by lixwz 20171013 e
                    IF g_oqb[l_ac].oqb10 IS NULL THEN LET g_oqb[l_ac].oqb10=0 END IF
                    LET g_oqb[l_ac].oqb10 = cl_digcut(g_oqb[l_ac].oqb10,t_azi03)
 
@@ -2216,6 +2321,17 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                   #----------------------------- 估價單身
                   #估價單價
                   LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb08*g_oqb[l_ac].oqb09
+                  # add by lixwz 20171013 s
+                  # 当项目为”5运费/消毒“时,估价金额=原币单价/单头中（40HQ装箱量）/单头中（装箱量）
+                  IF g_oqb[l_ac].oqbud01 = '5' THEN
+                     IF g_oqa.oqa042 != 0 AND g_oqa.oqaud01 != 0 THEN
+                         LET g_oqb[l_ac].oqb10 = g_oqb[l_ac].oqb09 / g_oqa.oqa042 / g_oqa.oqaud01
+                     ELSE
+                         LET g_oqb[l_ac].oqb10 = 0
+                         CALL cl_err('40HQ装箱量和装箱量不可为0','!',1)
+                     END IF
+                  END IF
+                 # add by lixwz 20171013 e
                   IF g_oqb[l_ac].oqb10 IS NULL THEN LET g_oqb[l_ac].oqb10=0 END IF
                   LET g_oqb[l_ac].oqb10 = cl_digcut(g_oqb[l_ac].oqb10,t_azi03)
 
@@ -2249,6 +2365,13 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
                   LET g_oqb[l_ac].oqb09 = cl_digcut(g_oqb[l_ac].oqb09,t_azi03)
                END IF
                #MOD-D50086 add--end
+               # add by lixwz 20171013 s
+               #当项目为”5运费/消毒“时，估价金额=原币单价/单头中（40HQ装箱量）/单头中（装箱量）
+               IF g_oqb[l_ac].oqbud01 = '5' THEN
+                  LET g_oqb[l_ac].oqb09 = g_oqb[l_ac].oqb10 * g_oqa.oqa042 * g_oqa.oqaud01
+                  LET g_oqb[l_ac].oqb09 = cl_digcut(g_oqb[l_ac].oqb09,t_azi03)
+               END IF
+               # add by lixwz 20171013 e
             END IF
 
          AFTER FIELD oqbud01
@@ -2411,10 +2534,19 @@ DEFINE l_tok        LIKE type_file.num5  # add by lixwz 20170829
 #                    LET g_qryparam.form ="q_ima"
 #                    LET g_qryparam.default1 = g_oqb[l_ac].oqb03
 #                    CALL cl_create_qry() RETURNING g_oqb[l_ac].oqb03
-
-                     CALL q_sel_ima(FALSE, "q_ima","",g_oqb[l_ac].oqb03,"","","","","",'' )
-                     RETURNING  g_oqb[l_ac].oqb03
-
+                     # add by lixwz 20170930 s
+                     IF g_oqb[l_ac].oqbud01 = '7' THEN
+                        CALL cl_init_qry_var()
+                        LET g_qryparam.form ="q_oqa2"
+                        LET g_qryparam.default1 = g_oqb[l_ac].oqb03
+                        CALL cl_create_qry() RETURNING g_oqb[l_ac].oqb03
+                        #带出没有料号，默认MISC
+                        #IF cl_null(g_oqb[l_ac].oqb03) THEN LET g_oqb[l_ac].oqb03 = 'MISC' END IF
+                     ELSE
+                        CALL q_sel_ima(FALSE, "q_ima","",g_oqb[l_ac].oqb03,"","","","","",'' )
+                        RETURNING  g_oqb[l_ac].oqb03
+                     END IF
+                     # add by lixwz 20170930 e
 #FUN-AA0059---------mod------------end-----------------
                      DISPLAY BY NAME g_oqb[l_ac].oqb03     #No.MOD-490371
                     NEXT FIELD oqb03
@@ -3337,6 +3469,8 @@ FUNCTION t310_bom(p_level,p_key,p_key2,p_total)  #FUN-550110
     #yemy 20130513  --End
     DEFINE l_str        STRING  # add by lixwz 20170829
     DEFINE l_azj02      LIKE azj_file.azj02  # add by lixwz 20170829
+    DEFINE l_oqbud01    LIKE oqb_file.oqbud01 # add by lixwz 20170929
+    DEFINE l_tc_ohi05   LIKE tc_ohi_file.tc_ohi05
 
     IF p_level > 20 THEN CALL cl_err('','mfg2733',1) RETURN END IF
     LET p_level = p_level + 1
@@ -3424,12 +3558,20 @@ FUNCTION t310_bom(p_level,p_key,p_key2,p_total)  #FUN-550110
              INTO t_azi03,t_azi04,t_azi05        #No.CHI-6A0004
              FROM azi_file
             WHERE azi01 = l_oqb07
-
+           # add by lixwz 20171009 s
+           # 美元料件优先取cxmi001 中的单价
+           IF l_oqb07 ='USD' THEN
+              SELECT tc_ohi05 INTO l_tc_ohi05 FROM tc_ohi_file
+                WHERE tc_ohi01 = sr[m].bmb03 AND tc_ohi04 = l_oqb07
+              IF NOT cl_null(l_tc_ohi05) THEN LET l_oqb09 = l_tc_ohi05 END IF
+           END IF
+           # add by lixwz 20171009 e
            #原幣單價
            IF l_oqb09 IS NULL THEN LET l_oqb09=0 END IF
            LET l_oqb09 = cl_digcut(l_oqb09,t_azi03)     #No.CHI-6A0004
 
-           CALL s_curr3(l_oqb07,l_oqb13,g_oaz.oaz52) RETURNING l_oqb08
+           # CALL s_curr3(l_oqb07,l_oqb13,g_oaz.oaz52) RETURNING l_oqb08 mark by lixwz 20171013
+           CALL s_curr3(l_oqb07,l_oqb13,g_oqa.oqa02) RETURNING l_oqb08
            # add by lixwz 20170829 s
            # 汇率
            IF cl_null(l_oqb13) THEN
@@ -3441,12 +3583,18 @@ FUNCTION t310_bom(p_level,p_key,p_key2,p_total)  #FUN-550110
               LET l_str = YEAR(l_oqb13),'0',MONTH(l_oqb13)
            END IF
            LET l_azj02 = cl_replace_str(l_str," ","")
-           IF l_oqb07 = 'USD' THEN
-              SELECT azj07 INTO l_oqb08 FROM azj_file
-                WHERE azj02 = l_azj02 AND azj01 = l_oqb07
-           END IF
+           # mark  by lixwz 20171010 s
+           # 单身的估价汇率取单头的报价汇率
+           #IF l_oqb07 = 'USD' THEN
+           #   SELECT azj07 INTO l_oqb08 FROM azj_file
+           #     WHERE azj02 = l_azj02 AND azj01 = l_oqb07
+           #END IF
+           # mark  by lixwz 20171010 e
            IF l_oqb07 = 'RMB' THEN
               LET l_oqb08 = 1
+           ELSE
+           # 单身的估价汇率取单头的报价汇率
+              LET l_oqb08 = g_oqa.oqaud02
            END IF
            #　add by lixwz 20170829 e
            LET l_oqb08=l_oqb08/g_oqa.oqa09
@@ -3461,6 +3609,19 @@ FUNCTION t310_bom(p_level,p_key,p_key2,p_total)  #FUN-550110
            #LET l_oqb11 = cl_digcut(l_oqb11,t_azi04) mark by lixwz 201708230
            SELECT ima02,ima021,ima25 INTO sr[m].ima02,sr[m].ima021,sr[m].ima25
              FROM ima_file WHERE ima01=sr[m].bmb03
+           # add by lixwz 20170929 s
+           # 项目
+           CASE sr[m].bmb03[1,1]
+              WHEN '1'
+                 LET l_oqbud01 = '1'
+              WHEN '2'
+                 LET l_oqbud01 = '2'
+              WHEN '3'
+                 LET l_oqbud01 = '3'
+              OTHERWISE
+                 LET l_oqbud01 = ''
+           END CASE
+           # add by lixwz 20170929 e
 
            INSERT INTO oqb_file(oqb01,oqb02,oqb03,oqb031,oqb032,
                                 oqb04,oqb05,oqb06,oqb07,oqb08,
@@ -3471,7 +3632,7 @@ FUNCTION t310_bom(p_level,p_key,p_key2,p_total)  #FUN-550110
                                 sr[m].bmb06,'N',l_oqb07,
                                 l_oqb08,l_oqb09,l_oqb10,
                                 l_oqb11,l_oqb12,l_oqb13,
-                                g_plant,g_legal,"1",sr[m].bmb06)   #FUN-980010 # mod by lixwz 20170817 add oqaud01,oqaud07
+                                g_plant,g_legal,l_oqbud01,sr[m].bmb06)   #FUN-980010 # mod by lixwz 20170817 add oqaud01,oqaud07
         END IF
     END FOR
 END FUNCTION
@@ -3489,59 +3650,6 @@ FUNCTION t310_get_price(p_bmb03,p_bmb10)   #MOD-870213
     DEFINE l_p        VARCHAR(04),
            l_flag     SMALLINT,
            l_fac      DECIMAL(16,8)
-
-    #--------- 1.抓最近採購單價  2.抓 ccc_file 單價  3.依市價
-    #DECLARE t310_price1 CURSOR FOR
-    #   SELECT pmm01,pmm04,pmm22,pmn31,pmn86 FROM pmm_file,pmn_file   #MOD-870213
-    #    WHERE pmm01=pmn01 AND pmm18 <> 'X'
-    #      AND pmm04>=g_oqa.oqa11
-    #      AND pmn04=p_bmb03
-    #   ORDER BY pmm04 DESC, pmm01 DESC
-    #OPEN t310_price1
-    #FETCH t310_price1 INTO p_oqb12,p_oqb13,p_oqb07,p_oqb09,l_p   #MOD-870213
-    #IF SQLCA.sqlcode THEN
-    #   SELECT ima25 INTO l_p FROM ima_file    #MOD-870213
-    #     WHERE ima01 = p_bmb03   #MOD-870213
-    #   SELECT ccz28 INTO g_ccz.ccz28 FROM ccz_file WHERE ccz00='0'
-    #   DECLARE t310_price2 CURSOR FOR
-#   #      SELECT ccc23,ccc02,ccc03 FROM ccc_file        #CHI-B60093 mark
-    #      SELECT AVG(ccc23),ccc02,ccc03 FROM ccc_file   #CHI-B60093
-    #       WHERE ccc01=p_bmb03
-#   #         AND ccc07='1'               #No.FUN-840041 #CHI-B60093 mark
-    #         AND ccc07=g_ccz.ccz28                      #CHI-B60093
-    #      GROUP BY ccc01,ccc02,ccc03                    #CHI-B60093 add
-    #      ORDER BY ccc02 DESC, ccc03 DESC
-    #   OPEN t310_price2
-    #   FETCH t310_price2 INTO p_oqb09,l_ccc02,l_ccc03
-    #   IF SQLCA.sqlcode THEN
-    #      IF g_sma.sma116 = '0' OR g_sma.sma116 = '2' THEN
-    #         SELECT ima44 INTO l_p FROM ima_file
-    #           WHERE ima01 = p_bmb03
-    #      ELSE
-    #         SELECT ima908 INTO l_p FROM ima_file
-    #           WHERE ima01 = p_bmb03
-    #      END IF
-    #      SELECT ima531,ima532 INTO p_oqb09,p_oqb13 FROM ima_file
-    #       WHERE ima01=p_bmb03
-    #      IF STATUS THEN
-    #         LET p_oqb07=' '
-    #         LET p_oqb09=0
-    #         LET p_oqb12=' '
-    #         LET p_oqb13=' '
-    #      ELSE
-    #         LET p_oqb07=g_aza.aza17
-    #         LET p_oqb12='IMA-999999'
-    #      END IF
-    #   ELSE
-    #      LET p_oqb07=g_aza.aza17
-    #      LET p_oqb12='CCC-999999'
-    #      CALL s_azn01(l_ccc02,l_ccc03) RETURNING l_date,p_oqb13
-    #   END IF
-    #END IF
-    #CALL s_umfchk(p_bmb03,p_bmb10,l_p)
-    #  RETURNING l_flag,l_fac
-    #IF l_flag THEN LET l_fac=1 END IF
-    #LET p_oqb09 = p_oqb09 * l_fac
     # add by lixwz 20170829 s
     #pmj05,pmj07t,pmj01,pmj09
     SELECT * INTO p_oqb07,p_oqb09,p_oqb12,p_oqb13 FROM
@@ -3550,7 +3658,62 @@ FUNCTION t310_get_price(p_bmb03,p_bmb10)   #MOD-870213
     #IF cl_null(l_oqbud08) THEN
     #    LET l_oqbud08 = 0
     #END IF
+    IF SQLCA.sqlcode THEN
     # add by lixwz 20170829 e
+        #--------- 1.抓最近採購單價  2.抓 ccc_file 單價  3.依市價
+        DECLARE t310_price1 CURSOR FOR
+           SELECT pmm01,pmm04,pmm22,pmn31,pmn86 FROM pmm_file,pmn_file   #MOD-870213
+            WHERE pmm01=pmn01 AND pmm18 <> 'X'
+              AND pmm04>=g_oqa.oqa11
+              AND pmn04=p_bmb03
+           ORDER BY pmm04 DESC, pmm01 DESC
+        OPEN t310_price1
+        FETCH t310_price1 INTO p_oqb12,p_oqb13,p_oqb07,p_oqb09,l_p   #MOD-870213
+        IF SQLCA.sqlcode THEN
+           SELECT ima25 INTO l_p FROM ima_file    #MOD-870213
+             WHERE ima01 = p_bmb03   #MOD-870213
+           SELECT ccz28 INTO g_ccz.ccz28 FROM ccz_file WHERE ccz00='0'
+           DECLARE t310_price2 CURSOR FOR
+    #         SELECT ccc23,ccc02,ccc03 FROM ccc_file        #CHI-B60093 mark
+              SELECT AVG(ccc23),ccc02,ccc03 FROM ccc_file   #CHI-B60093
+               WHERE ccc01=p_bmb03
+    #            AND ccc07='1'               #No.FUN-840041 #CHI-B60093 mark
+                 AND ccc07=g_ccz.ccz28                      #CHI-B60093
+              GROUP BY ccc01,ccc02,ccc03                    #CHI-B60093 add
+              ORDER BY ccc02 DESC, ccc03 DESC
+           OPEN t310_price2
+           FETCH t310_price2 INTO p_oqb09,l_ccc02,l_ccc03
+           IF SQLCA.sqlcode THEN
+              IF g_sma.sma116 = '0' OR g_sma.sma116 = '2' THEN
+                 SELECT ima44 INTO l_p FROM ima_file
+                   WHERE ima01 = p_bmb03
+              ELSE
+                 SELECT ima908 INTO l_p FROM ima_file
+                   WHERE ima01 = p_bmb03
+              END IF
+              SELECT ima531,ima532 INTO p_oqb09,p_oqb13 FROM ima_file
+               WHERE ima01=p_bmb03
+              IF STATUS THEN
+                 LET p_oqb07=' '
+                 LET p_oqb09=0
+                 LET p_oqb12=' '
+                 LET p_oqb13=' '
+              ELSE
+                 LET p_oqb07=g_aza.aza17
+                 LET p_oqb12='IMA-999999'
+              END IF
+           ELSE
+              LET p_oqb07=g_aza.aza17
+              LET p_oqb12='CCC-999999'
+              CALL s_azn01(l_ccc02,l_ccc03) RETURNING l_date,p_oqb13
+           END IF
+        END IF
+        CALL s_umfchk(p_bmb03,p_bmb10,l_p)
+          RETURNING l_flag,l_fac
+        IF l_flag THEN LET l_fac=1 END IF
+        LET p_oqb09 = p_oqb09 * l_fac
+    END IF
+
     IF p_oqb13 IS NULL THEN LET p_oqb13=g_today END IF   #FUN-5A0158
     RETURN p_oqb07,p_oqb09,p_oqb12,p_oqb13
 END FUNCTION
@@ -3846,7 +4009,8 @@ DEFINE l_oqa             RECORD
                       p_oqaud12  LIKE type_file.chr10,
                       p_oqaud13  LIKE type_file.chr10,
                       p_oqaud14  LIKE type_file.chr10,
-                      p_oqaud15  LIKE type_file.chr10
+                      p_oqaud15  LIKE type_file.chr10,
+                      p_ta_oqa01  LIKE type_file.chr10
                              END RECORD
 # add by lixwz 20170817 s
 
@@ -3898,19 +4062,22 @@ DEFINE l_oqa             RECORD
     LET g_oqa.oqaud13 = 0
     LET g_oqa.oqaud14 = 0
     LET g_oqa.oqaud15 = 0
+    LET g_oqa.ta_oqa01 = 0
     FOR l_cnt=1 TO g_oqb.getlength()
         IF NOT cl_null(g_oqb[l_cnt].oqbud01) THEN
             CASE g_oqb[l_cnt].oqbud01
                 WHEN  "1"
-                    LET g_oqa.oqaud10 = g_oqa.oqaud10 + g_oqb[l_cnt].oqb11 # 估价金额
+                    LET g_oqa.oqaud10 = g_oqa.oqaud10 + g_oqb[l_cnt].oqb11 # 主料
                 WHEN  "2"
-                    LET g_oqa.oqaud11 = g_oqa.oqaud11 + g_oqb[l_cnt].oqb11 # 估价金额
+                    LET g_oqa.oqaud11 = g_oqa.oqaud11 + g_oqb[l_cnt].oqb11 # 辅料
                 WHEN  "3"
-                    LET g_oqa.oqaud12 = g_oqa.oqaud12 + g_oqb[l_cnt].oqb11 # 估价金额
+                    LET g_oqa.oqaud12 = g_oqa.oqaud12 + g_oqb[l_cnt].oqb11 # 包装
                 WHEN  "4"
-                    LET g_oqa.oqaud13 = g_oqa.oqaud13 + g_oqb[l_cnt].oqb11 # 估价金额
+                    LET g_oqa.oqaud13 = g_oqa.oqaud13 + g_oqb[l_cnt].oqb11 # 加工
                 WHEN  "5"
-                    LET g_oqa.oqaud14 = g_oqa.oqaud14 + g_oqb[l_cnt].oqb11 # 估价金额
+                    LET g_oqa.oqaud14 = g_oqa.oqaud14 + g_oqb[l_cnt].oqb11 # 运费/消毒
+                WHEN  "7"
+                    LET g_oqa.ta_oqa01 = g_oqa.ta_oqa01 + g_oqb[l_cnt].oqb11 # 配件
                 OTHERWISE
                     LET g_oqa.oqaud15 = g_oqa.oqaud15 + g_oqb[l_cnt].oqb11 # 估价金额
             END CASE
@@ -3925,14 +4092,16 @@ DEFINE l_oqa             RECORD
         LET g_oqa.oqaud13 = g_oqa.oqaud13/g_oqa.oqaud02
         LET g_oqa.oqaud14 = g_oqa.oqaud14/g_oqa.oqaud02
         LET g_oqa.oqaud15 = g_oqa.oqaud15/g_oqa.oqaud02
+        LET g_oqa.ta_oqa01 = g_oqa.ta_oqa01/g_oqa.oqaud02
     END IF
-    LET l_oqb_s = g_oqa.oqaud10 + g_oqa.oqaud11 + g_oqa.oqaud12 + g_oqa.oqaud13 + g_oqa.oqaud14 + g_oqa.oqaud15
+    LET l_oqb_s = g_oqa.oqaud10 + g_oqa.oqaud11 + g_oqa.oqaud12 + g_oqa.oqaud13 + g_oqa.oqaud14 + g_oqa.oqaud15 + g_oqa.ta_oqa01
     LET l_oqa.p_oqaud10 = cl_replace_str(g_oqa.oqaud10/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud11 = cl_replace_str(g_oqa.oqaud11/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud12 = cl_replace_str(g_oqa.oqaud12/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud13 = cl_replace_str(g_oqa.oqaud13/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud14 = cl_replace_str(g_oqa.oqaud14/l_oqb_s *100," ","") , "%"
     LET l_oqa.p_oqaud15 = cl_replace_str(g_oqa.oqaud15/l_oqb_s *100," ","") , "%"
+    LET l_oqa.p_ta_oqa01 = cl_replace_str(g_oqa.ta_oqa01/l_oqb_s *100," ","") , "%"
 
     CALL  t310_get_oqaud1(g_oqa.*,g_oqb,'0') RETURNING g_oqa.oqaud04,g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,g_oqa.oqaud09
     UPDATE oqa_file SET oqaud04=g_oqa.oqaud04,
@@ -3946,10 +4115,11 @@ DEFINE l_oqa             RECORD
                     oqaud12=g_oqa.oqaud12,
                     oqaud13=g_oqa.oqaud13,
                     oqaud14=g_oqa.oqaud14,
-                    oqaud15=g_oqa.oqaud15
+                    oqaud15=g_oqa.oqaud15,
+                    ta_oqa01=g_oqa.ta_oqa01
     WHERE oqa01=g_oqa.oqa01
     DISPLAY BY NAME g_oqa.oqaud04,g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,g_oqa.oqaud09,g_oqa.oqaud10,g_oqa.oqaud11,g_oqa.oqaud12,
-                    g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15,l_oqa.*
+                    g_oqa.oqaud13,g_oqa.oqaud14,g_oqa.oqaud15,g_oqa.ta_oqa01,l_oqa.*
 
     # add by lixwz 20170817 e
 END FUNCTION
@@ -4201,7 +4371,7 @@ DEFINE l_i            LIKE type_file.num5
 DEFINE l_sum      LIKE oqa_file.oqaud15
 DEFINE l_chk       LIKE type_file.chr1
 
-  LET l_sum = l_oqa.oqaud10+l_oqa.oqaud11+l_oqa.oqaud12+l_oqa.oqaud13+l_oqa.oqaud14+l_oqa.oqaud15
+  LET l_sum = l_oqa.oqaud10+l_oqa.oqaud11+l_oqa.oqaud12+l_oqa.oqaud13+l_oqa.oqaud14+l_oqa.oqaud15 + l_oqa.ta_oqa01
   LET l_oqa.oqaud07 = 0
   FOR l_i =1 TO l_oqb.getlength()
               IF l_oqb[l_i].oqb07='RMB' THEN
@@ -4211,11 +4381,12 @@ DEFINE l_chk       LIKE type_file.chr1
               END IF
   END FOR
   IF NOT cl_null(l_oqa.oqaud02) AND l_oqa.oqaud02 != 0 THEN
-     LET  l_oqa.oqaud07 =  l_oqa.oqaud07 / l_oqa.oqaud02 * 0.15
+     LET  l_oqa.oqaud07 =  l_oqa.oqaud07 / l_oqa.oqaud02 * 0.15 * l_oqa.oqaud01# mode by lixwz 170920
+     IF   l_oqa.oqa042  > 0 THEN LET l_oqa.oqaud07 = l_oqa.oqaud07 * l_oqa.oqa042 END IF # add by lixwz 170929
   END IF
   IF l_chk='0' THEN
       #LET l_oqa.oqaud07 =  (l_oqa.oqaud10+l_oqa.oqaud11+l_oqa.oqaud12)*0.15
-      LET l_oqa.oqaud08 = (l_sum)*l_oqa.oqaud04
+      LET l_oqa.oqaud08 = (l_sum)*l_oqa.oqaud04/100 # mod by lixwz 170929
       LET l_oqa.oqaud09 = l_oqa.oqaud08+ l_sum
       LET l_oqa.oqaud05 =  l_oqa.oqaud01*l_oqa.oqaud08
       LET l_oqa.oqaud06 =  l_oqa.oqaud01*l_oqa.oqaud09
@@ -4224,9 +4395,9 @@ DEFINE l_chk       LIKE type_file.chr1
       END IF
   ELSE
       IF l_sum != 0 THEN
-          LET l_oqa.oqaud04 = (l_oqa.oqaud09 - l_sum)/l_sum
+          LET l_oqa.oqaud04 = (l_oqa.oqaud09 - l_sum)/l_sum*100 # mod by lixwz 170929
       END IF
-      LET l_oqa.oqaud08 = (l_sum)*l_oqa.oqaud04
+      LET l_oqa.oqaud08 = (l_sum)*l_oqa.oqaud04/100 # mod by lixwz 170929
       LET l_oqa.oqaud05 =  l_oqa.oqaud01*l_oqa.oqaud08
       LET l_oqa.oqaud06 =  l_oqa.oqaud01*l_oqa.oqaud09
       IF l_oqa.oqa042 > 0 THEN
@@ -4243,3 +4414,93 @@ DEFINE l_chk       LIKE type_file.chr1
   RETURN l_oqa.oqaud04,l_oqa.oqaud05,l_oqa.oqaud06,l_oqa.oqaud07,l_oqa.oqaud08,l_oqa.oqaud09
 END FUNCTION
 # add by llixwz 20170816 e
+
+FUNCTION t310_i_c(p_cmd)
+DEFINE
+    l_flag          LIKE type_file.chr1,                 #判斷必要欄位是否有輸入  #No.FUN-680137 VARCHAR(1)
+    l_misc          LIKE type_file.chr4,    #No.FUN-680137 VARCHAR(04)
+    p_cmd           LIKE type_file.chr1,                 #a:輸入 u:更改  #No.FUN-680137 VARCHAR(1)
+    li_result       LIKE type_file.num5                 #No.FUN-550070  #No.FUN-680137 SMALLINT
+DEFINE
+    l_gem02         LIKE gem_file.gem02,
+    l_occ02         LIKE occ_file.occ02,
+    l_gen02         LIKE gen_file.gen02,
+    l_gen03         LIKE gen_file.gen03  #NO.MOD-590057
+DEFINE l_cnt        LIKE type_file.num5           #No.FUN-890011
+DEFINE l_chk        LIKE type_file.chr1 # add by lixwz 20170822
+
+    DISPLAY BY NAME g_oqa.oqa03,g_oqa.oqa031
+    CALL cl_set_head_visible("","YES")
+
+    INPUT g_oqa.oqa03,g_oqa.oqa031,g_oqa.oqa032,g_oqa.oqaud04 WITHOUT DEFAULTS
+    FROM  oqa03,oqa031,oqa032,oqaud04
+
+    BEFORE INPUT
+        LET g_before_input_done = FALSE
+        CALL t310_set_entry(p_cmd)
+        CALL t310_set_no_entry(p_cmd)
+        LET g_before_input_done = TRUE
+        CALL cl_set_docno_format("oqa01")
+    BEFORE FIELD oqa03
+        CALL t310_set_entry(p_cmd)
+    #AFTER FIELD oqa03
+
+    AFTER FIELD oqaud04
+    IF (  cl_null(g_oqa.oqaud04)) THEN
+        #CALL cl_err(g_oqa.oqa02,'mfg5034',0)
+        LET g_oqa.oqaud04 = 0
+       # NEXT FIELD  oqaud04
+    END IF
+    IF NOT cl_null(g_oqa.oqaud01)  THEN
+        IF   NOT cl_null(g_oqa.oqaud04)  THEN
+            CALL  t310_get_oqaud1(g_oqa.*,g_oqb,'0') RETURNING g_oqa.oqaud04,g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,g_oqa.oqaud09
+            DISPLAY BY NAME g_oqa.oqaud04,g_oqa.oqaud05,g_oqa.oqaud06,g_oqa.oqaud07,g_oqa.oqaud08,g_oqa.oqaud09
+        END IF
+    ELSE
+        LET g_oqa.oqaud04 = 0
+    END IF
+
+    AFTER INPUT
+        UPDATE oqa_file SET oqa_file.* = g_oqa.*
+          WHERE oqa01 = g_oqa.oqa01
+        IF SQLCA.sqlcode OR SQLCA.sqlerrd[3] = 0 THEN
+           CALL cl_err3("upd","oqa_file",g_oqa01_t,"",SQLCA.sqlcode,"","",1)
+           NEXT FIELD oqa03
+        ELSE
+           CALL t310_g_b()
+           IF NOT INT_FLAG THEN
+              EXIT INPUT
+           END IF
+        END IF
+
+    ON ACTION controlp
+        CASE
+            WHEN INFIELD(oqa03)
+               CALL q_sel_ima(FALSE, "q_ima","",g_oqa.oqa03,"","","","","",'' )
+               RETURNING  g_oqa.oqa03
+               DISPLAY BY NAME g_oqa.oqa03
+               NEXT FIELD oqa03
+        END CASE
+
+    ON ACTION CONTROLF                  #欄位說明
+         CALL cl_set_focus_form(ui.Interface.getRootNode()) RETURNING g_fld_name,g_frm_name #Add on 040913
+         CALL cl_fldhelp(g_frm_name,g_fld_name,g_lang) #Add on 040913
+
+
+    ON ACTION CONTROLR
+        CALL cl_show_req_fields()
+
+    ON ACTION CONTROLG
+        CALL cl_cmdask()
+    ON IDLE g_idle_seconds
+       CALL cl_on_idle()
+       CONTINUE INPUT
+
+    ON ACTION about         #MOD-4C0121
+       CALL cl_about()      #MOD-4C0121
+
+    ON ACTION help          #MOD-4C0121
+       CALL cl_show_help()  #MOD-4C012
+
+    END INPUT
+END FUNCTION

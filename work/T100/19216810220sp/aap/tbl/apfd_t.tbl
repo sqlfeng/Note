@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="apfd_t" module="AAP" text="集团费用分摊目的明细档" type="D" version="1">
+  <column name="apfdent" text="企业别" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="apfdsite" text="帐务组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfdcomp" text="法人(集团)" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="apfdld" text="帐别" attribute="C501" type="varchar2(5)" pk="N" req="N"/>
+  <column name="apfddocno" text="摊销单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="apfdseq" text="摊销单项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="apfdorga" text="来源归属组织" attribute="C007" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="apfd001" text="摊销至目的方式" attribute="C002" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="apfd002" text="交易单号(入库单)" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfd003" text="交易单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfd004" text="产品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="apfd005" text="目的帐款单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="apfd006" text="目的帐款单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="apfd007" text="目的会计科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="apfd008" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd009" text="分摊金额方式" attribute="C002" type="varchar2(10)" pk="N" req="Y"/>
+  <column name="apfd111" text="本币分摊前单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd113" text="本币分摊前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd211" text="本币分摊后单价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd213" text="本币分摊后金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd123" text="本位币二分摊前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd223" text="本位币二分摊后金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd133" text="本位币三分摊前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="apfd233" text="本位币三分摊后金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="apfdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfdcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfdld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="apfddocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfdseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfdorga" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfd003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfd005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="apfd006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="apfd007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="apfd008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="apfd111" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd113" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd211" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd213" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd123" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd223" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd133" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="apfd233" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

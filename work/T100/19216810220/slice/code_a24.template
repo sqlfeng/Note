@@ -1,0 +1,12 @@
+      #應用 a24 樣板自動產生(Version:3)
+      #browser顯示圖片
+      CASE g_browser[g_cnt].b_statepic
+         WHEN "${mdl_stus1}"
+            LET g_browser[g_cnt].b_statepic = "stus/16/${mdl_pic1}.png"
+         #mdls - Start -
+         WHEN "${mdl_stus${mdl}}"
+            LET g_browser[g_cnt].b_statepic = "stus/16/${mdl_pic${mdl}}.png"
+         #mdls -  End  -
+         ${mdl_a33}
+      END CASE
+

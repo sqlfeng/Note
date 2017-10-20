@@ -1,0 +1,8 @@
+#應用 a35 樣板自動產生(Version:3)
+            #狀況碼為『D.抽單』時，必須隱藏『抽單』按鈕
+            #狀況碼為『W.已送簽』時，必須隱藏『提交』按鈕
+            WHEN "D"    #D.抽單 
+               HIDE OPTION "${mdl_stus_D}"   #「抽單」action
+            WHEN "W"    #W.已送簽 
+               HIDE OPTION "${mdl_stus_W}"       #「提交」action  
+

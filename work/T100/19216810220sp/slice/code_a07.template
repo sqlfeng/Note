@@ -1,0 +1,28 @@
+            #應用 a07 樣板自動產生(Version:3)   
+            #開窗i段
+            INITIALIZE g_qryparam.* TO NULL
+            LET g_qryparam.state = 'i'
+            LET g_qryparam.reqry = FALSE
+ 
+            LET g_qryparam.default1 = ${mdl_var1}             #給予default值
+            #mdls - Start -
+            LET g_qryparam.default${mdl} = "" #${mdl_var${mdl}} #${mdl_desc${mdl}}
+            #mdls -  End  -
+            #給予arg
+            LET g_qryparam.arg1 = "" #${mdl_arg_desc1}
+            #mdls2 - Start -
+            LET g_qryparam.arg${mdl} = "" #${mdl_arg_desc${mdl}}
+            #mdls -  End  -
+ 
+            CALL ${mdl_form}()                                #呼叫開窗
+ 
+            LET ${mdl_var1} = g_qryparam.return1              
+            #mdls - Start -
+            #LET ${mdl_var${mdl}} = g_qryparam.return${mdl} 
+            #mdls -  End  -
+            DISPLAY ${mdl_var1} TO ${mdl_field1}              #${mdl_desc$}
+            #mdls - Start -
+            #DISPLAY ${mdl_var${mdl}} TO ${mdl_field${mdl}} #${mdl_desc${mdl}}
+            #mdls -  End  -
+            NEXT FIELD ${mdl_field1}                          #返回原欄位
+

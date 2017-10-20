@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="wsab_t" module="AWS" text="BPM签核流程关联设置档" type="B" version="1">
+  <column name="wsabent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="wsab001" text="单据性质" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="wsab002" text="参照表编号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="wsab003" text="单据别编号" attribute="C202" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="wsab004" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="wsab005" text="参考签核模版" attribute="C807" type="varchar2(100)" pk="N" req="N"/>
+  <column name="wsab006" text="签核流程代号" attribute="C807" type="varchar2(100)" pk="N" req="N"/>
+  <column name="wsab007" text="启用工作流程" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="wsabent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="wsab001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="wsab002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="wsab003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="wsab004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="wsab005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="wsab006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="wsab007" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="wsab_t" depend_field="wsab001" correspon_key="&apos;24&apos;,wsab001" ref_table="gzcbl_t" ref_fk="gzcbl001,gzcbl002" ref_dlang="gzcbl003" ref_rtn="gzcbl004"/>
+    <field depend_table="wsab_t" depend_field="wsab003" correspon_key="wsabent,wsab002,wsab003" ref_table="oobal_t" ref_fk="oobalent,oobal001,oobal002" ref_dlang="oobal003" ref_rtn="oobal004"/>
+    <field depend_table="wsab_t" depend_field="wsab004" correspon_key="wsabent,wsab004" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

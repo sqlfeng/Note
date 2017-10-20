@@ -1,0 +1,93 @@
+#應用 qs07 樣板自動產生(Version:7)
+   #+ b_fill2段table資料取得(包含sql組成及資料填充)
+   #pages_d - Start -
+   CALL ${detail_var_title${page}}.clear()
+   #pages -  End  -
+   #add-point:陣列清空 name="b_fill2.array_clear"
+   {<point name="b_fill2.array_clear" />}
+   #end add-point
+ 
+   #tables_d2 - Start -
+   #為避免影響執行效能，若是按上下筆就不重組SQL
+   IF g_action_choice <> "fetch" OR cl_null(g_action_choice) THEN
+      LET g_sql = "${detail_fill_sql_pre${table}}",
+                  "${detail_append_join_b_fill${table}}",
+                  "${detail_fill_sql_post${table}}"
+  
+      IF NOT cl_null(g_wc2_table${table}) THEN
+         LET g_sql = g_sql CLIPPED," AND ",g_wc2_table${table} CLIPPED
+      END IF
+  
+      LET g_sql = g_sql, " ORDER BY ${detail_field_order_by_tbl${table}}"
+  
+      #add-point:單身填充前 name="b_fill2.before_fill${table}"
+      {<point name="b_fill2.before_fill${table}" />}
+      #end add-point
+ 
+      LET g_sql = cl_sql_add_mask(g_sql)              #遮蔽特定資料
+      PREPARE ${general_prefix}_pb${table} FROM g_sql
+      DECLARE b_fill_curs${table} CURSOR FOR ${general_prefix}_pb${table}
+   END IF
+ 
+   #(ver:7) ---mark start---
+#  OPEN b_fill_curs${table} USING ${detail_var_append}${detail_var_pk01}
+#                                 #detail_keys - Start -
+#                                 ,${detail_var_pk${key}}
+#                                 #keys -  End  -
+   LET l_ac = 1
+   FOREACH b_fill_curs${table}
+      USING ${detail_var_append}${detail_var_pk01}
+            #detail_keys - Start -
+            ,${detail_var_pk${key}}
+            #keys -  End  -
+      INTO ${detail_vars_all_by_tbl${table}}
+   #(ver:7) --- end ---
+      IF SQLCA.sqlcode THEN
+         INITIALIZE g_errparam TO NULL 
+         LET g_errparam.extend = "FOREACH:" 
+         LET g_errparam.code   = SQLCA.sqlcode 
+         LET g_errparam.popup  = TRUE 
+         CALL cl_err()
+ 
+         EXIT FOREACH
+      END IF
+ 
+      ${detail_hyper_b_fill${table}}
+ 
+      #add-point:b_fill2段資料填充 name="b_fill2.fill${table}"
+      {<point name="b_fill2.fill${table}"/>}
+      #end add-point
+ 
+      CALL ${general_prefix}_detail_show("'${table}'")
+ 
+      CALL ${general_prefix}_${detail_tbl_name${table}}_mask()
+ 
+      IF l_ac > g_max_rec THEN
+         INITIALIZE g_errparam TO NULL 
+         LET g_errparam.extend =  "" 
+         LET g_errparam.code   =  9035 
+         LET g_errparam.popup  = TRUE 
+         CALL cl_err()
+ 
+         EXIT FOREACH
+      END IF
+      LET l_ac = l_ac + 1
+ 
+   END FOREACH
+   #tables -  End  -
+ 
+   #pages_d - Start -
+   CALL ${detail_var_title${page}}.deleteElement(${detail_var_title${page}}.getLength())
+   #pages -  End  -
+   #add-point:陣列長度調整 name="b_fill2.array_deleteElement"
+   {<point name="b_fill2.array_deleteElement" />}
+   #end add-point
+ 
+   #pages_d - Start -
+   LET li_ac = ${detail_var_title${page}}.getLength()
+   #pages -  End  -
+   DISPLAY li_ac TO FORMONLY.cnt
+   LET g_detail_idx2 = 1
+   DISPLAY g_detail_idx2 TO FORMONLY.idx
+ 
+

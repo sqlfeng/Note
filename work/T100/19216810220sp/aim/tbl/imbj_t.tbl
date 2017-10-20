@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="imbj_t" module="AIM" text="料件申请料号成份与物质档" type="D" version="1">
+  <column name="imbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="imbj001" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="imbj002" text="类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imbj003" text="成份/物质" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="imbj004" text="含量" attribute="N103" type="number(20,6)" pk="N" req="N"/>
+  <column name="imbj005" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imbj006" text="管制类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="imbjdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="imbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="imbj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="imbj002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imbj003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imbj004" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="18" format="---,---,--&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="imbj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imbj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="imbjdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="imbj_t" depend_field="imbj002" correspon_key="imbjent,imbj002" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imbj_t" depend_field="imbj003" correspon_key="imbjent,imbj003" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="imbj_t" depend_field="imbj005" correspon_key="imbj005" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="imbj_t" depend_field="imbj006" correspon_key="imbjent,imbj006" ref_table="oocql_t" ref_fk="oocqlent,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

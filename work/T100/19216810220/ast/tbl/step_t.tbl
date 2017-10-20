@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="step_t" module="AST" text="合同费用优惠商户合作情况明细档" type="D" version="1">
+  <column name="stepent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stepunit" text="制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stepsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stepacti" text="状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stepdocno" text="审批单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stepseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="step001" text="门店编号" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="step002" text="专柜编号" attribute="C601" type="varchar2(20)" pk="N" req="N"/>
+  <column name="step003" text="门牌号" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="step004" text="租赁开始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="step005" text="租赁结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="step006" text="经营面积" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="step007" text="经营小类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="step008" text="合同编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stepent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stepunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stepsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stepacti" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stepdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stepseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="step001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhae001" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step004" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step005" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="step007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="step008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="step_t" depend_field="step001" correspon_key="step001" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="step_t" depend_field="step002" correspon_key="step001,step002" ref_table="mhael_t" ref_fk="mhaelsite,mhael001" ref_dlang="mhael022" ref_rtn="mhael023"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

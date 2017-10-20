@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="bgaa_t" module="ABG" text="预算编号档" type="B" version="1">
+  <column name="bgaaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="bgaastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa001" text="预算编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="bgaa002" text="预算周期" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa003" text="预算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa004" text="编制汇率" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa005" text="运行汇率" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa006" text="使用预测" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bgaa007" text="编制起点" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="bgaa008" text="使用预算细项参照表" attribute="C812" type="varchar2(5)" pk="N" req="N"/>
+  <column name="bgaa009" text="现金异动表编码" attribute="C812" type="varchar2(5)" pk="N" req="N"/>
+  <column name="bgaaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bgaaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bgaacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="bgaamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="bgaamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="bgaa010" text="预算组织版本" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa011" text="最上层组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="bgaa012" text="使用科目预算" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="bgaaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_contents" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bgaastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="bgaa001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_bgaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa002" widget="Edit" items="" default="&apos;&quot;B&quot;&apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_bgac001" c_zoom="q_bgac001" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="bgaa003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa004" widget="ComboBox" items="9401" default="&apos;3&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="bgaa005" widget="ComboBox" items="9401" default="&apos;3&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="bgaa006" widget="ComboBox" items="9402" default="&apos;2&apos;" max_compare="" max="100.000" min_compare="" min="1.000" i_zoom="q_aooi001" c_zoom="q_aooi001_1" chk_ref="v_dzca001_2,v_dzca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa007" widget="ComboBox" items="9403" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_bgae007" c_zoom="q_bgae007" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="bgaa009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmai001" c_zoom="q_nmai001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="bgaamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="bgaa010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeb006_1" c_zoom="q_ooeb006_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeb005_1" c_zoom="q_ooeb005_1" chk_ref="v_ooeb005" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="bgaa012" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="bgaa_t" depend_field="bgaa011" correspon_key="bgaaent,bgaa011" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="bgaa_t" depend_field="bgaacrtdp" correspon_key="bgaacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="bgaa_t" depend_field="bgaacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="bgaa_t" depend_field="bgaacrtid" correspon_key="bgaacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="bgaa_t" depend_field="bgaamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="bgaa_t" depend_field="bgaamodid" correspon_key="bgaamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="bgaa_t" depend_field="bgaaowndp" correspon_key="bgaaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="bgaa_t" depend_field="bgaaownid" correspon_key="bgaaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="bgaa_t" depend_field="bgaa001" correspon_key="bgaaent,bgaa001" lang_table="bgaal_t" lang_fk="bgaalent,bgaal001" lang_dlang="bgaal002" lang_rtn="bgaal003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="bgaastus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

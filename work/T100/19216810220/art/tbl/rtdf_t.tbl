@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtdf_t" module="ART" text="商品生命周期调整明细档" type="D" version="1">
+  <column name="rtdfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rtdfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdfunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdfdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rtdfseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rtdf001" text="商品编码" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtdf002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtdf003" text="商品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="rtdf004" text="原生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtdf005" text="新生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rtdfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtdfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdfunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtdfseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rtdf001" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_rtdx001_9" c_zoom="q_rtdx001_9" chk_ref="v_rtdx001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtdf002" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_imay003_8" c_zoom="q_imay003_8" chk_ref="v_imay003_1" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtdf003" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtdf004" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtdf005" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_rtda001" c_zoom="q_rtda001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtdf_t" depend_field="rtdf001" correspon_key="rtdf001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="rtdf_t" depend_field="rtdf004" correspon_key="rtdf004" ref_table="rtdal_t" ref_fk="rtdal001" ref_dlang="rtdal002" ref_rtn="rtdal003"/>
+    <field depend_table="rtdf_t" depend_field="rtdf005" correspon_key="rtdf005" ref_table="rtdal_t" ref_fk="rtdal001" ref_dlang="rtdal002" ref_rtn="rtdal003"/>
+    <field depend_table="rtdf_t" depend_field="rtdfsite" correspon_key="rtdfsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

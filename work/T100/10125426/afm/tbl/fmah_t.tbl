@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmah_t" module="AFM" text="融资审核单身档" type="D" version="1">
+  <column name="fmahent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmahdocno" text="融资审核单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmahseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmah001" text="融资类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmah002" text="对外融资组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmah003" text="合约编号" attribute="C207" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmah004" text="合约项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fmah005" text="合约银行" attribute="C503" type="varchar2(15)" pk="N" req="N"/>
+  <column name="fmah006" text="融资币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmah007" text="融资额度" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmah008" text="融资起始日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmah009" text="截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fmah010" text="融资成本（年利率%）" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmahent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmahdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmahseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmah001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmaa001_1" c_zoom="q_fmaa001_1" chk_ref="v_fmaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmah002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001_42" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmah003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmac001" c_zoom="q_fmac001" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fmah004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmah005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmab001" c_zoom="q_nmab001" chk_ref="v_fmac003" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fmah006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooai001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmah007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmah008" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmah009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmah010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fmah_t" depend_field="fmah001" correspon_key="fmah001" ref_table="fmaal_t" ref_fk="fmaal001" ref_dlang="fmaal002" ref_rtn="fmaal003"/>
+    <field depend_table="fmah_t" depend_field="fmah002" correspon_key="fmah002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="fmah_t" depend_field="fmah005" correspon_key="fmah005" ref_table="nmabl_t" ref_fk="nmabl001" ref_dlang="nmabl002" ref_rtn="nmabl003"/>
+    <field depend_table="fmah_t" depend_field="fmah006" correspon_key="fmah006" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oobd_t" module="AOO" text="单据别生命周期限定档" type="D" version="1">
+  <column name="oobdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oobd001" text="参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobd002" text="单据别" attribute="C202" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="oobd003" text="生命周期类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oobd004" text="生命周期编号" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="oobdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oobd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobd002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobd003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oobd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oobd004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oobd_t" depend_field="oobd004" correspon_key="oobdent,oobd003,oobd004" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

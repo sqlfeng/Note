@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="crae_t" module="ACR" text="潜在客户等级明细档" type="D" version="1">
+  <column name="craeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="crae001" text="应用分类" attribute="N805" type="number(5)" pk="Y" req="Y"/>
+  <column name="crae002" text="应用分类码" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="crae003" text="潜在客户等级行销方式" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="craeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="crae001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="crae002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="crae003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="5" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="crae_t" depend_field="crae003" correspon_key="&apos;2057&apos;,crae003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

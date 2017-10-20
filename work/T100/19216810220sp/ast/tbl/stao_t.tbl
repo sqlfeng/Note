@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stao_t" module="AST" text="自营合约费用设置档" type="D" version="1">
+  <column name="staoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stao001" text="合约编号" attribute="C207" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stao002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stao003" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao004" text="会计期间" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao005" text="价款类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao006" text="计算类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao007" text="费用周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao008" text="费用周期方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao009" text="条件基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao010" text="计算基准" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao011" text="费用净额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stao012" text="费用比率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stao013" text="保底否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao014" text="保底金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stao015" text="保底扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stao016" text="分量扣点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao017" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stao018" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stao019" text="下次计算日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stao020" text="下次费用开始日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stao021" text="下次费用截止日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stao022" text="自定义范围" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao023" text="纳入结算单否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stao024" text="票扣否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stao025" text="管理品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stao026" text="生效月份" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stao027" text="按自然月计费否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="staoacti" text="有效" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stao028" text="固定费用是否按法人收取" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stao029" text="促销扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stao030" text="促销销售额占比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="staoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="stao002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stao003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stae001" c_zoom="q_stae001" chk_ref="" widget_width="10" format="" prog_rel="asti203" case="upper"/>
+    <field name="stao004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao005" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao006" widget="ComboBox" items="6007" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao007" widget="ComboBox" items="6008" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao008" widget="ComboBox" items="6009" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="asti202" case="upper"/>
+    <field name="stao010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_stab001" c_zoom="q_stab001" chk_ref="" widget_width="10" format="" prog_rel="asti202" case="upper"/>
+    <field name="stao011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stao012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stao013" widget="ComboBox" items="6010" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stao015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stao016" widget="ComboBox" items="6011" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao018" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao019" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao020" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stao022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao023" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao024" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao027" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="staoacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao028" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stao029" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stao030" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stao_t" depend_field="stao003" correspon_key="staoent,stao003" ref_table="stael_t" ref_fk="staelent,stael001" ref_dlang="stael002" ref_rtn="stael003"/>
+    <field depend_table="stao_t" depend_field="stao009" correspon_key="staoent,stao009" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+    <field depend_table="stao_t" depend_field="stao010" correspon_key="staoent,stao010" ref_table="stabl_t" ref_fk="stablent,stabl001" ref_dlang="stabl002" ref_rtn="stabl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rmcb_t" module="ARM" text="RMA判别单单身档" type="D" version="1">
+  <column name="rmcbent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rmcbsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rmcbdocno" text="判别单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rmcbseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rmcb001" text="RMA单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="rmcb002" text="RMA项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="rmcb003" text="点收项序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="rmcb004" text="料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rmcb005" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="rmcb006" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rmcb007" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rmcb008" text="不良原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rmcb009" text="判别结果" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rmcb010" text="已转数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="rmcb011" text="维修入库" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rmcbent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rmcbsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rmcbdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rmcbseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="rmcb001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rmcb002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="rmcb003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="rmcb004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="rmcb005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rmcb006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rmcb007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel="" case=""/>
+    <field name="rmcb008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rmcb009" widget="ComboBox" items="4059" default="1" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rmcb010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="" prog_rel="" case=""/>
+    <field name="rmcb011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rmcb_t" depend_field="rmcb004" correspon_key="rmcb004" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="rmcb_t" depend_field="rmcb006" correspon_key="rmcb006" ref_table="oocal_t" ref_fk="oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

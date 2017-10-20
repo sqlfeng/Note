@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmba_t" module="APM" text="交易对象准入档" type="T" version="1">
+  <column name="pmbaent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbadocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmbadocdt" text="申请日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba000" text="申请类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba001" text="交易对象编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba002" text="交易对象类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba003" text="交易对象税籍编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba004" text="法人类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba005" text="所属法人" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba006" text="所属集团" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba007" text="注册国家" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba008" text="公司登记证号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba009" text="交易对象行事历参照表号" attribute="C812" type="varchar2(5)" pk="N" req="N"/>
+  <column name="pmba010" text="交易对象行事历类别" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba011" text="统计币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba016" text="负责人" attribute="C101" type="varchar2(80)" pk="N" req="N"/>
+  <column name="pmba017" text="创业日" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba018" text="资本额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba019" text="资本额计算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba020" text="员工人数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmba021" text="年营业额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba022" text="年营业额计算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba023" text="产业分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba024" text="规模分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba025" text="主要经营产品" attribute="C302" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmba026" text="数据源" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba027" text="联络对象识别码" attribute="C819" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba036" text="依交易对象结算日计算" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba037" text="结账方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba038" text="月结日一" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba039" text="月结日二" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba040" text="月结日三" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba041" text="付款日一" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba042" text="付款日二" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba043" text="付款日三" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba044" text="收款日一" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba045" text="收款日二" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba046" text="收款日三" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba047" text="关系人" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba051" text="信用额度检查方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba052" text="额度企业" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba053" text="信用评核等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba054" text="额度计算币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba055" text="企业额度" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba056" text="可超出率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba057" text="有效期限" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba058" text="逾期账款宽限天数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmba059" text="允许除外额度" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba060" text="no use" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba061" text="no use" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba062" text="no use" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba063" text="no use" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba064" text="no use" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba065" text="no use" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba066" text="no use" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba067" text="no use" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba068" text="合并立应收付凭单" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba069" text="集团内账款互抵冲销" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba070" text="汇总开立销项发票" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba071" text="得以净额开立销项发票" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba072" text="债权移转至非同法人对象" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba073" text="账龄计算基准" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba080" text="供应商分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba081" text="供应商价格群组" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba082" text="供应商经营类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba083" text="供应商生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba084" text="供应商重要等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba085" text="供应商制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba086" text="默认采购员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba090" text="客户分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba091" text="客户价格群组" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba092" text="客户经营类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba093" text="客户生命周期" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba094" text="客户重要等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba095" text="客户制定组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba096" text="默认业务员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba200" text="开发日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba201" text="立户日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba202" text="策略联盟否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba204" text="惯用经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba205" text="惯用下单方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba206" text="惯用结算方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba220" text="供应商角色" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba221" text="供应商渠道" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba222" text="供应商合作模式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba230" text="客户性质" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba231" text="客户渠道" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba232" text="客户合作模式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba241" text="经销区域" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba242" text="经销省区" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba243" text="经销县市" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba244" text="经销地区" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba245" text="擅长渠道" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba246" text="仓库数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba247" text="仓库总面积" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="pmba248" text="客户库存管理否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba270" text="送货周期" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba271" text="送货周期-日" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmba272" text="送货周期-周" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmba273" text="No Use" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmba274" text="送货时段" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba275" text="No Use" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba276" text="No Use" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba281" text="供应商其他属性一" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba282" text="供应商其他属性二" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba283" text="供应商其他属性三" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba284" text="供应商其他属性四" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba285" text="供应商其他属性五" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba286" text="供应商其他属性六" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba287" text="供应商其他属性七" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba288" text="供应商其他属性八" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba289" text="供应商其他属性九" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba290" text="供应商其他属性十" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba291" text="客户其他属性一" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba292" text="客户其他属性二" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba293" text="客户其他属性三" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba294" text="客户其他属性四" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba295" text="客户其他属性五" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba296" text="客户其他属性六" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba297" text="客户其他属性七" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba298" text="客户其他属性八" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba299" text="客户其他属性九" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba300" text="客户其他属性十" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba900" text="申请人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba901" text="申请部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbaownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmbaowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbacrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmbacrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbacrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbamodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmbamoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbacnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmbacnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbastus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbaacti" text="数据有效码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmbaud001" text="自定义字段(文本)001" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud002" text="自定义字段(文本)002" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud003" text="自定义字段(文本)003" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud004" text="自定义字段(文本)004" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud005" text="自定义字段(文本)005" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud006" text="自定义字段(文本)006" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud007" text="自定义字段(文本)007" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud008" text="自定义字段(文本)008" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud009" text="自定义字段(文本)009" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud010" text="自定义字段(文本)010" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbaud011" text="自定义字段(数字)011" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud012" text="自定义字段(数字)012" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud013" text="自定义字段(数字)013" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud014" text="自定义字段(数字)014" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud015" text="自定义字段(数字)015" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud016" text="自定义字段(数字)016" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud017" text="自定义字段(数字)017" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud018" text="自定义字段(数字)018" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud019" text="自定义字段(数字)019" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud020" text="自定义字段(数字)020" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbaud021" text="自定义字段(日期时间)021" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud022" text="自定义字段(日期时间)022" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud023" text="自定义字段(日期时间)023" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud024" text="自定义字段(日期时间)024" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud025" text="自定义字段(日期时间)025" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud026" text="自定义字段(日期时间)026" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud027" text="自定义字段(日期时间)027" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud028" text="自定义字段(日期时间)028" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud029" text="自定义字段(日期时间)029" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmbaud030" text="自定义字段(日期时间)030" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="pmba087" text="默认采购部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba097" text="默认业务部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmba088" text="寄发邮件前预览报表" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba074" text="逾期账款宽限额度" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmba075" text="除外额有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="pmba098" text="是否使用EC" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba089" text="是否列入黑名单" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmba028" text="海关监管编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmba029" text="保税业务人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbaent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbadocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_pmbadocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmbadocdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba000" widget="ComboBox" items="32" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba002" widget="ComboBox" items="2014" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmba004" widget="RadioGroup" items="2015" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004_2" c_zoom="q_pmaa001_3" chk_ref="v_ooed004_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_3" c_zoom="q_pmaa001_3" chk_ref="v_pmaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocg001" c_zoom="q_oocg001" chk_ref="v_oocg001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmba009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_5" c_zoom="q_ooal002_5" chk_ref="v_ooal002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba010" widget="ComboBox" items="25" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmba017" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba020" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="0" format="" prog_rel="" case=""/>
+    <field name="pmba021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba023" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmba026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pmba036" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba037" widget="ComboBox" items="2012" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba038" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba039" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba040" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba041" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba042" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba043" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba044" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba045" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba046" widget="Edit" items="" default="" max_compare="&lt;=" max="31.000" min_compare="&gt;=" min="1.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba047" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba051" widget="ComboBox" items="2033" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba052" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001" c_zoom="q_pmaa001" chk_ref="v_pmaa001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba053" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmaa001" c_zoom="q_xmaa001" chk_ref="v_xmaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba054" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba055" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba056" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmba057" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba058" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmba059" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba060" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmba061" widget="ComboBox" items="2034" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba062" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmba063" widget="ComboBox" items="2034" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba064" widget="Edit" items="" default="" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmba065" widget="ComboBox" items="2034" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba066" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba067" widget="ComboBox" items="2034" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba068" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba069" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba070" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba071" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba072" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba073" widget="ComboBox" items="8312" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba080" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba081" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba082" widget="ComboBox" items="2011" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba083" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba084" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba085" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_pmba085" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba086" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba090" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba091" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba092" widget="ComboBox" items="2040" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba093" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba094" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba095" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_pmba095" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba096" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="v_ooag001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba200" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba201" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba202" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba204" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba205" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba206" widget="ComboBox" items="2007" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba220" widget="ComboBox" items="2008" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba221" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba222" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba230" widget="ComboBox" items="6018" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba231" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba232" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba241" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba242" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba243" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba244" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_dbaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba245" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oojd001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba246" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba247" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba248" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba270" widget="ComboBox" items="6019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba271" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmba272" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmba273" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmba274" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba275" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba276" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba281" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba282" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba283" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba284" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba285" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba286" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba287" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba288" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba289" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba290" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba291" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba292" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba293" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba294" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba295" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba296" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba297" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba298" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba299" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba300" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba900" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001_2" c_zoom="q_ooag001_2" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba901" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooea001_1" c_zoom="q_ooea001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbaownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbaowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbacrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbacrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbacrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbamodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbamoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbacnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbacnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbastus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbaacti" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="pmbaud011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbaud021" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud022" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud023" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud024" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud025" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud026" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud027" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud028" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud029" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmbaud030" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="pmba087" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba097" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba088" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba074" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmba075" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmba098" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba089" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmba028" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmba029" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmba_t" depend_field="pmba001" correspon_key="pmbaent,pmba001" ref_table="pmbal_t" ref_fk="pmbalent,pmbaldocno" ref_dlang="pmbal001" ref_rtn="pmbal003"/>
+    <field depend_table="pmba_t" depend_field="pmba005" correspon_key="pmba005" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmba006" correspon_key="pmba006" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmba007" correspon_key="pmba007" ref_table="oocgl_t" ref_fk="oocgl001" ref_dlang="oocgl002" ref_rtn="oocgl003"/>
+    <field depend_table="pmba_t" depend_field="pmba009" correspon_key="&apos;4&apos;,pmba009" ref_table="ooall_t" ref_fk="ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="pmba_t" depend_field="pmba011" correspon_key="pmba011" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmba_t" depend_field="pmba019" correspon_key="pmba019" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmba_t" depend_field="pmba022" correspon_key="pmba022" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmba_t" depend_field="pmba023" correspon_key="&apos;254&apos;,pmba023" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba024" correspon_key="&apos;260&apos;,pmba024" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba026" correspon_key="pmba026" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba052" correspon_key="pmba052" ref_table="pmaal_t" ref_fk="pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal003"/>
+    <field depend_table="pmba_t" depend_field="pmba053" correspon_key="pmba053" ref_table="xmajl_t" ref_fk="xmajl001" ref_dlang="xmajl002" ref_rtn="xmajl003"/>
+    <field depend_table="pmba_t" depend_field="pmba054" correspon_key="pmba054" ref_table="ooail_t" ref_fk="ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="pmba_t" depend_field="pmba080" correspon_key="&apos;251&apos;,pmba080" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba081" correspon_key="&apos;253&apos;,pmba081" ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmba_t" depend_field="pmba083" correspon_key="&apos;255&apos;,pmba083" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba084" correspon_key="&apos;256&apos;,pmba084" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba085" correspon_key="pmba085" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmba086" correspon_key="pmba086" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmba090" correspon_key="&apos;281&apos;,pmba090" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba091" correspon_key="&apos;283&apos;,pmba091" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba093" correspon_key="&apos;285&apos;,pmba093" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba094" correspon_key="&apos;286&apos;,pmba094" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba095" correspon_key="pmba095" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmba096" correspon_key="pmba096" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmba205" correspon_key="&apos;2031&apos;,pmba205" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba221" correspon_key="&apos;2035&apos;,pmba221" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba222" correspon_key="&apos;2072&apos;,pmba222" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba231" correspon_key="&apos;2035&apos;,pmba231" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba232" correspon_key="&apos;2072&apos;,pmba232" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba241" correspon_key="&apos;287&apos;,pmba241" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba242" correspon_key="&apos;288&apos;,pmba242" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba243" correspon_key="&apos;289&apos;,pmba243" ref_table="oocql_t" ref_fk="oocq001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba244" correspon_key="&apos;290&apos;,pmba244" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba245" correspon_key="&apos;2035&apos;,pmba245" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba274" correspon_key="&apos;274&apos;,pmba274" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba281" correspon_key="&apos;2037&apos;,pmba281" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba282" correspon_key="&apos;2038&apos;,pmba282" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba283" correspon_key="&apos;2039&apos;,pmba283" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba284" correspon_key="&apos;2040&apos;,pmba284" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba285" correspon_key="&apos;2041&apos;,pmba285" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba286" correspon_key="&apos;2042&apos;,pmba286" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba287" correspon_key="&apos;2043&apos;,pmba287" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba288" correspon_key="&apos;2044&apos;,pmba288" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba289" correspon_key="&apos;2045&apos;,pmba289" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba290" correspon_key="&apos;2046&apos;,pmba290" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba291" correspon_key="&apos;2037&apos;,pmba291" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba292" correspon_key="&apos;2038&apos;,pmba292" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba293" correspon_key="&apos;2039&apos;,pmba293" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba294" correspon_key="&apos;2040&apos;,pmba294" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba295" correspon_key="&apos;2041&apos;,pmba295" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba296" correspon_key="&apos;2042&apos;,pmba296" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba297" correspon_key="&apos;2043&apos;,pmba297" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba298" correspon_key="&apos;2044&apos;,pmba298" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba299" correspon_key="&apos;2045&apos;,pmba299" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba300" correspon_key="&apos;2046&apos;,pmba300" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="pmba_t" depend_field="pmba900" correspon_key="pmba900" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmba901" correspon_key="pmba901" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmbacnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmba_t" depend_field="pmbacnfid" correspon_key="pmbacnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmbacrtdp" correspon_key="pmbacrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmbacrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmba_t" depend_field="pmbacrtid" correspon_key="pmbacrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmbadocno" correspon_key="pmbadocno" ref_table="pmbal_t" ref_fk="pmbaldocno" ref_dlang="pmbal001" ref_rtn="pmbal003"/>
+    <field depend_table="pmba_t" depend_field="pmbamoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="pmba_t" depend_field="pmbamodid" correspon_key="pmbamodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="pmba_t" depend_field="pmbaowndp" correspon_key="pmbaowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="pmba_t" depend_field="pmbaownid" correspon_key="pmbaownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pmba_t" depend_field="pmba001" correspon_key="pmbadocno" lang_table="pmbal_t" lang_fk="pmbaldocno" lang_dlang="pmbal001" lang_rtn="pmbal003"/>
+    <field depend_table="pmba_t" depend_field="pmbadocno" correspon_key="pmbadocno" lang_table="pmbal_t" lang_fk="pmbaldocno" lang_dlang="pmbal001" lang_rtn="pmbal002"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="pmbastus" category="13" desc="单据状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="A" desc="已核准"/>
+      <code value="D" desc="抽单"/>
+      <code value="R" desc="已拒绝"/>
+      <code value="W" desc="送签中"/>
+      <code value="X" desc="作废"/>
+    </field>
+  </scc>
+</table>
+

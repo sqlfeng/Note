@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzpc_t" module="AZZ" text="排程实际执行依时纪录表" type="T" version="1">
+  <column name="gzpcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzpc000" text="排程执行序号" attribute="C003" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="gzpc001" text="排程编号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="gzpc002" text="排程执行时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzpc003" text="排程执行模式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzpc004" text="排程执行状况" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzpc005" text="超过预估时间通知邮件位置" attribute="C153" type="varchar2(80)" pk="N" req="N"/>
+  <column name="gzpc006" text="执行结束时间" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzpc007" text="预估最长执行时间(分钟)" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzpcent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzpc000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="gzpc001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpc002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzpc003" widget="ComboBox" items="66" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpc004" widget="ComboBox" items="65" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzpc006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzpc007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzpc_t" depend_field="gzpc001" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

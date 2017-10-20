@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stdd_t" module="AST" text="内部结算对象配置数据表" type="B" version="1">
+  <column name="stddent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stdd001" text="结算中心" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="stdd002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="stdd003" text="对象类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdd004" text="结算对象1" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stdd005" text="结算对象2" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stddent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stdd001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_23" c_zoom="q_ooef001_23" chk_ref="v_ooef001_212" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="stdd003" widget="ComboBox" items="6085" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdd004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="v_ooef001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stdd005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="v_ooef001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="stdd_t" depend_field="stdd001" correspon_key="stdd001" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdd_t" depend_field="stdd004" correspon_key="stdd004" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="stdd_t" depend_field="stdd005" correspon_key="stdd005" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

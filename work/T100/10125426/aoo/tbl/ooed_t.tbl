@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="ooed_t" module="AOO" text="组织结构调整计划结存盘" type="S" version="1">
+  <column name="ooedent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="ooed001" text="组织类型" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooed002" text="最上层组织" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooed003" text="版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooed004" text="组织编号" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooed005" text="上级组织编号" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="ooed006" text="生效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="ooed007" text="失效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="ooed008" text="申请编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="ooedent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed001" widget="ComboBox" items="100" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooed004_2" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed006" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed007" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+    <field name="ooed008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree>
+    <type no="1" table="ooed_t" col=""/>
+    <id no="2" table="ooed_t" col="ooed004"/>
+    <pid no="3" table="ooed_t" col="ooed005"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="ooeds_t" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="ooed_t" depend_field="ooed002" correspon_key="ooedent,ooed002" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooed_t" depend_field="ooed004" correspon_key="ooedent,ooed004" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooed_t" depend_field="ooed005" correspon_key="b_ooed005" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

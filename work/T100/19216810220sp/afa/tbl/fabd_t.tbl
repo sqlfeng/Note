@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fabd_t" module="AFA" text="折毕再提单身档" type="D" version="1">
+  <column name="fabdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fabdld" text="帐套" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="fabddocno" text="折毕再提单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fabdseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fabd000" text="卡片编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd001" text="财产编号" attribute="C580" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabd002" text="附号" attribute="C581" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabd003" text="主要类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd004" text="次要类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd005" text="资产状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fabd006" text="折毕再提否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fabd007" text="再提年限（月）" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="fabd008" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd009" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabd010" text="折毕残值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabd011" text="单据性质" attribute="N806" type="number(10)" pk="N" req="N"/>
+  <column name="fabd101" text="本位币二币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd102" text="本位币二汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabd103" text="本位币二折毕残值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabd150" text="本位币三币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabd151" text="本位币三汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabd152" text="本位币三折毕残值" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fabdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabdld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabddocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabdseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fabd000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_faah003_3" c_zoom="q_faah003_3" chk_ref="v_faah001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_faah003_1" c_zoom="q_faah003_1" chk_ref="v_faah003_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_faah003_3" c_zoom="q_faah003_3" chk_ref="v_faah004" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fabd003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_faac001" c_zoom="q_faac001" chk_ref="v_faac001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_faad001" c_zoom="q_faad001" chk_ref="v_faad001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd005" widget="CheckBox" items="" default="&apos;4&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd006" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="fabd008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glaa001_3" c_zoom="q_glaa001_3" chk_ref="v_ooai001" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="fabd009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabd010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabd011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabd101" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd102" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabd103" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabd150" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabd151" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabd152" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fabd_t" depend_field="fabd003" correspon_key="fabdent,fabc001" ref_table="faacl_t" ref_fk="faaclent,faacl001" ref_dlang="faacl002" ref_rtn="faacl003"/>
+    <field depend_table="fabd_t" depend_field="fabd004" correspon_key="fabdent,fabd004" ref_table="faadl_t" ref_fk="faadlent,faadl001" ref_dlang="faadl002" ref_rtn="faadl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

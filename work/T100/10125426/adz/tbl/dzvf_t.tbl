@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzvf_t" module="ADZ" text="规格与程序版本历程对应表(版次归1)" type="B" version="1">
+  <column name="dzvf001" text="建构代号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzvf002" text="建构版号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzvf003" text="规格版号" attribute="C902" type="varchar2(15)" pk="N" req="N"/>
+  <column name="dzvf004" text="代码版号" attribute="C902" type="varchar2(15)" pk="N" req="N"/>
+  <column name="dzvf005" text="建构类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzvf006" text="模块" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="dzvf007" text="产品代号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzvf008" text="产品版本" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzvf009" text="客户代号" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <column name="dzvf010" text="识别标示" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="dzvf001" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="20" format=" " prog_rel=" "/>
+    <field name="dzvf002" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf003" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf004" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf005" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf006" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf007" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf008" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="10" format=" " prog_rel=" "/>
+    <field name="dzvf009" widget="Edit" items=" " default=" " max="" min="" i_zoom=" " c_zoom=" " chk_ref=" " widget_width="30" format=" " prog_rel=" "/>
+    <field name="dzvf010" widget="CheckBox" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzvf_t" depend_filed="dzvfcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzvf_t" depend_filed="dzvfcnfid" correspon_key="dzvfcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzvf_t" depend_filed="dzvfcrtdp" correspon_key="dzvfcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzvf_t" depend_filed="dzvfcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzvf_t" depend_filed="dzvfcrtid" correspon_key="dzvfcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzvf_t" depend_filed="dzvfmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="dzvf_t" depend_filed="dzvfmodid" correspon_key="dzvfmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="dzvf_t" depend_filed="dzvfowndp" correspon_key="dzvfowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="dzvf_t" depend_filed="dzvfownid" correspon_key="dzvfownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

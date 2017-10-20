@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xman_t" module="AXM" text="产品客户包装方式档" type="B" version="1">
+  <column name="xmanent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="xmansite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xman001" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="N"/>
+  <column name="xman002" text="产品分类" attribute="C816" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xman003" text="客户编号" attribute="C004" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xman004" text="联络地址" attribute="C816" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="xman005" text="包装方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmanownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmanowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmancrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmancrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmancrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmanmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmanmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmanstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmanent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmansite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xman001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_15" c_zoom="q_imaf001_15" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xman002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001" c_zoom="q_rtax001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xman003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_6" c_zoom="q_pmaa001_6" chk_ref="v_pmaa001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xman004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oofb019_1" c_zoom="q_oofb019_1" chk_ref="v_oofb019_4" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xman005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmam001" c_zoom="q_xmam001" chk_ref="v_xmam001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmanownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmanowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmancrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmancrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmancrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmanmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmanmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmanstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xman_t" depend_field="xmancrtdp" correspon_key="xmancrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xman_t" depend_field="xmancrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xman_t" depend_field="xmancrtid" correspon_key="xmancrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xman_t" depend_field="xmanmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xman_t" depend_field="xmanmodid" correspon_key="xmanmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xman_t" depend_field="xmanowndp" correspon_key="xmanowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xman_t" depend_field="xmanownid" correspon_key="xmanownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xmanstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

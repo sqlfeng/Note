@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="icaf_t" module="AIC" text="内部直接交易档" type="B" version="1">
+  <column name="icafent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="icafsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf001" text="来源对象编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="icaf002" text="目的对象编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="icaf003" text="缺省采购单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf004" text="缺省收货单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf005" text="缺省入库单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf006" text="缺省入库库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf007" text="缺省入库储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf008" text="缺省采购税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf009" text="缺省应付单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf010" text="缺省应付折让单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf011" text="缺省应付责任中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf012" text="缺省应付帐款类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf013" text="缺省付款条件" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf014" text="缺省订单单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf015" text="缺省出货单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf016" text="缺省签收单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf017" text="缺省出货库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf018" text="缺省出货储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf019" text="缺省订单税别" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf020" text="缺省应收单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf021" text="缺省应收折让单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf022" text="缺省应收责任中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf023" text="缺省应收帐款类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf024" text="缺省收款条件" attribute="C005" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icafownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icafowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icafcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icafcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icafcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="icafmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="icafmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="icafstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf025" text="统销出通单开立点" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="icaf026" text="缺省出通单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <column name="icaf027" text="缺省Invoice单别" attribute="C202" type="varchar2(5)" pk="N" req="N"/>
+  <col_attr>
+    <field name="icafent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="icafsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_12" c_zoom="q_ooef001_12" chk_ref="v_ooef001_13" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_12" c_zoom="q_ooef001_12" chk_ref="v_ooef001_13" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002" c_zoom="q_ooba002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002" c_zoom="q_ooba002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_6" c_zoom="q_inaa001_6" chk_ref="v_inaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_6" c_zoom="q_inab002_6" chk_ref="v_inab002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_5" c_zoom="q_oodb002_5" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_2" c_zoom="q_xrah002_2" chk_ref="v_xrah002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf012" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib002_1" c_zoom="q_ooib002_1" chk_ref="v_ooib002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002" c_zoom="q_ooba002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_6" c_zoom="q_inaa001_6" chk_ref="v_inaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_6" c_zoom="q_inab002_6" chk_ref="v_inab002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_5" c_zoom="q_oodb002_5" chk_ref="v_oodb002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002" c_zoom="q_ooba002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xrah002_2" c_zoom="q_xrah002_2" chk_ref="v_xrah002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf023" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooib002_1" c_zoom="q_ooib002_1" chk_ref="v_ooib002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="icafmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icafmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="icafstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="icaf025" widget="ComboBox" items="2502" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf026" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="icaf027" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooba002_1" c_zoom="q_ooba002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="icaf_t" depend_field="icaf001" correspon_key="icaf001" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icaf002" correspon_key="icaf002" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icaf003" correspon_key="icaf003" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf004" correspon_key="icaf004" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf005" correspon_key="icaf005" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf006" correspon_key="&apos;&apos;,icaf006" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="icaf_t" depend_field="icaf007" correspon_key="&apos;&apos;,icaf006,icaf007" ref_table="inab_t" ref_fk="inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="icaf_t" depend_field="icaf008" correspon_key="&apos;&apos;,icaf008" ref_table="oodbl_t" ref_fk="oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="icaf_t" depend_field="icaf009" correspon_key="icaf009" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf010" correspon_key="icaf010" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf011" correspon_key="icaf011" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icaf012" correspon_key="&apos;3211&apos;,icaf012" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="icaf_t" depend_field="icaf013" correspon_key="icaf013" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="icaf_t" depend_field="icaf014" correspon_key="icaf014" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf015" correspon_key="icaf015" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf016" correspon_key="icaf016" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf017" correspon_key="&apos;&apos;,icaf017" ref_table="inaa_t" ref_fk="inaasite,inaa001" ref_dlang=" " ref_rtn="inaa002"/>
+    <field depend_table="icaf_t" depend_field="icaf018" correspon_key="&apos;&apos;,icaf017,icaf018" ref_table="inab_t" ref_fk="inabsite,inab001,inab002" ref_dlang=" " ref_rtn="inab003"/>
+    <field depend_table="icaf_t" depend_field="icaf019" correspon_key="&apos;&apos;,icaf019" ref_table="oodbl_t" ref_fk="oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="icaf_t" depend_field="icaf020" correspon_key="icaf020" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf021" correspon_key="icaf021" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf022" correspon_key="icaf022" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icaf023" correspon_key="icaf023" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="icaf_t" depend_field="icaf024" correspon_key="icaf024" ref_table="ooibl_t" ref_fk="ooibl002" ref_dlang="ooibl003" ref_rtn="ooibl004"/>
+    <field depend_table="icaf_t" depend_field="icaf026" correspon_key="icaf026" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icaf027" correspon_key="icaf027" ref_table="oobxl_t" ref_fk="oobxl001" ref_dlang="oobxl002" ref_rtn="oobxl003"/>
+    <field depend_table="icaf_t" depend_field="icafcrtdp" correspon_key="icafcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icafcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="icaf_t" depend_field="icafcrtid" correspon_key="icafcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="icaf_t" depend_field="icafmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="icaf_t" depend_field="icafmodid" correspon_key="icafmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="icaf_t" depend_field="icafowndp" correspon_key="icafowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="icaf_t" depend_field="icafownid" correspon_key="icafownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="icafstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fabj_t" module="AFA" text="利息资本化明细档" type="D" version="1">
+  <column name="fabjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fabjcomp" text="法人" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabjdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fabjseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fabj000" text="异动类型" attribute="N806" type="number(10)" pk="N" req="N"/>
+  <column name="fabj001" text="底稿编号" attribute="C580" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabj002" text="附号" attribute="C581" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabj003" text="卡片编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabj004" text="来源" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fabj005" text="单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabj006" text="数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabj007" text="来源单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabj008" text="来源项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fabj009" text="利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabj010" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabj011" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fabj012" text="原币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabj013" text="本币金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fabj014" text="转固定资产日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="fabj015" text="原因码" attribute="C013" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fabj016" text="费用编号" attribute="C581" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fabj017" text="产生卡片编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fabjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabjcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabjdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_fabjdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabjseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fabj000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fabj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooag001" c_zoom="q_ooag001" chk_ref="v_ooag001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabj002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fabj003" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabj004" widget="ButtonEdit" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001" c_zoom="q_ooca001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabj006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabj007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_fmaz004" c_zoom="q_fmaz004" chk_ref="v_fmaz004" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fabj008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fabj009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="fabj010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooai001" c_zoom="q_ooai001" chk_ref="" widget_width="15" format="" prog_rel="" case="upper"/>
+    <field name="fabj011" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabj012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabj013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fabj014" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="fabj015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002_18" c_zoom="q_oocq002_18" chk_ref="v_oocq002_3904" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fabj016" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="fabj017" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="fabj_t" depend_field="fabj001" correspon_key="fabj001" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="fabj_t" depend_field="fabj015" correspon_key="fabjent,&apos;3904&apos;,fabj015" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

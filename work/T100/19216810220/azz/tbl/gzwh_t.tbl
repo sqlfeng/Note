@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzwh_t" module="AZZ" text="服务人员负责模块" type="D" version="1">
+  <column name="gzwhent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzwh001" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="gzwh002" text="服务人员" attribute="C819" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzwh003" text="服务模块" attribute="C808" type="varchar2(4)" pk="Y" req="Y"/>
+  <column name="gzwh004" text="主要处理人员" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzwhent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzwh001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzwh002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzwh003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzzo001" c_zoom="q_gzzo001" chk_ref="v_gzzo001_1" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzwh004" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzwh_t" depend_field="gzwh003" correspon_key="gzwh003" ref_table="gzzol_t" ref_fk="gzzol001" ref_dlang="gzzol002" ref_rtn="gzzol003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

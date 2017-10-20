@@ -1,0 +1,9 @@
+#應用 a20 樣板自動產生(Version:3)
+      #根據狀態碼控制action
+      IF ${master_var_stus} = "Y" THEN
+         CALL cl_set_act_visible("statechange,modify,delete,reproduce", TRUE)
+      ELSE
+         CALL cl_set_act_visible("statechange,reproduce", TRUE)
+         CALL cl_set_act_visible("modify,delete", FALSE)
+      END IF  
+

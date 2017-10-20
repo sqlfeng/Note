@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbo_t" module="APM" text="供应商评核公式评分等级明细档(制造)" type="D" version="1">
+  <column name="pmboent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbosite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbo001" text="公式编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbo002" text="评核等级" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbo003" text="分数起" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="pmbo004" text="分数迄" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmboent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbosite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbo001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbo002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_01" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbo003" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="pmbo004" widget="Edit" items="" default="0" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbo_t" depend_field="pmbo002" correspon_key="&apos;2053&apos;,pmbo002" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

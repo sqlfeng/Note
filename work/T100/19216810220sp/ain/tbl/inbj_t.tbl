@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inbj_t" module="AIN" text="库存报废明细档" type="D" version="1">
+  <column name="inbjent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inbjsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbjdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inbjseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inbj001" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inbj002" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="inbj003" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inbj004" text="包装容器编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inbj005" text="拨出库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj006" text="拨出储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj007" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inbj008" text="库存单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj009" text="申请数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inbj010" text="实际异动数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inbj011" text="参考单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj012" text="参考单位申请数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inbj013" text="参考单位实际数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inbj014" text="拨入废库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj015" text="拨入废储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj016" text="报废原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj017" text="归属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inbj018" text="归属单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inbj031" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="inbj019" text="专案编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inbj020" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inbj021" text="活动编号" attribute="C092" type="varchar2(30)" pk="N" req="N"/>
+  <col_attr>
+    <field name="inbjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inbjsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbjdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inbjseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inbj001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inbj002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag001" c_zoom="q_inag001" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inbj003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag003_1" c_zoom="q_inag003_1" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inbj004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_12" c_zoom="q_imaf001_12" chk_ref="v_imaf001_2" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inbj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001" c_zoom="q_inaa001" chk_ref="v_inaa001_9" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag005_6" c_zoom="q_inag005_6" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag006_1" c_zoom="q_inag006_1" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inbj008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inag007" c_zoom="q_inag007" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inbj010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="---,---,--&amp;" prog_rel="" case=""/>
+    <field name="inbj011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inbj013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inbj014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001" c_zoom="q_inaa001" chk_ref="v_inaa001_9" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002" c_zoom="q_inab002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_9" c_zoom="q_ooef001_9" chk_ref="v_ooef001_14" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inbj018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inbj031" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inbj019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjba001" c_zoom="q_pjba001" chk_ref="v_pjba001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inbj020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbb002_1" c_zoom="q_pjbb002_1" chk_ref="v_pjbb002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="inbj021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbm002" c_zoom="q_pjbm002" chk_ref="v_pjbm002" widget_width="30" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="inbj_t" depend_field="inbj001" correspon_key="inbj001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="inbj_t" depend_field="inbj005" correspon_key="inbj005" ref_table="inaa_t" ref_fk="inaa001" ref_dlang="" ref_rtn="inaa002"/>
+    <field depend_table="inbj_t" depend_field="inbj006" correspon_key="inbj005,inbj006" ref_table="inab_t" ref_fk="inab001,inab002" ref_dlang="" ref_rtn="inab003"/>
+    <field depend_table="inbj_t" depend_field="inbj014" correspon_key="inbj014" ref_table="inaa_t" ref_fk="inaa001" ref_dlang="" ref_rtn="inaa002"/>
+    <field depend_table="inbj_t" depend_field="inbj015" correspon_key="inbj014,inbj015" ref_table="inab_t" ref_fk="inab001,inab002" ref_dlang="" ref_rtn="inab003"/>
+    <field depend_table="inbj_t" depend_field="inbj016" correspon_key="&apos;302&apos;,inbj016" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="inbj_t" depend_field="inbj017" correspon_key="inbj017" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="inbj_t" depend_field="inbj019" correspon_key="inbj019" ref_table="pjbal_t" ref_fk="pjbal001" ref_dlang="pjbal002" ref_rtn="pjbal003"/>
+    <field depend_table="inbj_t" depend_field="inbj020" correspon_key="inbj019,inbj020" ref_table="pjbbl_t" ref_fk="pjbbl001,pjbbl002" ref_dlang="pjbbl003" ref_rtn="pjbbl004"/>
+    <field depend_table="inbj_t" depend_field="inbj021" correspon_key="inbj019,inbj021" ref_table="pjbml_t" ref_fk="pjbml001,pjbml002" ref_dlang="pjbml003" ref_rtn="pjbml004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

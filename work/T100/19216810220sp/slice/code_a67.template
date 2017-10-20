@@ -1,0 +1,16 @@
+         #應用 a67 樣板自動產生(Version:1)
+         ON ACTION ${mdl_action_name}
+            ${mdl_action_mark}LET g_action_choice="${mdl_action_name}"
+            ${mdl_modify_detail}
+            CALL ${general_prefix}_show_ownid_msg()
+            #因為不呼叫cl_auth_chk_act()，所以需另外紀錄log，
+            #但紀錄log時需紀錄status，與鴻傑討論後，決議先一律紀錄成功
+            CALL cl_log_act(g_action_choice,TRUE)
+            ${mdl_action_mark}${mdl_action_call}
+            #add-point:ON ACTION ${mdl_action_name} name="${mdl_action_loc}.${mdl_action_name}"
+            {<point name="${mdl_action_loc}.${mdl_action_name}" mark="Y"/>}
+            #END add-point
+            ${mdl_output}
+            ${mdl_action_mark}${mdl_chk_mark}${mdl_exit}
+ 
+

@@ -1,0 +1,59 @@
+#應用 qs05 樣板自動產生(Version:4)
+   #+ b_fill段其他table資料取得(包含sql組成及資料填充)
+   #tables - Start -
+   LET g_sql = "${detail_fill_sql_pre${table}}",
+               "${detail_append_join_b_fill${table}}",
+               "${detail_fill_sql_post${table}}"  ,
+               " AND ${detail_by_tbl${table}_field_pk01_by_tbl} = ? "
+               #detail_keys - Start -
+               " AND ${detail_by_tbl${table}_field_pk${key}_by_tbl} = ? "
+               #keys -  End  -
+ 
+   IF NOT cl_null(g_wc_table${table}) THEN
+      LET g_sql = g_sql CLIPPED," AND ",g_wc_table${table} CLIPPED
+   END IF
+ 
+   LET g_sql = g_sql, cl_sql_add_filter("${detail_tbl_name}"),
+                      " ORDER BY ${detail_field_order_by_tbl${table}}"
+ 
+   LET g_sql = cl_sql_add_mask(g_sql)              #遮蔽特定資料
+   PREPARE ${general_prefix}_pb${table} FROM g_sql
+   DECLARE b_fill_curs${table} CURSOR FOR ${general_prefix}_pb${table}
+ 
+   FOR l_ac = 1 TO ${detail_var_title}.getLength()
+      OPEN b_fill_curs${table} USING ${detail_var_append}${detail_var_pk01}
+                                     #detail_keys - Start -
+                                     ,${detail_var_pk${key}}
+                                     #keys -  End  -
+      #(ver:4) ---start---
+      IF SQLCA.SQLCODE THEN
+         NITIALIZE g_errparam TO NULL
+         LET g_errparam.extend = "OPEN FETCH:",SQLERRMESSAGE
+         LET g_errparam.code   = SQLCA.SQLCODE
+         LET g_errparam.popup  = TRUE
+         CALL cl_err()
+         RETURN
+      END IF
+      #(ver:4) --- end ---
+      FETCH b_fill_curs${table} INTO ${detail_vars_all_by_tbl${table}}
+      #(ver:4) ---start---
+      IF SQLCA.SQLCODE THEN
+         NITIALIZE g_errparam TO NULL
+         LET g_errparam.extend = "FETCH:",SQLERRMESSAGE
+         LET g_errparam.code   = SQLCA.SQLCODE
+         LET g_errparam.popup  = TRUE
+         CALL cl_err()
+         RETURN
+      END IF
+      #(ver:4) --- end ---
+ 
+      CALL ${general_prefix}_detail_show("'${table}'")
+ 
+      #add-point:b_fill段資料填充${table} name="b_fill.fill${table}"
+      {<point name="b_fill.fill${table}"/>}
+      #end add-point
+ 
+   END FOR
+   #tables -  End  -
+ 
+

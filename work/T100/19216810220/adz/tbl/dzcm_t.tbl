@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="dzcm_t" module="ADZ" text="复制规格与程序底稿明细1" type="X" version="1">
+  <column name="dzcm001" text="程式类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="dzcm002" text="复制来源" attribute="C011" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzcm003" text="复制目标" attribute="C011" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzcm004" text="使用表格字段转换" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="dzcm005" text="来源表格" attribute="C011" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzcm006" text="目标表格" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="dzcmcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="dzcm007" text="来源上层表格" attribute="C803" type="varchar2(15)" pk="N" req="N"/>
+  <column name="dzcm008" text="来源主要表格" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzcm009" text="目标上层表格" attribute="C803" type="varchar2(15)" pk="N" req="N"/>
+  <column name="dzcm010" text="目标主要表格" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="dzcm011" text="对应顺序" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="dzcm001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzcm002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dzcm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dzcm004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzcm005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dzcm006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="dzcmcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzcm007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzcm008" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzcm009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="dzcm010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="dzcm011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="dzcm_t" depend_field="dzcmcrtid" correspon_key="dzcmcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

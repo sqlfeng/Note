@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="deap_t" module="ADE" text="营业款寄送存缴单明细档" type="T" version="1">
+  <column name="deapent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="deapsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deapunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deapdocno" text="存缴单号" attribute="C203" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="deapseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="N"/>
+  <column name="deap001" text="营业日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="deap002" text="款别分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deap003" text="款别编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deap004" text="券种编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deap005" text="券面额编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deap006" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="deap007" text="代收数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="deap008" text="代收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="deapent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="deapsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deapunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deapdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="deapseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="deap001" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="deap002" widget="ComboBox" items="8310" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deap003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooie001_03" c_zoom="q_ooie001_02" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deap004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gcaf001" c_zoom="q_gcaf001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deap005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deap006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_aooi001_1" c_zoom="q_aooi001_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="deap007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="deap008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="deap_t" depend_field="deap003" correspon_key="deapent,deap003" ref_table="ooial_t" ref_fk="ooialent,ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="deap_t" depend_field="deap004" correspon_key="deapent,deap004" ref_table="gcafl_t" ref_fk="gcaflent,gcafl001" ref_dlang="gcafl002" ref_rtn="gcafl003"/>
+    <field depend_table="deap_t" depend_field="deap005" correspon_key="deapent,&apos;2071&apos;,deap005" ref_table="oocql_t" ref_fk="oocqlent,oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="deap_t" depend_field="deap006" correspon_key="deapent,deap006" ref_table="ooial_t" ref_fk="ooialent,ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

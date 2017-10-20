@@ -1,0 +1,35 @@
+---------------------------------------------------------------------------------- 
+-- File created from /u1/topprod/topcust/cim/4fd/cimp005.4fd by Genero Studio
+-- WARNING! All changes made in this file will be lost!
+----------------------------------------------------------------------------------
+
+SCHEMA formonly
+
+LAYOUT (text=%"cimp001")
+Folder Folder1
+Page Page1(text=%"Page1")
+Grid Grid1
+{
+
+    <G group1                   >
+     [jcth_check             ]
+
+
+    <                           >
+
+
+}
+END -- Grid1
+END -- Page1
+END -- Folder1
+END -- cimp001
+
+ATTRIBUTES
+Group group1:Group1, text=%"Group1";
+CheckBox jcth_check=formonly.jcth_check type CHAR, tabIndex=1, text=%"formonly.jcth_check", not null, valueChecked = "Y", valueUnchecked = "N";
+END -- ATTRIBUTES
+
+INSTRUCTIONS
+SCREEN RECORD Undefined(formonly.jcth_check)
+END -- INSTRUCTIONS
+

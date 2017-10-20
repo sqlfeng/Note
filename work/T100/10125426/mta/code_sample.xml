@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<code_sample>
+  <sample id="after_field_type01" desc="" range="erp" show="Y">
+    <![CDATA[LET g_xxxx_m.xxxx001_desc = ' '
+DISPLAY BY NAME g_xxxx_m.xxxx001_desc
+IF NOT cl_null(g_xxxx_m.xxxx001) THEN
+   IF p_cmd = 'a' OR (p_cmd = 'u' AND (g_xxxx_m.xxxx001 != g_xxxx_m_t.xxxx001 OR g_xxxx_m_t.xxxx001 IS NULL )) THEN
+      INITIALIZE g_chkparam.* TO NULL
+      LET g_chkparam.arg1 = g_xxxx_m.xxxx001
+      LET g_chkparam.arg2 = ' '
+      IF NOT cl_chk_exist("v_xxxx001") THEN
+         LET g_xxxx_m.xxxx001 = g_xxxx_m_t.xxxx001
+         CALL axxm001_xxxx001_ref()
+         NEXT FIELD CURRENT
+      END IF
+   END IF
+END IF
+CALL axxm001_xxxx001_ref()]]>
+  </sample>
+  <sample id="after_field_type02" desc="" range="erp" show="Y">
+    <![CDATA[LET g_xxxx_m.xxxx001_desc = ' '
+DISPLAY BY NAME g_xxxx_m.xxxx001_desc
+IF NOT cl_null(g_xxxx_m.xxxx001) THEN
+   IF p_cmd = 'a' OR (p_cmd = 'u' AND (g_xxxx_m.xxxx001 != g_xxxx_m_t.xxxx001 OR g_xxxx_m_t.xxxx001 IS NULL )) THEN
+      CALL s_xxxx_chk(g_xxxx_m.xxxx001)RETURNING g_errno
+      IF NOT cl_null(g_errno) THEN
+          CALL cl_err('',g_errno,1)
+         LET g_xxxx_m.xxxx001 = g_xxxx_m_t.xxxx001
+         CALL axxm001_xxxx001_ref()
+         NEXT FIELD CURRENT
+      END IF
+   END IF
+END IF
+CALL axxm001_xxxx001_ref()]]>
+  </sample>
+  <sample id="after_field_type03" desc="" range="erp" show="Y">
+    <![CDATA[LET g_xxxx_m.xxxx001_desc = ' '
+DISPLAY BY NAME g_xxxx_m.xxxx001_desc
+IF NOT cl_null(g_xxxx_m.xxxx001) THEN
+   IF p_cmd = 'a' OR (p_cmd = 'u' AND (g_xxxx_m.xxxx001 != g_xxxx_m_t.xxxx001 OR g_xxxx_m_t.xxxx001 IS NULL )) THEN
+      IF axxm001_xxxx001_chk() THEN
+      ELSE
+         LET g_xxxx_m.xxxx001 = g_xxxx_m_t.xxxx001
+         CALL axxm001_xxxx001_ref()
+         NEXT FIELD CURRENT
+      END IF
+   END IF
+END IF
+CALL axxm001_xxxx001_ref()]]>
+  </sample>
+  <sample id="rep_01" desc="子报表架构程序模板1" range="报表元件" show="Y">
+    <![CDATA[    FORMAT
+           
+        ON EVERY ROW
+            PRINTX g_grNumFmt.*
+            PRINTX]]>
+  </sample>
+  <sample id="sub_memo" desc="应用元件PUBLIC FUNCTION注释" range="sub" show="N">
+    <![CDATA[
+################################################################################
+# Descriptions...: 描述说明
+# Memo...........:
+# Usage..........: CALL s_aooi150_ins (传入参数)
+#                  RETURNING 回传参数
+# Input parameter: 传入参数变量1   传入参数变量说明1
+#                : 传入参数变量2   传入参数变量说明2
+# Return code....: 回传参数变量1   回传参数变量说明1
+#                : 回传参数变量2   回传参数变量说明2
+# Date & Author..: 日期 By 作者
+# Modify.........:
+################################################################################
+]]>
+  </sample>
+  <sample id="trans_beg" desc="Transaction 开始" range="sub" show="Y">
+    <![CDATA[CALL s_transaction_begin()]]>
+  </sample>
+  <sample id="trans_chk_y" desc="检查是否在事务中" range="sub" show="Y">
+    <![CDATA[#检查是否在事务中
+IF NOT s_transaction_chk('Y',1) THEN
+   LET r_success = FALSE
+   RETURN r_success
+END IF
+]]>
+  </sample>
+</code_sample>

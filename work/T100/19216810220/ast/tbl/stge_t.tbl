@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stge_t" module="AST" text="专柜销售成本月汇总统计档" type="S" version="1">
+  <column name="stgeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stgesite" text="营运组织" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="stgeunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stge001" text="会计期间" attribute="C430" type="varchar2(6)" pk="Y" req="Y"/>
+  <column name="stge002" text="专柜编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stge003" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stge004" text="楼层编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stge005" text="经营小类编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stge006" text="经营方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stge007" text="专柜面积" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="stge008" text="追溯面积" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="stge009" text="原价金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge010" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge011" text="应付成本" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge012" text="预扣费用金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge013" text="保底成本差额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge014" text="目标销售成本差额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge015" text="税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge016" text="费用扣项金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge017" text="租金" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge018" text="物业管理费" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge019" text="返还VIP折扣" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge020" text="结算调整金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge021" text="退货调整金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stge022" text="加抽/降扣金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <col_attr>
+    <field name="stgeent" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgeunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stge001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stge002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhae001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stge003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stge004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhab002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stge005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_rtax001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stge006" widget="ComboBox" items="6013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stge007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge018" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge021" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stge022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

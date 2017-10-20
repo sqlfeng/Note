@@ -1,0 +1,14 @@
+         #應用 a43 樣板自動產生(Version:4)
+         ON ACTION ${mdl_action_name}
+            ${mdl_action_mark}LET g_action_choice="${mdl_action_name}"
+            ${mdl_action_mark}${mdl_chk_mark}IF cl_auth_chk_act("${mdl_action_name}") THEN
+               ${mdl_action_mark}${mdl_modify_detail}
+               ${mdl_action_mark}${mdl_action_call}
+               #add-point:ON ACTION ${mdl_action_name} name="${mdl_action_loc}.${mdl_action_name}"
+               {<point name="${mdl_action_loc}.${mdl_action_name}" mark="Y"/>}
+               #END add-point
+               ${mdl_output}
+               ${mdl_action_mark}${mdl_chk_mark}${mdl_exit}
+            ${mdl_action_mark}${mdl_chk_mark}END IF
+ 
+

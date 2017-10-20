@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="decj_t" module="ADE" text="门店库区款别统计周结档" type="S" version="1">
+  <column name="decjent" text="企业代码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="decjsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decj001" text="层级类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="decj005" text="库区编号" attribute="C303" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decj006" text="库区类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="decj007" text="存货管理方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="decj008" text="库区业态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="decj009" text="品类编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decj010" text="专柜编号" attribute="C601" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="decj011" text="税别" attribute="C010" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decj012" text="款别编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="decj013" text="款别分类" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="decj014" text="实收金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="decj015" text="统计年度月份" attribute="N002" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="decj016" text="统计周期" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="decjent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="decjsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj001" widget="ComboBox" items="6540" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj006" widget="ComboBox" items="6200" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj007" widget="ComboBox" items="6203" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj008" widget="ComboBox" items="6201" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="decj011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooia001_04" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj013" widget="ComboBox" items="8310" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="decj014" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="decj015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="decj016" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="decj_t" depend_field="decj012" correspon_key="decj012" ref_table="ooial_t" ref_fk="ooila001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

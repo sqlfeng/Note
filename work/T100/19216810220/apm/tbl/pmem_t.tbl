@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmem_t" module="APM" text="收货送货预约单身明细档" type="D" version="1">
+  <column name="pmement" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmemsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmemunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmemdocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmemseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="pmem000" text="单据类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem001" text="采购出货单据编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="pmem002" text="采购出货单据项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmem003" text="采购出货单据项序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmem004" text="分批序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="pmem005" text="子件特性" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem006" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmem007" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmem008" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pmem009" text="收货/送货包装单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem010" text="预约收货/送货包装数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmem011" text="收货/送货单位" attribute="C009" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem012" text="预约收货/送货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmem013" text="实际收货/送货数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmem014" text="限定库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem015" text="限定储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem016" text="限定批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="pmem017" text="采购组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem018" text="采购中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem019" text="要货组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem020" text="备注" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="pmem021" text="销售组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmem022" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmement" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmemsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmemunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmemdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmemseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmem000" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmem002" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmem003" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmem004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="pmem005" widget="ComboBox" items="2055" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imay003_2" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmem007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmem008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmdn002" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmem009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imao002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmem011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imao002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmem013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmem014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_4" c_zoom="q_inaa001_4" chk_ref="v_inaa001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inab002_8" c_zoom="q_inab002_8" chk_ref="v_inab002_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="v_inag006_1" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmem017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem018" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem019" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem020" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmem021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_16" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmem022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

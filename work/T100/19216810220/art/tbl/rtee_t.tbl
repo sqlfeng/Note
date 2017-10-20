@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="rtee_t" module="ART" text="市场调查明细数据" type="T" version="1">
+  <column name="rteeent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="rteedocno" text="单据编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="rteeseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="rteesite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rtee001" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtee002" text="商品条码" attribute="C307" type="varchar2(40)" pk="N" req="N"/>
+  <column name="rtee003" text="商品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="rtee004" text="进价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtee005" text="售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtee006" text="毛利率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtee007" text="竞争门店售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtee008" text="促销否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtee009" text="促销结束日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtee010" text="价高标记" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtee011" text="门店是否跟价" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="rtee012" text="门店跟价至" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="rtee013" text="门店跟价截止日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="rtee014" text="不跟价原因" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="rteeunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="rteeent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rteedocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rteeseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="rteesite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtee001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtdx001_3" c_zoom="q_rtdx001_2" chk_ref="v_rtdx001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="rtee002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtdx002" c_zoom="q_rtdx002" chk_ref="v_rtdx002" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtee003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="rtee004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtee005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtee006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="rtee007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtee008" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtee009" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtee010" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtee011" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rtee012" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="rtee013" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="rtee014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_2075" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="rteeunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="rtee_t" depend_field="rtee001" correspon_key="rtee001" ref_table="imaal_t" ref_fk="imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="rtee_t" depend_field="rtee014" correspon_key="&apos;2075&apos;,rtee014" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="rtee_t" depend_field="rteesite" correspon_key="rteesite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

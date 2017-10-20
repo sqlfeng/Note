@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isas_t" module="AIS" text="发票簿调拨记录档" type="T" version="1">
+  <column name="isasent" text="企业编码" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="isascomp" text="法人编号" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isassite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isas001" text="发票簿号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isas002" text="生效日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="isas003" text="失效日期" attribute="D001" type="date" pk="Y" req="Y"/>
+  <column name="isas004" text="发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="isas005" text="发票字轨" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas006" text="发票编号" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas007" text="起始号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas008" text="结束号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas009" text="发票张数" attribute="N002" type="number(10,0)" pk="N" req="N"/>
+  <column name="isas010" text="已开立张数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="isas011" text="拨入营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isas012" text="拨入起始号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas013" text="拨入结束号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isas014" text="拨入簿号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isasstus" text="状态码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="isasent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isascomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isassite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isas001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isas002" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isas003" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isas004" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="isas005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="11" format="" prog_rel="" case=""/>
+    <field name="isas010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="isas011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_14" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isas012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isas014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isasstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isas_t" depend_field="isas011" correspon_key="isasent,isas011" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isas_t" depend_field="isassite" correspon_key="isasent,isassite" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="isasstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>
+

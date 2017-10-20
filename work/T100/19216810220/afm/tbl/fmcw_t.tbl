@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="fmcw_t" module="AFM" text="偿还本息单身档" type="D" version="1">
+  <column name="fmcwent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="fmcwdocno" text="还款单编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="fmcwseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="fmcw001" text="融资组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcw002" text="融资合同号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmcw003" text="融资合同项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fmcw004" text="还款性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmcw005" text="币别" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcw006" text="本/息金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw007" text="还款账户" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcw008" text="异动别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="fmcw009" text="存提码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcw010" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw011" text="本币" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw012" text="汇率二" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw013" text="本币二" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw014" text="汇率三" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw015" text="本币三" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw016" text="现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="fmcw017" text="已计提未支付利息" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw018" text="历史汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw019" text="历史汇率二" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw020" text="历史汇率三" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="fmcw021" text="融资到账单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="fmcw022" text="融资到账单项次" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="fmcw023" text="本币汇差" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw024" text="本币汇差二" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw025" text="本币汇差三" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="fmcw026" text="摘要" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <col_attr>
+    <field name="fmcwent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="fmcwdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcwseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmcw001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmcw003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmcw004" widget="ComboBox" items="8859" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw008" widget="ComboBox" items="8708" default="2" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw013" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw015" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="fmcw017" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw019" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw020" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="fmcw022" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="fmcw023" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw024" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw025" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="fmcw026" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

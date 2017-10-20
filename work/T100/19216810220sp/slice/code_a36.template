@@ -1,0 +1,29 @@
+#應用 a36 樣板自動產生(Version:5)
+      #提交
+      ON ACTION ${mdl_stus_W}
+         IF cl_auth_chk_act("${mdl_stus_W}") THEN
+            IF NOT ${general_prefix}_send() THEN
+               CALL s_transaction_end('N','0')
+            ELSE
+               CALL s_transaction_end('Y','0')
+            END IF
+            #因應簽核行為, 該動作完成後不再進行後續處理
+            #於此處直接返回
+            CLOSE ${general_prefix}_cl
+            RETURN
+         END IF
+    
+      #抽單
+      ON ACTION ${mdl_stus_D}
+         IF cl_auth_chk_act("${mdl_stus_D}") THEN
+            IF NOT ${general_prefix}_draw_out() THEN
+               CALL s_transaction_end('N','0')
+            ELSE
+               CALL s_transaction_end('Y','0')
+            END IF
+            #因應簽核行為, 該動作完成後不再進行後續處理
+            #於此處直接返回
+            CLOSE ${general_prefix}_cl
+            RETURN
+         END IF
+

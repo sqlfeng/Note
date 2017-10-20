@@ -1,0 +1,12 @@
+#應用 a62 樣板自動產生(Version:3)
+      INITIALIZE l_var_keys_bak TO NULL
+      INITIALIZE l_field_keys   TO NULL
+      LET l_var_keys_bak[1] = ${mdl_var}
+      LET l_field_keys[1]   = '${mdl_field}'
+      #mdls - Start -
+      LET l_var_keys_bak[${mdl}] = ${mdl_var${mdl}}
+      LET l_field_keys[${mdl}]   = '${mdl_field${mdl}}'
+      #mdls -  End  -
+      CALL cl_multitable_delete(l_field_keys,l_var_keys_bak,'${mdl_table}')
+ 
+

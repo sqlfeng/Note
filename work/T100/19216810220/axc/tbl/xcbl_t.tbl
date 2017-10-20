@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xcbl_t" module="AXC" text="人工制费收集维护档" type="B" version="1">
+  <column name="xcblent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xcblcomp" text="法人组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcblld" text="账套" attribute="C501" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xcbl001" text="费用类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcbl002" text="年度" attribute="N401" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcbl003" text="期别" attribute="N402" type="number(5,0)" pk="Y" req="Y"/>
+  <column name="xcbl004" text="成本中心" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xcbl005" text="分摊方式" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="xcblseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="xcbl010" text="科目编号" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="xcbl011" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl012" text="部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl013" text="收付款客商" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl014" text="客群" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl015" text="区域" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl016" text="成本中心" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl017" text="经营类别" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl018" text="通路" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl019" text="品类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl020" text="品牌" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl021" text="项目编号" attribute="C090" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcbl022" text="WBS" attribute="C091" type="varchar2(30)" pk="N" req="N"/>
+  <column name="xcbl023" text="成本次要素" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl100" text="分摊成本" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbl110" text="分摊成本(本位币二)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcbl120" text="分摊成本(本位币三)" attribute="N205" type="number(20,6)" pk="N" req="N"/>
+  <column name="xcblownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcblowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcblcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcblcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcblcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcblmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xcblmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xcblstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl024" text="账款对象" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xcbl025" text="人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xcblent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcblcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001_2" c_zoom="q_ooef001_2" chk_ref="v_ooef001_1" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblld" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_authorised_ld" c_zoom="q_authorised_ld" chk_ref="v_glaald" widget_width="5" format="" prog_rel="" case="upper"/>
+    <field name="xcbl001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="xcbl003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="xcbl004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_4" c_zoom="q_ooeg001_4" chk_ref="v_ooeg001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblseq" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="xcbl010" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="aglt310_04" c_zoom="aglt310_04" chk_ref="v_glac002_3" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcbl011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooef001" c_zoom="q_ooef001" chk_ref="v_ooef001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_4" c_zoom="q_ooeg001_4" chk_ref="v_ooeg001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl013" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmaa001_4" c_zoom="q_pmaa001_4" chk_ref="v_pmaa001_6" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl014" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_281" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_287" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl016" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooeg001_4" c_zoom="q_ooeg001_4" chk_ref="v_ooeg001_3" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl017" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzcb001" c_zoom="q_gzcb001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_2035" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_rtax001_1" c_zoom="q_rtax001_1" chk_ref="v_rtax001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl020" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_2002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl021" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjba001" c_zoom="q_pjba001" chk_ref="v_pjba001" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xcbl022" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pjbb002_1" c_zoom="q_pjbb002_1" chk_ref="v_pjbb002" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="xcbl023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbl110" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcbl120" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="22" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xcblownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcblmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcblmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xcblstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xcbl024" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xcbl025" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xcbl_t" depend_field="xcbl004" correspon_key="xcblent,xcbl004" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbl_t" depend_field="xcbl010" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbl_t" depend_field="xcblcomp" correspon_key="xcblent,xcblcomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbl_t" depend_field="xcblcrtdp" correspon_key="xcblcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbl_t" depend_field="xcblcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbl_t" depend_field="xcblcrtid" correspon_key="xcblcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbl_t" depend_field="xcblld" correspon_key="xcblent,xcblld" ref_table="glaal_t" ref_fk="glaalent,glaalld" ref_dlang="glaal001" ref_rtn="glaal002"/>
+    <field depend_table="xcbl_t" depend_field="xcblmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xcbl_t" depend_field="xcblmodid" correspon_key="xcblmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xcbl_t" depend_field="xcblowndp" correspon_key="xcblowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xcbl_t" depend_field="xcblownid" correspon_key="xcblownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="xcblstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="oocm_t" module="AOO" text="行政地区档" type="B" version="1">
+  <column name="oocmstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oocment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="oocm001" text="国家地区编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oocm002" text="州省编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oocm003" text="县市编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oocm004" text="行政地区编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="oocmownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oocmowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oocmcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oocmcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="oocmcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="oocmmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="oocmmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="oocmstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oocment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="oocm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocg001" c_zoom="q_oocm001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocm002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooci002" c_zoom="q_oocm002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oock003" c_zoom="q_oocm003" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocm004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_oocm004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="oocmmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="oocmmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="oocm_t" depend_field="oocm001" correspon_key="oocment,oocm001" ref_table="oocgl_t" ref_fk="oocglent,oocgl001" ref_dlang="oocgl002" ref_rtn="oocgl003"/>
+    <field depend_table="oocm_t" depend_field="oocm002" correspon_key="oocment,oocm001,oocm002" ref_table="oocil_t" ref_fk="oocilent,oocil001,oocil002" ref_dlang="oocil003" ref_rtn="oocil004"/>
+    <field depend_table="oocm_t" depend_field="oocm003" correspon_key="oocment,oocm001,oocm002,oocm003" ref_table="oockl_t" ref_fk="oocklent,oockl001,oockl002,oockl003" ref_dlang="oockl004" ref_rtn="oockl005"/>
+    <field depend_table="oocm_t" depend_field="oocmcrtdp" correspon_key="oocmcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oocm_t" depend_field="oocmcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oocm_t" depend_field="oocmcrtid" correspon_key="oocmcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oocm_t" depend_field="oocmmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="oocm_t" depend_field="oocmmodid" correspon_key="oocmmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="oocm_t" depend_field="oocmowndp" correspon_key="oocmowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="oocm_t" depend_field="oocmownid" correspon_key="oocmownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="oocm_t" depend_field="oocm004" correspon_key="oocment,oocm001,oocm002,oocm003,oocm004" lang_table="oocml_t" lang_fk="oocmlent,oocml001,oocml002,oocml003,oocml004" lang_dlang="oocml005" lang_rtn="oocml006"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="oocmstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

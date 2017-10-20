@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="sfcd_t" module="ASF" text="工单制程check in/out项目数据" type="D" version="1">
+  <column name="sfcdent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="sfcdsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="sfcddocno" text="单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="sfcd001" text="RUN CARD" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfcd002" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="sfcd003" text="项目" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="sfcd004" text="型态" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <column name="sfcd005" text="下限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="sfcd006" text="上限" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="sfcd007" text="预设值" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="sfcd008" text="必要" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="sfcd009" text="check in/check out" attribute="C001" type="varchar2(1)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="sfcdent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="sfcdsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfcddocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="sfcd001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfcd002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="sfcd003" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfcd004" widget="ComboBox" items="1201" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfcd005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfcd006" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="sfcd007" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="sfcd008" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="sfcd009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="sfcd_t" depend_field="sfcd003" correspon_key="&apos;223&apos;,sfcd003" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pmbw_t" module="APM" text="采购价格表申请单身档" type="D" version="1">
+  <column name="pmbwent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pmbwdocno" text="申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="pmbw010" text="变更方式" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbw011" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="pmbw012" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="pmbw013" text="计价单位" attribute="C009" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbw014" text="参考数据否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="pmbw015" text="参考料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="pmbw016" text="参考料号产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="pmbw017" text="加金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw018" text="加百分比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw019" text="标准定价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw020" text="一般采购价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw021" text="警告容差率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw022" text="拒绝容差率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="pmbw031" text="系列" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbw032" text="产品分类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pmbw033" text="参考系列" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pmbw034" text="参考产品分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pmbwent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbwdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmbw010" widget="ComboBox" items="32" default="&apos;I&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001_8" c_zoom="q_imaf001_8" chk_ref="v_imaa001_4" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmbw012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="pmbw013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001_1" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw014" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmbw015_1" c_zoom="q_pmbw015" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="pmbw016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_pmbw016_1" c_zoom="q_pmbw016" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pmbw017" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbw018" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmbw019" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbw020" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="pmbw021" widget="Edit" items="" default="10" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmbw022" widget="Edit" items="" default="10" max_compare="&lt;=" max="100.000" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="pmbw031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pmbw034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pmbw_t" depend_field="pmbw011" correspon_key="pmbwent,pmbw011" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="pmbw_t" depend_field="pmbw013" correspon_key="pmbwent,pmbw013" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="pmbw_t" depend_field="pmbw015" correspon_key="pmbwent,pmbw015" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="xmaw_t" module="AXM" text="销售价格表档" type="B" version="1">
+  <column name="xmawent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="xmaw001" text="销售价格参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="xmaw002" text="基础币别" attribute="C008" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmaw011" text="料件编号" attribute="C301" type="varchar2(40)" pk="Y" req="Y"/>
+  <column name="xmaw012" text="产品特征" attribute="C508" type="varchar2(256)" pk="Y" req="Y"/>
+  <column name="xmaw013" text="计价单位" attribute="C009" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmaw014" text="参考数据否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="xmaw015" text="参考料号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="xmaw016" text="参考料号产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="xmaw017" text="加金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw018" text="加百分比" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw019" text="标准成本" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw020" text="销售底价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw021" text="业务底价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw022" text="一般售价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw023" text="标准定价" attribute="N201" type="number(20,6)" pk="N" req="N"/>
+  <column name="xmaw100" text="申请单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmawstus" text="数据状态码" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmawownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmawowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmawcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmawcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmawcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmawmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="xmawmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="xmaw031" text="系列" attribute="C816" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmaw032" text="产品分类" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="xmaw033" text="参考系列" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="xmaw034" text="参考产品分类" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="xmawent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="xmaw001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_0" c_zoom="q_ooal002_0" chk_ref="v_ooal002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_ooaj002_1" chk_ref="v_ooaj002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw011" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_imaf001" c_zoom="q_imaf001" chk_ref="v_imaf001_1" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmaw012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmaw013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooca001_1" c_zoom="q_ooca001" chk_ref="v_ooca001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw014" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmaw015" c_zoom="q_xmaw015" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmaw016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_xmaw016" c_zoom="q_xmaw016" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="xmaw017" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw018" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="xmaw019" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw020" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw021" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw022" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw023" widget="Edit" items="" default="" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="---,---,---,--&amp;.&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="xmaw100" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_xmbvdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="xmawstus" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmawmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmawmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="xmaw031" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="xmaw034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="xmaw_t" depend_field="xmaw001" correspon_key="xmawent,15,xmaw001" ref_table="ooall_t" ref_fk="ooallent,ooall001,ooall002" ref_dlang="ooall003" ref_rtn="ooall004"/>
+    <field depend_table="xmaw_t" depend_field="xmaw002" correspon_key="xmawent,xmaw002" ref_table="ooail_t" ref_fk="ooailent,ooail001" ref_dlang="ooail002" ref_rtn="ooail003"/>
+    <field depend_table="xmaw_t" depend_field="xmaw011" correspon_key="xmawent,xmaw011" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmaw_t" depend_field="xmaw013" correspon_key="xmawent,xmaw013" ref_table="oocal_t" ref_fk="oocalent,oocal001" ref_dlang="oocal002" ref_rtn="oocal003"/>
+    <field depend_table="xmaw_t" depend_field="xmaw015" correspon_key="xmawent,xmaw015" ref_table="imaal_t" ref_fk="imaalent,imaal001" ref_dlang="imaal002" ref_rtn="imaal003"/>
+    <field depend_table="xmaw_t" depend_field="xmawcrtdp" correspon_key="xmawcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmaw_t" depend_field="xmawcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmaw_t" depend_field="xmawcrtid" correspon_key="xmawcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmaw_t" depend_field="xmawmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="xmaw_t" depend_field="xmawmodid" correspon_key="xmawmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="xmaw_t" depend_field="xmawowndp" correspon_key="xmawowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="xmaw_t" depend_field="xmawownid" correspon_key="xmawownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="xmaw_t" depend_field="xmaw001" correspon_key="xmawent,xmaw001" lang_table="ooall_t" lang_fk="ooallent,15,ooall002" lang_dlang="ooall003" lang_rtn="ooall004"/>
+    <field depend_table="xmaw_t" depend_field="xmaw011" correspon_key="xmawent,xmaw011" lang_table="imaal_t" lang_fk="imaalent,imaal001" lang_dlang="imaal002" lang_rtn="imaal003"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="xmawstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

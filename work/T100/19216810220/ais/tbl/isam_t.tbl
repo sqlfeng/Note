@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isam_t" module="AIS" text="进项发票主档" type="M" version="1">
+  <column name="isament" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="isamownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isamowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isamcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isamcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isamcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isammodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isammoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isamcnfid" text="资料审核者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isamcnfdt" text="数据审核日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="isamstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isamcomp" text="法人" attribute="C813" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isamdocno" text="收票单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="isamseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="isam001" text="发票来源" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam002" text="开发票人" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam004" text="账务中心(业务组织)" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam006" text="业务部门(登录部门)" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam008" text="发票类型" attribute="C550" type="varchar2(2)" pk="N" req="N"/>
+  <column name="isam009" text="銷方發票代碼" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam010" text="发票号码" attribute="C552" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam011" text="发票日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="isam012" text="税种" attribute="C010" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam0121" text="含税否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isam013" text="税率" attribute="N302" type="number(5,2)" pk="N" req="N"/>
+  <column name="isam014" text="币种" attribute="C008" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam015" text="汇率" attribute="N203" type="number(20,10)" pk="N" req="N"/>
+  <column name="isam016" text="购货方名称" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isam017" text="购货方税务编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam018" text="购货方地址" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <column name="isam019" text="购货方电话" attribute="C150" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam020" text="购货方开户银行" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isam021" text="购货方账户编码" attribute="C504" type="varchar2(30)" pk="N" req="N"/>
+  <column name="isam022" text="销方银行账户编码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam023" text="发票原币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam024" text="发票原币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam025" text="发票原币含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam026" text="发票本币税前金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam027" text="发票本币税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam028" text="发票本币含税金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam029" text="销货方名称" attribute="C102" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isam030" text="税务编号" attribute="C011" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam031" text="销货方地址" attribute="C152" type="varchar2(4000)" pk="N" req="N"/>
+  <column name="isam032" text="销货方电话" attribute="C150" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam033" text="销货方开户银行" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isam034" text="销货方帐号" attribute="C504" type="varchar2(30)" pk="N" req="N"/>
+  <column name="isam035" text="申报数量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam036" text="异动状态" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam037" text="可扣抵编号" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isam038" text="作废(注销)理由码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam039" text="作废日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="isam040" text="作废时间" attribute="C109" type="varchar2(8)" pk="N" req="N"/>
+  <column name="isam041" text="作废人员" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam042" text="项目作废核准文号" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isam043" text="通关方式注记" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isam044" text="打印次数" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="isam045" text="支付工具卡号1" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam046" text="支付工具卡号2" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam047" text="支付工具卡号3" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam048" text="通关注记" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam049" text="备注说明" attribute="C105" type="varchar2(255)" pk="N" req="N"/>
+  <column name="isam050" text="立账单号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam107" text="发票原币已折金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam108" text="发票原币已折税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam117" text="发票本币已折金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam118" text="发票本币已折税额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="isam200" text="电子发票否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isam201" text="爱心码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam202" text="载具类别号码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam203" text="载具显码 ID" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isam204" text="载具隐码 ID" attribute="C103" type="varchar2(80)" pk="N" req="N"/>
+  <column name="isam205" text="电子发票导出状态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isam206" text="电子发票导出序号" attribute="C204" type="varchar2(20)" pk="N" req="N"/>
+  <column name="isam207" text="电子发票领取方式" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam208" text="申报年度" attribute="N401" type="number(5,0)" pk="N" req="N"/>
+  <column name="isam209" text="申报月份" attribute="N402" type="number(5,0)" pk="N" req="N"/>
+  <column name="isam210" text="申报据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isam051" text="认证否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="isament" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isamownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isammodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isammoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isamcnfid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamcnfdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isamstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isamcomp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isamdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_isamdocno" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isamseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="isam001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam002" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam008" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002" c_zoom="q_isac002" chk_ref="v_isac002_2" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="isam009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isam010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isam010" c_zoom="q_isam010" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isam011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isam012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oodb002_5" c_zoom="q_oodb002_5" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam0121" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam013" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="8" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="isam014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooaj002_1" c_zoom="q_ooaj002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam015" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="14" format="######&amp;.&amp;&amp;&amp;&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam016" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam017" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isam018" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam019" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam020" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="isam021" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam022" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam023" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam024" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam025" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam026" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam027" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam028" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam029" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam030" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isam031" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam032" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam033" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam034" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam035" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam036" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam037" widget="CheckBox" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam038" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_3804" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam039" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isam040" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isam041" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam042" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam043" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam044" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="isam045" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam046" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam047" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam048" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam049" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="isam107" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam108" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam117" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam118" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="isam200" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam201" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam202" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_3802" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam203" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam204" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="isam205" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam206" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="isam207" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="v_oocq002_3803" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam208" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="4" format="####" prog_rel="" case=""/>
+    <field name="isam209" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="2" format="##" prog_rel="" case=""/>
+    <field name="isam210" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isam051" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isam_t" depend_field="isam002" correspon_key="isament,isam002" ref_table="pmaal_t" ref_fk="pmaalent,pmaal001" ref_dlang="pmaal002" ref_rtn="pmaal004"/>
+    <field depend_table="isam_t" depend_field="isam004" correspon_key="isament,isam004" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isam_t" depend_field="isam008" correspon_key="isament,isamcomp,isam008" ref_table="isacl_t" ref_fk="isaclent,isacl001,isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+    <field depend_table="isam_t" depend_field="isam012" correspon_key="&apos;&apos;,isam012" ref_table="oodbl_t" ref_fk="oodbl001,oodbl002" ref_dlang="oodbl003" ref_rtn="oodbl004"/>
+    <field depend_table="isam_t" depend_field="isam038" correspon_key="&apos;3804&apos;,isam038" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="isam_t" depend_field="isam041" correspon_key="isam041" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isam_t" depend_field="isam202" correspon_key="&apos;3802&apos;,isam202" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="isam_t" depend_field="isam207" correspon_key="&apos;3803&apos;,isam207" ref_table="oocql_t" ref_fk="oocql001,oocql002" ref_dlang="oocql003" ref_rtn="oocql004"/>
+    <field depend_table="isam_t" depend_field="isam210" correspon_key="isament,isam210" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isam_t" depend_field="isamcnfdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isam_t" depend_field="isamcnfid" correspon_key="isamcnfid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isam_t" depend_field="isamcomp" correspon_key="isament,isamcomp" ref_table="ooefl_t" ref_fk="ooeflent,ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="isam_t" depend_field="isamcrtdp" correspon_key="isamcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang=" " ref_rtn="ooefl002"/>
+    <field depend_table="isam_t" depend_field="isamcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isam_t" depend_field="isamcrtid" correspon_key="isamcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isam_t" depend_field="isammoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="isam_t" depend_field="isammodid" correspon_key="isammodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="isam_t" depend_field="isamowndp" correspon_key="isamowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang=" " ref_rtn="ooefl002"/>
+    <field depend_table="isam_t" depend_field="isamownid" correspon_key="isamownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc>
+    <field name="isamstus" category="50" desc="主档状态码">
+      <code value="N" desc="未审核"/>
+      <code value="Y" desc="已审核"/>
+      <code value="X" desc="无效"/>
+    </field>
+  </scc>
+</table>
+

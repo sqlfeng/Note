@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="prdf_t" module="APR" text="促销规则申请款别限定数据档" type="D" version="1">
+  <column name="prdfent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="prdfunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdfsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdfdocno" text="促销申请单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="prdf001" text="规则编号" attribute="C203" type="varchar2(20)" pk="N" req="N"/>
+  <column name="prdf002" text="组别" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="prdf003" text="款别编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdf004" text="款别子类型" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="prdfacti" text="有效否" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="prdfent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="prdfunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdfsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdfdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="prdf001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case="upper"/>
+    <field name="prdf002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="prdf003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooia001" c_zoom="q_ooia001" chk_ref="v_ooia001_2" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdf004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_prdf004" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="prdfacti" widget="Edit" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="prdf_t" depend_field="prdf003" correspon_key="prdf003" ref_table="ooial_t" ref_fk="ooial001" ref_dlang="ooial002" ref_rtn="ooial003"/>
+    <field depend_table="prdf_t" depend_field="prdf004" correspon_key="prdf004" ref_table="mmanl_t" ref_fk="mmanl001" ref_dlang="mmanl002" ref_rtn="mmanl003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>

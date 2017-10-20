@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzad_t" version="1">
+  <column name="gzad001" text="应用分类" attribute="N805" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzad002" text="参考栏位编号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="gzad003" text="显示否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzad004" text="可空白否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzad005" text="建档开窗" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzad006" text="校验带值" attribute="N805" type="number(5)" pk="N" req="N"/>
+  <column name="gzad007" text="型态" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzad008" text="最小值" attribute="C809" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzad009" text="最大值" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzad010" text="" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzad011" text="" attribute="N003" type="number(15,3)" pk="N" req="N"/>
+  <column name="gzad012" text="" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzad013" text="" attribute="N003" type="" pk="N" req="N"/>
+  <column name="gzad014" text="" attribute="C003" type="varchar2(40)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzad001" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5"/>
+    <field name="gzad002" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5"/>
+    <field name="gzad003" widget="CheckBox" items="" default="N" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad004" widget="CheckBox" items="" default="Y" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad005" widget="ComboBox" items="source_data" default="2" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad006" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="q_gzca001" c_zoom="q_gzca001" chk_ref="v_gzca001" widget_width="5"/>
+    <field name="gzad007" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="q_dzca001" c_zoom="q_dzca001" chk_ref="v_dzca001" widget_width="20"/>
+    <field name="gzad008" widget="ButtonEdit" items="" default="" max="" min="" i_zoom="q_dzcd001" c_zoom="q_dzcd001" chk_ref="v_dzcd001" widget_width="20"/>
+    <field name="gzad009" widget="ComboBox" items="form_type" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad010" widget="ComboBox" items="comparison_symb_min" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad011" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20"/>
+    <field name="gzad012" widget="ComboBox" items="comparison_symb_max" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10"/>
+    <field name="gzad013" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20"/>
+    <field name="gzad014" widget="Edit" items="" default="" max="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30"/>
+  </col_attr>
+  <tree id="gzad_t" type="" lid="" pid="" desc="" speed="" stype="" slid="" spid=""/>
+  <ref_field>
+    <field depend_table="gzad_t" depend_filed="gzad006" correspon_key="gzad006" ref_table="gzca_t" ref_fk="gzcal001" ref_dlang="gzcal002" ref_rtn="gzcal003"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code/>
+</table>

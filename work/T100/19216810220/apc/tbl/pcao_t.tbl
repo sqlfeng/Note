@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="pcao_t" module="APC" text="收银机可使用库位档" type="D" version="1">
+  <column name="pcaoent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="pcaosite" text="营运据点" attribute="C007" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcaounit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcao001" text="收银机编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="pcao002" text="库位编号" attribute="C101" type="varchar2(80)" pk="Y" req="Y"/>
+  <column name="pcaostus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="pcaostamp" text="时间戳记" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <col_attr>
+    <field name="pcaoent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcaosite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcaounit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcao001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="pcao002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_inaa001_7" c_zoom="q_inaa001_7" chk_ref="v_inaa001" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="pcaostus" widget="ComboBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="pcaostamp" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="pcao_t" depend_field="pcao001" correspon_key="pcaoent,pcaosite,pcao001" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang="inaa002" ref_rtn=" "/>
+    <field depend_table="pcao_t" depend_field="pcao002" correspon_key="pcaoent,pcaosite,pcao002" ref_table="inaa_t" ref_fk="inaaent,inaasite,inaa001" ref_dlang="inaa002" ref_rtn=" "/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="pcao_t" depend_field="pcao001" correspon_key="pcaoent,pcaosite,pcao001" lang_table="inaa_t" lang_fk="inaaent,inaasite,inaa001" lang_dlang="inaa002" lang_rtn="inaa002"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="pcaostus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

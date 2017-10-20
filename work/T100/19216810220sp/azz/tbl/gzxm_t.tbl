@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="gzxm_t" module="AZZ" text="查询方案单头档" type="B" version="1">
+  <column name="gzxmstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="gzxm001" text="QBE编号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="gzxm002" text="作业编号" attribute="C809" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzxm003" text="员工编号" attribute="C006" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="gzxm004" text="是否为默认" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxm005" text="首页使用" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="gzxm006" text="查询方案来源序号" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="gzxm007" text="额外条件" attribute="C107" type="varchar2(500)" pk="N" req="N"/>
+  <column name="gzxm008" text="分群编号" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="gzxmownid" text="数据所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzxmowndp" text="数据所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmcrtid" text="数据建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzxmcrtdp" text="数据建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="gzxmcrtdt" text="数据创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzxmmodid" text="数据修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="gzxmmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="gzxm009" text="顺序" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="gzxm010" text="分享" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="gzxmstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="gzxm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzxm001" c_zoom="q_gzxm001" chk_ref="" widget_width="5" format="####&amp;" prog_rel="azzi915" case=""/>
+    <field name="gzxm002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzzz001_1" c_zoom="q_gzzz001_1" chk_ref="" widget_width="20" format="" prog_rel="azzi900" case=""/>
+    <field name="gzxm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzxa003" c_zoom="q_gzxa003" chk_ref="" widget_width="10" format="" prog_rel="azzi800" case="upper"/>
+    <field name="gzxm004" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxm005" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxm006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzxm001" c_zoom="q_gzxm001" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="gzxm007" widget="TextEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="40" format="" prog_rel="" case=""/>
+    <field name="gzxm008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_gzxo001" c_zoom="q_gzxo001_1" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="gzxmownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxmowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxmcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxmcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxmcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzxmmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="gzxmmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="gzxm009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="gzxm010" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="gzxm_t" depend_field="gzxm002" correspon_key="gzxm002" ref_table="gzzal_t" ref_fk="gzzal001" ref_dlang="gzzal002" ref_rtn="gzzal003"/>
+    <field depend_table="gzxm_t" depend_field="gzxm003" correspon_key="gzxm003" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzxm_t" depend_field="gzxmcrtdp" correspon_key="gzxmcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzxm_t" depend_field="gzxmcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzxm_t" depend_field="gzxmcrtid" correspon_key="gzxmcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzxm_t" depend_field="gzxmmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="gzxm_t" depend_field="gzxmmodid" correspon_key="gzxmmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="gzxm_t" depend_field="gzxmowndp" correspon_key="gzxmowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="gzxm_t" depend_field="gzxmownid" correspon_key="gzxmownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="gzxm_t" depend_field="gzxm001" correspon_key="gzxment,gzxm001,gzxm002,gzxm003" lang_table="gzxml_t" lang_fk="gzxmlent,gzxml001,gzxml002,gzxml003" lang_dlang="gzxml004" lang_rtn="gzxml005"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="gzxmstus" category="17" desc="基本数据状态码">
+      <code value="Y" desc="有效"/>
+      <code value="N" desc="无效"/>
+    </field>
+  </scc>
+</table>

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="glac_t" module="AGL" text="会计科目数据档" type="B" version="1">
+  <column name="glacent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="glacownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glacowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glaccrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glaccrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glaccrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glacmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="glacmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="glacstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac001" text="会计科目参照表号" attribute="C812" type="varchar2(5)" pk="Y" req="Y"/>
+  <column name="glac002" text="会计科目编号" attribute="C502" type="varchar2(24)" pk="Y" req="Y"/>
+  <column name="glac003" text="统制/明细别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac004" text="所属统制科目" attribute="C502" type="varchar2(24)" pk="N" req="N"/>
+  <column name="glac005" text="科目层级" attribute="N001" type="number(5,0)" pk="N" req="N"/>
+  <column name="glac006" text="科目性质" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac007" text="科目类别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac008" text="正常余额形态" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac009" text="是否为内部管理科目" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac010" text="费用固定变动别" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac011" text="财务比率分析类别" attribute="C510" type="varchar2(2)" pk="N" req="N"/>
+  <column name="glac012" text="科目分类码一" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac013" text="科目分类码二" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac014" text="科目分类码三" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac015" text="科目分类码四" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac016" text="现金科目否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac017" text="启用部门管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac018" text="启用利润成本管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac019" text="启用区域管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac020" text="启用收付款客商管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac021" text="启用客群管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac022" text="启用产品类别管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac023" text="启用人员管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac024" text="no use" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac025" text="启用项目管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac026" text="启用WBS管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac027" text="启用账款客商管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac028" text="启用经营方式管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac029" text="启用通路管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac030" text="启用品牌管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac031" text="科目做多币种管理" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac035" text="是否是子系统科目" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac032" text="借方现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac036" text="贷方现金变动码" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac041" text="启用自由核算项一" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0411" text="自由核算项一类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0412" text="自由核算项一控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac042" text="启用自由核算项二" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0421" text="自由核算项二类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0422" text="自由核算项二控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac043" text="启用自由核算项三" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0431" text="自由核算项三类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0432" text="自由核算项三控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac044" text="启用自由核算项四" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0441" text="自由核算项四类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0442" text="自由核算项四控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac045" text="启用自由核算项五" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0451" text="自由核算项五类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0452" text="自由核算项五控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac046" text="启用自由核算项六" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0461" text="自由核算项六类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0462" text="自由核算项六控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac047" text="启用自由核算项七" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0471" text="自由核算项七类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0472" text="自由核算项七控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac048" text="启用自由核算项八" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0481" text="自由核算项八类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0482" text="自由核算项八控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac049" text="启用自由核算项九" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0491" text="自由核算项九类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0492" text="自由核算项九控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac050" text="启用自由核算项十" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="glac0501" text="自由核算项十类型编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="glac0502" text="自由核算项十控制方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="glacent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glacownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glacowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glaccrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glaccrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glaccrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glacmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glacmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="glacstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glac001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooal002_1" c_zoom="q_ooal002_1" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac002" c_zoom="q_glac" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glac003" widget="RadioGroup" items="8011" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glac" c_zoom="q_glac" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="glac005" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="----&amp;" prog_rel="" case=""/>
+    <field name="glac006" widget="RadioGroup" items="8012" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac007" widget="ComboBox" items="8002" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac008" widget="RadioGroup" items="8013" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac009" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac010" widget="RadioGroup" items="8014" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac011" widget="ComboBox" items="8015" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="" prog_rel="" case=""/>
+    <field name="glac012" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac013" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac014" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac015" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_oocq002" c_zoom="q_oocq002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac016" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac017" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac018" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac019" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac020" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac021" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac022" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac023" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac024" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac025" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac026" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac027" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac028" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac029" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac030" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac031" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac035" widget="CheckBox" items="" default="&apos;N&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac032" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmai002" c_zoom="q_nmai002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac036" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_nmai002" c_zoom="q_nmai002" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac041" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0411" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0412" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac042" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0421" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0422" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac043" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0431" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0432" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac044" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0441" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0442" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac045" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0451" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0452" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac046" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0461" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0462" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac047" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0471" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0472" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac048" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0481" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0482" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac049" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0491" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0492" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac050" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0501" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_glae001" c_zoom="q_glae001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="glac0502" widget="ComboBox" items="8019" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree>
+    <type no="1" table="glac_t" col="glac001"/>
+    <id no="2" table="glac_t" col="glac002"/>
+    <pid no="3" table="glac_t" col="glac004"/>
+    <desc no="4" table="" col=""/>
+    <speed no="5" table="glacs_t" col=""/>
+  </tree>
+  <ref_field>
+    <field depend_table="glac_t" depend_field="glac001" correspon_key="glacent,glac001" ref_table="glacl_t" ref_fk="glaclent,glacl001" ref_dlang="glacl002" ref_rtn="glacl003"/>
+    <field depend_table="glac_t" depend_field="glac002" correspon_key="glacent,glac001,glac002" ref_table="glacl_t" ref_fk="glaclent,glacl001,glacl002" ref_dlang="glacl003" ref_rtn="glacl004"/>
+    <field depend_table="glac_t" depend_field="glac0411" correspon_key="glacent,glac0411" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0421" correspon_key="glacent,glac0421" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0431" correspon_key="glacent,glac0431" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0441" correspon_key="glacent,glac0441" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0451" correspon_key="glacent,glac0451" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0461" correspon_key="glacent,glac0461" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0471" correspon_key="glacent,glac0471" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0481" correspon_key="glacent,glac0481" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0491" correspon_key="glacent,glac0491" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glac0501" correspon_key="glacent,glac0501" ref_table="glael_t" ref_fk="glaelent,glael001" ref_dlang="glael002" ref_rtn="glael003"/>
+    <field depend_table="glac_t" depend_field="glaccrtdp" correspon_key="glaccrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glac_t" depend_field="glaccrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glac_t" depend_field="glaccrtid" correspon_key="glaccrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glac_t" depend_field="glacmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="glac_t" depend_field="glacmodid" correspon_key="glacmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="glac_t" depend_field="glacowndp" correspon_key="glacowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="glac_t" depend_field="glacownid" correspon_key="glacownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="glac_t" depend_field="glac002" correspon_key="glacent,glac001,glac002" lang_table="glacl_t" lang_fk="glaclent,glacl001,glacl002" lang_dlang="glacl003" lang_rtn="glacl004"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="glacstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

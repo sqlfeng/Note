@@ -1,0 +1,33 @@
+#報表 d02 樣板自動產生(Version:3)
+PRIVATE REPORT ${component_name}_subrep${subseq}(sr${sub_recordname})
+DEFINE  sr${sub_recordname}  sr${sub_recordname}_r
+#add-point:query段define(客製用) name="sub${subseq}.define_customerization" 
+{<point name="sub${subseq}.define_customerization" edit="c" mark="Y"/>}
+#end add-point
+#add-point:sub${subseq}.define(請盡量不要在客製環境修改此段落內容, 否則將後續patch的調整需人工處理) name="sub${subseq}.define" 
+{<point name="sub${subseq}.define"/>}
+#end add-point:sub${subseq}.define
+
+    #add-point:sub${subseq}.order.before name="sub${subseq}.order.before" 
+    {<point name="sub${subseq}.order.before"/>}
+    #end add-point:sub${subseq}.order.before
+
+${subrep_b_group_str}
+
+    FORMAT
+
+${subrep_before_grup}
+
+       ON EVERY ROW
+            #add-point:sub${subseq}.everyrow.before name="sub${subseq}.everyrow.before" 
+            {<point name="sub${subseq}.everyrow.before"/>}              
+            #end add-point:sub${subseq}.everyrow.before
+
+            PRINTX sr${sub_recordname}.*
+
+            #add-point:sub${subseq}.everyrow.after name="sub${subseq}.everyrow.after" 
+            {<point name="sub${subseq}.everyrow.after"/>}
+            #end add-point:sub${subseq}.everyrow.after
+
+${subrep_a_group_str}
+END REPORT

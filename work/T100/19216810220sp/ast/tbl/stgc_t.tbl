@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="stgc_t" module="AST" text="专柜每日退货统计档" type="S" version="1">
+  <column name="stgcent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="stgcsite" text="营运组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgcunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgc001" text="销退日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stgc002" text="商品编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="stgc003" text="库区编号" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgc004" text="专柜编号" attribute="C601" type="varchar2(20)" pk="N" req="N"/>
+  <column name="stgc005" text="供应商编号" attribute="C004" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgc006" text="费用编号" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgc007" text="销退金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgc008" text="原扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgc009" text="新扣率" attribute="N301" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgc010" text="销退费用金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgc011" text="销退成本金额" attribute="N202" type="number(20,6)" pk="N" req="N"/>
+  <column name="stgc012" text="原销售日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="stgc013" text="价款类型" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="stgc014" text="已结转否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="stgcdocno" text="销退单号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="stgcseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <col_attr>
+    <field name="stgcent" widget="ButtonEdit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgcsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooef001_24" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgcunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgc001" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgc002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_imaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgc003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_inaa001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgc004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhae001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgc005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_pmaa001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgc006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_stae001" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgc007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgc008" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stgc009" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="---&amp;.&amp;&amp;%" prog_rel="" case=""/>
+    <field name="stgc010" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgc011" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="-,---,---,---,--&amp;.&amp;&amp;" prog_rel="" case=""/>
+    <field name="stgc012" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="stgc013" widget="ComboBox" items="6006" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgc014" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="stgcdocno" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="stgcseq" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
+

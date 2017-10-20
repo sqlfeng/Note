@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="mhad_t" module="AMH" text="场地基本资料档" type="B" version="1">
+  <column name="mhadent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="mhadsite" text="营运据点" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhadunit" text="应用组织" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhad001" text="楼栋编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mhad002" text="楼层编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mhad003" text="区域编号" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="mhad004" text="场地编号" attribute="C601" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="mhad005" text="建筑面积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mhad006" text="测量面积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mhad007" text="经营面积" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="mhad008" text="场地使用状态" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhadstus" text="状态码" attribute="C822" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhadownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhadowndp" text="资料所有部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhadcrtid" text="资料录入者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhadcrtdp" text="资料录入部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="mhadcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mhadmodid" text="资料更改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="mhadmoddt" text="最近更改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="mhad009" text="版本" attribute="N004" type="number(10,0)" pk="N" req="N"/>
+  <column name="mhad010" text="场地等级" attribute="C816" type="varchar2(10)" pk="N" req="N"/>
+  <col_attr>
+    <field name="mhadent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mhadsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadunit" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_ooed004" c_zoom="q_ooed004" chk_ref="v_ooed004" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhad001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mhaa001" c_zoom="q_mhaa001" chk_ref="v_mhaa001" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhad002" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mhab002" c_zoom="q_mhab002" chk_ref="v_mhab002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhad003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_mhac003" c_zoom="q_mhac003" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhad004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_mhad001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhad005" widget="Edit" items="" default="0" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mhad006" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mhad007" widget="Edit" items="" default="0" max_compare="" max="" min_compare="&gt;=" min="0.000" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="mhad008" widget="ComboBox" items="6020" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadstus" widget="ComboBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="mhadownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="mhadmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="mhadmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="mhad009" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="mhad010" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="mhad_t" depend_field="mhad001" correspon_key="mhad001" ref_table="mhaal_t" ref_fk="mhaal001" ref_dlang="mhaal002" ref_rtn="mhaal003"/>
+    <field depend_table="mhad_t" depend_field="mhad002" correspon_key="mhad001,mhad002" ref_table="mhabl_t" ref_fk="mhabl001,mhabl002" ref_dlang="mhabl003" ref_rtn="mhabl004"/>
+    <field depend_table="mhad_t" depend_field="mhad003" correspon_key="mhad001,mhad002,mhad003" ref_table="mhacl_t" ref_fk="mhacl001,mhacl002,mhacl003" ref_dlang="mhacl004" ref_rtn="mhacl005"/>
+    <field depend_table="mhad_t" depend_field="mhadcrtdp" correspon_key="mhadcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhad_t" depend_field="mhadcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhad_t" depend_field="mhadcrtid" correspon_key="mhadcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhad_t" depend_field="mhadmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="mhad_t" depend_field="mhadmodid" correspon_key="mhadmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhad_t" depend_field="mhadowndp" correspon_key="mhadowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhad_t" depend_field="mhadownid" correspon_key="mhadownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="mhad_t" depend_field="mhadsite" correspon_key="mhadsite" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="mhad_t" depend_field="mhadunit" correspon_key="mhadunit" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="mhad_t" depend_field="mhad004" correspon_key="mhad001,mhad002,mhad003,mhad004" lang_table="mhadl_t" lang_fk="mhadl001,mhadl002,mhadl003,mhadl004" lang_dlang="mhadl005" lang_rtn="mhadl006"/>
+  </multi_lang>
+  <help_code/>
+  <scc>
+    <field name="mhadstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>
+

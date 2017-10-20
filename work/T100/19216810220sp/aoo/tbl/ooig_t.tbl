@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="ooig_t" module="AOO" text="单据款别范围设置作业" type="B" version="1">
+  <column name="ooigent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="N"/>
+  <column name="ooigstus" text="有效否" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooig001" text="作业编号" attribute="C809" type="varchar2(20)" pk="Y" req="N"/>
+  <column name="ooig002" text="款别性质" attribute="C002" type="varchar2(10)" pk="Y" req="N"/>
+  <column name="ooig003" text="对应POS作业" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooigpos" text="下传否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="ooigstamp" text="时间戳记" attribute="D003" type="timestamp(5)" pk="N" req="N"/>
+  <column name="ooigownid" text="资料所有者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooigowndp" text="资料所属部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooigcrtid" text="资料建立者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooigcrtdp" text="资料建立部门" attribute="C007" type="varchar2(10)" pk="N" req="N"/>
+  <column name="ooigcrtdt" text="资料创建日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <column name="ooigmodid" text="资料修改者" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="ooigmoddt" text="最近修改日" attribute="D002" type="timestamp(0)" pk="N" req="N"/>
+  <col_attr>
+    <field name="ooigent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="ooigstus" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooig001" widget="ButtonEdit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="q_gzzz001_1" c_zoom="q_gzzz001_1" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="ooig002" widget="ComboBox" items="8310" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooig003" widget="Edit" items="" default="&apos; &apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigpos" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigstamp" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case=""/>
+    <field name="ooigownid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigowndp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigcrtid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigcrtdp" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooeg001_9" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigcrtdt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+    <field name="ooigmodid" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="q_ooag001" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="ooigmoddt" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="15" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="ooig_t" depend_field="ooigcrtdp" correspon_key="ooigcrtdp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooig_t" depend_field="ooigcrtdt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigcrtid" correspon_key="ooigcrtid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="ooig_t" depend_field="ooigmoddt" correspon_key=" " ref_table=" " ref_fk=" " ref_dlang=" " ref_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigmodid" correspon_key="ooigmodid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+    <field depend_table="ooig_t" depend_field="ooigowndp" correspon_key="ooigowndp" ref_table="ooefl_t" ref_fk="ooefl001" ref_dlang="ooefl002" ref_rtn="ooefl003"/>
+    <field depend_table="ooig_t" depend_field="ooigownid" correspon_key="ooigownid" ref_table="ooag_t" ref_fk="ooag001" ref_dlang=" " ref_rtn="ooag011"/>
+  </ref_field>
+  <multi_lang/>
+  <help_code>
+    <field depend_table="ooig_t" depend_field="ooig001" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooig003" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigcrtdp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigcrtid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigmodid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigowndp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigownid" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+    <field depend_table="ooig_t" depend_field="ooigstamp" correspon_key=" " help_table=" " help_fk=" " help_dlang=" " help_rtn=" "/>
+  </help_code>
+  <scc>
+    <field name="ooigstus" category="17" desc="基本数据状态码">
+      <code value="N" desc="无效"/>
+      <code value="Y" desc="有效"/>
+    </field>
+  </scc>
+</table>

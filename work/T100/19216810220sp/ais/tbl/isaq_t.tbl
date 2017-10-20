@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="isaq_t" module="AIS" text="营运据点可用发票类型设置档" type="D" version="1">
+  <column name="isaqent" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="isaqsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isaq001" text="发票类型" attribute="C002" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="isaq002" text="发票购入方式" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isaq003" text="发票回收否" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isaq004" text="套表样版" attribute="C002" type="varchar2(10)" pk="N" req="N"/>
+  <column name="isaq005" text="发票取得时机点" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <column name="isaqstus" text="状态码" attribute="C001" type="varchar2(1)" pk="N" req="N"/>
+  <col_attr>
+    <field name="isaqent" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="isaqsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaq001" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="q_isac002" c_zoom="q_isac002" chk_ref="v_isac002" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaq002" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaq003" widget="CheckBox" items="" default="&apos;Y&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaq004" widget="Edit" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaq005" widget="CheckBox" items="" default="&apos;1&apos;" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="isaqstus" widget="CheckBox" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+  </col_attr>
+  <tree/>
+  <ref_field>
+    <field depend_table="isaq_t" depend_field="isaq001" correspon_key="isaq001" ref_table="isacl_t" ref_fk="isacl002" ref_dlang="isacl003" ref_rtn="isacl004"/>
+  </ref_field>
+  <multi_lang>
+    <field depend_table="isaq_t" depend_field="isaq001" correspon_key="isaqent,&apos;&apos;,isaq001" lang_table="isacl_t" lang_fk="isaclent,isacl001,isacl002" lang_dlang="isacl003" lang_rtn="isacl004"/>
+  </multi_lang>
+  <help_code/>
+  <scc/>
+</table>

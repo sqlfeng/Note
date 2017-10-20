@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<table name="inpm_t" module="AIN" text="周期盘点单制作批序号明细档" type="D" version="1">
+  <column name="inpment" text="企业编号" attribute="N802" type="number(5)" pk="Y" req="Y"/>
+  <column name="inpmsite" text="营运据点" attribute="C813" type="varchar2(10)" pk="Y" req="Y"/>
+  <column name="inpmdocno" text="盘点编号" attribute="C203" type="varchar2(20)" pk="Y" req="Y"/>
+  <column name="inpmseq" text="项次" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inpmseq1" text="序号" attribute="N004" type="number(10,0)" pk="Y" req="Y"/>
+  <column name="inpm001" text="料件编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inpm002" text="产品特征" attribute="C508" type="varchar2(256)" pk="N" req="N"/>
+  <column name="inpm003" text="库存管理特征" attribute="C305" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inpm004" text="包装容器编号" attribute="C301" type="varchar2(40)" pk="N" req="N"/>
+  <column name="inpm005" text="库位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpm006" text="储位" attribute="C303" type="varchar2(10)" pk="N" req="N"/>
+  <column name="inpm007" text="批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inpm008" text="制造批号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inpm009" text="制造序号" attribute="C304" type="varchar2(30)" pk="N" req="N"/>
+  <column name="inpm010" text="制造日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpm011" text="有效日期" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpm012" text="现有库存量" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpm030" text="盘点数量-初盘" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpm031" text="输入人员-初盘" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpm032" text="输入日期-初盘" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpm033" text="盘点人员-初盘" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpm034" text="盘点日期-初盘" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpm050" text="盘点数量-复盘" attribute="N101" type="number(20,6)" pk="N" req="N"/>
+  <column name="inpm051" text="输入人员-复盘" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpm052" text="输入日期-复盘" attribute="D001" type="date" pk="N" req="N"/>
+  <column name="inpm053" text="盘点人员-复盘" attribute="C006" type="varchar2(20)" pk="N" req="N"/>
+  <column name="inpm054" text="盘点日期-复盘" attribute="D001" type="date" pk="N" req="N"/>
+  <col_attr>
+    <field name="inpment" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpmsite" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpmdocno" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpmseq" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inpmseq1" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="5" format="####&amp;" prog_rel="" case=""/>
+    <field name="inpm001" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpm002" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpm003" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpm004" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="20" format="" prog_rel="" case="upper"/>
+    <field name="inpm005" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm006" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm007" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpm008" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpm009" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="30" format="" prog_rel="" case=""/>
+    <field name="inpm010" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpm011" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpm012" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpm030" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpm031" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm032" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpm033" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm034" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpm050" widget="Edit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="19" format="---,---,---,--&amp;.&amp;&amp;&amp;" prog_rel="" case=""/>
+    <field name="inpm051" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm052" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+    <field name="inpm053" widget="ButtonEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case="upper"/>
+    <field name="inpm054" widget="DateEdit" items="" default="" max_compare="" max="" min_compare="" min="" i_zoom="" c_zoom="" chk_ref="" widget_width="10" format="" prog_rel="" case=""/>
+  </col_attr>
+  <tree/>
+  <ref_field/>
+  <multi_lang/>
+  <help_code/>
+  <scc/>
+</table>
