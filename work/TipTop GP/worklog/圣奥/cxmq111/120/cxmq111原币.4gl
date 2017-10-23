@@ -1087,9 +1087,8 @@ REPORT cxmq111_rep(sr)
 DEFINE l_tc_khy05,l_tc_khy06,l_tc_khy07,l_tc_khy08,l_tc_khy09,l_tc_khy10,l_tc_khy11,l_tc_khy12 LIKE  npq_file.npq07
 DEFINE l_h,l_ii,l_j,l_k      LIKE type_file.num20_6   #用于本期累计
 DEFINE lf_h,lf_ii,lf_j,lf_k  LIKE type_file.num20_6   #用于本期累计
-DEFINE l_g,l_g2,lf_g,lf_g2                       LIKE type_file.num20_6  # add by lixwz 20170804
+DEFINE l_g,l_g2                      LIKE type_file.num20_6  # add by lixwz 20170804
 DEFINE l_l,l_m,l_l2,l_m2,l_l3,l_m3,l_l4,l_m4       LIKE type_file.num20_6 # add by lixwz 20170901
-DEFINE lf_l,lf_m,lf_l2,lf_m2,lf_l3,lf_m3,lf_l4,lf_m4       LIKE type_file.num20_6 # add by lixwz 20170901
 DEFINE l_h2,l_ii2,l_j2,l_k2  LIKE type_file.num20_6   #用于按月累计
 DEFINE lf_h2,lf_ii2,lf_j2,lf_k2 LIKE type_file.num20_6   #用于按月累计
 DEFINE l_a,l_b,l_c,l_d LIKE type_file.num20_6
@@ -1101,7 +1100,7 @@ DEFINE l_flag_chk  LIKE type_file.chr1
 # add by lixwz 20170808 e
 # add by lixwz 20170818 s
 # 用于按月累计
-DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
+DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4 ,
              l_h4,lf_h4,l_ii4,lf_ii4,l_j4,lf_j4,l_k4,lf_k4 LIKE type_file.num20_6
 # add by lixwz 20170818 e
 
@@ -1126,7 +1125,6 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
       # add by lixwz 20170818 s
       # 用来每月累计
       LET l_g4  = 0
-      LET lf_g4  = 0 # add by lixwz 20171023
       LET l_h4 = 0
       LET lf_h4 = 0
       LET l_ii4 = 0
@@ -1162,13 +1160,8 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
 
       #期初金额
          LET l_g2 = l_tc_khy08-l_tc_khy12   #     #出货应收余额 B-D
-         LET lf_g2 = l_tc_khy07-l_tc_khy11   #     #出货应收余额 B-D
-
          LET l_l2 = 0 # 销退折让金额 # add by lixwz 20170901
-         LET lf_l2 = 0 # 销退折让金额 # add by lixwz 20170901
-
          LET l_m2 = l_tc_khy08 - l_l2 # 实际出货金额 = 出货金额 - 销退折让金额
-         LET lf_m2 = l_tc_khy07 - lfl2 # 实际出货金额 = 出货金额 - 销退折让金额
 
          LET l_h2 = l_tc_khy06-l_tc_khy12  #订单-回款 #订单应收余额 A-D
          LET lf_h2 = l_tc_khy05-l_tc_khy11
@@ -1183,7 +1176,6 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
          LET lf_k2 = l_tc_khy09-l_tc_khy11
 
          IF cl_null(l_g2) THEN LET l_g2 = 0 END IF # add by lixwz 20170804
-         IF cl_null(lf_g2) THEN LET l_g2 = 0 END IF # add by lixwz 20171023
          IF cl_null(l_h2) THEN LET l_h2 = 0 END IF
          IF cl_null(lf_h2) THEN LET lf_h2 = 0 END IF
          IF cl_null(l_k2) THEN LET l_k2 = 0 END IF
@@ -1192,9 +1184,9 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
          INSERT INTO cxmq111_tmp
          VALUES(sr.oea03,sr.oea032,sr.oea23,sr.mm,'','','0','',
                 l_tc_khy06,l_tc_khy05,l_tc_khy08,l_tc_khy07,l_tc_khy10   ,l_tc_khy09,l_tc_khy12,l_tc_khy11,
-                l_l2,lf_l2,l_g2,lf_g2,                                           # add by lixwz 20170804
+                l_l2,l_g2,                                          # add by lixwz 20170804
                 l_h2,lf_h2,l_ii2,lf_ii2,l_j2,lf_j2,l_k2,lf_k2,
-                l_m2,lf_m2,                                                # add by lixwz 20170901
+                l_m2,                                                # add by lixwz 20170901
                 '',g_pageno,g_seq,t_azi04,t_azi05,t_azi07)
          LET g_seq=g_seq+1
 
@@ -1203,9 +1195,6 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
       LET  l_g = 0 # add by lixwz 20170804
       LET  l_l = 0 # add by lixwz 20170901
       LET  l_m = 0 # add by lixwz 20170901
-      LET  lf_g = 0 # add by lixwz 20170804
-      LET  lf_l = 0 # add by lixwz 20170901
-      LET  lf_m = 0 # add by lixwz 20170901
       LET  l_h = 0
       LET  l_ii = 0
       LET  l_j = 0
@@ -1267,7 +1256,6 @@ DEFINE l_a4,lf_a4,l_b4,lf_b4,l_c4,lf_c4,l_d4,lf_d4,l_g4,lf_g4 ,
       # add by lixwz 20170901 e
       # add by lixwz 20170804 s
       LET l_g  =l_g+sr.b-sr.d - sr.l
-      LET l_g  =lf_g+sr.bf-sr.df - sr.l
       LET l_h = l_h+sr.a-sr.d - sr.l
       LET lf_h = lf_h+sr.a-sr.df - sr.l
       LET l_ii  = l_ii+sr.b-sr.c  - sr.l
@@ -2279,9 +2267,7 @@ FUNCTION cxmq111_table()
                     d          LIKE npq_file.npq07,   #回款金额
                     df          LIKE npq_file.npq07,   #回款金额
                     l           LIKE npq_file.npq07,  #销退折让金额 # add by lixwz 20170901
-                    lf           LIKE npq_file.npq07,  #销退折让金额 # add by lixwz 20171023
                     g          LIKE npq_file.npq07,   #出货应收余额 # add by lixwz 20170804
-                    gf          LIKE npq_file.npq07,   #出货应收余额 # add by lixwz 20171023
                     h          LIKE npq_file.npq07,   #订单应收余额
                     hf          LIKE npq_file.npq07,   #订单应收余额
                     i          LIKE npq_file.npq07,   #出货未开票金额
@@ -2291,7 +2277,6 @@ FUNCTION cxmq111_table()
                     k          LIKE npq_file.npq07,   #开票应收余额
                     kf          LIKE npq_file.npq07,   #开票应收余额
                     m           LIKE npq_file.npq07,   #实际出货金额 # add by lixwz 20170901
-                    mf           LIKE npq_file.npq07,   #实际出货金额 # add by lixwz 20170901
                     exp        LIKE type_file.chr300,   #说明
                     pagenum     LIKE type_file.num5,
                     seq     LIKE type_file.num5,
@@ -2340,8 +2325,8 @@ FUNCTION q111_out_1()
    LET g_sql = "INSERT INTO ",g_cr_db_str CLIPPED,l_table CLIPPED,
                " VALUES(?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ",
                "        ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ",
-               "        ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ",
-                "       ?, ?, ? ) " # add by lixwz 171023
+               "        ?, ?, ?, ?, ?,  ?, ?, ?, ?, ? ",
+                "        ) "
    PREPARE insert_prep FROM g_sql
    IF STATUS THEN
       CALL cl_err('insert_prep:',status,1)
